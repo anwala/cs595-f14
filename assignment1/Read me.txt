@@ -1,0 +1,14 @@
+Nwala_Assignment1_Report.pdf: contains methodology
+
+Problem 1 file(s):
+
+	problem1_curlDemonstration.py: python application which uses curl to POST data to server; usage example: python problem1_curlDemonstration.py
+
+	problem1_curlDemonstrationOutput.html: the html output of running problem1_curlDemonstration.py
+
+	problem1_curlDemonstration.py: the server web application that retrieves the POST message and display it
+
+Problem 2 file(s):
+
+	problem2.py: a python application to retrieve scores; usage example: python problem2.py "Old Dominion" 5 "http://sports.yahoo.com/college-football/scoreboard/?week=2&conf=all"
+
