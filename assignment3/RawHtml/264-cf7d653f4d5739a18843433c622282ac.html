@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ja"
+	  xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:og="http://ogp.me/ns#"
+	  xmlns:fb="http://www.facebook.com/2008/fbml">
+	<head>
+		<meta charset="utf-8">
+		<title>
+				MAKEBOT - ツイッターボット作成サービス
+				</title>
+
+		<meta property="og:title" content="MAKEBOT - ツイッターボット作成サービス" />
+		<meta property="og:type" content="article" />
+		<meta property="og:description" content="MAKEBOTは高機能なツイッターボットも誰でも簡単に作成できるサービスです。" />
+		<meta property="og:url" content="http://makebot.sh" />
+		<meta property="og:image" content="http://makebot.sh/img/ogp_image.png" />
+		<meta property="og:site_name" content="MAKEBOT - ツイッターボット作成サービス" />
+		<meta property="og:locale" content="ja_JP" />
+		
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<meta name="google-site-verification" content="DE2myoqWMKLk1Nm1CjySBdsiTEbd-2eWyxaqupSDrl4" />
+		<meta name="robots" content="index,follow">
+		<meta name="description" content="MAKEBOTは高機能なツイッターボットも誰でも簡単に作成できるサービスです。" />
+		<meta name="keywords" content="MAKEBOT,ボット作成,ツイッターボット作成,ボット,作成,サービス,ツイッター" />
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+				<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+		<!--[if lt IE 9]>
+	    <![endif]-->
+		<!-- Le styles -->
+
+
+
+		<link href="/css/bootstrap.css" rel="stylesheet">
+		
+		<link href="/css/style.css" rel="stylesheet">
+		<!-- Le fav and touch icons -->
+		<link rel="shortcut icon" href="/img/favicon.ico">
+		<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
+        <link rel="canonical" href="http:///" >
+
+		
+
+		
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-18094036-36']);
+  _gaq.push(['_setDomainName', 'makebot.sh']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+	</head>
+
+	<body>
+		<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1&appId=107996179302361";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+        <!-- twitter follow badge by go2web20 -->
+        <script src='http://www.go2web20.net/twitterfollowbadge/1.0/badge.js' type='text/javascript'></script><script type='text/javascript' charset='utf-8'><!--
+        tfb.account = 'makebotsh';
+        tfb.label = 'follow-me';
+        tfb.color = '#35ccff';
+        tfb.side = 'r';
+        tfb.top = 136;
+        tfb.showbadge();
+        --></script>
+        <!-- end of twitter follow badge -->
+
+		<div class="navbar navbar-fixed-top">
+						<div class="navbar">
+				<div class="navbar-inner">
+					<div class="container">
+						<a class="brand" href="/"><img class="title" src="/img/makebot_logo.png"> - ツイッターボット作成サービス</a>
+						<ul class="nav">
+
+							<li   ><a href="/">ホーム</a></li>
+							<li>
+								<a data-toggle="modal" href="#demand" >ご要望はこちら</a>
+							</li>
+							<!--
+														-->
+							
+
+														<li   class="active"  ><a href="/login">ログイン</a></li>
+														
+					  </ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal hide fade" id="demand">
+			<div class="modal-header">
+                <a class="close" data-dismiss="modal">&times;</a>
+                <h3>ご要望はこちらから</h3>
+			</div>
+			<div class="modal-body">
+				<p>こちらからツイートいただければ幸いです。</p>
+				<a href="https://twitter.com/intent/tweet?screen_name=makebotsh" class="twitter-mention-button" data-lang="ja" data-size="large" data-related="makebotsh">Tweet to @makebotsh</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+				<p><a href="http://desk.atfreaks.com/tickets/form/makebot">また不具合のご連絡はこちらのフォームからいただければ幸いです。</a></p>
+			</div>
+			<div class="modal-footer">
+							</div>
+		</div>
+
+        <div class="cover">
+	<div class="container">
+		<div class="title">
+			<h1>ツイッターボットを作ろう。</h1>
+			<p class="subtitle">ＭＡＫＥＢＯＴは無料で簡単にボットを作成できるサービスです。</p>
+		</div>
+		<div class="login_wrapper">
+			<h3>ログイン</h3>
+			<div class="login_content">
+				<form method="post" action="/login">
+				<div class="title-input">
+					<p><input id="id-form" type="text" name="user_id" value="" placeholder="ユーザー名"></p>
+					<p><input id="pass-form" type="password" name="pass" value="" placeholder="パスワード"></p>
+				</div>
+				<div class="title-btn">	
+					<input id="login-btn4" type="submit" class="btn btn-lightblue2" value="ログイン">
+					<!--<label class="checkbox inline auto-text"><input type="checkbox" id="inlineCheckbox1" value="option1">保存する</label>-->
+				</div>
+								<a href="/forget/pass" id="foget_text">パスワードを忘れた方はこちら</a><br/>
+				<a href="/forget/user" id="foget_text">ユーザー名を忘れた方はこちら</a>
+				<a href="/register/" id="regist-btn3" class="btn btn-yellow2">新規登録 &raquo;</a>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+       <div id="pagetop"><a href="#pagetop">ページトップへ</a></div>
+
+		<footer>
+			<div class="nav-bar">
+				<div class="navbar-inner">
+					<div class="container">
+						<div class="row">
+							<div class="span6">
+								<p>
+									<a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja">ツイート</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+									<!-- Place this tag where you want the +1 button to render -->
+<g:plusone annotation="inline" width="300" href="http://makebot.sh/"></g:plusone>
+
+<!-- Place this render call where appropriate -->
+<script type="text/javascript">
+  window.___gcfg = {lang: 'ja'};
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+									<div class="fb-like" data-href="http://makebot.sh" data-send="false" data-width="450" data-show-faces="false"></div>								</p>
+							</div>
+							                            <div class="span6 footer_menu">
+
+                            
+                                <ul>
+                                    <li><a href="/tos/">利用規約</a></li>
+                                    <li><a href="/pp/">プライバシーポリシー</a></li>
+                                    <li><a href="/tokusho/">特定商取引について</a></li>
+                                    <li><a href="http://www55.atwiki.jp/makebotsh/pages/32.html">プレミアムプランとは</a>
+                                    <li><a href="http://www55.atwiki.jp/makebotsh/">ご利用ガイド</a></li>
+                                    <li><a href="http://www55.atwiki.jp/makebotsh/pages/30.html">よくある問い合わせ</a></li>
+                                    <li><a href="http://desk.atfreaks.com/tickets/form/makebot">ご意見・ご要望</a></li>
+                                    <li>&copy;2014 <a href="http://www.twitter.com/makebotsh">@Makebot</a></li>
+                                </ul>
+                            </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script language="Javascript" type="text/javascript">
+	$(document).ready(function(){
+		$('.dropdown-toggle').dropdown();
+	});
+	</script>
+	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<script type="text/javascript" src="/js/script.js"></script>
+
+		  <script src="/js/jquery.ah-placeholder.js"></script>
+          <script type="text/javascript">
+            $(function()
+            {
+                $('.jq-placeholder').ahPlaceholder({
+                    placeholderColor : 'silver',
+                    likeApple       : true
+                });
+            });
+          </script>
+
+	</body>
+</html>
+

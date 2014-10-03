@@ -1,0 +1,193 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-jp">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="refresh"content="5;url=http://news.yahoo.co.jp/">
+<title>表示できません - Yahoo!ニュース</title>
+<meta name="robots" content="noarchive">
+<link href="http://i.yimg.jp/images/news/v1/css/yj2.css?v2" rel="stylesheet" type="text/css" media="screen, print" id="yjFsCss">
+<link rel="stylesheet" href="http://i.yimg.jp/images/news/v1/css/master-news_v2.css?20140911" type="text/css" media="all">
+<link type="text/css" rel="stylesheet" href="http://i.yimg.jp/images/jpnews/cre/common/pc/css/common_pc.css" media="all">
+<!-- SpaceID=0 robot -->
+</head>
+<body class="yj950-2">
+
+<div id="wrapper">
+
+<!--header start-->
+<div id="header">
+<span class="yj-guid"><a name="pagetop" id="pagetop"></a><img src="http://i.yimg.jp/images/clear.gif" width="1" height="1" alt="このページの先頭です"></span>
+<span class="yj-skip"><a href="#contents-start"><img src="http://i.yimg.jp/images/clear.gif" alt="このページの本文へ" width="1" height="1" ></a></span>
+
+<!-- SpaceID=0 robot -->
+
+</div><!--/#header-->
+<!--header end-->
+
+<hr class="separation">
+
+<!--contents start-->
+<div id="contents">
+<div id="contents-header">
+
+<div id="contentsHeader">
+
+<div id="headerSearch">
+
+<div class="searchWrapper">
+<!-- ニュース -->
+<form action="http://news.search.yahoo.co.jp/search" method="get" id="searchNewsForm" class="current">
+
+<div class="inputWrapper">
+<input class="searchInput" type="text" name="p" placeholder="キーワードを入力">
+<input type="hidden" value="EUC-JP" name="ei">
+<input type="hidden" value="news_sw" name="fr">
+</div><!-- /.inputWrapper -->
+<p class="currentSearch"><a href="#">ニュース</a></p>
+<span class="searchButton"><input type="submit" value="検索"></span>
+
+<!-- 条件指定ボタン -->
+<p class="advanced"><a href="http://news.search.yahoo.co.jp/advanced">条件指定</a></p>
+</form>
+
+<!-- トピ -->
+<form action="http://search.yahoo.co.jp/search" method="get" id="searchTopicsForm">
+
+<div class="inputWrapper">
+<input class="searchInput" type="text" name="p" placeholder="キーワードを入力">
+<input type="hidden" value="EUC-JP" name="ei">
+<input type="hidden" value="news_sw" name="fr">
+<input type="hidden" value="news.yahoo.co.jp/list/" name="vs">
+<input type="hidden" value="1" name="rkf">
+</div><!-- /.inputWrapper -->
+<p class="currentSearch"><a href="#">トピックス</a></p>
+<span class="searchButton"><input type="submit" value="検索"></span>
+
+</form>
+
+<!-- Buzz -->
+<form action="http://buzz.news.yahoo.co.jp/search/result/" method="get" id="searchBuzzwordForm">
+
+<div class="inputWrapper">
+<input class="searchInput" type="text" name="search" placeholder="キーワードを入力">
+</div><!-- /.inputWrapper -->
+
+<p class="currentSearch"><a href="#">Buzzワード</a></p>
+<span class="searchButton"><input type="submit" value="検索"></span>
+</form>
+
+<!-- 意識調査 -->
+<form action="http://polls.dailynews.yahoo.co.jp/list" method="get" id="SearchSurveyForm">
+
+<div class="inputWrapper">
+<input class="searchInput" type="text" name="q" placeholder="キーワードを入力">
+<input type="hidden" value="euc-jp" name="ei">
+</div><!-- /.inputWrapper -->
+
+<p class="currentSearch"><a href="#">意識調査</a></p>
+<span class="searchButton"><input type="submit" value="検索"></span>
+</form>
+
+<!-- GSR -->
+<form action="http://gsearch.news.yahoo.co.jp/gs?" name="s" method="get" id="searchGSRForm">
+
+<div class="inputWrapper">
+<input class="searchInput" type="text" name="key" placeholder="キーワードを入力">
+<input type="hidden" value="l" name="ty">
+<input type="hidden" value="" name="dbty">
+<input type="hidden" value="euc-jp" name="ei">
+</div><!-- /.inputWrapper -->
+<p class="currentSearch"><a href="#">全国紙パック</a></p>
+<span class="searchButton"><input type="submit" value="検索"></span>
+</form>
+
+<!--検索カテゴリのセレクト -->
+<ul class="searchSelect hide"><!--
+--><li id="searchNews"><a href="#" class="current"><span>ニュース</span></a></li><li id="searchTopics"><a href="#"><span>トピックス</span></a></li><li id="searchBuzzword"><a href="#"><span>Buzzワード</span></a></li><li id="SearchSurvey"><a href="#"><span>意識調査</span></a></li><li id="searchGSR"><a href="#"><span>全国紙パック</span></a></li>
+</ul>
+<div class="bubble hide"></div>
+
+</div><!-- /.searchWrapper -->
+
+<ul class="personalInfo">
+<li class="myPage"><a href="http://person.news.yahoo.co.jp/u/login" onmousedown="this.href='http://person.news.yahoo.co.jp/u/login'"><span class="myThumb"><img src="http://i.yimg.jp/images/bloom/v201212/anonymous_24.png" width="24" height="24"></span></a><a href="http://person.news.yahoo.co.jp/u/login" onmousedown="this.href='http://person.news.yahoo.co.jp/u/login'"><span class="myName">ユーザーページ</span></a>
+</li>
+<li class="purchase"><a href="http://headlines.yahoo.co.jp/purchase/" onmousedown="this.href='http://headlines.yahoo.co.jp/purchase/'">購読一覧</a></li>
+<li class="setting"><a href="http://person.news.yahoo.co.jp/settings/profile/" onmousedown="this.href='http://person.news.yahoo.co.jp/settings/profile/'">設定</a></li>
+</ul><!-- /.personalInfo -->
+
+</div><!-- /#search -->
+<!--グローバルナビ-->
+<div id="globalNav">
+<ul id="gnPri"><!-- global nav primary -->
+<li id="gnPriHeadlines" ><a href="http://news.yahoo.co.jp" onmousedown="this.href='http://news.yahoo.co.jp'" >トップ</a></li>
+<li id="gnPriFlash" ><a href="http://news.yahoo.co.jp/flash" onmousedown="this.href='http://news.yahoo.co.jp/flash'" >速報</a></li>
+<li id="gnPriPhoto" ><a href="http://headlines.yahoo.co.jp/hl?ty=p" onmousedown="this.href='http://headlines.yahoo.co.jp/hl?ty=p'" >写真</a></li>
+<li id="gnPriVideo" ><a href="http://headlines.yahoo.co.jp/videonews/" onmousedown="this.href='http://headlines.yahoo.co.jp/videonews/'" >映像</a></li>
+<li id="gnPriZasshi" ><a href="http://zasshi.news.yahoo.co.jp/" onmousedown="this.href='http://zasshi.news.yahoo.co.jp/'" >雑誌</a></li>
+<li id="gnPriBylines" ><a href="http://bylines.news.yahoo.co.jp/" onmousedown="this.href='http://bylines.news.yahoo.co.jp/'" >個人</a></li>
+<li id="gnPriBuzz" ><a href="http://buzz.news.yahoo.co.jp/" onmousedown="this.href='http://buzz.news.yahoo.co.jp/'" >Buzz</a></li>
+<li id="gnPriResearch" ><a href="http://polls.dailynews.yahoo.co.jp/" onmousedown="this.href='http://polls.dailynews.yahoo.co.jp/'" >意識調査</a></li>
+<li id="gnPriRanking" ><a href="http://headlines.yahoo.co.jp/accr" onmousedown="this.href='http://headlines.yahoo.co.jp/accr'" >ランキング</a></li>
+<li id="gnPriFeed"><a href="http://feed.news.yahoo.co.jp/" onmousedown="this.href='http://feed.news.yahoo.co.jp/'">ニュースフィード</a></li>
+</ul>
+
+<div class="gnSecWrap">
+</div>
+</div><!-- /.globalNav -->
+<!--/グローバルナビ-->
+</div>
+<div id="cat-pass"></div><!--/#cat-pass-->
+</div><!--/#contents-header-->
+
+<div id="contents-body">
+<span class="yj-guid"><a name="contents-start" id="contents-start"></a><img src="http://i.yimg.jp/images/clear.gif" alt="ここから本文です" width="1" height="1"></span>
+<div class="errorText">
+<p class="yjM s150 textCenter"><strong>指定されたURLは存在しませんでした。</strong></p>
+<p class="textCenter">Yahoo!ニュースのトップページへ5秒後に移動します。</p>
+<ul class="textCenter">
+<li class="first"><a href="http://news.yahoo.co.jp/">Yahoo!ニューストップへ</a></li>
+</ul>
+</div><!--./errorText-->
+</div><!--/#contents-body-->
+
+<div id="contents-footer">
+<span class="yj-guid"><img src="http://i.yimg.jp/images/clear.gif" width="1" height="1" alt="本文はここまでです"></span>
+<span class="yj-skip">
+<a href="#pagetop"><img src="http://i.yimg.jp/images/clear.gif" alt="このページの先頭へ" width="1" height="1"></a></span>
+</div><!--/#contents-footer-->
+
+</div><!--/#contents-->
+<!--contents end-->
+
+<!--<hr class="separation">-->
+
+<!--footer start-->
+<div id="footer">
+
+<!-- SpaceID=0 robot -->
+
+<address>
+<a href="http://docs.yahoo.co.jp/docs/info/terms/chapter1.html#cf2nd" rel="nofollow">プライバシーポリシー</a> - <a href="http://docs.yahoo.co.jp/docs/info/terms/" rel="nofollow">利用規約</a> - 
+<a href="http://headlines.yahoo.co.jp/docs/copyright.html" rel="nofollow">著作権</a>  - 
+<a href="http://headlines.yahoo.co.jp/docs/tokuteisho.html" rel="nofollow">特定商取引法の表示</a> - <a href="http://rdsig.yahoo.co.jp/media/news/footer/feedback/RV=1/RU=aHR0cDovL21zLnlhaG9vLmNvLmpwL2Jpbi95YWR2LWluZm8vZmVlZGJhY2sv" rel="nofollow">ご意見・ご要望</a> - <a href="http://help.yahoo.co.jp/help/jp/news/" rel="nofollow">ヘルプ・お問い合わせ</a><br>
+Copyright (C) 2014 Yahoo Japan Corporation. All Rights Reserved.
+</address>
+</div><!--/#footer-->
+<!--footer end-->
+
+</div><!--/#wrapper-->
+<script type="text/javascript" src="http://i.yimg.jp/images/news/lib/jquery/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" language="javascript" src="http://i.yimg.jp/lib/news/top/common_pc-1.0.0.min.js"></script>
+<script type="text/javascript" language="javascript">
+<!--
+$(function() {
+    // グロナビ
+    YAHOO.JP.News.globalNav.init();
+});
+//-->
+</script>
+</body>
+</html>

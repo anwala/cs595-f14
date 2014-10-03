@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="dist/img/favicon.ico">
+
+    <title>Pill Control</title>
+
+    <link href="dist/css/bootstrap.css" rel="stylesheet">
+    <link href="dist/css/style.css" rel="stylesheet">
+
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <script src="dist/js/ie-emulation-modes-warning.js"></script>
+    <script src="dist/js/ie10-viewport-bug-workaround.js"></script>
+
+  </head>
+
+  <body>
+
+    <section class="bg-pink">
+
+      <div class="container">
+      
+        <div class="row">
+
+          <div class="col-md-6">
+            <img class="img-responsive img-lead" src="dist/img/logo-main.png">
+
+            <p class="lead">NO OLVIDES CUANDO TOMAR TUS MEDICAMENTOS</p>
+            <ul class="list-inline">
+              <li><a href="http://bitly.com/pillapp"><img src="dist/img/get_ios.png"></a></li>
+              <!-- <li><a href="http://bit.ly/RlQpUm"><img src="dist/img/get_ios.png"></a></li> -->
+              <!-- <li><img src="dist/img/get_android.png"></li> -->
+            </ul>
+          </div>
+          <div class="col-md-offset-1 col-md-5 main">
+            <h3 class="text-center">LOS MEJORES TIPS DE SALUD<br>SEMANALMENTE</h3>
+
+            <div class="row">
+              <div class="col-md-6">
+                <p><i class="fa fa-medkit"></i> Tu botiquín</p>
+                <p><i class="fa fa-hospital-o"></i> Tips en hospitales</p>
+              </div>
+              <div class="col-md-6">
+                <p><i class="fa fa-wheelchair"></i> Discapacidades</p>
+                <p><i class="fa fa-stethoscope"></i> Especialistas</p>
+              </div>
+            </div> <!-- /.row -->
+
+            <br>
+
+            <form role="form" action="mail.php" method="post" id="contact-form">
+              <div class="form-group">
+                <label for="email">Regístrate y recibe tips de salud directo a tu email:</label>
+                <input type="email" class="form-control" name="email" id="email" placeholder="nombre@email.com">
+              </div>
+              <hr>
+              <button type="submit" class="btn btn-lg btn-pink btn-block">REGISTRARME</button>
+            </form>
+          </div>
+
+        </div> <!-- /.row -->
+
+      </div>
+
+    </section> <!-- /.bg-pink -->
+
+    <div class="container">
+
+      <h2>Destacados<br><small>Conoce todas nuestras Apps de Salud</small></h2>
+
+      <div class="row">
+        <div class="col-md-2">
+          <p><a href="http://bit.ly/barriveapp"><img class="img-responsive img-rounded img-center" src="dist/img/app0.png"></a></p>
+          <h4>BABY ARRIVE</h4>
+          <p>Te ayudará a conocer la fecha de nacimiento de tu bebé, y darle un poco de información acerca de su embarazo.</p>
+          <p><a href="http://bit.ly/barriveapp"><i class="fa fa-apple"></i> Descargar</a></p>
+        </div>
+        <div class="col-md-2">
+          <p><a href="http://bit.ly/sbapp1"><img class="img-responsive img-rounded img-center" src="dist/img/app1.png"></a></p>
+          <h4>STORK BRINGS</h4>
+          <p>Para las personas que quieren ser padres e incrementar la oportunidad de elegir el sexo de su futuro bebé.</p>
+          <p><a href="http://bit.ly/sbapp1"><i class="fa fa-apple"></i> Descargar</a></p>
+        </div>
+        <div class="col-md-2">
+          <p><a href="http://bit.ly/natalpp"><img class="img-responsive img-rounded img-center" src="dist/img/app2.png"></a></p>
+          <h4>NATAL CONTROL</h4>
+          <p>Para las mujeres que quieren saber exactamente sus días fértiles, y los días de ovulación para saber que días pueden quedar embarazadas y cuáles días no.</p>
+          <p><a href="http://bit.ly/natalpp"><i class="fa fa-apple"></i> Descargar</a></p>
+        </div>
+        <div class="col-md-2">
+          <p><a href="http://bit.ly/talkapp"><img class="img-responsive img-rounded img-center" src="dist/img/app3.png"></a></p>
+          <h4>THINK-TALK</h4>
+          <p>Para ayudar a la gente con problema de hablar y que estas puedan mantener una mejor calidad de vida a través de una mejor comunicación.</p>
+          <p><a href="http://bit.ly/talkapp"><i class="fa fa-apple"></i> Descargar</a></p>
+        </div>
+      </div> <!-- /.row -->
+
+      <hr>
+
+      <footer class="text-center">
+        <ul class="list-inline social">
+          <li><a href="http://facebook.com/pillcontrol" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+          <li><a href="http://twitter.com/pillcontroll" target="_blank"><i class="fa fa-twitter"></i></li>
+        </ul>
+      </footer>
+
+    </div> <!-- /.container -->
+
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="dist/js/jquery-1.js"></script>
+    <script src="dist/js/jquery.validate.js"></script>
+    <script src="dist/js/additional-methods.js"></script>
+    <script src="dist/js/bootstrap.js"></script>
+
+    <!-- Formulario -->
+    <script>
+    $( document ).ready(function() {
+        $('#contact-form').validate({
+            rules: {
+                email: {
+                    minlength: 10,
+                    maxlength: 50,
+                    required: true,
+                    email: true
+                }
+            },
+            highlight: function(element) {
+                $(element).closest('.form-group').addClass('has-error');
+            },
+            unhighlight: function(element) {
+                $(element).closest('.form-group').removeClass('has-error');
+            },
+            errorElement: 'span',
+            errorClass: 'help-block',
+            errorPlacement: function(error, element) {
+                if(element.parent('.input-group').length) {
+                    error.insertAfter(element.parent());
+                } else {
+                    error.insertAfter(element);
+                }
+            }
+        });
+      });
+    </script>
+    
+    <!-- Clickheat -->
+    <script type="text/javascript" src="http://www.pillcontrol.com.mx/clickheat/js/clickheat.js"></script><noscript><p><a href="http://www.dugwood.com/index.html">Heatmap plugin</a></p></noscript><script type="text/javascript"><!--
+clickHeatSite = 'pill_control';clickHeatGroup = 'pill';clickHeatServer = 'http://www.pillcontrol.com.mx/clickheat/click.php';initClickHeat(); //-->
+    </script>  
+
+    <a title="Real Time Web Analytics" href="http://clicky.com/100755644"><img alt="Real Time Web Analytics" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
+    <script src="//static.getclicky.com/js" type="text/javascript"></script>
+    <script type="text/javascript">try{ clicky.init(100755644); }catch(e){}</script>
+    <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100755644ns.gif" /></p></noscript>
+
+
+</body></html>

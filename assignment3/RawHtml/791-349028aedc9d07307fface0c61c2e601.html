@@ -1,0 +1,302 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="Vero Solís te presenta en su sitio web las nuevas tendencias de la moda, así como sus colecciones y tienda en línea.">
+    <meta name="keywords" content="vero solis, moda, xv años, ropa de moda, moda para niñas, moda para jovencitas">
+    <meta name="author" content="Jaime Hinojosa">
+	<title>Vero Solis - Sitio Oficial</title>
+	<link rel="stylesheet" type="text/css" href="estilos.css" />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	
+<!---------------------------- INSTAGRAM FEED -------------------------------------------->
+<script type="text/javascript" src="instafeed.js"></script>
+<!-- Agregué el JQuery para que se ejecute cuando los elementos DOM estén en su lugar -->
+<script type="text/javascript" src="includes/jquery-1.4.2.min.js"></script>
+
+<script type="text/javascript">
+    var userFeed = new Instafeed({	
+		get: 'user',
+		userId: 196117344,
+		accessToken: '196117344.467ede5.d2991e2d6ad14b1abaa18da0843a1299',
+		clientId: '08513cbe4a554328978c26ce71faa2ec',
+        sortBy: 'random', 
+		limit: '3'
+    });
+	
+	// JQuery agregado para que se ejecute la función:
+	$(function() {
+		userFeed.run();
+		// Los resultados se enlistan en <div id="instafeed"></div>
+	});
+	
+	
+</script>
+<!---------------------------- /INSTAGRAM FEED -------------------------------------------->
+
+<!-- ----------FACEBOOK LIKE BUTTON SCRIPT---------- -->
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+<!-- ----------TERMINA FACEBOOK LIKE BUTTON SCRIPT---------- -->	
+</head>
+<body>
+<!-- ---------- GOOGLE ANALYTICS ---------- -->
+<script type="text/javascript"> 
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script> 
+<script type="text/javascript"> 
+try {
+var pageTracker = _gat._getTracker("UA-6125290-19");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<!-- ---------- / GOOGLE ANALYTICS---------- -->
+<table border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr><td colspan="3" class="header" align="center"><a href="index.php"><img src="images/header_logo.png" width="300" height="149"></a></td></tr>
+<tr><td colspan="3" class="menu"><div id="inicio"><table width="1000" align="center" cellpadding="0" cellspacing="0">
+	<tr>
+    	<td><div class="menu_btn" id="navi01" onClick="location.href='vero-solis.php'">VERO SOLÍS</div></td>
+        <td><div class="menu_btn" id="navi02" onClick="location.href='colecciones.php'">COLECCIONES</div></td>
+        <td><div class="menu_btn" id="navi03" onClick="location.href='tips-de-moda.php'">TIPS DE MODA</div></td>
+        <td><div class="menu_btn" id="navi04" onClick="location.href='publicaciones.php'">PUBLICACIONES</div></td>
+        <td><div class="menu_btn" id="navi05" onClick="location.href='boutiques.php'">BOUTIQUES</div></td>
+        <td><div class="menu_btn" id="navi06" onClick="location.href='contacto.php'">CONTACTO</div></td>
+        <td><div class="menu_btn" id="navi07" onClick="location.href='tienda.php'">TIENDA EN LÍNEA</div></td>
+    </tr>
+</table></div></td></tr>
+<tr><td>&nbsp;</td>
+	<td class="wrapper">
+		<table border="0">
+		<tr>
+			<td colspan="5" style="height:506px;">
+			
+		<link type="text/css" href="styles/simple.css" rel="stylesheet" />
+		<script type="text/javascript" src="includes/jquery.js"></script>
+        <script type="text/javascript" src="slider/jquery.jcarousel.min.js"></script>
+		<script type="text/javascript" src="slider/jquery.pikachoose.min.js"></script>
+		<script type="text/javascript" src="slider/jquery.touchwipe.min.js"></script>
+		<script language="javascript">
+			$(document).ready(function (){
+					$("#pikame").PikaChoose();
+					/*$('#pikame').data('pikachoose').Pause(); Detiene reproduccion automatica */
+				});
+		</script>
+
+            <!-- BANNERS -->
+                <div class="pikachoose" style="margin-top:40px;">
+                    <ul id="pikame">
+                
+                    <li><img src="images/banner1.jpg" width="1000" height="431" /></li>
+                    <li><img src="images/banner2.jpg" width="1000" height="431" /></li>
+                    <li><img src="images/banner3.jpg" width="1000" height="431" /></li>
+                    <li><img src="images/banner4.jpg" width="1000" height="431" /></li>
+                    
+                    </ul>
+                </div>
+                
+                <div class="divisor" style="background-color:#fff;"></div>
+            <!-- /BANNERS -->
+			</td>
+		</tr>
+		<tr>
+			<td class="columnaIzquierda" valign="top">
+            				<div class="titulo" style="background-color:#bb45bf;">TIENDA EN LÍNEA</div>
+				<div>
+					<a href="producto.php?id=60"><img src="cms_uploads/17_20140905_127.png" style="width:300px; height:auto;"></a>
+				<h1 class="morado1">Arracada espiral</h1>
+				<p class="">$ 320.00 MXN</p>
+                				<button type="button" class="botonMorado1" onClick="location.href='producto.php?id=60'">¡Compra en Línea!</button>
+				</div>
+				
+				<div class="divisor" style="background-color:#fff;"></div>
+				
+				<div class="titulo" style="background-color:#fb0f61;">UN DÍA CON VERO</div>
+                
+                
+                <div class="font_estandar">
+				<div class="imagen-video">
+                	<img src="cms_uploads/m:-v_20140826_141.jpg" style="width:300px; height:auto;">
+                                        		<div class="play" onClick="location.href='un-dia-con-vero.php?a=25'"></div>
+                                    </div>
+				<h1 class="rojo1">Marla en presentación de colección </h1>
+				<p><p>La hija menor de Marco Antonio Solís y Cristy Solís en Monterrey&nbsp;</p>
+</p>
+				<button type="button" class="botonRojo1" onClick="location.href='un-dia-con-vero.php?a=25'">Ver video...</button>
+				</div>
+				
+				<div class="divisor" style="background-color:#fff;"></div>
+				
+				<div class="titulo" style="background-color:#ea4cc0;">FACEBOOK</div>
+				
+				 <div class="fb-like-box" data-href="http://www.facebook.com/pages/Vero-Sol%C3%ADs-Oficial/242826652471490?ref=tn_tnmn" data-width="300" data-height="485" data-colorscheme="light" data-show-faces="true" data-stream="true" data-header="true" style="background-color:#fff; margin-top:20px;"></div>
+				
+			</td>
+			<td style="width:15px;">&nbsp;</td>
+			<td class="columnaCentral" valign="top">
+				<div class="titulo" style="background-color:#eb4a81;">TU CANAL DE MODA</div>
+
+			<div class="font_estandar">
+            	<div class="imagen-video">
+                	<img src="cms_uploads/vero-testimonial-_20140926_778.png" style="width:484px; height:auto;">
+                                        		<div class="play" onClick="location.href='articulo.php?a=32'"></div>
+                                    </div>
+				<h1>Como adquirir la Colección Mexican Chic </h1>
+				<p><p>Ya están disponible nuevamente estas prendas en verosolis.com</p>
+</p>
+                <button type="button" class="botonRosa" onClick="location.href='articulo.php?a=32'">Ver video...</button>
+				</div>
+            			<div class="divisor" style="background-color:#fff;"></div>				
+				
+				<table class="videoPrev">
+				<tr><td rowspan="2" width="249" style="background-image:url('cms_uploads/screen-shot-2014-09-17-at-4.23.49-pm_20140917_366.png'); background-size:auto 169px;" align="center">
+					<div class="imagen-video" style="width:60px; height:169px; background-color:transparent;">
+					                    		<div class="play2" onClick="location.href='articulo.php?a=29'"></div>
+                                        <div class="imagen-video">
+					</td><td valign="top" align="center">
+					<div class="font_estandar"><p><p>Para lucir muy adoc en estas fiestas patrias.&nbsp;</p>
+</p></div>
+					</td></tr>
+					<tr><td height="50">
+					<button type="button" class="botonRosa" onClick="location.href='articulo.php?a=29'">Ver video...</button>
+					</td></tr>					
+				</table>
+             			<div class="divisor" style="background-color:#fff;"></div>				
+				
+				<table class="videoPrev">
+				<tr><td rowspan="2" width="249" style="background-image:url('cms_uploads/look-mexicano_20140910_594.png'); background-size:auto 169px;" align="center">
+					<div class="imagen-video" style="width:60px; height:169px; background-color:transparent;">
+					                    		<div class="play2" onClick="location.href='articulo.php?a=28'"></div>
+                                        <div class="imagen-video">
+					</td><td valign="top" align="center">
+					<div class="font_estandar"><p><p>Ideas para lucir en estas fiestas patrias&nbsp;</p>
+</p></div>
+					</td></tr>
+					<tr><td height="50">
+					<button type="button" class="botonRosa" onClick="location.href='articulo.php?a=28'">Ver video...</button>
+					</td></tr>					
+				</table>
+             			<div class="divisor" style="background-color:#fff;"></div>				
+				
+				<table class="videoPrev">
+				<tr><td rowspan="2" width="249" style="background-image:url('cms_uploads/img_1135_20140829_556.jpg'); background-size:auto 169px;" align="center">
+					<div class="imagen-video" style="width:60px; height:169px; background-color:transparent;">
+					                    		<div class="play2" onClick="location.href='articulo.php?a=27'"></div>
+                                        <div class="imagen-video">
+					</td><td valign="top" align="center">
+					<div class="font_estandar"><p><p>Vero Solís te presenta su nueva colección&nbsp;de T-shirt.&nbsp;</p>
+</p></div>
+					</td></tr>
+					<tr><td height="50">
+					<button type="button" class="botonRosa" onClick="location.href='articulo.php?a=27'">Ver video...</button>
+					</td></tr>					
+				</table>
+             		
+
+				
+				<div class="masVideos" onclick="window.open('https://www.youtube.com/user/verosolistv')('_blank')"><img src="images/masVideos.png"></div>
+				
+				<div class="divisor" style="background-color:#fff;"></div>
+				
+				<div id="masTwitter" style="margin-bottom:20px;">TWITTER</div>
+				
+                <a class="twitter-timeline"  href="https://twitter.com/vero_solis"  data-widget-id="497214837550620673">Tweets por @vero_solis</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+				<br><br>
+				
+			</td>
+			<td style="width:15px;">&nbsp;</td>
+			<td class="columnaDerecha" valign="top">
+				<div class="titulo" style="background-color:#dd06bd;">INSTAGRAM</div>
+				<div id="instafeed" style="padding:8px 0 8px 0;"></div>
+				
+				<div class="divisor" style="padding:0; background-color:#fff;"></div>
+				<div class="titulo" style="background-color:#ec0c80;">COLECCIONES</div>
+				<div style="padding:8px 0 8px 0;">
+					<a class="coleccionesHome" href="coleccion-xv-marla.php"><img src="images/colecciones1.jpg" width="150" height="150"></a>
+					<a class="coleccionesHome" href="coleccion-xv-danna.php"><img src="images/colecciones2.jpg" width="150" height="150"></a>
+					<a class="coleccionesHome" href="coleccion-teens.php"><img src="images/colecciones3.jpg" width="150" height="150"></a>
+				</div>
+				<div class="divisor" style="padding:0;background-color:#fff;"></div>
+				<div class="titulo" style="background-color:#e606b4;">ESTA TEMPORADA</div>
+                <a href="tienda.php"><img src="images/banner_derecho.jpg" border="0" width="186" height="513"></a>
+				<br><br>
+			</td>
+		</tr>
+		</table>
+	</td>
+	<td>&nbsp;</td></tr>
+<tr><td colspan="3"><div class="divisor"></div></td></tr>
+<tr class="footer"><td>&nbsp;</td><td class="footer_cont"><table width="1000" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+    	<td width="500"><img src="images/boceto_vestido.png" width="337" /></td>
+        <td valign="top" align="right">
+        	<table>
+            	<tr>
+                	<td width="260" valign="top">
+                    	<div class="footer_titulo footer_aire_titulo_1">Fifteen Studio</div>
+                        <div class="footer_direccion">
+                            Treviño No. 307<br>
+                            Col. Centro<br>
+                            San Nicolás de los Garza N.L.<br>
+                            CP. 64400<br>
+                            Tel. (81) 8343 8849 y (81) 8057 8507
+                        </div>
+                        <div class="altura"></div>
+                    </td>
+                    <td width="20"></td>
+                    <td width="220" align="left" valign="top">
+                    	<table>
+                        	<tr>
+                            	<td><div class="footer_btn red_youtube" onclick="window.open('https://www.youtube.com/user/verosolistv')('_blank')">&nbsp;</div></td>
+                                <td><div class="footer_btn red_face" onclick="window.open('https://www.facebook.com/VeroSolisOficial')('_blank')">&nbsp;</div></td>
+                                <td><div class="footer_btn red_twitter" onclick="window.open('https://twitter.com/vero_solis')('_blank')">&nbsp;</div></td>
+                                <td><div class="footer_btn red_instagram" onclick="window.open('http://instagram.com/vero_solis/#')('_blank')">&nbsp;</div></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                	<td valign="top">
+                    	<div class="footer_titulo footer_aire_titulo_2">San Agustín</div>
+                        <div class="footer_direccion">
+                            Batallón de San Patricio No. 1000<br>
+                            Local 1033<br>
+                            Col. Residencial San Agustín<br>
+                            San Pedro Garza, García N.L.<br>
+                            CP. 66477<br>
+                            Tel. (81) 8104 1417
+                        </div>
+                    </td>
+                    <td>&nbsp;</td>
+                    <td valign="top">
+                    	<div class="footer_titulo footer_aire_titulo_2">Anáhuac</div>
+                        <div class="footer_direccion">
+                            Manuel L. Barragán<br>
+                            Local 1007<br>
+                            Col. Residencial Anáhuac<br>
+                            San Nicolás de los Garza, N.L.<br>
+                            CP. 66457<br>
+        					Tel. (81) 8332 3585
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <div class="snl">Diseñado por: <a href="http://www.sunegocioenlinea.com" target="_blank">Sunegocioenlinea.com</a></div>
+        </td>
+    </tr>
+</table></td><td>&nbsp;</td></tr>
+</table>
+	
+</body>
+</html>

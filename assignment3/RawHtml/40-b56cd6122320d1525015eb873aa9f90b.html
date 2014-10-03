@@ -1,0 +1,451 @@
+
+<!doctype html>
+
+<!--[if IE ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml"><![endif]--> 
+<!--[if !(IE)]><!--><html lang="ja" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml"><!--<![endif]-->
+
+
+<head>
+  <meta charset="utf-8">
+  <title>マンガボックス インディーズ(MangaBox Indies)</title>
+  <meta name="description" content="オリジナル漫画を投稿・閲覧可能な「マンガボックスインディーズ」！マンガボックス編集部からスカウトされればマンガボックスで作品掲載できる可能性も！今なら賞金が貰えるマンガボックスリーグ開催中！">
+  <meta property="og:title" content="マンガボックス インディーズ(MangaBox Indies)">
+  <meta property="og:description" content="オリジナル漫画を投稿・閲覧可能な「マンガボックスインディーズ」！マンガボックス編集部からスカウトされればマンガボックスで作品掲載できる可能性も！今なら賞金が貰えるマンガボックスリーグ開催中！">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:site_name" content="マンガボックス インディーズ(MangaBox Indies)">
+  <meta property="fb:app_id" content="193592954158347">
+  <meta name="keywords" content="同人誌,Webマンガ,無料漫画,マンガ投稿,マンガコンテスト,連載権">
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+  
+  
+    <link rel="stylesheet" href="https://image-a.mangabox.me/static/assets/css/pc/ja/indies/viewer.css?t=1409895151">
+  
+
+
+  <script src="https://image-a.mangabox.me/static/assets/js/jquery-1.9.1.min.js?t=1383817241"></script>
+  <script src="https://image-a.mangabox.me/static/assets/js/indies/jquery.custombox.min.js?t=1406107541"></script>
+  <!--[if lt IE 9]>
+  <script src="https://image-a.mangabox.me/static/assets/js/html5.js?t=1383817241"></script>
+  <![endif]-->
+
+  <link rel="shortcut icon" href="https://image-a.mangabox.me/static/assets/images/pc/ja/indies/favicon.ico?t=1405671098">
+</head>
+<body>
+
+
+
+
+<style>
+html,body{
+	overflow:hidden;
+	height: 100%;
+	width:100%;
+}
+</style>
+
+
+<header id="indies-header-wrapper">
+	<a id="indies-header-icon" href="/">トップ</a>
+	<a id="indies-header-back" href="/">戻る</a>
+	<a id="js-indies-viewer-episode-list" class="indies-viewer-episode-list">
+		エピソード一覧
+	</a>
+
+	<h1 id="indies-header-title"><span id="indies-header-title-text">倚天の空(週２更新) 第1話</span><h1>
+
+	<div id="indies-header-sns-wrapper">
+		<div id="indies-header-twitter-wrapper">
+
+
+		<a href="https://twitter.com/share" class="twitter-share-button" data-url="https://www.mangabox.me/redirect_to/indies.viewer/?aff_code=indaa0000001688&amp;manga_id=1688" data-counturl="https://www.mangabox.me/redirect_to/indies.viewer/?aff_code=indaa0000001688&amp;manga_id=1688" data-text="たぬキつネこ (@hakoniwanoneko)の「倚天の空(週２更新)」を応援しています。#マンガボックスインディーズ" data-lang="ja" data-count="none">ツイート</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+		</div>
+	</div>
+
+</header>
+<script>
+$(function() {	
+	var ans; 
+	var bs  = false; 
+	var ref = document.referrer;
+	$(window).on("unload beforeunload",function(){
+	    bs = true;
+	});
+	re = new RegExp(location.hostname,"i");
+	if(ref.match(re)){
+	    ans = true;
+	}else{
+	    ans = false;
+	    $('#indies-header-back').html('サイトトップ');
+	    $('#indies-header-title').css({'padding':'0 396px'});
+	    $('.indies-viewer-episode-list').css({'left':'226px'});
+
+	}
+	$('#indies-header-back').on("click",function(){
+	    var that = this;
+	    if(ans){
+	        history.back();
+	        setTimeout(function(){
+	            if(!bs){
+	                location.href = $(that).attr("href");
+	            }
+	        },100);
+	    }else{
+	        location.href = $(this).attr("href");
+	    }
+	    return false;
+	});
+});	
+</script>
+
+
+
+<div id="indies-viewer-loading">
+	<img src="https://image-a.mangabox.me/static/assets/images/pc/ja/indies/viewer_loading.gif?t=1406088592" width="50px" height="50px" id="indies-viewer-loading-img">
+</div>
+
+
+	<section id="indies-viewer-horizontal-section">
+	<div class="flexslider">
+	<ul id="indies-viewer-list-wrapper" class="slides">
+	
+		
+			<li class="indies-viewer-list"><div class="indies-viewer-img-wrapper">
+		
+			<div alt="" class="indies-viewer-horizontal-img jsNext" style="display:none;"></div>
+			<img src="https://img-indies-a.mangabox.me/static/content/indies/images/manga/fb14a75858571e5bd2db2d7cb2d0756fd6f0cd8cd42dfd37d21efd208699dc67/1d113ebcea7cfaa9ae13e9a8919ccd4645703a1ebbfa49d4abdd87db11ecf080/c8c7c6d678bf0dc9a40c62b635a8aa7949d14d7cfe28fe8b219d3755dddbde6e.jpeg" alt="" class="indies-viewer-horizontal-img jsNext" style="display:none;">
+		
+			</div></li>
+		
+
+	
+		
+			<li class="indies-viewer-list"><div class="indies-viewer-img-wrapper">
+		
+			
+			<img src="https://img-indies-a.mangabox.me/static/content/indies/images/manga/fb14a75858571e5bd2db2d7cb2d0756fd6f0cd8cd42dfd37d21efd208699dc67/1d113ebcea7cfaa9ae13e9a8919ccd4645703a1ebbfa49d4abdd87db11ecf080/2c11a2d76574fcc138c3512e2bef0e7b6f7d36412c60a3b58c350e546ff0cfd4.jpeg" alt="" class="indies-viewer-horizontal-img jsNext" style="display:none;">
+		
+
+	
+		
+			
+			<img src="https://img-indies-a.mangabox.me/static/content/indies/images/manga/fb14a75858571e5bd2db2d7cb2d0756fd6f0cd8cd42dfd37d21efd208699dc67/1d113ebcea7cfaa9ae13e9a8919ccd4645703a1ebbfa49d4abdd87db11ecf080/0c07157b3b54b4fc51bbdc8b07b74f5a74ac9e9d9388196979ad69a42fa1b3a6.jpeg" alt="" class="indies-viewer-horizontal-img jsNext" style="display:none;">
+		
+			</div></li>
+		
+
+	
+		
+			<li class="indies-viewer-list"><div class="indies-viewer-img-wrapper">
+		
+			
+			<img src="https://img-indies-a.mangabox.me/static/content/indies/images/manga/fb14a75858571e5bd2db2d7cb2d0756fd6f0cd8cd42dfd37d21efd208699dc67/1d113ebcea7cfaa9ae13e9a8919ccd4645703a1ebbfa49d4abdd87db11ecf080/d600de801a473401c4c26c76c49b5cf0d9715c91e4bb71018c9a866378fa0b45.jpeg" alt="" class="indies-viewer-horizontal-img jsNext" style="display:none;">
+		
+
+	
+		
+			
+			<img src="https://img-indies-a.mangabox.me/static/content/indies/images/manga/fb14a75858571e5bd2db2d7cb2d0756fd6f0cd8cd42dfd37d21efd208699dc67/1d113ebcea7cfaa9ae13e9a8919ccd4645703a1ebbfa49d4abdd87db11ecf080/88162a5da92212c5a5a9c9bcdb2a6193ede53aa03677e311d2143feb184beda2.jpeg" alt="" class="indies-viewer-horizontal-img jsNext" style="display:none;">
+		
+			</div></li>
+		
+
+	
+		
+			<li class="indies-viewer-list"><div class="indies-viewer-img-wrapper">
+		
+			
+			<img src="https://img-indies-a.mangabox.me/static/content/indies/images/manga/fb14a75858571e5bd2db2d7cb2d0756fd6f0cd8cd42dfd37d21efd208699dc67/1d113ebcea7cfaa9ae13e9a8919ccd4645703a1ebbfa49d4abdd87db11ecf080/775b080b754959c24faaf0e410aab4d659db62c0df2d051c378a2ec2dc1c77d9.jpeg" alt="" class="indies-viewer-horizontal-img jsNext" style="display:none;">
+		
+
+	
+		
+			
+			<img src="https://img-indies-a.mangabox.me/static/content/indies/images/manga/fb14a75858571e5bd2db2d7cb2d0756fd6f0cd8cd42dfd37d21efd208699dc67/1d113ebcea7cfaa9ae13e9a8919ccd4645703a1ebbfa49d4abdd87db11ecf080/bd65291cf4200c47940c5576906337aa078156c861edfd6fae7242d698d59b00.jpeg" alt="" class="indies-viewer-horizontal-img jsNext" style="display:none;">
+		
+			</div></li>
+		
+
+	
+		
+			<li class="indies-viewer-list"><div class="indies-viewer-img-wrapper">
+		
+			
+			<img src="https://img-indies-a.mangabox.me/static/content/indies/images/manga/fb14a75858571e5bd2db2d7cb2d0756fd6f0cd8cd42dfd37d21efd208699dc67/1d113ebcea7cfaa9ae13e9a8919ccd4645703a1ebbfa49d4abdd87db11ecf080/16a30c68e5afe4a15ad8dcc5abcabb4d6338d3648571f78a7700d4a38e64af1b.jpeg" alt="" class="indies-viewer-horizontal-img jsNext" style="display:none;">
+		
+
+	
+		
+			
+			<img src="https://img-indies-a.mangabox.me/static/content/indies/images/manga/fb14a75858571e5bd2db2d7cb2d0756fd6f0cd8cd42dfd37d21efd208699dc67/1d113ebcea7cfaa9ae13e9a8919ccd4645703a1ebbfa49d4abdd87db11ecf080/5c558b26b984deee834d6750327f1f86391e62851f2e7f481518fb64ed4ecf14.jpeg" alt="" class="indies-viewer-horizontal-img jsNext" style="display:none;">
+		
+			</div></li>
+		
+
+	
+		
+			<li class="indies-viewer-list"><div class="indies-viewer-img-wrapper">
+		
+			
+			<img src="https://img-indies-a.mangabox.me/static/content/indies/images/manga/fb14a75858571e5bd2db2d7cb2d0756fd6f0cd8cd42dfd37d21efd208699dc67/1d113ebcea7cfaa9ae13e9a8919ccd4645703a1ebbfa49d4abdd87db11ecf080/653fe7b2b018da7f11710a9cb8fa586cb5c9fae72eb1e29fb7eb98b29dc38440.jpeg" alt="" class="indies-viewer-horizontal-img jsNext" style="display:none;">
+		
+
+	
+		
+			
+			<img src="https://img-indies-a.mangabox.me/static/content/indies/images/manga/fb14a75858571e5bd2db2d7cb2d0756fd6f0cd8cd42dfd37d21efd208699dc67/1d113ebcea7cfaa9ae13e9a8919ccd4645703a1ebbfa49d4abdd87db11ecf080/eb9936a8f8fd7c15cb0874388ae0b6ae79c9347bc67409465dafae28d75c4d3e.jpeg" alt="" class="indies-viewer-horizontal-img jsNext" style="display:none;">
+		
+			</div></li>
+		
+
+	
+		
+			<li class="indies-viewer-list"><div class="indies-viewer-img-wrapper">
+		
+			
+			<img src="https://img-indies-a.mangabox.me/static/content/indies/images/manga/fb14a75858571e5bd2db2d7cb2d0756fd6f0cd8cd42dfd37d21efd208699dc67/1d113ebcea7cfaa9ae13e9a8919ccd4645703a1ebbfa49d4abdd87db11ecf080/1d31f184503929084fc671b085d1f7ef849f8917009359c43075ecd354a0549d.jpeg" alt="" class="indies-viewer-horizontal-img jsNext" style="display:none;">
+		
+
+	
+		
+			
+			<img src="https://img-indies-a.mangabox.me/static/content/indies/images/manga/fb14a75858571e5bd2db2d7cb2d0756fd6f0cd8cd42dfd37d21efd208699dc67/1d113ebcea7cfaa9ae13e9a8919ccd4645703a1ebbfa49d4abdd87db11ecf080/51b35bf1663a2ed6d04521fea3ec38ac2495894afdc7a3ee36b0fcc064e4f6bd.jpeg" alt="" class="indies-viewer-horizontal-img jsNext" style="display:none;">
+		
+			</div></li>
+		
+
+	
+		
+			<li class="indies-viewer-list"><div class="indies-viewer-img-wrapper">
+		
+			
+			<img src="https://img-indies-a.mangabox.me/static/content/indies/images/manga/fb14a75858571e5bd2db2d7cb2d0756fd6f0cd8cd42dfd37d21efd208699dc67/1d113ebcea7cfaa9ae13e9a8919ccd4645703a1ebbfa49d4abdd87db11ecf080/bd1b33084d99b9ee529d71ca775a1684bb3d329426f9e2b1d1a9dc17602c4f2f.jpeg" alt="" class="indies-viewer-horizontal-img jsNext" style="display:none;">
+		
+
+	
+		
+			
+			<img src="https://img-indies-a.mangabox.me/static/content/indies/images/manga/fb14a75858571e5bd2db2d7cb2d0756fd6f0cd8cd42dfd37d21efd208699dc67/1d113ebcea7cfaa9ae13e9a8919ccd4645703a1ebbfa49d4abdd87db11ecf080/e046686235721f242385c73e998e7a29d3e76fdb37ffd7905b179c40c7a4d2c3.jpeg" alt="" class="indies-viewer-horizontal-img jsNext" style="display:none;">
+		
+			</div></li>
+		
+
+	
+		
+			<li class="indies-viewer-list"><div class="indies-viewer-img-wrapper">
+		
+			
+			<img src="https://img-indies-a.mangabox.me/static/content/indies/images/manga/fb14a75858571e5bd2db2d7cb2d0756fd6f0cd8cd42dfd37d21efd208699dc67/1d113ebcea7cfaa9ae13e9a8919ccd4645703a1ebbfa49d4abdd87db11ecf080/905158daf89de248fb59cdc95c5c2cb477c8e41410ca31a22900907c8e7e12e8.jpeg" alt="" class="indies-viewer-horizontal-img jsNext" style="display:none;">
+		
+
+	
+		
+			
+			<img src="https://img-indies-a.mangabox.me/static/content/indies/images/manga/fb14a75858571e5bd2db2d7cb2d0756fd6f0cd8cd42dfd37d21efd208699dc67/1d113ebcea7cfaa9ae13e9a8919ccd4645703a1ebbfa49d4abdd87db11ecf080/571457b76953edf95d3a29b2a781e1ee00953a25f956b4ed9e791413c9f6697c.jpeg" alt="" class="indies-viewer-horizontal-img jsNext" style="display:none;">
+		
+			</div></li>
+		
+
+	
+		
+			<li class="indies-viewer-list"><div class="indies-viewer-img-wrapper">
+		
+			
+			<img src="https://img-indies-a.mangabox.me/static/content/indies/images/manga/fb14a75858571e5bd2db2d7cb2d0756fd6f0cd8cd42dfd37d21efd208699dc67/1d113ebcea7cfaa9ae13e9a8919ccd4645703a1ebbfa49d4abdd87db11ecf080/777c070d01835b3c150db74949c363c48bf5cb6c3ec33bce63ddb909c3adcbbe.jpeg" alt="" class="indies-viewer-horizontal-img jsNext" style="display:none;">
+		
+
+	
+		
+			
+			<img src="https://img-indies-a.mangabox.me/static/content/indies/images/manga/fb14a75858571e5bd2db2d7cb2d0756fd6f0cd8cd42dfd37d21efd208699dc67/1d113ebcea7cfaa9ae13e9a8919ccd4645703a1ebbfa49d4abdd87db11ecf080/e67f125be4543adb8bd24a42b677862d49bd74035468f3b08718093813339329.jpeg" alt="" class="indies-viewer-horizontal-img jsNext" style="display:none;">
+		
+			</div></li>
+		
+
+	
+		
+			<li class="indies-viewer-list"><div class="indies-viewer-img-wrapper">
+		
+			
+			<img src="https://img-indies-a.mangabox.me/static/content/indies/images/manga/fb14a75858571e5bd2db2d7cb2d0756fd6f0cd8cd42dfd37d21efd208699dc67/1d113ebcea7cfaa9ae13e9a8919ccd4645703a1ebbfa49d4abdd87db11ecf080/1c69e8715fc16887e234e8ace1fadff45339051a6a4e04efe4eb081d69b0a192.jpeg" alt="" class="indies-viewer-horizontal-img jsNext" style="display:none;">
+		
+
+	
+		
+			
+			<img src="https://img-indies-a.mangabox.me/static/content/indies/images/manga/fb14a75858571e5bd2db2d7cb2d0756fd6f0cd8cd42dfd37d21efd208699dc67/1d113ebcea7cfaa9ae13e9a8919ccd4645703a1ebbfa49d4abdd87db11ecf080/0cdd7e30b25be77fd98ffdcdce5829f9625406f5c38f4e82038c5ac83bc68c97.jpeg" alt="" class="indies-viewer-horizontal-img jsNext" style="display:none;">
+		
+			</div></li>
+		
+
+	
+		
+			<li class="indies-viewer-list"><div class="indies-viewer-img-wrapper">
+		
+			
+			<img src="https://img-indies-a.mangabox.me/static/content/indies/images/manga/fb14a75858571e5bd2db2d7cb2d0756fd6f0cd8cd42dfd37d21efd208699dc67/1d113ebcea7cfaa9ae13e9a8919ccd4645703a1ebbfa49d4abdd87db11ecf080/f598f33976d2ef6f54371cf07c02ea04de8ea2c80f1c5ec1a4edb4323e52b756.jpeg" alt="" class="indies-viewer-horizontal-img jsNext" style="display:none;">
+		
+
+	
+		
+			
+			<img src="https://img-indies-a.mangabox.me/static/content/indies/images/manga/fb14a75858571e5bd2db2d7cb2d0756fd6f0cd8cd42dfd37d21efd208699dc67/1d113ebcea7cfaa9ae13e9a8919ccd4645703a1ebbfa49d4abdd87db11ecf080/ea42ec1b851631bd66ea482996cf1ddc740210694212f1f5d27b17c63662893d.jpeg" alt="" class="indies-viewer-horizontal-img jsNext" style="display:none;">
+		
+			</div></li>
+		
+
+	
+		
+			<li class="indies-viewer-list"><div class="indies-viewer-img-wrapper">
+		
+			
+			<img src="https://img-indies-a.mangabox.me/static/content/indies/images/manga/fb14a75858571e5bd2db2d7cb2d0756fd6f0cd8cd42dfd37d21efd208699dc67/1d113ebcea7cfaa9ae13e9a8919ccd4645703a1ebbfa49d4abdd87db11ecf080/9d915b5f8cddfbb79a2c43f12cb2d419f7dc2c2643fd3d0a900c0e53d8156de6.jpeg" alt="" class="indies-viewer-horizontal-img jsNext" style="display:none;">
+		
+
+	
+		
+			
+			<img src="https://img-indies-a.mangabox.me/static/content/indies/images/manga/fb14a75858571e5bd2db2d7cb2d0756fd6f0cd8cd42dfd37d21efd208699dc67/1d113ebcea7cfaa9ae13e9a8919ccd4645703a1ebbfa49d4abdd87db11ecf080/2291350336ed5042e206d39580a46c2a740db2f6028f19cd8ea2940e9b46378f.jpeg" alt="" class="indies-viewer-horizontal-img jsNext" style="display:none;">
+		
+			</div></li>
+		
+
+	
+		
+			<li class="indies-viewer-list"><div class="indies-viewer-img-wrapper">
+		
+			
+			<img src="https://img-indies-a.mangabox.me/static/content/indies/images/manga/fb14a75858571e5bd2db2d7cb2d0756fd6f0cd8cd42dfd37d21efd208699dc67/1d113ebcea7cfaa9ae13e9a8919ccd4645703a1ebbfa49d4abdd87db11ecf080/7476772c4b30ef1ddd228b1fb3749609a87de1e434cfd0a105cd870e58ff5647.jpeg" alt="" class="indies-viewer-horizontal-img jsNext" style="display:none;">
+		
+
+	
+		
+			
+			<img src="https://img-indies-a.mangabox.me/static/content/indies/images/manga/fb14a75858571e5bd2db2d7cb2d0756fd6f0cd8cd42dfd37d21efd208699dc67/1d113ebcea7cfaa9ae13e9a8919ccd4645703a1ebbfa49d4abdd87db11ecf080/3c5dcfed604d8fd28b1a8d880da3fe74e470c64b04db1ada54c9fb4f2bebb0e4.jpeg" alt="" class="indies-viewer-horizontal-img jsNext" style="display:none;">
+		
+			</div></li>
+		
+
+	
+		<li class="indies-viewer-list">
+<div id="viewer-horizontal-last-slide-wrapper" style="display:none;">
+	<div id="viewer-horizontal-last-slide-container">
+		
+		<img src="https://img-indies-a.mangabox.me/static/content/indies/images/manga/fb14a75858571e5bd2db2d7cb2d0756fd6f0cd8cd42dfd37d21efd208699dc67/3ec11af3af48335dc345d77cf34fb2d63b4dd44e1b25068961c85eb635dd2296.jpeg" width="190" height="190" id="viewer-horizontal-last-slide-img">
+		<div id="viewer-horizontal-last-slide-title">倚天の空(週２更新)　第1話</div>
+		<div id="viewer-horizontal-last-slide-end">おわり</div>
+	</div>
+	
+</div>
+</li>
+	</ul>
+	</div>
+	</section>
+
+
+
+
+
+	<section id="js-tutorial-viewer-horizontal" class="custombox-nomal-container custombox-tutorial-horizontal-container" style="display:none;">
+	<h1 class="custombox-tutorial-horizontal-header">この漫画は<span class="custombox-tutorial-horizontal-header-highlight">横読み</span>です</h1>
+	<div class="custombox-tutorial-horizontal-text">画面左右の矢印をクリックか<br>左右のカーソルで読み進めてください</div>
+	<div id="custombox-tutorial-horizontal-mouse"></div>
+	<a class="custombox-tutorial-horizontal-button" onclick="$.fn.custombox('close');">OK!</a>
+</section>
+<script src="https://image-a.mangabox.me/static/assets/js/indies/jquery.cookie.min.js?t=1405671098"></script>
+<script>
+$(function() {
+	$(window).load(function () {
+		var tutorial_viewer_horizontal = $.cookie("tutorial_viewer_horizontal") || '';
+		if(!tutorial_viewer_horizontal){
+			$.fn.custombox({
+				url: '#js-tutorial-viewer-horizontal'
+			});
+		}
+		$.cookie("tutorial_viewer_horizontal", "1", { path: '/',expires: 365 });
+
+	});
+	
+});
+</script>
+
+
+<footer id="indies-footer-wrapper">
+
+
+
+
+	<div id="indies-footer-author-info">
+		<span id="indies-footer-author-info-inner">
+			<span class="indies-footer-author"><img src="https://img-indies-a.mangabox.me/static/content/indies/images/author/3125028826/3206933170.png" width="36" height="36" class="indies-footer-author-img">たぬキつネこ</span>
+
+		    <span class="indies-footer-read-count">125161</span>
+		    <span class="indies-footer-favorites-count">5874</span>
+		    
+		    
+		</span>
+	</div>
+
+
+<script>
+jQuery(function($) {
+    $('.indies-footer-comment-link').on('click', function(){
+        $.fn.custombox({url: '/episode/9529/comment/' });
+    });
+});
+</script>
+
+
+
+	<a href="https://play.google.com/store/apps/details?id=com.dena.mj" class="indies-footer-download-android">Google play</a>
+	<a href="https://itunes.apple.com/jp/app/manga-box./id633864753?l=ja&amp;ls=1&amp;mt=8" class="indies-footer-download-ios">App Storeからダウンロード</a>
+
+
+
+	<div id="indies-footer-control-direction">
+		<div class="indies-footer-control-pager">
+			<span id="js-page-current" class="indies-footer-control-current"></span> / <span id="js-count-page"></span>
+			ページ
+		</div>
+	</div>
+
+
+
+</footer>
+
+<script>
+
+var custombox_open_done=false;
+var custombox_open = {custombox_episode_list: function(){$.fn.custombox({url: '/manga/1688/',get_param :"current_volume=1",complete: function () {
+	custombox_open_done=true;
+}}); }};
+var custombox_close = {custombox_episode_list_close: function(){$.fn.custombox('close'); }};
+
+
+
+</script>
+
+
+<script src="https://image-a.mangabox.me/static/assets/js/jquery.flexslider-min.js?t=1384233819"></script>
+<script src="https://image-a.mangabox.me/static/assets/js/indies/web_reader_pc.min.js?t=1406088592"></script>
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46141432-5', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

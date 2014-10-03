@@ -1,0 +1,156 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml" id="adfly_html" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VwYPVFZQGwEDUFVbAwQ="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,o){t&&t(e,n,o),o||(o={});for(var a=i(e),s=a.length,c=o[r]||(o[r]={}),f=0;s>f;f++)a[f].apply(c,n);return c}function o(t,e){s[t]=i(t).concat(e)}function i(t){return s[t]||[]}function a(){return n(e)}var s={};return{on:o,emit:e,create:a,listeners:i,_events:s}}var r="nr@context";e.exports=n()},{}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(4),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(f){"stack"in f&&(t(5),t(3),"addEventListener"in window&&t(1),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(2),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:4,2:7,3:5,4:15,5:6,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o);if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var a=document;a&&!a.hasOwnProperty("addEventListener");)a=Object.getPrototypeOf(a);a&&n(a);for(var s=XMLHttpRequest.prototype;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=e["nr@wrapped"]?t[1]=e["nr@wrapped"]:e["nr@wrapped"]=t[1]=i(e,"fn-",null,e.name||"anonymous"):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:15,2:16,ee:"QJf3ax"}],5:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:16,2:15,ee:"QJf3ax"}],6:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:16,2:15,ee:"QJf3ax"}],7:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),f=s(a),u=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new u(t);try{i.emit("new-xhr",[],e),f.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",r)}catch(o){}}return e},window.XMLHttpRequest.prototype=u.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:4,2:16,ee:"QJf3ax"}],8:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=e(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(1),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(2);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=e(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",e)}catch(r){}}};for(var u=0;c>u;u++)n.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:9,2:12,3:7,4:4,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],9:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],12:[function(t,e){function n(t){if(!t||"object"!=typeof t&&"function"!=typeof t)return-1;if(t===window)return 0;if(o.call(t,"__nr"))return t.__nr;try{return Object.defineProperty(t,"__nr",{value:r,writable:!0,enumerable:!1}),r}catch(e){return t.__nr=r,r}finally{r+=1}}var r=1,o=Object.prototype.hasOwnProperty;e.exports=n},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){p.proto="https"===d.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=p.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,c=s.document,f="addEventListener",u="attachEvent",d=(""+location).split("?")[0],p=e.exports={offset:i(),origin:d,features:{}};c[f]?(c[f]("DOMContentLoaded",o,!1),s[f]("load",n,!1)):(c[u]("onreadystatechange",r),s[u]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],15:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],16:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper";e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,f,u;try{i=this,n=o(arguments),f=r&&r(n,i)||{}}catch(d){c([d,"",[n,i,a],f])}s(e+"start",[n,i,a],f);try{return u=t.apply(i,n)}catch(p){throw s(e+"err",[n,i,p],f),p}finally{s(e+"end",[n,i,u],f)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,nrWrapper)}function a(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s,t))}function s(e,n,r){try{t.emit(e,n,r)}catch(o){c([o,e,n,r])}}function c(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=a,e.flag=i,e}},{1:15,ee:"QJf3ax"}]},{},["G9z0Bl",3,8]);</script>
+<meta property="fb:app_id" content="399141353502152"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="http://"/>
+<meta property="og:title" content=""/>
+<meta property="og:image" content="https://fbcdn-photos-a.akamaihd.net/photos-ak-snc7/v43/18/130851780416550/app_115_130851780416550_2014650105.png"/>
+<noscript>
+<meta http-equiv="refresh" content="0; url=/noscript.php?t=js">
+</noscript>
+<link rel="apple-touch-icon" href="http://static.adf.ly/static/image/apple-touch-icon.png"/>
+<style id="antiClickjack">body{display:none!important;}</style>
+<script type="text/javascript">
+           var frame_check = false;
+           if (self === top) {
+               var antiClickjack = document.getElementById("antiClickjack");
+               antiClickjack.parentNode.removeChild(antiClickjack);
+               frame_check = true;
+           } else {
+               top.location = self.location;
+               document.write('<!--');
+               window.onload = function() { document.write('AdF.ly - Security Error. If you see this message please contact the owner of the website and inform them that AdF.ly links cannot be placed in a frame.'); }               
+           }
+        </script>
+<meta http-equiv="cache-control" content="max-age=0"/>
+<meta http-equiv="cache-control" content="no-cache"/>
+<meta http-equiv="expires" content="0"/>
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"/>
+<meta http-equiv="pragma" content="no-cache"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://static.adf.ly/static/js/jquery-1.7.1.min.js">\x3C/script>');</script>
+<title>AdF.ly - shrink your URLs and get paid!</title>
+<meta name="title" content=""/>
+<link rel="icon" href="http://adf.ly/static/image/favicon.ico" type="image/ico"/>
+<link rel="shortcut icon" href="http://adf.ly/static/image/favicon.ico"/>
+<link rel="stylesheet" type="text/css" href="http://static.adf.ly/static/css/adfly_4.css"/>
+<script type="text/javascript">
+                            </script>
+<script type="text/javascript">
+                var at = 1;
+                var log_token = '09e0313ceb608b41be40c3041017f21c';
+                var log_hash = 'ef17ca7a52f70600f36272596e56be3f';
+                var waitmsg = 'seconds';
+                var zzz = 'http://adf.ly/skip.php';
+                var ysmm = 'M=D8lCobdtHRRHwaOuiU8mvbdp3xdm3bLvm1RChZalWtxW5YblWxFWpLbuCF5WjaboyN5X1YakyJ9X0Ydrn1NSobbp3tdWiLazXVo2vZYhX1JW0aatWUNGsZZ1S50WyLNhzxYW0LMzzRgX4ZLq21Ryvcb1i91W0aLyWV1nlZbtnMR3pabv294GtbctGQh3vcdlGd9XzLLlWltnhb';
+                var easyUrl = 'true';
+                var smk = 'MjDFljlMMmDdMTxMMw2ENDlNZwmMIz2YMwDQhTiZNiDF';
+                var uid = '4061766';
+                if(easyUrl){
+                    var eu = 'M=D8lCobdtHRRHwaOuiU8mvbdp3xdm3bLvm1RChZalWtxW5YblWxFWpLbuCF5WjaboyN5X1YakyJ9X0Ydrn1NSobbp3tdWiLazXVo2vZYhX1JW0aatWUNGsZZ1S50WyLNhzxYW0LMzzRgX4ZLq21Ryvcb1i91W0aLyWV1nlZbtnMR3pabv294GtbctGQh3vcdlGd9XzLLlWltnhb';
+                }else{
+                    var eu = 'false';
+                }
+                var abb = '0';
+
+
+                                var d = 350561
+            </script>
+<script src="http://static.adf.ly/static/js/b64.js"></script>
+<script src="http://static.adf.ly/static/js/view40.js"></script>
+</head>
+<body id='home'>
+<script type="text/javascript">
+					var _gaq = _gaq || [];
+					_gaq.push(['_setAccount', 'UA-6469700-9']);
+                    _gaq.push(['_setSampleRate','0.5']);
+					_gaq.push(['_setCustomVar', 1, 'User', '4061766', 3]);
+					
+					_gaq.push(['_trackPageview']);
+
+					
+					(function() {
+						var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+						ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+						(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+					})();
+
+                    //Analytics tracking code
+                    setTimeout(function(){goal();},5000);
+                    function goal(){
+                        try{
+                            var iframe = document.getElementById('rf');
+                            var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+                            var iframe2 = innerDoc.getElementById('rf2').src;
+                        }catch(err){
+                            //Nothing
+                        }
+
+                        if(iframe2 == undefined){
+                            _gaq.push(['_trackEvent', 'Ad', 'Paid', 'Success', 3]);
+                        }else{
+                            if(iframe2.indexOf('adf.ly') == -1){
+                                _gaq.push(['_trackEvent', 'Ad', 'Paid', 'Success', 1]);
+                            }else{
+                                _gaq.push(['_trackEvent', 'Ad', 'Paid', 'Success', 0]);
+                            }
+                        }
+                    }
+				</script>
+<img src='http://static.adf.ly/static/image/logo_fb2.png' border='0' alt='logo' style='display:none;'/>
+<div id="Interstitual" style="background-color: #FFFFFF; z-index:9999; position: absolute; width: 100%; height: 100%;">
+<table cellpadding="0" cellspacing="0" height="100%" width="100%">
+<tr height="1%">
+<td style="top:0;width:100%">
+<div id="sitebar">
+<div id="top" style="width: 100%;">
+<span style="float: left; width:20%;">
+<a href="http://adf.ly/?id=4061766" target="_blank">
+<img id="bee" border=0 src="http://static.adf.ly/static/image/ahl6532.gif"/>
+</a>
+</span>
+<div style="display:inline-block; text-align: center; padding-top: 20px; height: 20px; width:60%; color: #FFFFFF; letter-spacing:2px">
+<a href="#" id="opera_retry" style="color: yellow;float: right;letter-spacing: 0;display:none;" onclick="javascript:return true;">OPERA MINI USERS CLICK HERE UNTIL SKIP ADD APPEARS!</a>
+</div>
+<span style="float: right; padding-right: 20px; padding-top: 9px; width:20%;">
+<div style="position:absolute; text-align: center; width: 200px; height: 30px; top: 10px; right:0px; color:#ffffff; font-weight: bold; font-size: 16px; class="please_wait" id="please_wait">
+                                                Please Wait..<br />
+                                                <span id="countdown">&nbsp;</span>
+                                            </div>
+											<a style="position:absolute; display: none; width: 300px; text-align: right; height: 30px; top: 10px; right:20px; color:#ffffff; font-weight: bold; font-size: 16px;" id="skip_button" style="cursor:pointer; display:none;" target="_top">
+                                                <img src="http://static.adf.ly/static/image/skip_ad/en_tran.png" alt="Skip Ad" height="39" id="skip_ad_button" />
+                                            </a>
+										</span>
+                                        <script>
+                                            $('#please_wait').css({ 'color': '#' });
+                                        </script>
+									</div>
+                                <div id="bottomAd" style="font-size: 2px; background: url('http://static.adf.ly/static/image/d_top_bg.png') repeat-x blue">&nbsp;</div>
+                                    <div id="bottom">
+										<span style="float: left; padding-left: 20px; margin-top: 4px;">
+											<a href="http://adf.ly/?id=4061766" target="_blank">AdF.ly</a> : shorten urls and earn money										</span>
+
+
+										<span style="float: right; padding-right: 28px; margin-top: 2px;">
+                                            <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fx19ltd.adfly&amp;width=150&amp;fb_source=unshorten&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=21&amp;appId=399141353502152" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:135px; height:21px;" allowTransparency="true"></iframe>
+										</span>
+                                        <span style="float: right; padding-right: 20px; margin-top: 5px;">
+                                            <a href="http://adf.ly/advertiser/advertising" target="_blank">Your Site Here: 10,000 visitors / $5.00</a>
+                                        </span>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+
+							</td>
+						</tr>
+					</table>
+                    <p style="display: none;" id="fbm">You are about to be redirected.
+
+In order to reach your destination link, please click to stay on the page and then click our Skip Ad button.</p>
+				</div>
+			<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-3.newrelic.com","licenseKey":"92a411bc23","applicationID":"2344945,2334836","transactionName":"YlNSbUYAV0IFBhdaWVsZc0xHFVZcSwQHcFlbQkJWWA1cQ0sAAkBPeV9eUg==","queueTime":0,"applicationTime":20,"ttGuid":"","agentToken":"","atts":"ThRRGw4aREw=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-460.min.js"}</script></body>
+		</html>

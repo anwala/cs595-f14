@@ -1,0 +1,14 @@
+Nwala_Assignment2_Report.pdf: contains methodology
+
+	Assignment2.py: retrieves over 1000 urls in tweets from twitter, writes to linksFile.txt
+
+	makeUniqueLines.py: preprocessed linksFile.txt, remove duplicates, adds / at the end, writes to uniqueLines_rawLinks.txt
+
+	countMementos.py: reads uniqueLinksForCountingMementos.txt and writes mementos count for each entry into uniqueLinksMementosCount.txt
+
+	URI-MEM-DATE-AGE.txt: contains tuples of form <URI, MementoCount, EstimatedCreationDate, Age>
+
+	AGE-MEMENTOCOUNT.txt: contains tuples of form <Age, MementoCount>
+
+
+

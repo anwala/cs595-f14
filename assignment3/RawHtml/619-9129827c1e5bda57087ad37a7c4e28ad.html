@@ -1,0 +1,1011 @@
+<html>
+<head>
+
+<script type="text/javascript" src="/static/js/analytics.js" ></script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+<!-- Start Wayback Rewrite JS Include -->
+
+<script type="text/javascript" src="/static/js/jwplayer/jwplayer.js" ></script>
+<script type="text/javascript" src="/static/js/video-embed-rewriter.js"></script>
+<script type="text/javascript">
+function initYTVideo(id)
+{
+	_wmVideos_.init("/web/", id);
+}
+</script>
+<!-- End Wayback Rewrite JS Include -->
+
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>YouTube - Broadcast Yourself.</title>
+		
+		<script language="javascript" type="text/javascript">
+		onLoadFunctionList = new Array();
+		function performOnLoadFunctions()
+		{
+			for (var i in onLoadFunctionList)
+			{
+				onLoadFunctionList[i]();
+			}
+		}
+		</script>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/web/20050815011340im_/http://www.youtube.com/favicon.ico" type="image/x-icon">
+<link href="/web/20050815011340cs_/http://www.youtube.com/styles.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="YouTube "" Recently Added Videos [RSS]" href="http://www.youtube.com/rss/global/recently_added.rss">
+</head>
+
+
+<body onLoad="performOnLoadFunctions();">
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script> if (window.archive_analytics) { window.archive_analytics.values['server_name']="wwwb-app1.us.archive.org";}; </script>
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1420070399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/www.youtube.com\/";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 475;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "15";
+var displayMonth = "Aug";
+var displayYear = "2005";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" lang="en" class="__wb_banner_div" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px">
+
+
+<div id="wm-ipp-inside" class="__wb_banner_div" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://www.youtube.com/" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20050815011340" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;width: inherit !important" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20050714000327/http://www.youtube.com/" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="14 Jul 2005"><strong>JUL</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 1:13:40 Aug 15, 2005">AUG</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20050923173727/http://youtube.com/" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="23 Sep 2005"><strong>SEP</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20050814001648/http://www.youtube.com/" title="0:16:48 Aug 14, 2005" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 1:13:40 Aug 15, 2005">15</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20050819125629/http://www.youtube.com/" title="12:56:29 Aug 19, 2005" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2004
+                       
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 1:13:40 Aug 15, 2005">2005</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20060815021301/http://www.youtube.com/" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Aug 2006"><strong>2006</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20050815011340*/http://www.youtube.com/" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>33,619 captures</strong></a>
+           <div class="__wb_banner_div" style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">28 Apr 05 - 30 Sep 14</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:475px;height:27px;" href="" id="wm-graph-anchor">
+       <div class="__wb_banner_div" id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:475px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="475"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=475_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:7:000135675678_2006:-1:975844674566_2007:-1:567677567775_2008:-1:555686656678_2009:-1:888879876777_2010:-1:898787898899_2011:-1:aaaaaaaa9acc_2012:-1:dddcdccdccdd_2013:-1:edeeeeddddee_2014:-1:eeeeeeefe000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<table width="800" cellpadding="0" cellspacing="0" border="0" align="center">
+	<tr>
+		<td bgcolor="#FFFFFF" style="padding-bottom: 25px;">
+		
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr valign="top">
+		<td width="130" rowspan="2" style="padding: 0px 5px 5px 5px;"><a href="/web/20050815011340/http://www.youtube.com/index.php"><img src="/web/20050815011340im_/http://www.youtube.com/img/logo_sm.gif" width="120" height="48" alt="YouTube" border="0" style="vertical-align: middle; "></a></td>
+		<td valign="top">
+		
+		<table width="670" cellpadding="0" cellspacing="0" border="0">
+			<tr valign="top">
+				<td style="padding: 0px 5px 0px 5px; font-style: italic;">Upload, tag and share your videos worldwide!</td>
+				<td align="right">
+				
+				<table cellpadding="0" cellspacing="0" border="0">
+					<tr>
+		
+							
+						<td><a href="/web/20050815011340/http://www.youtube.com/signup.php"><strong>Sign Up</strong></a></td>
+						<td style="padding: 0px 5px 0px 5px;">|</td>
+						<td><a href="/web/20050815011340/http://www.youtube.com/login.php">Log In</a></td>
+						<td style="padding: 0px 5px 0px 5px;">|</td>
+						<td style="padding-right: 5px;"><a href="/web/20050815011340/http://www.youtube.com/help.php">Help</a></td>
+		
+										
+					</tr>
+				</table>
+				
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	<tr valign="bottom">
+		<td>
+		
+		<table cellpadding="0" cellspacing="0" border="0">
+			<tr>
+				<td>
+				<table style=" background-color: #DDDDDD; margin: 5px 2px 0px 5px; border-bottom: 1px solid #DDDDDD; " cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td><img src="/web/20050815011340im_/http://www.youtube.com/img/box_login_tl.gif" width="5" height="5"></td>
+						<td><img src="/web/20050815011340im_/http://www.youtube.com/img/pixel.gif" width="1" height="5"></td>
+						<td><img src="/web/20050815011340im_/http://www.youtube.com/img/box_login_tr.gif" width="5" height="5"></td>
+					</tr>
+					<tr>
+						<td><img src="/web/20050815011340im_/http://www.youtube.com/img/pixel.gif" width="5" height="1"></td>
+						<td style="padding: 0px 20px 5px 20px; font-size: 13px; font-weight: bold;"><a href="/web/20050815011340/http://www.youtube.com/index.php">Home</a></td>
+						<td><img src="/web/20050815011340im_/http://www.youtube.com/img/pixel.gif" width="5" height="1"></td>
+					</tr>
+				</table>
+				</td>
+				<td>
+				<table style=" background-color: #BECEEE; margin: 5px 2px 1px 0px; " cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td><img src="/web/20050815011340im_/http://www.youtube.com/img/box_login_tl.gif" width="5" height="5"></td>
+						<td><img src="/web/20050815011340im_/http://www.youtube.com/img/pixel.gif" width="1" height="5"></td>
+						<td><img src="/web/20050815011340im_/http://www.youtube.com/img/box_login_tr.gif" width="5" height="5"></td>
+					</tr>
+					<tr>
+						<td><img src="/web/20050815011340im_/http://www.youtube.com/img/pixel.gif" width="5" height="1"></td>
+						<td style="padding: 0px 20px 5px 20px; font-size: 13px; font-weight: bold;"><a href="/web/20050815011340/http://www.youtube.com/browse.php" >Watch&nbsp;Videos</a></td>
+						<td><img src="/web/20050815011340im_/http://www.youtube.com/img/pixel.gif" width="5" height="1"></td>
+					</tr>
+				</table>
+				</td>
+				<td>
+				<table style=" background-color: #BECEEE; margin: 5px 2px 1px 0px; " cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td><img src="/web/20050815011340im_/http://www.youtube.com/img/box_login_tl.gif" width="5" height="5"></td>
+						<td><img src="/web/20050815011340im_/http://www.youtube.com/img/pixel.gif" width="1" height="5"></td>
+						<td><img src="/web/20050815011340im_/http://www.youtube.com/img/box_login_tr.gif" width="5" height="5"></td>
+					</tr>
+					<tr>
+						<td><img src="/web/20050815011340im_/http://www.youtube.com/img/pixel.gif" width="5" height="1"></td>
+						<td style="padding: 0px 20px 5px 20px; font-size: 13px; font-weight: bold;"><a href="/web/20050815011340/http://www.youtube.com/my_videos_upload.php">Upload&nbsp;Videos</a></td>
+						<td><img src="/web/20050815011340im_/http://www.youtube.com/img/pixel.gif" width="5" height="1"></td>
+					</tr>
+				</table>
+				</td>
+				<td>
+				<table style=" background-color: #BECEEE; margin: 5px 2px 1px 0px; " cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td><img src="/web/20050815011340im_/http://www.youtube.com/img/box_login_tl.gif" width="5" height="5"></td>
+						<td><img src="/web/20050815011340im_/http://www.youtube.com/img/pixel.gif" width="1" height="5"></td>
+						<td><img src="/web/20050815011340im_/http://www.youtube.com/img/box_login_tr.gif" width="5" height="5"></td>
+					</tr>
+					<tr>
+						<td><img src="/web/20050815011340im_/http://www.youtube.com/img/pixel.gif" width="5" height="1"></td>
+						<td style="padding: 0px 20px 5px 20px; font-size: 13px; font-weight: bold;"><a href="/web/20050815011340/http://www.youtube.com/my_friends_invite.php">Invite&nbsp;Friends</a></td>
+						<td><img src="/web/20050815011340im_/http://www.youtube.com/img/pixel.gif" width="5" height="1"></td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	
+</table>
+
+<table align="center" width="800" bgcolor="#DDDDDD" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 10px;">
+	<tr>
+		<td><img src="/web/20050815011340im_/http://www.youtube.com/img/box_login_tl.gif" width="5" height="5"></td>
+		<td><img src="/web/20050815011340im_/http://www.youtube.com/img/pixel.gif" width="1" height="5"></td>
+		<td><img src="/web/20050815011340im_/http://www.youtube.com/img/box_login_tr.gif" width="5" height="5"></td>
+	</tr>
+	<tr>
+		<td><img src="/web/20050815011340im_/http://www.youtube.com/img/pixel.gif" width="5" height="1"></td>
+		<td width="790" align="center" style="padding: 2px;">
+
+		<table cellpadding="0" cellspacing="0" border="0">
+			<tr>
+				<td style="font-size: 10px;">&nbsp;</td>
+				
+								
+				<td style="  "><a href="/web/20050815011340/http://www.youtube.com/my_videos.php">My Videos</a></td>
+				<td style="padding: 0px 10px 0px 10px;">|</td>
+				<td style="  "><a href="/web/20050815011340/http://www.youtube.com/my_favorites.php">My Favorites</a></td>
+				<td style="padding: 0px 10px 0px 10px;">|</td>
+				<td style="  "><a href="/web/20050815011340/http://www.youtube.com/my_friends.php">My Friends</a></td>
+				<!-- <td>&nbsp;|&nbsp;</td>
+				<td style="  "><a href="my_groups.php">My Groups</a></td> -->
+				<td style="padding: 0px 10px 0px 10px;">|</td>
+				<td style="  "><a href="/web/20050815011340/http://www.youtube.com/my_messages.php">My Messages</a></td>
+				<td style="padding: 0px 10px 0px 10px;">|</td>
+				<td style="  "><a href="/web/20050815011340/http://www.youtube.com/my_profile.php">My Profile</a></td>
+				
+								
+								
+								
+				<td style="font-size: 10px;">&nbsp;</td>
+			</tr>
+		</table>
+			
+		</td>
+		<td><img src="/web/20050815011340im_/http://www.youtube.com/img/pixel.gif" width="5" height="1"></td>
+	</tr>
+	<tr>
+		<td style="border-bottom: 1px solid #FFFFFF"><img src="/web/20050815011340im_/http://www.youtube.com/img/box_login_bl.gif" width="5" height="5"></td>
+		<td style="border-bottom: 1px solid #BBBBBB"><img src="/web/20050815011340im_/http://www.youtube.com/img/pixel.gif" width="1" height="5"></td>
+		<td style="border-bottom: 1px solid #FFFFFF"><img src="/web/20050815011340im_/http://www.youtube.com/img/box_login_br.gif" width="5" height="5"></td>
+	</tr>
+</table>
+
+<div style="padding: 0px 5px 0px 5px;">
+
+<table align="center" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 10px;">
+	<tr>
+		<form name="searchForm" id="searchForm" method="GET" action="/web/20050815011340/http://www.youtube.com/results.php">
+	 		<td style="padding-right: 5px;"><input tabindex="1" type="text" value="" name="search" maxlength="128" style="color:#ff3333; font-size: 12px; width: 300px;"></td>
+			<td><input type="submit" value="Search Videos"></td>
+		</form>
+		<script language="javascript">
+			onLoadFunctionList.push(function () { document.searchForm.search.focus(); });
+		</script>
+	</tr>
+</table>
+
+<table width="790" align="center" cellpadding="0" cellspacing="0" border="0">
+	<tr valign="top">
+		<td style="padding-right: 15px;">
+		
+		<table width="595" align="center" cellpadding="0" cellspacing="0" border="0" bgcolor="#E5ECF9">
+			<tr>
+				<td><img src="/web/20050815011340im_/http://www.youtube.com/img/box_login_tl.gif" width="5" height="5"></td>
+				<td width="100%"><img src="/web/20050815011340im_/http://www.youtube.com/img/pixel.gif" width="1" height="5"></td>
+				<td><img src="/web/20050815011340im_/http://www.youtube.com/img/box_login_tr.gif" width="5" height="5"></td>
+			</tr>
+			<tr>
+				<td><img src="/web/20050815011340im_/http://www.youtube.com/img/pixel.gif" width="5" height="1"></td>
+				<td style="padding: 5px 0px 5px 0px;">
+				
+								
+				<table width="100%" cellpadding="0" cellspacing="0" border="0">
+					<tr valign="top">
+					<td width="33%" style="border-right: 1px dashed #369; padding: 0px 10px 10px 10px; color: #444;">
+					<div style="font-size: 16px; font-weight: bold; margin-bottom: 5px;"><a href="/web/20050815011340/http://www.youtube.com/browse.php">Watch</a></div>
+					Instantly find and watch 1000's of fast streaming videos.
+					</td>
+					<td width="33%" style="border-right: 1px dashed #369; padding: 0px 10px 10px 10px; color: #444;">
+					<div style="font-size: 16px; font-weight: bold; margin-bottom: 5px;"><a href="/web/20050815011340/http://www.youtube.com/my_videos_upload.php">Upload</a></div>
+					Quickly upload and tag videos in almost any video format.
+					</td>
+					<td width="33%" style="padding: 0px 10px 10px 10px; color: #444;">
+					<div style="font-size: 16px; font-weight: bold; margin-bottom: 5px;"><a href="/web/20050815011340/http://www.youtube.com/my_friends_invite.php">Share</a></div>
+					Easily share your videos with family, friends, or co-workers.
+					</td>
+					</tr>
+				</table>
+
+									
+				</td>
+				<td><img src="/web/20050815011340im_/http://www.youtube.com/img/pixel.gif" width="5" height="1"></td>
+			</tr>
+			<tr>
+				<td><img src="/web/20050815011340im_/http://www.youtube.com/img/box_login_bl.gif" width="5" height="5"></td>
+				<td><img src="/web/20050815011340im_/http://www.youtube.com/img/pixel.gif" width="1" height="5"></td>
+				<td><img src="/web/20050815011340im_/http://www.youtube.com/img/box_login_br.gif" width="5" height="5"></td>
+			</tr>
+		</table><br>
+		
+		<table width="595" align="center" cellpadding="0" cellspacing="0" border="0" bgcolor="#CCCCCC">
+			<tr>
+				<td><img src="/web/20050815011340im_/http://www.youtube.com/img/box_login_tl.gif" width="5" height="5"></td>
+				<td width="100%"><img src="/web/20050815011340im_/http://www.youtube.com/img/pixel.gif" width="1" height="5"></td>
+				<td><img src="/web/20050815011340im_/http://www.youtube.com/img/box_login_tr.gif" width="5" height="5"></td>
+			</tr>
+			<tr>
+				<td><img src="/web/20050815011340im_/http://www.youtube.com/img/pixel.gif" width="5" height="1"></td>
+				<td width="585">
+				<div class="moduleTitleBar">
+				<div class="moduleTitle"><div style="float: right; padding: 1px 5px 0px 0px; font-size: 12px;"><a href="/web/20050815011340/http://www.youtube.com/browse.php">See More Videos</a></div>
+				Today's Featured Videos
+				</div>
+				</div>
+		
+				
+					<div class="moduleEntry">
+					<table width="565" cellpadding="0" cellspacing="0" border="0">
+						<tr valign="top">
+							<td><a href="/web/20050815011340/http://www.youtube.com/index.php?v=8ZuTe2VuktE"><img src="/web/20050815011340im_/http://www.youtube.com/get_still.php?video_id=8ZuTe2VuktE" class="moduleEntryThumb" width="120" height="90"></a></td>
+							<td width="100%"><div class="moduleEntryTitle"><a href="/web/20050815011340/http://www.youtube.com/index.php?v=8ZuTe2VuktE">Skydiving over Las Vegas</a></div>
+							<div class="moduleEntryDescription">I made my first dive back in May.  It really was as much fun as it looks, everyone should try it.</div>
+							<div class="moduleEntryTags">
+							Tags // <a href="/web/20050815011340/http://www.youtube.com/results.php?search=skydive">skydive</a> : <a href="/web/20050815011340/http://www.youtube.com/results.php?search=las">las</a> : <a href="/web/20050815011340/http://www.youtube.com/results.php?search=vegas">vegas</a> : 							</div>
+							<div class="moduleEntryDetails">Added: 41 minutes ago by <a href="/web/20050815011340/http://www.youtube.com/profile.php?user=falser">falser</a></div>
+							<div class="moduleEntryDetails">Runtime: 03:32 | Views: 38 | Comments: 0</div>
+							</td>
+						</tr>
+					</table>
+					</div>
+					
+					
+					<div class="moduleEntry">
+					<table width="565" cellpadding="0" cellspacing="0" border="0">
+						<tr valign="top">
+							<td><a href="/web/20050815011340/http://www.youtube.com/index.php?v=u9CSW4f1uw0"><img src="/web/20050815011340im_/http://www.youtube.com/get_still.php?video_id=u9CSW4f1uw0" class="moduleEntryThumb" width="120" height="90"></a></td>
+							<td width="100%"><div class="moduleEntryTitle"><a href="/web/20050815011340/http://www.youtube.com/index.php?v=u9CSW4f1uw0">London 2nd Bomb Day</a></div>
+							<div class="moduleEntryDescription">HD Handheld video stuff filmed just after the city was placed on high alert.<br>
+<br>
+More information about me and my clips:<br>
+http://www.liverpool-skyline.co.uk/<br>
+http://j.1asphost.com/HiDef/</div>
+							<div class="moduleEntryTags">
+							Tags // <a href="/web/20050815011340/http://www.youtube.com/results.php?search=London">London</a> : <a href="/web/20050815011340/http://www.youtube.com/results.php?search=Bomb">Bomb</a> : <a href="/web/20050815011340/http://www.youtube.com/results.php?search=Reportage">Reportage</a> : 							</div>
+							<div class="moduleEntryDetails">Added: 2 hours ago by <a href="/web/20050815011340/http://www.youtube.com/profile.php?user=johnvid">johnvid</a></div>
+							<div class="moduleEntryDetails">Runtime: 01:55 | Views: 160 | Comments: 0</div>
+							</td>
+						</tr>
+					</table>
+					</div>
+					
+					
+					<div class="moduleEntry">
+					<table width="565" cellpadding="0" cellspacing="0" border="0">
+						<tr valign="top">
+							<td><a href="/web/20050815011340/http://www.youtube.com/index.php?v=fVdxNaeP3VI"><img src="/web/20050815011340im_/http://www.youtube.com/get_still.php?video_id=fVdxNaeP3VI" class="moduleEntryThumb" width="120" height="90"></a></td>
+							<td width="100%"><div class="moduleEntryTitle"><a href="/web/20050815011340/http://www.youtube.com/index.php?v=fVdxNaeP3VI">Paragliding flight from Uptimal.com</a></div>
+							<div class="moduleEntryDescription">Here I am flying into the great blue sky, on a tandem paragliding flight. Highly recommended, if you live near Los Angeles, check out Uptimal paragliding at http://uptimal.com . Still pictures at http://www.flickr.com/photos/jakerome/sets/750233/ .</div>
+							<div class="moduleEntryTags">
+							Tags // <a href="/web/20050815011340/http://www.youtube.com/results.php?search=paragliding">paragliding</a> : <a href="/web/20050815011340/http://www.youtube.com/results.php?search=california">california</a> : <a href="/web/20050815011340/http://www.youtube.com/results.php?search=calabasas">calabasas</a> : 							</div>
+							<div class="moduleEntryDetails">Added: 5 hours ago by <a href="/web/20050815011340/http://www.youtube.com/profile.php?user=jakerome">jakerome</a></div>
+							<div class="moduleEntryDetails">Runtime: 00:21 | Views: 287 | Comments: 1</div>
+							</td>
+						</tr>
+					</table>
+					</div>
+					
+					
+					<div class="moduleEntry">
+					<table width="565" cellpadding="0" cellspacing="0" border="0">
+						<tr valign="top">
+							<td><a href="/web/20050815011340/http://www.youtube.com/index.php?v=tOQGkB0oJLI"><img src="/web/20050815011340im_/http://www.youtube.com/get_still.php?video_id=tOQGkB0oJLI" class="moduleEntryThumb" width="120" height="90"></a></td>
+							<td width="100%"><div class="moduleEntryTitle"><a href="/web/20050815011340/http://www.youtube.com/index.php?v=tOQGkB0oJLI">gfddf</a></div>
+							<div class="moduleEntryDescription">gfdgfd</div>
+							<div class="moduleEntryTags">
+							Tags // <a href="/web/20050815011340/http://www.youtube.com/results.php?search=gf">gf</a> : <a href="/web/20050815011340/http://www.youtube.com/results.php?search=gfd">gfd</a> : <a href="/web/20050815011340/http://www.youtube.com/results.php?search=df">df</a> : 							</div>
+							<div class="moduleEntryDetails">Added: 6 hours ago by <a href="/web/20050815011340/http://www.youtube.com/profile.php?user=blondie9700">blondie9700</a></div>
+							<div class="moduleEntryDetails">Runtime: 00:15 | Views: 858 | Comments: 3</div>
+							</td>
+						</tr>
+					</table>
+					</div>
+					
+					
+					<div class="moduleEntry">
+					<table width="565" cellpadding="0" cellspacing="0" border="0">
+						<tr valign="top">
+							<td><a href="/web/20050815011340/http://www.youtube.com/index.php?v=UlpSBZF7BWc"><img src="/web/20050815011340im_/http://www.youtube.com/get_still.php?video_id=UlpSBZF7BWc" class="moduleEntryThumb" width="120" height="90"></a></td>
+							<td width="100%"><div class="moduleEntryTitle"><a href="/web/20050815011340/http://www.youtube.com/index.php?v=UlpSBZF7BWc">Groucho on Chair</a></div>
+							<div class="moduleEntryDescription">Groucho on a kitchen chair.</div>
+							<div class="moduleEntryTags">
+							Tags // <a href="/web/20050815011340/http://www.youtube.com/results.php?search=cat">cat</a> : <a href="/web/20050815011340/http://www.youtube.com/results.php?search=h264">h264</a> : <a href="/web/20050815011340/http://www.youtube.com/results.php?search=home">home</a> : 							</div>
+							<div class="moduleEntryDetails">Added: 6 hours ago by <a href="/web/20050815011340/http://www.youtube.com/profile.php?user=ericIII">ericIII</a></div>
+							<div class="moduleEntryDetails">Runtime: 01:24 | Views: 237 | Comments: 0</div>
+							</td>
+						</tr>
+					</table>
+					</div>
+					
+					
+					<div class="moduleEntry">
+					<table width="565" cellpadding="0" cellspacing="0" border="0">
+						<tr valign="top">
+							<td><a href="/web/20050815011340/http://www.youtube.com/index.php?v=DbZ2kVz1Pt8"><img src="/web/20050815011340im_/http://www.youtube.com/get_still.php?video_id=DbZ2kVz1Pt8" class="moduleEntryThumb" width="120" height="90"></a></td>
+							<td width="100%"><div class="moduleEntryTitle"><a href="/web/20050815011340/http://www.youtube.com/index.php?v=DbZ2kVz1Pt8">Baby's Big Vegetable</a></div>
+							<div class="moduleEntryDescription">Baby trying to eat an enormous zuchinni</div>
+							<div class="moduleEntryTags">
+							Tags // <a href="/web/20050815011340/http://www.youtube.com/results.php?search=baby">baby</a> : <a href="/web/20050815011340/http://www.youtube.com/results.php?search=babies">babies</a> : <a href="/web/20050815011340/http://www.youtube.com/results.php?search=funny">funny</a> : 							</div>
+							<div class="moduleEntryDetails">Added: 19 hours ago by <a href="/web/20050815011340/http://www.youtube.com/profile.php?user=tfirma">tfirma</a></div>
+							<div class="moduleEntryDetails">Runtime: 00:45 | Views: 2123 | Comments: 2</div>
+							</td>
+						</tr>
+					</table>
+					</div>
+					
+					
+					<div class="moduleEntry">
+					<table width="565" cellpadding="0" cellspacing="0" border="0">
+						<tr valign="top">
+							<td><a href="/web/20050815011340/http://www.youtube.com/index.php?v=E5lyJLGANAs"><img src="/web/20050815011340im_/http://www.youtube.com/get_still.php?video_id=E5lyJLGANAs" class="moduleEntryThumb" width="120" height="90"></a></td>
+							<td width="100%"><div class="moduleEntryTitle"><a href="/web/20050815011340/http://www.youtube.com/index.php?v=E5lyJLGANAs">autoX video</a></div>
+							<div class="moduleEntryDescription">bowie MD try to get this video to play right</div>
+							<div class="moduleEntryTags">
+							Tags // <a href="/web/20050815011340/http://www.youtube.com/results.php?search=autoX">autoX</a> : <a href="/web/20050815011340/http://www.youtube.com/results.php?search=capitaldrivingclub">capitaldrivingclub</a> : <a href="/web/20050815011340/http://www.youtube.com/results.php?search=dcevoclub">dcevoclub</a> : 							</div>
+							<div class="moduleEntryDetails">Added: 22 hours ago by <a href="/web/20050815011340/http://www.youtube.com/profile.php?user=SgtEvo">SgtEvo</a></div>
+							<div class="moduleEntryDetails">Runtime: 06:01 | Views: 967 | Comments: 1</div>
+							</td>
+						</tr>
+					</table>
+					</div>
+					
+					
+					<div class="moduleEntry">
+					<table width="565" cellpadding="0" cellspacing="0" border="0">
+						<tr valign="top">
+							<td><a href="/web/20050815011340/http://www.youtube.com/index.php?v=QdPqTiDPSGU"><img src="/web/20050815011340im_/http://www.youtube.com/get_still.php?video_id=QdPqTiDPSGU" class="moduleEntryThumb" width="120" height="90"></a></td>
+							<td width="100%"><div class="moduleEntryTitle"><a href="/web/20050815011340/http://www.youtube.com/index.php?v=QdPqTiDPSGU">USC Football @ Home</a></div>
+							<div class="moduleEntryDescription">What it looks like to watch the Trojan home game at the LA Colosseum.</div>
+							<div class="moduleEntryTags">
+							Tags // <a href="/web/20050815011340/http://www.youtube.com/results.php?search=USC">USC</a> : <a href="/web/20050815011340/http://www.youtube.com/results.php?search=football">football</a> : <a href="/web/20050815011340/http://www.youtube.com/results.php?search=game">game</a> : <a href="/web/20050815011340/http://www.youtube.com/results.php?search=colosseum">colosseum</a> : <a href="/web/20050815011340/http://www.youtube.com/results.php?search=sports">sports</a> : 							</div>
+							<div class="moduleEntryDetails">Added: 23 hours ago by <a href="/web/20050815011340/http://www.youtube.com/profile.php?user=supawako">supawako</a></div>
+							<div class="moduleEntryDetails">Runtime: 00:23 | Views: 452 | Comments: 0</div>
+							</td>
+						</tr>
+					</table>
+					</div>
+					
+					
+					<div class="moduleEntry">
+					<table width="565" cellpadding="0" cellspacing="0" border="0">
+						<tr valign="top">
+							<td><a href="/web/20050815011340/http://www.youtube.com/index.php?v=4MY-CVLnFTw"><img src="/web/20050815011340im_/http://www.youtube.com/get_still.php?video_id=4MY-CVLnFTw" class="moduleEntryThumb" width="120" height="90"></a></td>
+							<td width="100%"><div class="moduleEntryTitle"><a href="/web/20050815011340/http://www.youtube.com/index.php?v=4MY-CVLnFTw">Office Sports</a></div>
+							<div class="moduleEntryDescription">The dangerous risks of cubicle hurddles</div>
+							<div class="moduleEntryTags">
+							Tags // <a href="/web/20050815011340/http://www.youtube.com/results.php?search=office">office</a> : <a href="/web/20050815011340/http://www.youtube.com/results.php?search=sports">sports</a> : <a href="/web/20050815011340/http://www.youtube.com/results.php?search=funny">funny</a> : <a href="/web/20050815011340/http://www.youtube.com/results.php?search=danger">danger</a> : 							</div>
+							<div class="moduleEntryDetails">Added: 1 day ago by <a href="/web/20050815011340/http://www.youtube.com/profile.php?user=supawako">supawako</a></div>
+							<div class="moduleEntryDetails">Runtime: 00:09 | Views: 3473 | Comments: 3</div>
+							</td>
+						</tr>
+					</table>
+					</div>
+					
+					
+					<div class="moduleEntry">
+					<table width="565" cellpadding="0" cellspacing="0" border="0">
+						<tr valign="top">
+							<td><a href="/web/20050815011340/http://www.youtube.com/index.php?v=GleQQqzdGVw"><img src="/web/20050815011340im_/http://www.youtube.com/get_still.php?video_id=GleQQqzdGVw" class="moduleEntryThumb" width="120" height="90"></a></td>
+							<td width="100%"><div class="moduleEntryTitle"><a href="/web/20050815011340/http://www.youtube.com/index.php?v=GleQQqzdGVw">art crafts market in Maputo</a></div>
+							<div class="moduleEntryDescription">It was a walk on Saturday morning.</div>
+							<div class="moduleEntryTags">
+							Tags // <a href="/web/20050815011340/http://www.youtube.com/results.php?search=Mozambique">Mozambique</a> : <a href="/web/20050815011340/http://www.youtube.com/results.php?search=Summer">Summer</a> : <a href="/web/20050815011340/http://www.youtube.com/results.php?search=2005">2005</a> : <a href="/web/20050815011340/http://www.youtube.com/results.php?search=arts">arts</a> : <a href="/web/20050815011340/http://www.youtube.com/results.php?search=market">market</a> : 							</div>
+							<div class="moduleEntryDetails">Added: 1 day ago by <a href="/web/20050815011340/http://www.youtube.com/profile.php?user=cinemato">cinemato</a></div>
+							<div class="moduleEntryDetails">Runtime: 02:28 | Views: 311 | Comments: 0</div>
+							</td>
+						</tr>
+					</table>
+					</div>
+					
+									
+				</td>
+				<td><img src="/web/20050815011340im_/http://www.youtube.com/img/pixel.gif" width="5" height="1"></td>
+			</tr>
+			<tr>
+				<td><img src="/web/20050815011340im_/http://www.youtube.com/img/box_login_bl.gif" width="5" height="5"></td>
+				<td><img src="/web/20050815011340im_/http://www.youtube.com/img/pixel.gif" width="1" height="5"></td>
+				<td><img src="/web/20050815011340im_/http://www.youtube.com/img/box_login_br.gif" width="5" height="5"></td>
+			</tr>
+		</table>
+
+		
+		</td>
+		<td width="180">
+		
+		<table width="180" align="center" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFEEBB">
+			<tr>
+				<td><img src="/web/20050815011340im_/http://www.youtube.com/img/box_login_tl.gif" width="5" height="5"></td>
+				<td><img src="/web/20050815011340im_/http://www.youtube.com/img/pixel.gif" width="1" height="5"></td>
+				<td><img src="/web/20050815011340im_/http://www.youtube.com/img/box_login_tr.gif" width="5" height="5"></td>
+			</tr>
+			<tr>
+				<td><img src="/web/20050815011340im_/http://www.youtube.com/img/pixel.gif" width="5" height="1"></td>
+				<td width="170">
+		
+								
+				<div style="font-size: 16px; font-weight: bold; text-align: center; padding: 5px 5px 10px 5px;"><a href="/web/20050815011340/http://www.youtube.com/signup.php">Sign up for your free account!</a></div>
+				
+								
+				</td>
+				<td><img src="/web/20050815011340im_/http://www.youtube.com/img/pixel.gif" width="5" height="1"></td>
+			</tr>
+			<tr>
+				<td><img src="/web/20050815011340im_/http://www.youtube.com/img/box_login_bl.gif" width="5" height="5"></td>
+				<td><img src="/web/20050815011340im_/http://www.youtube.com/img/pixel.gif" width="1" height="5"></td>
+				<td><img src="/web/20050815011340im_/http://www.youtube.com/img/box_login_br.gif" width="5" height="5"></td>
+			</tr>
+		</table>
+		
+		<div style="margin-top: 10px;">
+		<table width="180" align="center" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFCC99">
+			<tr>
+				<td><img src="/web/20050815011340im_/http://www.youtube.com/img/box_login_tl.gif" width="5" height="5"></td>
+				<td><img src="/web/20050815011340im_/http://www.youtube.com/img/pixel.gif" width="1" height="5"></td>
+				<td><img src="/web/20050815011340im_/http://www.youtube.com/img/box_login_tr.gif" width="5" height="5"></td>
+			</tr>
+			<tr>
+				<td><img src="/web/20050815011340im_/http://www.youtube.com/img/pixel.gif" width="5" height="1"></td>
+				<td width="170" style="padding: 5px; text-align: center;">
+				<div style="font-weight: bold; font-size: 13px;">August Video Contest!</div>
+				
+				<a href="/web/20050815011340/http://www.youtube.com/watch.php?v=PaluLFfv0EI&amp;search=wherethehellismatt"><img src="/web/20050815011340im_/http://www.youtube.com/get_still.php?video_id=PaluLFfv0EI" width="80" height="60" style="border: 5px solid #FFFFFF; margin-top: 10px;"></a>
+				
+				<div style="font-size: 16px; font-weight: bold; padding-top: 5px;"><a href="/web/20050815011340/http://www.youtube.com/monthly_contest.php">Can you dance?</a></div>
+				<div style="font-size: 11px; padding: 10px 0px 5px 0px;">Inspired by <a href="/web/20050815011340/http://www.wherethehellismatt.com/" target="_blank">Matt Harding</a>, YouTube is proud to present our first monthly video contest.</div>
+				
+								
+				<div style="font-size: 12px; font-weight: bold; margin-bottom: 5px;"><a href="/web/20050815011340/http://www.youtube.com/signup.php">Join the contest now!</a></div>
+				
+								
+				</td>
+				<td><img src="/web/20050815011340im_/http://www.youtube.com/img/pixel.gif" width="5" height="1"></td>
+			</tr>
+			<tr>
+				<td><img src="/web/20050815011340im_/http://www.youtube.com/img/box_login_bl.gif" width="5" height="5"></td>
+				<td><img src="/web/20050815011340im_/http://www.youtube.com/img/pixel.gif" width="1" height="5"></td>
+				<td><img src="/web/20050815011340im_/http://www.youtube.com/img/box_login_br.gif" width="5" height="5"></td>
+			</tr>
+		</table>
+		</div>
+		
+		<div style="margin: 10px 0px 5px 0px; font-size: 12px; font-weight: bold; color: #333;">Recent Tags:</div>
+		<div style="font-size: 13px; color: #333333;">
+		
+				
+			<a style="font-size: 17px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=skool">skool</a> :
+		
+					
+			<a style="font-size: 12px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=oahu">oahu</a> :
+		
+					
+			<a style="font-size: 12px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=spring">spring</a> :
+		
+					
+			<a style="font-size: 12px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=night">night</a> :
+		
+					
+			<a style="font-size: 17px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=california">california</a> :
+		
+					
+			<a style="font-size: 17px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=world">world</a> :
+		
+					
+			<a style="font-size: 12px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=tricks">tricks</a> :
+		
+					
+			<a style="font-size: 17px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=dancing">dancing</a> :
+		
+					
+			<a style="font-size: 17px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=hawaii">hawaii</a> :
+		
+					
+			<a style="font-size: 17px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=made">made</a> :
+		
+					
+			<a style="font-size: 12px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=to">to</a> :
+		
+					
+			<a style="font-size: 12px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=children">children</a> :
+		
+					
+			<a style="font-size: 17px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=music">music</a> :
+		
+					
+			<a style="font-size: 17px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=ghgf">ghgf</a> :
+		
+					
+			<a style="font-size: 12px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=waikiki">waikiki</a> :
+		
+					
+			<a style="font-size: 12px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=friends">friends</a> :
+		
+					
+			<a style="font-size: 17px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=superluminousvelocity">superluminousvelocity</a> :
+		
+					
+			<a style="font-size: 12px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=shoe">shoe</a> :
+		
+					
+			<a style="font-size: 12px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=walking">walking</a> :
+		
+					
+			<a style="font-size: 17px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=singing">singing</a> :
+		
+					
+			<a style="font-size: 12px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=yo">yo</a> :
+		
+					
+			<a style="font-size: 12px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=stephen">stephen</a> :
+		
+					
+			<a style="font-size: 17px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=microsoft">microsoft</a> :
+		
+					
+			<a style="font-size: 12px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=legian">legian</a> :
+		
+					
+			<a style="font-size: 17px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=spinning">spinning</a> :
+		
+					
+			<a style="font-size: 12px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=dog">dog</a> :
+		
+					
+			<a style="font-size: 12px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=funny">funny</a> :
+		
+					
+			<a style="font-size: 12px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=office">office</a> :
+		
+					
+			<a style="font-size: 12px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=dc">dc</a> :
+		
+					
+			<a style="font-size: 17px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=dance">dance</a> :
+		
+					
+			<a style="font-size: 12px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=vegas">vegas</a> :
+		
+					
+			<a style="font-size: 17px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=newyork">newyork</a> :
+		
+					
+			<a style="font-size: 17px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=regiaart">regiaart</a> :
+		
+					
+			<a style="font-size: 12px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=dune">dune</a> :
+		
+					
+			<a style="font-size: 12px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=sage">sage</a> :
+		
+					
+			<a style="font-size: 17px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=yoyo">yoyo</a> :
+		
+					
+			<a style="font-size: 12px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=valley">valley</a> :
+		
+					
+			<a style="font-size: 12px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=game">game</a> :
+		
+					
+			<a style="font-size: 12px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=roadworks">roadworks</a> :
+		
+					
+			<a style="font-size: 17px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=cruise">cruise</a> :
+		
+					
+			<a style="font-size: 12px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=break">break</a> :
+		
+					
+			<a style="font-size: 12px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=bali">bali</a> :
+		
+					
+			<a style="font-size: 12px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=video">video</a> :
+		
+					
+			<a style="font-size: 12px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=rocks">rocks</a> :
+		
+					
+			<a style="font-size: 17px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=kid">kid</a> :
+		
+					
+			<a style="font-size: 12px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=warped">warped</a> :
+		
+					
+			<a style="font-size: 12px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=emily">emily</a> :
+		
+					
+			<a style="font-size: 17px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=performance">performance</a> :
+		
+					
+			<a style="font-size: 12px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=eureka">eureka</a> :
+		
+					
+			<a style="font-size: 17px;" href="/web/20050815011340/http://www.youtube.com/results.php?search=ny">ny</a> :
+		
+					
+		<div style="font-size: 14px; font-weight: bold; margin-top: 10px;"><a href="/web/20050815011340/http://www.youtube.com/tags.php">See More Tags</a></div>
+		
+		</div>
+
+		<div style="padding-top: 15px;">
+		<table width="180" align="center" cellpadding="0" cellspacing="0" border="0" bgcolor="#EEEEDD">
+			<tr>
+				<td><img src="/web/20050815011340im_/http://www.youtube.com/img/box_login_tl.gif" width="5" height="5"></td>
+				<td><img src="/web/20050815011340im_/http://www.youtube.com/img/pixel.gif" width="1" height="5"></td>
+				<td><img src="/web/20050815011340im_/http://www.youtube.com/img/box_login_tr.gif" width="5" height="5"></td>
+			</tr>
+			<tr>
+				<td><img src="/web/20050815011340im_/http://www.youtube.com/img/pixel.gif" width="5" height="1"></td>
+				<td width="170">
+
+				<div style="padding: 2px 5px 10px 5px;">
+				<div style="font-size: 14px; font-weight: bold; margin-bottom: 8px; color: #666633;">Last 8 users online...</div>
+
+				
+					<div style="font-size: 12px; font-weight: bold; margin-bottom: 5px;"><a href="/web/20050815011340/http://www.youtube.com/profile.php?user=arash">arash</a></div>
+
+					<div style="font-size: 12px; margin-bottom: 8px; padding-bottom: 10px; border-bottom: 1px dashed #CCCC66;"><a href="/web/20050815011340/http://www.youtube.com/profile_videos.php?user=arash"><img src="/web/20050815011340im_/http://www.youtube.com/img/icon_vid.gif" alt="Videos" width="14" height="14" border="0" style="vertical-align: text-bottom; padding-left: 2px; padding-right: 1px;"></a> (<a href="/web/20050815011340/http://www.youtube.com/profile_videos.php?user=arash">1</a>)
+					 | <a href="/web/20050815011340/http://www.youtube.com/profile_favorites.php?user=arash"><img src="/web/20050815011340im_/http://www.youtube.com/img/icon_fav.gif" alt="Favorites" width="14" height="14" border="0" style="vertical-align: text-bottom; padding-left: 2px; padding-right: 1px;"></a> (<a href="/web/20050815011340/http://www.youtube.com/profile_favorites.php?user=arash">0</a>)
+					 | <a href="/web/20050815011340/http://www.youtube.com/profile_friends.php?user=arash"><img src="/web/20050815011340im_/http://www.youtube.com/img/icon_friends.gif" alt="Friends" width="14" height="14" border="0" style="vertical-align: text-bottom; padding-left: 2px; padding-right: 1px;"></a> (<a href="/web/20050815011340/http://www.youtube.com/profile_friends.php?user=arash">0</a>)</div>
+
+					
+					<div style="font-size: 12px; font-weight: bold; margin-bottom: 5px;"><a href="/web/20050815011340/http://www.youtube.com/profile.php?user=cadetbox2000">cadetbox2000</a></div>
+
+					<div style="font-size: 12px; margin-bottom: 8px; padding-bottom: 10px; border-bottom: 1px dashed #CCCC66;"><a href="/web/20050815011340/http://www.youtube.com/profile_videos.php?user=cadetbox2000"><img src="/web/20050815011340im_/http://www.youtube.com/img/icon_vid.gif" alt="Videos" width="14" height="14" border="0" style="vertical-align: text-bottom; padding-left: 2px; padding-right: 1px;"></a> (<a href="/web/20050815011340/http://www.youtube.com/profile_videos.php?user=cadetbox2000">1</a>)
+					 | <a href="/web/20050815011340/http://www.youtube.com/profile_favorites.php?user=cadetbox2000"><img src="/web/20050815011340im_/http://www.youtube.com/img/icon_fav.gif" alt="Favorites" width="14" height="14" border="0" style="vertical-align: text-bottom; padding-left: 2px; padding-right: 1px;"></a> (<a href="/web/20050815011340/http://www.youtube.com/profile_favorites.php?user=cadetbox2000">0</a>)
+					 | <a href="/web/20050815011340/http://www.youtube.com/profile_friends.php?user=cadetbox2000"><img src="/web/20050815011340im_/http://www.youtube.com/img/icon_friends.gif" alt="Friends" width="14" height="14" border="0" style="vertical-align: text-bottom; padding-left: 2px; padding-right: 1px;"></a> (<a href="/web/20050815011340/http://www.youtube.com/profile_friends.php?user=cadetbox2000">0</a>)</div>
+
+					
+					<div style="font-size: 12px; font-weight: bold; margin-bottom: 5px;"><a href="/web/20050815011340/http://www.youtube.com/profile.php?user=curlygurl">curlygurl</a></div>
+
+					<div style="font-size: 12px; margin-bottom: 8px; padding-bottom: 10px; border-bottom: 1px dashed #CCCC66;"><a href="/web/20050815011340/http://www.youtube.com/profile_videos.php?user=curlygurl"><img src="/web/20050815011340im_/http://www.youtube.com/img/icon_vid.gif" alt="Videos" width="14" height="14" border="0" style="vertical-align: text-bottom; padding-left: 2px; padding-right: 1px;"></a> (<a href="/web/20050815011340/http://www.youtube.com/profile_videos.php?user=curlygurl">0</a>)
+					 | <a href="/web/20050815011340/http://www.youtube.com/profile_favorites.php?user=curlygurl"><img src="/web/20050815011340im_/http://www.youtube.com/img/icon_fav.gif" alt="Favorites" width="14" height="14" border="0" style="vertical-align: text-bottom; padding-left: 2px; padding-right: 1px;"></a> (<a href="/web/20050815011340/http://www.youtube.com/profile_favorites.php?user=curlygurl">0</a>)
+					 | <a href="/web/20050815011340/http://www.youtube.com/profile_friends.php?user=curlygurl"><img src="/web/20050815011340im_/http://www.youtube.com/img/icon_friends.gif" alt="Friends" width="14" height="14" border="0" style="vertical-align: text-bottom; padding-left: 2px; padding-right: 1px;"></a> (<a href="/web/20050815011340/http://www.youtube.com/profile_friends.php?user=curlygurl">0</a>)</div>
+
+					
+					<div style="font-size: 12px; font-weight: bold; margin-bottom: 5px;"><a href="/web/20050815011340/http://www.youtube.com/profile.php?user=christopherfarrell">christopherfarrell</a></div>
+
+					<div style="font-size: 12px; margin-bottom: 8px; padding-bottom: 10px; border-bottom: 1px dashed #CCCC66;"><a href="/web/20050815011340/http://www.youtube.com/profile_videos.php?user=christopherfarrell"><img src="/web/20050815011340im_/http://www.youtube.com/img/icon_vid.gif" alt="Videos" width="14" height="14" border="0" style="vertical-align: text-bottom; padding-left: 2px; padding-right: 1px;"></a> (<a href="/web/20050815011340/http://www.youtube.com/profile_videos.php?user=christopherfarrell">0</a>)
+					 | <a href="/web/20050815011340/http://www.youtube.com/profile_favorites.php?user=christopherfarrell"><img src="/web/20050815011340im_/http://www.youtube.com/img/icon_fav.gif" alt="Favorites" width="14" height="14" border="0" style="vertical-align: text-bottom; padding-left: 2px; padding-right: 1px;"></a> (<a href="/web/20050815011340/http://www.youtube.com/profile_favorites.php?user=christopherfarrell">0</a>)
+					 | <a href="/web/20050815011340/http://www.youtube.com/profile_friends.php?user=christopherfarrell"><img src="/web/20050815011340im_/http://www.youtube.com/img/icon_friends.gif" alt="Friends" width="14" height="14" border="0" style="vertical-align: text-bottom; padding-left: 2px; padding-right: 1px;"></a> (<a href="/web/20050815011340/http://www.youtube.com/profile_friends.php?user=christopherfarrell">0</a>)</div>
+
+					
+					<div style="font-size: 12px; font-weight: bold; margin-bottom: 5px;"><a href="/web/20050815011340/http://www.youtube.com/profile.php?user=Rummelhart">Rummelhart</a></div>
+
+					<div style="font-size: 12px; margin-bottom: 8px; padding-bottom: 10px; border-bottom: 1px dashed #CCCC66;"><a href="/web/20050815011340/http://www.youtube.com/profile_videos.php?user=Rummelhart"><img src="/web/20050815011340im_/http://www.youtube.com/img/icon_vid.gif" alt="Videos" width="14" height="14" border="0" style="vertical-align: text-bottom; padding-left: 2px; padding-right: 1px;"></a> (<a href="/web/20050815011340/http://www.youtube.com/profile_videos.php?user=Rummelhart">2</a>)
+					 | <a href="/web/20050815011340/http://www.youtube.com/profile_favorites.php?user=Rummelhart"><img src="/web/20050815011340im_/http://www.youtube.com/img/icon_fav.gif" alt="Favorites" width="14" height="14" border="0" style="vertical-align: text-bottom; padding-left: 2px; padding-right: 1px;"></a> (<a href="/web/20050815011340/http://www.youtube.com/profile_favorites.php?user=Rummelhart">0</a>)
+					 | <a href="/web/20050815011340/http://www.youtube.com/profile_friends.php?user=Rummelhart"><img src="/web/20050815011340im_/http://www.youtube.com/img/icon_friends.gif" alt="Friends" width="14" height="14" border="0" style="vertical-align: text-bottom; padding-left: 2px; padding-right: 1px;"></a> (<a href="/web/20050815011340/http://www.youtube.com/profile_friends.php?user=Rummelhart">0</a>)</div>
+
+					
+					<div style="font-size: 12px; font-weight: bold; margin-bottom: 5px;"><a href="/web/20050815011340/http://www.youtube.com/profile.php?user=cjoh">cjoh</a></div>
+
+					<div style="font-size: 12px; margin-bottom: 8px; padding-bottom: 10px; border-bottom: 1px dashed #CCCC66;"><a href="/web/20050815011340/http://www.youtube.com/profile_videos.php?user=cjoh"><img src="/web/20050815011340im_/http://www.youtube.com/img/icon_vid.gif" alt="Videos" width="14" height="14" border="0" style="vertical-align: text-bottom; padding-left: 2px; padding-right: 1px;"></a> (<a href="/web/20050815011340/http://www.youtube.com/profile_videos.php?user=cjoh">0</a>)
+					 | <a href="/web/20050815011340/http://www.youtube.com/profile_favorites.php?user=cjoh"><img src="/web/20050815011340im_/http://www.youtube.com/img/icon_fav.gif" alt="Favorites" width="14" height="14" border="0" style="vertical-align: text-bottom; padding-left: 2px; padding-right: 1px;"></a> (<a href="/web/20050815011340/http://www.youtube.com/profile_favorites.php?user=cjoh">0</a>)
+					 | <a href="/web/20050815011340/http://www.youtube.com/profile_friends.php?user=cjoh"><img src="/web/20050815011340im_/http://www.youtube.com/img/icon_friends.gif" alt="Friends" width="14" height="14" border="0" style="vertical-align: text-bottom; padding-left: 2px; padding-right: 1px;"></a> (<a href="/web/20050815011340/http://www.youtube.com/profile_friends.php?user=cjoh">0</a>)</div>
+
+					
+					<div style="font-size: 12px; font-weight: bold; margin-bottom: 5px;"><a href="/web/20050815011340/http://www.youtube.com/profile.php?user=anduvius">anduvius</a></div>
+
+					<div style="font-size: 12px; margin-bottom: 8px; padding-bottom: 10px; border-bottom: 1px dashed #CCCC66;"><a href="/web/20050815011340/http://www.youtube.com/profile_videos.php?user=anduvius"><img src="/web/20050815011340im_/http://www.youtube.com/img/icon_vid.gif" alt="Videos" width="14" height="14" border="0" style="vertical-align: text-bottom; padding-left: 2px; padding-right: 1px;"></a> (<a href="/web/20050815011340/http://www.youtube.com/profile_videos.php?user=anduvius">0</a>)
+					 | <a href="/web/20050815011340/http://www.youtube.com/profile_favorites.php?user=anduvius"><img src="/web/20050815011340im_/http://www.youtube.com/img/icon_fav.gif" alt="Favorites" width="14" height="14" border="0" style="vertical-align: text-bottom; padding-left: 2px; padding-right: 1px;"></a> (<a href="/web/20050815011340/http://www.youtube.com/profile_favorites.php?user=anduvius">0</a>)
+					 | <a href="/web/20050815011340/http://www.youtube.com/profile_friends.php?user=anduvius"><img src="/web/20050815011340im_/http://www.youtube.com/img/icon_friends.gif" alt="Friends" width="14" height="14" border="0" style="vertical-align: text-bottom; padding-left: 2px; padding-right: 1px;"></a> (<a href="/web/20050815011340/http://www.youtube.com/profile_friends.php?user=anduvius">0</a>)</div>
+
+					
+					<div style="font-size: 12px; font-weight: bold; margin-bottom: 5px;"><a href="/web/20050815011340/http://www.youtube.com/profile.php?user=contron">contron</a></div>
+
+					<div style="font-size: 12px; margin-bottom: 8px; padding-bottom: 10px; border-bottom: 1px dashed #CCCC66;"><a href="/web/20050815011340/http://www.youtube.com/profile_videos.php?user=contron"><img src="/web/20050815011340im_/http://www.youtube.com/img/icon_vid.gif" alt="Videos" width="14" height="14" border="0" style="vertical-align: text-bottom; padding-left: 2px; padding-right: 1px;"></a> (<a href="/web/20050815011340/http://www.youtube.com/profile_videos.php?user=contron">10</a>)
+					 | <a href="/web/20050815011340/http://www.youtube.com/profile_favorites.php?user=contron"><img src="/web/20050815011340im_/http://www.youtube.com/img/icon_fav.gif" alt="Favorites" width="14" height="14" border="0" style="vertical-align: text-bottom; padding-left: 2px; padding-right: 1px;"></a> (<a href="/web/20050815011340/http://www.youtube.com/profile_favorites.php?user=contron">3</a>)
+					 | <a href="/web/20050815011340/http://www.youtube.com/profile_friends.php?user=contron"><img src="/web/20050815011340im_/http://www.youtube.com/img/icon_friends.gif" alt="Friends" width="14" height="14" border="0" style="vertical-align: text-bottom; padding-left: 2px; padding-right: 1px;"></a> (<a href="/web/20050815011340/http://www.youtube.com/profile_friends.php?user=contron">0</a>)</div>
+
+									
+				<div style="font-weight: bold; margin-bottom: 5px;">Icon Key:</div>
+				<div style="margin-bottom: 4px;"><img src="/web/20050815011340im_/http://www.youtube.com/img/icon_vid.gif" alt="Videos" width="14" height="14" border="0" style="vertical-align: text-bottom; padding-left: 2px; padding-right: 1px;"> - Videos</div>
+				<div style="margin-bottom: 4px;"><img src="/web/20050815011340im_/http://www.youtube.com/img/icon_fav.gif" alt="Favorites" width="14" height="14" border="0" style="vertical-align: text-bottom; padding-left: 2px; padding-right: 1px;"> - Favorites</div>
+				<img src="/web/20050815011340im_/http://www.youtube.com/img/icon_friends.gif" alt="Friends" width="14" height="14" border="0" style="vertical-align: text-bottom; padding-left: 2px; padding-right: 1px;"> - Friends
+				
+				</div>
+
+				</td>
+				<td><img src="/web/20050815011340im_/http://www.youtube.com/img/pixel.gif" width="5" height="1"></td>
+			</tr>
+			<tr>
+				<td><img src="/web/20050815011340im_/http://www.youtube.com/img/box_login_bl.gif" width="5" height="5"></td>
+				<td><img src="/web/20050815011340im_/http://www.youtube.com/img/pixel.gif" width="1" height="5"></td>
+				<td><img src="/web/20050815011340im_/http://www.youtube.com/img/box_login_br.gif" width="5" height="5"></td>
+			</tr>
+		</table>
+		</div>
+		
+		</td>
+	</tr>
+</table>
+
+		</div>
+		</td>
+	</tr>
+</table>
+
+<table cellpadding="10" cellspacing="0" border="0" align="center">
+	<tr>
+		<td align="center" valign="center"><span class="footer"><a href="/web/20050815011340/http://www.youtube.com/whats_new.php">What's New</a> | <a href="/web/20050815011340/http://www.youtube.com/about.php">About Us</a> | <a href="/web/20050815011340/http://www.youtube.com/help.php">Help</a> | <a href="/web/20050815011340/http://www.youtube.com/developers_intro.php">Developers</a> <img src="/web/20050815011340im_/http://www.youtube.com/img/new.gif"> | <a href="/web/20050815011340/http://www.youtube.com/terms.php">Terms of Use</a> | <a href="/web/20050815011340/http://www.youtube.com/privacy.php">Privacy Policy</a> 
+		<br><br>Copyright &copy; 2005 YouTube, LLC&#8482; | <a href="/web/20050815011340/http://www.youtube.com/rss/global/recently_added.rss"><img src="/web/20050815011340im_/http://www.youtube.com/img/rss.gif" width="36" height="14" border="0" style="vertical-align: text-top;"></a></span></td>
+	</tr>
+</table>
+
+<div id="sheet" style="position:fixed; top:0px; visibility:hidden; width:100%; text-align:center;">
+<table width="100%">
+<tr>
+<td align="center">
+<div id="sheetContent" style="filter:alpha(opacity=50); -moz-opacity:0.5; opacity:0.5; border: 1px solid black; background-color:#cccccc; width:40%; text-align:left;"></div>
+</td>
+</tr>
+</table>
+</div>
+
+<div id="tooltip"></div>
+
+</body>
+</html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 1:13:40 Aug 15, 2005 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 4:35:08 Oct 1, 2014.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

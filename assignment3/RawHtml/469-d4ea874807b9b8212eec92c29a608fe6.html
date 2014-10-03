@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://twap.chu.jp/news03/">
+<meta property="og:site_name" content="恋愛体質診断テスト">
+<meta property="og:title" content="恋愛体質診断テスト">
+<meta property="og:description" content="恋愛体質を診断して楽しむアプリです。"/>
+<meta property="og:image" content="http://twap.chu.jp/news03/images/title1.jpg">
+<title>恋愛体質診断テスト</title>
+<link rel="stylesheet" type="text/css" media="all" href="style.php">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript">
+$(function() {	
+	/* 送信ボタン(input要素のvalue属性では改行に対応していない為) */
+	$('.frm_submit').one('click',function(){  document.frm.submit();  });
+
+	/* 選択肢ボタン押下状態を表現するためのクラスを操作 */
+	$("ul input[type='radio']").change(function(){
+        if($(this).is(":checked")){
+            $(this).parent().parent().children().removeClass("radio_on");
+            $(this).parent().addClass("radio_on");
+        }else{
+            $(this).parent().removeClass("radio_on");
+        }
+    });
+
+	/* 選択漏れがないか調べる */
+	$('.get_result_btn').click(function(){
+		var err_flg = '';
+				if (!$("input:radio[name='q1']:checked").val()) {err_flg += "設問1に回答してください。\n";}
+				if (!$("input:radio[name='q2']:checked").val()) {err_flg += "設問2に回答してください。\n";}
+				if (!$("input:radio[name='q3']:checked").val()) {err_flg += "設問3に回答してください。\n";}
+				if(err_flg){alert(err_flg);}else{$(this).unbind("click");document.frm.submit();}
+	});
+});
+</script>
+</head>
+<body>
+<div class="ci_frame">
+<div class="ci">
+<noscript>
+<p class="red">このサイトはjavascriptを使用しています。javascriptを有効にしないと正しくサイトを表示させる事がが出来ません。</p>
+</noscript>
+<h1 class="main_img"><img src="images/title1.jpg" /></h1>
+
+<p class="m_btm10">恋愛しているときのあなたの恋愛体質を診断♪</p>
+
+<form method="post" name="frm" action="http://twap.chu.jp/news03/">
+<input type="hidden" name="status" value="start" />
+<p class="btn frm_submit">診断開始</p>
+</form>
+
+<div class="info_box">
+<p>上記のボタンをクリックすると、@pokke4dとの連携確認が表示されます。<br />
+「連携アプリを認証」をクリック頂くことで自動フォローとなりますが、連携したアプリは設定画面からいつでも許可の取り消しが可能です。<br />
+連携アプリを認証することでTwitterのサービス利用規約に同意したことになります。<br />
+また、いくつかの連携アプリの利用情報はTwitterにも共有されます。</p>
+</div><!-- /.info_box -->
+
+
+
+<p class="back_to_fb"><a href="https://twitter.com/">Twitterに戻る</a></p>
+<!-- <p style="text-align:center;margin:0 0 20px;"><a href="rules.html" target="_blank">利用規約</a>｜<a href="privacy.html" target="_blank">プライバシーポリシー</a></p> -->
+</div><!-- /.ci -->
+</div><!-- /.ci_frame -->
+</body>
+</html>

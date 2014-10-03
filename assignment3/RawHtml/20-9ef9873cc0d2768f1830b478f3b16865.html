@@ -1,0 +1,1055 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+
+
+<script src="http://www.google.com/jsapi"></script>
+<script type="text/javascript" charset="utf-8">
+ google.load('ads.search', '2');
+</script>
+
+
+ 
+
+<title>Job Search USA</title>
+<meta http-equiv="description" content="Search thousands of job listings from around the United States. Jobseekers can choose to job search by specific industry, city or state.">
+<meta http-equiv="keywords" content="job search, job, jobs search, jobs usa, job usa">
+<base href="http://www.jobsearchusa.org/">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link rel="Shortcut Icon" href="http://www.jobsearchusa.org/favicon.ico" type="image/x-icon" /> 
+
+<link rel="alternate" type="application/rss+xml" title="" href="" />
+
+<script type="text/javascript" src="http://www.jobsearchusa.org/javacombined.js.php"></script>
+
+
+<script type="text/javascript">
+function validate_search_form()
+{
+	valid = true;
+	//alert('state:'+document.getElementById('State').value+' city:'+document.getElementById('City').value+' career:'+document.getElementById('CareerType').value);
+	
+	if (document.getElementById('State').selectedIndex == 0 && document.getElementById('City').selectedIndex == 0 && document.getElementById('CareerType').selectedIndex == 0 && document.getElementById('keywords').value == "") {
+		alert("Please select at least one category.");
+		valid = false;
+	}
+	return valid;
+
+}
+</script>
+
+	<script type="text/javascript">
+		function validate_search_form1() {
+			valid = true;
+			if (document.getElementById('State').selectedIndex == 0) {
+				alert("Please select a state.");
+				valid = false;
+			}
+			return valid;
+		}
+	</script>
+
+
+<link rel="StyleSheet" type="text/css" href="mainb.css.php">
+<link rel="StyleSheet" type="text/css" href="newmain2.css.php">
+<link rel="StyleSheet" type="text/css" href="testing.css.php">
+ <style>
+	body{font-family:arial}
+  .ad_header {color:#215670;font-weight:bold;padding-bottom:7px;font-size:13px}
+	.ad_hg {color:#000000;padding-bottom:7px;font-size:13px}
+  .ad_line1 {color:#215670;font-weight:bold;font-size:15px; text-decoration:underline}
+  .ad_text {color:#000000;font-size:13px; text-decoration:none}
+  .ad_url {color:#000000;font-weight:bold;font-size:12px;margin-bottom:12px; text-decoration:none}
+  .search_header{background:#eee;padding:4px;font-size:15px;font-weight:bold}
+  .wide_ads {background:#FFFFFF; padding:10px}
+  .narrow_ads {background:#FFFFFF; padding:10px}
+  .bottom_ads {background:#FFFFFF; padding:10px}
+  .top_ads {background:#FFFFFF; padding:10px}
+</style>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('.rmv-dft-val').click(
+		function() {
+			if (this.value == this.defaultValue) {
+				this.value = '';
+			}
+		}
+	);
+	$('.rmv-dft-val').blur(
+		function() {
+			if (this.value == '') {
+				this.value = this.defaultValue;
+			}
+		}
+	);
+});
+
+function validate_required(field,alerttxt) {
+  with (field) {
+    if (value==null||value==""||value==""||value=="") {
+      alert(alerttxt);return false;
+    }
+    else {
+      return true;
+    }
+  }
+}
+function validate_form(thisform) {
+  with (thisform) {
+    if(validate_required(keyword,"You need to enter a Keyword and Location")==false){
+      keyword.value='';
+      keyword.focus();
+  	  return false;
+  	}
+    if(validate_required(location,"You need to enter a Keyword and Location")==false){
+      location.value='';
+      location.focus();
+  	  return false;
+  	}
+  }
+}
+</script>
+
+</head>
+<body>
+
+<div id= "container">
+
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+  <tr>
+    <td>
+		  <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="31%" rowspan="2">
+		        <div align="center" style="margin:10px;">
+  			      <img src="http://www.jobsearchusa.org/images/job_search_usa.jpg" alt="Job Search USA Logo" width="240" height="57" border="0">			      </div>
+		      </td>
+          <td valign="bottom">
+		        <table width="96%"  border="0" cellspacing="0" cellpadding="7">
+		          <tr>
+		        	  <td align="right">
+		            
+ 
+
+		            </td>
+
+		          </tr>
+		        </table>
+		      </td>
+		    </tr>
+		    <tr>
+		  	  <td width="59%" valign="bottom">
+		        <table  border="0" align="right" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="25">&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+
+
+
+<tr>
+	
+	
+ 	  <td class="underbar" align="center" style="padding:0px;margin:0px;font-size:14px;">
+ 	    <form action="/searchindex.php" method="get" onSubmit="return validate_search_form1();" style="margin-bottom:15px;padding:0px;">
+<input type="hidden" name="action" value="search">
+ 	    
+ 	    <span style="color:#FFFFFF;font-size:14px;"><b>Job/Keyword</b></span> &nbsp;&nbsp;
+
+ <input name="2" type="text" class="keywordtf" id="2" value="" size="30">								
+		
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+ 	    <span style="color:#FFFFFF;font-size:14px;"><b>Location:</b></span> &nbsp;
+<select name="92" class="searchboxselect" id="State" onchange="get_cities(this);">
+                    <option value="all" selected>[ Select ]</option>
+                    <option value="all">Select All</option>
+<option value="188">Alabama</option>
+<option value="189">Alaska</option>
+<option value="190">Arizona</option>
+<option value="191">Arkansas</option>
+<option value="192">California</option>
+<option value="193">Colorado</option>
+<option value="194">Connecticut</option>
+<option value="195">Delaware</option>
+<option value="196">District of Columbia</option>
+<option value="197">Florida</option>
+<option value="198">Georgia</option>
+<option value="199">Hawaii</option>
+<option value="200">Idaho</option>
+<option value="201">Illinois</option>
+<option value="202">Indiana</option>
+<option value="203">Iowa</option>
+<option value="204">Kansas</option>
+<option value="205">Kentucky</option>
+<option value="206">Louisiana</option>
+<option value="207">Maine</option>
+<option value="208">Maryland</option>
+<option value="209">Massachusetts</option>
+<option value="210">Michigan</option>
+<option value="211">Minnesota</option>
+<option value="212">Mississippi</option>
+<option value="213">Missouri</option>
+<option value="214">Montana</option>
+<option value="215">Nebraska</option>
+<option value="216">Nevada</option>
+<option value="217">New Hampshire</option>
+<option value="218">New Jersey</option>
+<option value="219">New Mexico</option>
+<option value="220">New York</option>
+<option value="221">North Carolina</option>
+<option value="222">North Dakota</option>
+<option value="223">Ohio</option>
+<option value="224">Oklahoma</option>
+<option value="225">Oregon</option>
+<option value="226">Pennsylvania</option>
+<option value="227">Rhode Island</option>
+<option value="228">South Carolina</option>
+<option value="229">South Dakota</option>
+<option value="230">Tennessee</option>
+<option value="231">Texas</option>
+<option value="232">Utah</option>
+<option value="233">Vermont</option>
+<option value="234">Virginia</option>
+<option value="235">Washington</option>
+<option value="236">West Virginia</option>
+<option value="237">Wisconsin</option>
+<option value="238">Wyoming</option>
+                  </select>
+
+ &nbsp;
+ 	    <input type="submit" value="Find Jobs!" name="search" style="margin:0px;padding:0px;font-size:15px;" />
+ 	    </form>
+ 	  </td>
+ 	</tr>
+ 	<tr>
+ 		<td align="center">
+		<div id="homecontentcontainer">		<!-------- end of header  ------------>
+		<!-- start home -->
+		<table width="100%"  border="0" cellspacing="0" cellpadding="5">
+		  <tr>
+		  <td width="28%" valign="top"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+		      <tr>
+		        <td><form  action="/searchindex.php" method="get" onSubmit="return validate_search_form();">
+		            <input type="hidden" name="action" value="search">
+		            <table width="100%"  border="0" cellpadding="0" cellspacing="0" class="searchbox">
+		              <tr>
+		                <td class="searchboxheader" valign="top">&nbsp;</td>
+		              </tr>
+		              <tr>
+		                <td valign="top">Step 1 - Select a State<br>
+               
+		   <select name="92" class="searchboxselect" id="State" onchange="get_cities(this);">
+		                    <option value="all" selected>[ Select ]</option>
+		                    <option value="all">Select All</option>
+<option value="188">Alabama</option>
+<option value="189">Alaska</option>
+<option value="190">Arizona</option>
+<option value="191">Arkansas</option>
+<option value="192">California</option>
+<option value="193">Colorado</option>
+<option value="194">Connecticut</option>
+<option value="195">Delaware</option>
+<option value="196">District of Columbia</option>
+<option value="197">Florida</option>
+<option value="198">Georgia</option>
+<option value="199">Hawaii</option>
+<option value="200">Idaho</option>
+<option value="201">Illinois</option>
+<option value="202">Indiana</option>
+<option value="203">Iowa</option>
+<option value="204">Kansas</option>
+<option value="205">Kentucky</option>
+<option value="206">Louisiana</option>
+<option value="207">Maine</option>
+<option value="208">Maryland</option>
+<option value="209">Massachusetts</option>
+<option value="210">Michigan</option>
+<option value="211">Minnesota</option>
+<option value="212">Mississippi</option>
+<option value="213">Missouri</option>
+<option value="214">Montana</option>
+<option value="215">Nebraska</option>
+<option value="216">Nevada</option>
+<option value="217">New Hampshire</option>
+<option value="218">New Jersey</option>
+<option value="219">New Mexico</option>
+<option value="220">New York</option>
+<option value="221">North Carolina</option>
+<option value="222">North Dakota</option>
+<option value="223">Ohio</option>
+<option value="224">Oklahoma</option>
+<option value="225">Oregon</option>
+<option value="226">Pennsylvania</option>
+<option value="227">Rhode Island</option>
+<option value="228">South Carolina</option>
+<option value="229">South Dakota</option>
+<option value="230">Tennessee</option>
+<option value="231">Texas</option>
+<option value="232">Utah</option>
+<option value="233">Vermont</option>
+<option value="234">Virginia</option>
+<option value="235">Washington</option>
+<option value="236">West Virginia</option>
+<option value="237">Wisconsin</option>
+<option value="238">Wyoming</option>
+            </select>
+			</td>
+              </tr>
+              <tr>
+                <td valign="top">Step 2 - Select a City <br>
+                  <select name="93" class="searchboxselect" id="City">
+                    <option value="">[ Select ]</option>
+                    <option value="0">Select All</option>
+                    <option value="">select a state first</option>
+                  </select></td>
+              </tr>
+              <tr>
+                <td valign="top">Step 3 - Select an Industry<br>
+                  <select name="6" class="searchboxselect" id="CareerType" onchange="get_classifieds(this);">
+                    <option value="">[ Select ]</option>
+                    <option value="all">Select All</option>
+<option value="1222">Accounting-Auditing</option>
+<option value="1225">Admin-Customer Service</option>
+<option value="1246">Construction</option>
+<option value="1254">Education</option>
+<option value="1334">Entry-Level-Internships</option>
+<option value="1483">Executive-Management</option>
+<option value="1266">Financial Services</option>
+<option value="1273">Government</option>
+<option value="1280">Health-Medical</option>
+<option value="1282">Hospitality-Tourism</option>
+<option value="1286">Human Resources</option>
+<option value="1287">Information Technology</option>
+<option value="1295">Legal</option>
+<option value="1301">Manufacturing-Transport</option>
+<option value="1302">Marketing-Media-Entertainment</option>
+<option value="1303">Math-Engineering</option>
+<option value="1415">Nonprofit-Community</option>
+<option value="1331">Sales-Retail</option>
+<option value="1332">Science</option>
+                  </select></td>
+              </tr>
+              <tr>
+                <td valign="top">Career Field (Optional)<br>
+                  <select name="25" class="searchboxselect" id="Career Type Classified">
+                    <option value="">[ Select ]</option>
+                    <option value="all">Select All</option>
+<option value="1869"> Educator</option>
+<option value="1281">.net</option>
+<option value="1729">Academic</option>
+<option value="7006">Account Executive</option>
+<option value="7020">Account Manager</option>
+<option value="7067">Accountant</option>
+<option value="1300">Accounting Manager</option>
+<option value="7021">Accounts Payable</option>
+<option value="1223">Accounts Receivable</option>
+<option value="1438">Actuarial</option>
+<option value="1226">Administrative</option>
+<option value="1821">Admissions</option>
+<option value="1227">Advertising</option>
+<option value="1742">Aeronautical Engineering</option>
+<option value="1256">Aerospace Engineering</option>
+<option value="1228">Air Force</option>
+<option value="1862">Aircraft</option>
+<option value="1441">Airline</option>
+<option value="1766">Airport</option>
+<option value="1573">Ajax</option>
+<option value="1656">Analyst</option>
+<option value="7053">Anesthesiology</option>
+<option value="1728">Application Developer</option>
+<option value="1863">Application Engineer</option>
+<option value="1481">Apprentice</option>
+<option value="1233">Army</option>
+<option value="1457">asp</option>
+<option value="1414">Attorney</option>
+<option value="1608">Audiology</option>
+<option value="1734">Auditing</option>
+<option value="1548">AutoCad</option>
+<option value="1831">Automotive</option>
+<option value="1235">Aviation</option>
+<option value="1741">Avionics</option>
+<option value="1720">Bakery</option>
+<option value="1236">Banking</option>
+<option value="1721">Banquet</option>
+<option value="7051">Barista</option>
+<option value="1647">Bartender</option>
+<option value="1462">Beautician</option>
+<option value="1593">Benefits</option>
+<option value="1237">Beverage</option>
+<option value="1732">Billing</option>
+<option value="1422">Biochemistry</option>
+<option value="1744">Bioinformatics</option>
+<option value="1631">Biology</option>
+<option value="7040">Biomedical</option>
+<option value="1702">Biostatistician</option>
+<option value="1436">Biotechnology</option>
+<option value="1589">Bobcat</option>
+<option value="1238">Bookkeeper</option>
+<option value="1564">Botanist</option>
+<option value="1534">Branch Manager</option>
+<option value="1518">Brokerage</option>
+<option value="1738">Building Engineer</option>
+<option value="1288">Building Inspector</option>
+<option value="1649">Business Analyst</option>
+<option value="1796">Business Manager</option>
+<option value="7072">Business Sales</option>
+<option value="1727">Business Systems</option>
+<option value="1241">Call Center</option>
+<option value="1523">Calypso</option>
+<option value="1499">Capital Markets</option>
+<option value="1250">Cardiology</option>
+<option value="1509">Care Manager</option>
+<option value="1239">Carpenter</option>
+<option value="1306">Case Manager</option>
+<option value="1448">Cash Management</option>
+<option value="1452">Cashier</option>
+<option value="1585">Catering</option>
+<option value="1607">Chauffeur</option>
+<option value="1539">Chef</option>
+<option value="1258">Chemical Engineer</option>
+<option value="1552">Chemistry</option>
+<option value="1692">Chief Executive Officer</option>
+<option value="1695">Chief Financial Officer</option>
+<option value="1773">Chief Information Officer</option>
+<option value="1693">Chief Operating Officer</option>
+<option value="1774">Chief Technology Officer</option>
+<option value="1560">Child Care</option>
+<option value="1416">Children Services</option>
+<option value="1319">Chiropractor</option>
+<option value="1570">Cisco</option>
+<option value="1590">Citrix</option>
+<option value="1709">Civil Engineering</option>
+<option value="1538">Claims</option>
+<option value="1679">Cleaning</option>
+<option value="7002">Clerical</option>
+<option value="1825">Client Services</option>
+<option value="1826">Client Support</option>
+<option value="1514">Clinical</option>
+<option value="1861">Coach</option>
+<option value="1430">Cobol</option>
+<option value="1707">Cognos</option>
+<option value="1572">Coldfusion</option>
+<option value="1726">Collections</option>
+<option value="1521">Commodities</option>
+<option value="1710">Communications Engineer</option>
+<option value="1417">Community Development</option>
+<option value="1717">Community Outreach</option>
+<option value="1718">Community Relations</option>
+<option value="1858">Compensation Specialist</option>
+<option value="1688">Computer</option>
+<option value="1517">Concierge</option>
+<option value="1624">Concrete</option>
+<option value="1322">Construction Manager</option>
+<option value="1622">Construction Worker</option>
+<option value="7043">Controls Engineer</option>
+<option value="1242">Cook</option>
+<option value="7017">Cooperative</option>
+<option value="1834">Corrections</option>
+<option value="1467">Counsel</option>
+<option value="1544">Counselor</option>
+<option value="1685">Courier</option>
+<option value="1828">Court</option>
+<option value="1344">Crane</option>
+<option value="1541">Credit</option>
+<option value="1772">Custodian</option>
+<option value="7022">Customer Sales</option>
+<option value="1247">Customer Service</option>
+<option value="1800">Customer Support</option>
+<option value="1461">Dancer</option>
+<option value="1615">Data Analyst</option>
+<option value="1248">Data Entry</option>
+<option value="1795">Database</option>
+<option value="1614">DB2</option>
+<option value="1529">Dean</option>
+<option value="1606">Dentistry</option>
+<option value="1497">Derivatives</option>
+<option value="1691">Dermatology</option>
+<option value="7033">Design Engineer</option>
+<option value="1704">Desktop Support</option>
+<option value="7026">Dietetic</option>
+<option value="1838">Dining Room</option>
+<option value="1842">Director</option>
+<option value="1419">Disability</option>
+<option value="1735">Dishwasher</option>
+<option value="1284">Dispatch</option>
+<option value="1818">Dispatcher</option>
+<option value="7015">Distribution Center</option>
+<option value="7041">Dock</option>
+<option value="1252">Drafter</option>
+<option value="1562">Driver</option>
+<option value="1566">Ecologist</option>
+<option value="1565">Ecology</option>
+<option value="1569">Economist</option>
+<option value="1528">Educational</option>
+<option value="1262">Electrical Engineer</option>
+<option value="1711">Electrical Engineering</option>
+<option value="1255">Electrician</option>
+<option value="1257">Electronic Engineer</option>
+<option value="1338">Elementary</option>
+<option value="7047">Employee Relations</option>
+<option value="1469">Employment</option>
+<option value="1536">Endocrinology</option>
+<option value="1700">Energy Engineer</option>
+<option value="1849">Engineering Manager</option>
+<option value="1477">Entry Level</option>
+<option value="1653">Environmental Engineer</option>
+<option value="1604">Equities</option>
+<option value="1769">Esthetician</option>
+<option value="1263">Estimator</option>
+<option value="7074">Events</option>
+<option value="1857">Fabrication</option>
+<option value="1860">Faculty</option>
+<option value="1794">Field Engineer</option>
+<option value="1460">Film</option>
+<option value="1508">Finance Manager</option>
+<option value="1265">Financial Advisor</option>
+<option value="7032">Financial Consultant</option>
+<option value="1535">Financial Controller</option>
+<option value="1443">Financial Manager</option>
+<option value="1290">Financial Planning</option>
+<option value="7055">Financial Rep</option>
+<option value="1824">Financial Reporting</option>
+<option value="7018">Financial Representative</option>
+<option value="7054">Financial Specialist</option>
+<option value="1586">Firefighter</option>
+<option value="1602">Fitness</option>
+<option value="1574">Flash</option>
+<option value="1554">Flight Attendant</option>
+<option value="1836">Food Service</option>
+<option value="1269">Foreman</option>
+<option value="1502">Forklift</option>
+<option value="1429">fortran</option>
+<option value="1759">Freight</option>
+<option value="1846">Fundraising</option>
+<option value="1498">FX</option>
+<option value="1271">Gaming</option>
+<option value="1673">Gastroenterology</option>
+<option value="1485">General Manager</option>
+<option value="7048">Genetics</option>
+<option value="1479">Geology</option>
+<option value="1703">Geoscience</option>
+<option value="1705">Geotechnical Engineer</option>
+<option value="1478">Graduate</option>
+<option value="1600">Grants</option>
+<option value="1251">Graphic Design</option>
+<option value="1771">Greeter</option>
+<option value="1733">Guest</option>
+<option value="1336">Hairstylist</option>
+<option value="1714">Hardware Engineer</option>
+<option value="1749">Help Desk</option>
+<option value="7086">Histology</option>
+<option value="1791">Home Health Aide</option>
+<option value="1545">Homeless</option>
+<option value="1670">Hospitalist</option>
+<option value="1453">Host</option>
+<option value="1220">Hotel Manager</option>
+<option value="1868">Housekeeping</option>
+<option value="1848">Human Resource</option>
+<option value="1556">HVAC</option>
+<option value="7078">Immunology</option>
+<option value="1260">Industrial Engineer</option>
+<option value="7071">Information Systems</option>
+<option value="7080">Installer</option>
+<option value="1761">Instructor</option>
+<option value="1289">Insurance</option>
+<option value="1635">Internship</option>
+<option value="7000">Interpreter</option>
+<option value="1568">Inventory</option>
+<option value="1651">Investment</option>
+<option value="1340">IT Manager</option>
+<option value="1612">IT security</option>
+<option value="1431">IT Support</option>
+<option value="1231">J2ee</option>
+<option value="1681">Janitor</option>
+<option value="1230">Java</option>
+<option value="1456">JavaScript</option>
+<option value="1291">Journalism</option>
+<option value="7081">Journeyman</option>
+<option value="1696">JSP</option>
+<option value="1244">Kindergarten</option>
+<option value="1292">Kitchen</option>
+<option value="1632">Laboratory</option>
+<option value="1623">Laborer</option>
+<option value="1576">Lamp</option>
+<option value="1232">Landscape Architect</option>
+<option value="1512">Law Clerk</option>
+<option value="1294">Law Enforcement</option>
+<option value="1687">Lawyer</option>
+<option value="7083">Leasing</option>
+<option value="1434">Legal Assistant</option>
+<option value="1296">Legal Secretary</option>
+<option value="1500">Lending</option>
+<option value="1297">Librarian</option>
+<option value="1770">Lifeguard</option>
+<option value="1346">Linguist</option>
+<option value="1433">Linux</option>
+<option value="1468">Litigation</option>
+<option value="1299">Logistics</option>
+<option value="1768">Loss Prevention</option>
+<option value="1627">Lotus Notes</option>
+<option value="7011">Machine</option>
+<option value="1267">Machinist</option>
+<option value="7068">Maintenance</option>
+<option value="1444">Manufacturing</option>
+<option value="1722">Manufacturing Engineer</option>
+<option value="1712">Marine Engineer</option>
+<option value="1440">Marketing</option>
+<option value="1293">Masons</option>
+<option value="1625">Massage</option>
+<option value="7082">Material Handler</option>
+<option value="1701">Materials Engineer</option>
+<option value="1550">Math</option>
+<option value="1549">Mathematician</option>
+<option value="1304">Mathematics</option>
+<option value="1621">Mechanic</option>
+<option value="1261">Mechanical Engineer</option>
+<option value="1708">Mechanical Engineering</option>
+<option value="1464">Media</option>
+<option value="1513">Medical Assistant</option>
+<option value="1776">Medical Billing</option>
+<option value="1792">Medical Records</option>
+<option value="1511">Medical Technologist</option>
+<option value="1420">Mental Health</option>
+<option value="7019">Merchandising</option>
+<option value="1298">Microbiology</option>
+<option value="1577">Microsoft</option>
+<option value="7039">MRI</option>
+<option value="1678">Multimedia</option>
+<option value="1522">Murex</option>
+<option value="1689">MySQL</option>
+<option value="1310">Navy</option>
+<option value="1249">network administrator</option>
+<option value="1633">Network Engineering</option>
+<option value="7031">Neurology</option>
+<option value="1845">Nonprofit</option>
+<option value="1312">Nursing</option>
+<option value="1675">OBGYN</option>
+<option value="1442">Occupational Therapy</option>
+<option value="7013">Office</option>
+<option value="7014">Office Manager</option>
+<option value="1313">Office Secretary</option>
+<option value="1672">Oncology</option>
+<option value="1852">Operations Engineer</option>
+<option value="1751">Operations Manager</option>
+<option value="1605">Optometry</option>
+<option value="1424">Oracle</option>
+<option value="7046">Organizational Development</option>
+<option value="1326">Orthopedics</option>
+<option value="1835">Other Government</option>
+<option value="7069">Packaging</option>
+<option value="1314">Painter</option>
+<option value="1413">Paralegal</option>
+<option value="1465">Paramedic</option>
+<option value="1274">Park Ranger</option>
+<option value="1674">Patient Care</option>
+<option value="1315">Payroll</option>
+<option value="1666">PC Technician</option>
+<option value="1775">Pediatric</option>
+<option value="1609">PeopleSoft</option>
+<option value="7044">Performance Engineer</option>
+<option value="7028">Perioperative</option>
+<option value="1428">Perl</option>
+<option value="1616">Pest Control</option>
+<option value="1713">Petroleum Engineer</option>
+<option value="1435">Pharmaceutical</option>
+<option value="1316">Pharmacy</option>
+<option value="7025">Phlebotomy</option>
+<option value="1317">Photography</option>
+<option value="1278">php</option>
+<option value="1668">Physical Therapy</option>
+<option value="1307">Physician</option>
+<option value="1318">Physics</option>
+<option value="1806">Plant Engineer</option>
+<option value="1320">Plant Manager</option>
+<option value="1321">Plumber</option>
+<option value="1683">Podiatrist</option>
+<option value="1584">Police</option>
+<option value="1746">Postdoctoral</option>
+<option value="1426">powerbuilder</option>
+<option value="1530">Preschool</option>
+<option value="1532">Process Engineer</option>
+<option value="1805">Procurement</option>
+<option value="7056">Product Engineer</option>
+<option value="7003">Product Manager</option>
+<option value="1219">Professor</option>
+<option value="1867">Program Manager</option>
+<option value="1730">Programmer</option>
+<option value="1855">Project Engineer</option>
+<option value="1864">Project Manager</option>
+<option value="7085">Psychiatric</option>
+<option value="7052">Psychiatry</option>
+<option value="1323">Psychology</option>
+<option value="1324">Public Relations</option>
+<option value="1325">Purchasing</option>
+<option value="1427">Python</option>
+<option value="7034">QA Engineer</option>
+<option value="7042">Quality Engineer</option>
+<option value="1646">Quantitative</option>
+<option value="1463">Radio</option>
+<option value="7037">Radiology</option>
+<option value="1327">Real Estate</option>
+<option value="1328">Receptionist</option>
+<option value="1581">Recruiter</option>
+<option value="1471">Recruiting Coordinator</option>
+<option value="1470">Recruitment</option>
+<option value="1829">Regional Manager</option>
+<option value="1567">Regulatory</option>
+<option value="1329">Rehabilitation</option>
+<option value="1865">Relationship Manager</option>
+<option value="7073">Research Assistant</option>
+<option value="1859">Research Associate</option>
+<option value="7079">Resident Care</option>
+<option value="1676">Respiratory</option>
+<option value="1451">Restaurant</option>
+<option value="1240">Retail Buyer</option>
+<option value="1445">Retail Manager</option>
+<option value="1330">Retail Sales</option>
+<option value="7049">RF Engineer</option>
+<option value="1519">Risk Management</option>
+<option value="1425">Ruby</option>
+<option value="7009">Sales Assistant</option>
+<option value="1559">Sales Associate</option>
+<option value="7004">Sales consultant</option>
+<option value="7035">Sales Engineer</option>
+<option value="7007">Sales Executive</option>
+<option value="1526">Sales Manager</option>
+<option value="7038">Sales Professional</option>
+<option value="1527">Sales Representative</option>
+<option value="1793">Sales Specialist</option>
+<option value="7075">Sales Support</option>
+<option value="1555">Salon</option>
+<option value="1308">SAP</option>
+<option value="1339">School</option>
+<option value="1654">Scientific</option>
+<option value="1799">Scientist</option>
+<option value="7057">Security Engineer</option>
+<option value="1682">Security Guard</option>
+<option value="1767">Security Officer</option>
+<option value="1830">Senior Manager</option>
+<option value="1578">seo</option>
+<option value="1697">Sharepoint</option>
+<option value="1454">Shelter</option>
+<option value="1760">Shipping</option>
+<option value="1698">Siebel</option>
+<option value="1844">Social Services</option>
+<option value="1421">Social Work</option>
+<option value="1596">Software Developer</option>
+<option value="1715">Software Engineering</option>
+<option value="1575">Solaris</option>
+<option value="7050">Sonographer</option>
+<option value="7030">Spa</option>
+<option value="1335">Special Education</option>
+<option value="1537">Speech Pathology</option>
+<option value="1423">sql</option>
+<option value="1580">Staffing</option>
+<option value="1686">Statistician</option>
+<option value="7029">Sterile Processing</option>
+<option value="1496">Stockbroker</option>
+<option value="7010">Store Associate</option>
+<option value="1628">Store Manager</option>
+<option value="1563">Structural Engineer</option>
+<option value="1455">Substance Abuse</option>
+<option value="1758">Supply Chain</option>
+<option value="1309">Surgeon</option>
+<option value="1510">Surgical</option>
+<option value="1337">Surveyor</option>
+<option value="1515">Sustainability</option>
+<option value="1613">Sybase</option>
+<option value="1311">Systems Administrator</option>
+<option value="1597">Systems Analyst</option>
+<option value="7005">Systems Engineer</option>
+<option value="7045">Talent Management</option>
+<option value="1503">Tax</option>
+<option value="1636">Teaching</option>
+<option value="1579">Tech Support</option>
+<option value="1598">Technical Support</option>
+<option value="1341">Telemarketing</option>
+<option value="7084">Telesales</option>
+<option value="1493">Teller</option>
+<option value="1866">Test Engineer</option>
+<option value="1610">Tivoli</option>
+<option value="1342">Tour Guide</option>
+<option value="1747">Toxicology</option>
+<option value="1482">Trainee</option>
+<option value="1801">Training</option>
+<option value="1305">Transportation</option>
+<option value="1736">Transportation Engineer</option>
+<option value="1343">Travel Agent</option>
+<option value="1447">Treasury</option>
+<option value="1234">Truck</option>
+<option value="1264">TV</option>
+<option value="1677">Ultrasound Technologist</option>
+<option value="1808">Underwriting</option>
+<option value="1611">Unix</option>
+<option value="1571">Urology</option>
+<option value="1797">User Experience</option>
+<option value="1680">Valet</option>
+<option value="1345">Veterinarian</option>
+<option value="1694">Vice President</option>
+<option value="1459">Visual Basic</option>
+<option value="1648">Waiter</option>
+<option value="1634">Warehouse</option>
+<option value="7036">Waste</option>
+<option value="1699">Wastewater</option>
+<option value="1276">Water</option>
+<option value="1449">Wealth</option>
+<option value="1432">Web Design</option>
+<option value="1540">Web Designer</option>
+<option value="1731">Web Developer</option>
+<option value="1706">WebSphere</option>
+<option value="1630">Welding</option>
+<option value="1588">Wireless</option>
+<option value="7024">Writing</option>
+<option value="1458">xml</option>
+<option value="1716">Youth</option>
+                  </select></td>
+              </tr>
+              <tr>
+                <td class="searchr2" valign="top">Job Title Search (Optional)<br>
+                  <input class="keywordtf" name="keywords" id="keywords" type="text" value=""></td>
+              </tr>
+              <tr>
+                <td class="searchboxbut" valign="top"><div align="right">
+                    <input value="Find" name="search" type="image" src="images/n-but-fj.jpg" alt="Search Button"  width="94" height="26" border="0">
+                  </div></td>
+              </tr>
+              <tr>
+                <td valign="top">&nbsp;</td>
+              </tr>
+            </table>
+          </form></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td align="center"><p> </p>
+      <tr>
+        <td><table width="95%"  border="0" cellpadding="2" cellspacing="2" class="browsebox">
+            <tr>
+              <td class="blueheader">Job Search Tools</td>
+            </tr>
+            <tr>
+              <td><p>
+                
+                <table width="95%"  border="0" cellpadding="4" cellspacing="3" class="jstbox">
+	              <tr>
+	                <td><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <a href="recruiters.php">Find your Local Recruiter</a></td>
+	            </tr>
+	            <tr>
+	                <td><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <a href="companies.php">Browse jobs by company</a></td>
+	              </tr>
+	              
+	            
+	            </table>
+				</p>
+				</td>
+				</tr>
+          </table>
+			</td>
+      </tr>
+    </table></td>
+    <td width="44%" valign="top">
+  
+  <table width="100%"  border="0" cellspacing="0" cellpadding="2">
+    <tr>
+      <td>	<table width="100%"  border="0" cellpadding="2" cellspacing="2" class="browsebox">
+          <tr>
+            <td class="blueheader">Browse Jobs by State </td>
+          </tr>
+          <tr>
+            <td><p>
+              	<table align="center" border="0" cellpadding="3" cellspacing="0" width="100%"  >
+	<tr>
+	<td valign='top' width='33.3333333333%'><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/alabama/"><span class='cat_heading'>Alabama</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/alaska/"><span class='cat_heading'>Alaska</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/arizona/"><span class='cat_heading'>Arizona</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/arkansas/"><span class='cat_heading'>Arkansas</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/california/"><span class='cat_heading'>California</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/colorado/"><span class='cat_heading'>Colorado</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/connecticut/"><span class='cat_heading'>Connecticut</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/delaware/"><span class='cat_heading'>Delaware</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/district-of-columbia/"><span class='cat_heading'>District of Columbia</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/florida/"><span class='cat_heading'>Florida</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/georgia/"><span class='cat_heading'>Georgia</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/hawaii/"><span class='cat_heading'>Hawaii</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/idaho/"><span class='cat_heading'>Idaho</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/illinois/"><span class='cat_heading'>Illinois</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/indiana/"><span class='cat_heading'>Indiana</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/iowa/"><span class='cat_heading'>Iowa</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/kansas/"><span class='cat_heading'>Kansas</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div></td><td valign='top' width='33.3333333333%'><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/kentucky/"><span class='cat_heading'>Kentucky</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/louisiana/"><span class='cat_heading'>Louisiana</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/maine/"><span class='cat_heading'>Maine</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/maryland/"><span class='cat_heading'>Maryland</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/massachusetts/"><span class='cat_heading'>Massachusetts</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/michigan/"><span class='cat_heading'>Michigan</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/minnesota/"><span class='cat_heading'>Minnesota</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/mississippi/"><span class='cat_heading'>Mississippi</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/missouri/"><span class='cat_heading'>Missouri</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/montana/"><span class='cat_heading'>Montana</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/nebraska/"><span class='cat_heading'>Nebraska</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/nevada/"><span class='cat_heading'>Nevada</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/new-hampshire/"><span class='cat_heading'>New Hampshire</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/new-jersey/"><span class='cat_heading'>New Jersey</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/new-mexico/"><span class='cat_heading'>New Mexico</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/new-york/"><span class='cat_heading'>New York</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/north-carolina/"><span class='cat_heading'>North Carolina</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div></td><td valign='top' width='33.3333333333%'><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/north-dakota/"><span class='cat_heading'>North Dakota</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/ohio/"><span class='cat_heading'>Ohio</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/oklahoma/"><span class='cat_heading'>Oklahoma</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/oregon/"><span class='cat_heading'>Oregon</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/pennsylvania/"><span class='cat_heading'>Pennsylvania</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/rhode-island/"><span class='cat_heading'>Rhode Island</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/south-carolina/"><span class='cat_heading'>South Carolina</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/south-dakota/"><span class='cat_heading'>South Dakota</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/tennessee/"><span class='cat_heading'>Tennessee</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/texas/"><span class='cat_heading'>Texas</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/utah/"><span class='cat_heading'>Utah</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/vermont/"><span class='cat_heading'>Vermont</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/virginia/"><span class='cat_heading'>Virginia</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/washington/"><span class='cat_heading'>Washington</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/west-virginia/"><span class='cat_heading'>West Virginia</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/wisconsin/"><span class='cat_heading'>Wisconsin</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/wyoming/"><span class='cat_heading'>Wyoming</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div></td>	</tr>
+	</table>
+	            </p>                </td>
+          </tr>
+          
+        </table>
+	</td>
+    </tr>
+      <tr>
+    
+      <td>
+    <br />
+	<table width="100%"  border="0" cellpadding="2" cellspacing="2" class="browsebox">
+      <tr>
+        <td class="blueheader">Browse Jobs by Type </td>
+      </tr>
+      <tr>
+        <td valign="top">
+							<table align="center" border="0" cellpadding="3" cellspacing="0" width="100%"  >
+	<tr>
+	<td valign='top' width='50%'><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/accounting-auditing/all/"><span class='cat_heading'>Accounting-Auditing</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/admin-customer-service/all/"><span class='cat_heading'>Admin-Customer Service</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/construction/all/"><span class='cat_heading'>Construction</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/education/all/"><span class='cat_heading'>Education</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/entry-level-internships/all/"><span class='cat_heading'>Entry Level/Internships</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/executive-management/all/"><span class='cat_heading'>Executive/Management</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/financial-services/all/"><span class='cat_heading'>Financial Services</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/government/all/"><span class='cat_heading'>Government</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/health-medical/all/"><span class='cat_heading'>Health-Medical</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/hospitality-tourism/all/"><span class='cat_heading'>Hospitality-Tourism</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div></td><td valign='top' width='50%'><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/human-resources/all/"><span class='cat_heading'>Human Resources</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/information-technology/all/"><span class='cat_heading'>Information Technology</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/legal/all/"><span class='cat_heading'>Legal</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/manufacturing-transport/all/"><span class='cat_heading'>Manufacturing/Transport</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/marketing-media-entertainment/all/"><span class='cat_heading'>Marketing-Media-Entertain</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/math-engineering/all/"><span class='cat_heading'>Math-Engineering</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/nonprofit-community/all/"><span class='cat_heading'>Nonprofit / Community</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/sales-retail/all/"><span class='cat_heading'>Sales-Retail</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div><IMG src="http://www.jobsearchusa.org/images/n-arrow.gif" width="6" height="9" border="0" alt=""/> <A HREF="http://www.jobsearchusa.org/jobs/science/all/"><span class='cat_heading'>Science</span></a> <br><div class='cat_subcategory'><table border='0' width='100%'></table></div></td>	</tr>
+	</table>
+									</td>
+      </tr>
+      
+    </table>    
+  </td>
+    
+      </tr>
+    
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+  </table>
+    </td>
+  
+  
+    <td width="28%" valign="top"><table width="100%"  border="0" cellspacing="0" cellpadding="2">
+        <tr>
+          <td><table width="100%"  border="0" cellpadding="6" cellspacing="0" class="employerbox">
+              <tr>
+                <td colspan="2" class="orangeheader">Employer Tools </td>
+              </tr>
+              <tr>
+                <td width="20%"><img src="images/emptools-post.gif" width="24" height="24"></td>
+                <td width="80%"><a href="http://www.jobsearchusa.org/employers/">Post a Job/ Forgot Password</a></td>
+              </tr>
+              <tr>
+                <td><img src="images/emptools-manage.gif" width="24" height="24"></td>
+                <td>Manage Jobs Posts </td>
+              </tr>
+              <tr>
+                <td><img src="images/emptools-view.gif" width="24" height="24"></td>
+                <td>View Resumes</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td><a href="http://www.jobsearchusa.org/aboutus.php" class="nu">About Us</a></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+      <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><div style="margin-bottom: 12px;">
+                        <form name="form1" action="jobseekers/login.php" method="post">
+              <table width="90%"  border="0" cellpadding="6" cellspacing="0" class="loginbox">
+                <tr>
+                  <td colspan="2" class="blueheader">Job Seeker Login </td>
+                </tr>
+                <tr>
+                  <td colspan="2"></td>
+                </tr>
+                <tr>
+                  <td width="159">Member Id:</td>
+                  <td width="189"><input class="logininput" id="username" name="username"></td>
+                </tr>
+                <tr>
+                  <td>Password:</td>
+                  <td><input class="logininput" id="password" type="password" name="password"></td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td><input type="image" src="images/n-loginbut.gif" width="77" height="24" border="0" value="Login" name="Submit"></td>
+                </tr>
+                <tr>
+                  <td colspan="4"><a href="http://www.jobsearchusa.org/jobseekers/">Join Now! / Forgot password?</a></td>
+                </tr>
+              </table>
+            </form>
+            <form name="form1" action="employers/login.php" method="post">
+              <br />
+              <table width="90%"  border="0" cellpadding="6" cellspacing="0" class="loginbox">
+                <tr>
+                  <td colspan="2" class="blueheader">Employer Login </td>
+                </tr>
+                <tr>
+                  <td width="164">Employer Id:</td>
+                  <td width="184"><input class="logininput" id="username" name="username"></td>
+                </tr>
+                <tr>
+                  <td>Password:</td>
+                  <td><input class="logininput" id="password" type="password" name="password"></td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td><input type="image" src="images/n-loginbut.gif" width="77" height="24" border="0" value="Login" name="Submit"></td>
+                </tr>
+              </table>
+            </form></td>
+        	</tr>
+	      </table>
+		</table>
+		</p>
+		</td>
+		</tr>
+		</table>
+		</td>
+		</tr>
+		</div>
+		</td>
+		</tr>
+		</table>
+		</td>
+		</tr>
+		</table>
+
+		<!-- end new home -->
+
+		    </div></td></tr>
+<tr><td>
+	<br>
+	
+		
+		<table width="96%"  border="0" align="center" cellpadding="0" cellspacing="0" class="footerborder">
+			<tr>
+			  <td width="66%" valign="top">
+			  <div style="padding-top: 8px">
+			  ©2006-2014 JobSearchUSA.org			  </div>
+			  </td>
+   		 	<td width="34%" align="right">
+
+</div>
+
+
+
+				
+<br><br>				
+
+					  
+				</td>
+ 		 	</tr>
+</table>
+
+		</td>
+  </tr>
+</table>
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-972365-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</body>
+
+</html>    

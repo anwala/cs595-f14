@@ -1,0 +1,331 @@
+  <!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    
+  
+  <meta charset="utf-8">
+      <title>大人の出逢いサイト「スマ恋」</title>
+        <meta name="description" content="大人の出逢いサイト「スマ恋」は、素敵な女性とのお付き合いの場を提供する恋愛ソーシャルネットワークです。">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <!-- mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <!-- /mobile -->
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <!-- mobile -->
+  <link rel="apple-touch-icon" media="screen and (resolution: 163dpi)" href="http://imageup.sumakoi.com/jp/images/apple-touch-icon1x.png">
+  <link rel="apple-touch-icon" media="screen and (resolution: 326dpi)" href="http://imageup.sumakoi.com/jp/images/apple-touch-icon2x.png">
+  <link rel="stylesheet" media="screen and (max-width: 960px)" href="http://imageup.sumakoi.com/jp/css/mobile.min.css">
+  <link rel="stylesheet" media="screen and (max-width: 960px)" href="http://imageup.sumakoi.com/jp/css/mobile-mypage.min.css">
+  <!-- /mobile -->
+  <!-- iconic fonts -->
+  <link rel="stylesheet" media="screen" href="http://imageup.sumakoi.com/jp/css/font-awesome.min.css">
+  <link rel="stylesheet" media="screen" href="http://imageup.sumakoi.com/jp/css/fontello.min.css">
+  <!-- /iconic fonts -->
+  <link rel="stylesheet" media="screen and (min-width: 961px)" href="http://imageup.sumakoi.com/jp/css/common/pc.min.css">
+  <link rel="stylesheet" media="screen and (min-width: 961px)" href="http://imageup.sumakoi.com/jp/css/mypage/mypage.min.css">
+      <!--colorbox -->
+  <link href="http://imageup.sumakoi.com/jp/css/colorbox/colorbox.min.css" rel="stylesheet" type="text/css" media="all">
+  <link href="http://imageup.sumakoi.com/jp/css/jquery-ui/redmond/jquery-ui-1.10.3.custom.min.css" rel="stylesheet">
+  <!-- /colorbox -->
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <!-- html5 placeholder for IE9 -->
+  <style type="text/css">
+  <!--
+  .placeholder {
+          color: #CCC;
+  }
+  ::-webkit-input-placeholder {
+   color: #CCC;
+  }
+  :-moz-placeholder {
+   color: #CCC;
+  }
+  -->
+  </style>
+  <!-- /html5 placeholder for IE9 -->
+
+  <!--begin google analytics must be just before the closing head tag-->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', 'UA-40641653-1', 'sumakoi.com');
+    ga('require', 'displayfeatures'); 
+    ga('send', 'pageview');
+  </script>
+  <!-- end google analytics -->
+</head>
+<body>
+  <!-- begin header -->
+<div class="header">
+  <div class="nav">
+    <div class="menu">
+            <!-- home -->
+      <a href="/">ホーム</a>
+            <!-- search -->
+      <a href="/search">メンバー検索</a>
+            <!-- login -->
+      <a href="/loginForm" class="new">ログイン</a>
+      <!-- join -->
+      <a href="/join" class="credit new">無料新規登録</a>
+                  <!-- end -->
+    </div>
+    <div class="logo">
+        <a href="/">
+          <img src="http://imageup.sumakoi.com/jp/images/logo.png" alt="スマ恋">
+        </a>
+        <!-- new-msg-count -->
+            </div>
+  </div>
+</div>
+<!-- end header -->
+<!-- begin mobile header.main -->
+<header class="main">
+  <!-- begin mainNav -->
+  <div id="mainNav">
+    <div class="section group">
+      <div class="col span_1_of_6"><a href="#menu" class="menu-trigger btn-header"><i class="icon icon-menu"></i></a></div>
+      <!-- if $login -->
+      <div class="col span_4_of_6">
+        <h1 class="mobile">スマ恋</h1>
+      </div>
+      <div class="col span_1_of_6"><a href="/loginForm" class="btn-header"><i class="icon icon-login"></i></a></div>
+      <!-- if $login -->
+    </div>
+    <!--  -->
+  <!-- end mainNav -->
+  <!-- begin nav -->
+  <nav style="display:none;">
+    <ul>
+      <div class="searchArea">
+        <form action="/search" method="get">
+          <input type="search" name="profile_name" id="searchInput" placeholder="名前検索">
+        </form>
+      </div>
+            <li class="new"><a href="/join"><i class="icon icon-user"></i>無料登録</a></li>
+      <li class="new"><a href="/loginForm"><i class="icon icon-login"></i>ログイン</a></li>
+      <li class="new"><a href="/"><i class="icon icon-home"></i>ホーム</a></li>
+                  <li><a href="/search"><i class="icon-search"></i>メンバー検索</a></li>
+                        <li><a href="/help"><i class="icon icon-help-circled"></i>利用ガイド</a></li>
+            <li>
+        <a href="/gift/sent_list"><i class="icon-gift"></i>ギフト</a>
+      </li>
+      <li><a href="/help/contact"><i class="icon icon-phone-circled"></i>お問い合わせ</a></li>
+      <li><a href="/terms"><i class="icon icon-info-circled"></i>利用規約</a></li>
+      <li><a href="/privacy"><i class="icon icon-lock"></i>プライバシーポリシー</a></li>
+            <li><span>&copy; 2014 Sumakoi.com</span></li>
+    </ul>
+  </nav>
+  <!-- end nav -->
+</header>
+<!-- end mobile header.main -->
+<div id="header_notify_wrapper" style="width:100%;text-align:center;padding-top:20px;background:white;line-height:1em;display:none;"></div>
+
+<script id="header_notify_template" type="text/template">
+    <span id="notify" class="server-warn" style="-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border-radius:3px;padding:8px 18px;font-size:12px;display:inline-block;width:900px;background-color:#F8E9EE;border:1px solid #DD3C52;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;">
+        <span id="notify-msg">
+            <a href=<%= notify_href %> style="color:#DD1695;text-decoration:none;"><%= notify_msg %></a>
+        </span>
+    </span>
+</script> 
+<link rel="stylesheet" type="text/css" href="http://imageup.sumakoi.com/jp/css/page/home.min.css" media="all">
+<!--[if IE 9]><style>.home-search-form .searchBtn, section.middle a.joinBtn { border-radius: 0px; }</style><![endif]-->
+<!-- begin page -->
+<div class="page clearfix"> 
+<script type="text/javascript" src="http://imageup.sumakoi.com/jp/vendor/bower_components/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="http://imageup.sumakoi.com/jp/vendor/bower_components/jpanelmenu/jquery.jpanelmenu.min.js"></script>
+<script>
+<!--
+    jpm$ = jQuery.noConflict();
+    var jPM = jpm$.jPanelMenu({
+        menu: 'header.main nav',
+        animated: false,
+        closeOnContentClick: false,
+        trigger: '.menu-trigger',
+        keyboardShortcuts: [
+            { code: 27, open: false, close: false }
+        ],
+        // 閉じる動作前実行
+        beforeClose: function () {
+            jpm$('header.main #mainNav a.btn-header').addClass('disabled');
+            jpm$('header.main #mainNav a.disabled').on('click', function(e) { return false; });
+        },
+        // 閉じる動作後実行
+        afterClose: function () {
+            setTimeout(function () {
+                jpm$('header.main #mainNav a.disabled').off('click');
+                jpm$('header.main #mainNav a.btn-header').removeClass('disabled');
+            }, 300);
+        },
+    });
+    jPM.on();
+-->
+</script>
+<script type="text/javascript" src="http://imageup.sumakoi.com/jp/vendor/bower_components/modernizr/modernizr.min.js"></script>  <!-- begin container -->
+  <div class="container"> 
+    <!-- begin content -->
+    <div class="content"> 
+      <h1 class="pc home">大人の出逢いサイト「スマ恋」</h1>
+      <!-- begin home -->
+      <section class="home">
+        <div class="home-search">
+          <form action="/search" class="home-search-form">
+            <ul>
+              <li class="boxbg form-title">大人の出逢い検索</li>
+              <li class="form-txt">年齢：</li>
+              <li class="boxbg">
+                <select id="age" name="age">
+                  <option value="">問わない</option>
+                  <option value="18-24">18 歳 ～ 24 歳</option>
+                  <option value="25-30">25 歳 ～ 30 歳</option>
+                  <option value="31-36">31 歳 ～ 36 歳</option>
+                  <option value="37-99">37 歳以上</option>
+                </select>
+              </li>
+              <li class="form-txt">地域：</li>
+              <li class="boxbg">
+                <select id="location" name="location">
+                  <option value="">選択して下さい</option>
+                  <option value="hokkaido">北海道</option>
+                  <option value="tohoku">東北</option>
+                  <option value="kanto">関東</option>
+                  <option value="chubu">中部</option>
+                  <option value="kansai">関西</option>
+                  <option value="chugoku">中国</option>
+                  <option value="shikoku">四国</option>
+                  <option value="kyushu">九州・沖縄</option>
+                  <option value="kaigai">海外</option>
+                </select>
+              </li>
+              <li class="form-txt">タイプ：</li>
+              <li class="boxbg">
+
+                                  <select id="type_of_girl" name="type_of_girl">
+                    <option value="">選択して下さい</option>
+                                          <option value="1501" >カジュアル系</option>
+                                          <option value="1502" >お姉系</option>
+                                          <option value="1503" >お嬢系</option>
+                                          <option value="1504" >セレブ系</option>
+                                          <option value="1505" >癒し系</option>
+                                          <option value="1506" >面白い系</option>
+                                          <option value="1507" >かわいい系</option>
+                                          <option value="1509" >モデル系</option>
+                                          <option value="1510" >ギャル系</option>
+                                          <option value="1512" >熟女系</option>
+                                          <option value="1513" >不思議系</option>
+                                          <option value="1515" >ストリート系</option>
+                                          <option value="1516" >フェロモン系</option>
+                                          <option value="1517" >エロカワ系</option>
+                                          <option value="1518" >小悪魔系</option>
+                                          <option value="1599" >その他</option>
+                                      </select>
+                              </li>
+              <li class="submit">
+                <input type="submit" value="検　索" class="searchBtn">
+              </li>
+            </ul>
+          </form>
+          <div class="home-search-box"></div>
+        </div>
+      </section>
+      <!-- end home --> 
+      <!-- begin middle -->
+      <section class="middle">
+        <ul>
+                      <li class="middle-right"><a href="/join" class="joinBtn">無料新規登録</a></li>
+                    <li class="middle-left">スマ恋では、日本各地から、男性との出逢い、恋愛、お友達探し等を求めて、多くの女性が登録していますので、自分にあった相手を見つけることが出来ます。また、メル友、遊び仲間をお探しの方にもお勧めです。</li>
+        </ul>
+      </section>
+      <!-- end middle --> 
+      <!-- begin bottom -->
+      <section class="bottom clearfix">
+        <ul>
+                  <li >
+            <div class="bottom-name"><a href="/profile/11020933">☆みゆき</a></div>
+            <div class="bottom-frame"><a href="/profile/11020933" title="☆みゆき"><img src="http://imageup.sumakoi.com/jp/images/home/thumbnail-frame.png"></a></div>
+            <div class="bottom-thumbnail"><img src="http://imageup.sumakoi.com/WebArchive/1102/0933/p240x320.jpg" width="178" height="238"></div>
+          </li>
+                  <li >
+            <div class="bottom-name"><a href="/profile/11022503">ゆあたん</a></div>
+            <div class="bottom-frame"><a href="/profile/11022503" title="ゆあたん"><img src="http://imageup.sumakoi.com/jp/images/home/thumbnail-frame.png"></a></div>
+            <div class="bottom-thumbnail"><img src="http://imageup.sumakoi.com/WebArchive/1102/2503/p240x320.jpg" width="178" height="238"></div>
+          </li>
+                  <li >
+            <div class="bottom-name"><a href="/profile/11006881">ALICIA</a></div>
+            <div class="bottom-frame"><a href="/profile/11006881" title="ALICIA"><img src="http://imageup.sumakoi.com/jp/images/home/thumbnail-frame.png"></a></div>
+            <div class="bottom-thumbnail"><img src="http://imageup.sumakoi.com/WebArchive/1100/6881/p240x320.jpg" width="178" height="238"></div>
+          </li>
+                  <li >
+            <div class="bottom-name"><a href="/profile/11021858">しゃろ</a></div>
+            <div class="bottom-frame"><a href="/profile/11021858" title="しゃろ"><img src="http://imageup.sumakoi.com/jp/images/home/thumbnail-frame.png"></a></div>
+            <div class="bottom-thumbnail"><img src="http://imageup.sumakoi.com/WebArchive/1102/1858/p240x320.jpg" width="178" height="238"></div>
+          </li>
+                  <li class="bottom-list-last">
+            <div class="bottom-name"><a href="/profile/11021214">さーちん</a></div>
+            <div class="bottom-frame"><a href="/profile/11021214" title="さーちん"><img src="http://imageup.sumakoi.com/jp/images/home/thumbnail-frame.png"></a></div>
+            <div class="bottom-thumbnail"><img src="http://imageup.sumakoi.com/WebArchive/1102/1214/p240x320.jpg" width="178" height="238"></div>
+          </li>
+                </ul>
+      </section>
+      <!-- end bottom -->
+      <!-- begin about -->
+      <section class="about clearfix">
+        <ul>
+            <li><img src="http://imageup.sumakoi.com/jp/images/home/usflag.png" class="flag"/>
+            <div class="h1">海外発の、大人の出逢いを求める人のためのサイト『スマ恋』が遂に日本に上陸！</div>
+            <div class="h2">①<span>『スマ恋』</span>は、大人の出逢いの場を提供するソーシャル・ネットワーク・サービス</div>
+            <p>何か物足りなさを感じる女性と、それを満たすことの出来る男性が出逢い、楽しい一時を過ごす、そんな大人のいたずら心を目覚めさせる、ちょっと常識外れのコンセプトは、今、世界中で注目されていて、日本のマスコミでも数多く紹介されています。スマ恋はこの新しいスリルを求める人のための大人の出逢いの場です。</p>
+          </li>
+          <li><img src="http://imageup.sumakoi.com/jp/images/home/jpid.png" class="id"/>
+            <div class="h2">②<span>『スマ恋』</span>は身分証明を提出している、身元が確かな会員のみが参加しているので安心！</div>
+            <p>男性は、任意でクレジットカードにて認証登録して頂きますので、身元の確認はもちろんのこと、本気で楽しまれたい方のみに参加頂いております。女性は、厳正な年齢確認を行うため、写真付き身分証明書、さらに契約書の両方を提出して頂いております。身元が確認出来た女性には、身分証確認済み（認）の表示がされるため、安心してお楽しみ頂けます。</p>
+          </li>
+        </ul>
+      </section>
+      <!-- end about --> 
+    </div>
+    <!-- end content --> 
+  </div>
+  <!-- end container --> 
+  <div id="campaign-box"></div>
+
+</div>
+<!-- end page --> 
+
+<script type="text/template" id="campaign-template">
+<div id='campaign'>
+    <div class='promo'>
+        <ul class='message'>
+            <li class='simplemodal-close'><a href='javascript:void(0);' title='閉じる'>x</a></li>
+            <li class='space'></li>
+            <li class='join'>
+                <a id='d2pshooter' href='javascript:void(0);'></a>
+                <a id='login' href='/login'></a>
+            </li>
+        </ul>
+    </div>
+</div>
+</script>
+<script data-main="http://imageup.sumakoi.com/jp/js/home.min" src="http://imageup.sumakoi.com/jp/vendor/require.min.js"></script>
+<!-- begin footer -->
+<footer> 
+    <div class="links"><a href="/join">無料新規登録</a> | <a href="/help">利用ガイド</a> | <a href="/company">運営会社</a> | <a href="/privacy">プライバシーポリシー</a> | <a href="/terms">利用規約</a> | <a href="/company/transactions">特定商取引法に基づく表記</a> | <a href="/help/contact">お問い合わせ</a> | <a href="http://blog.sumakoi.com/" target="_blank">スタッフブログ</a> | <a href="http://en.sumakoi.com/">ENGLISH</a></div>
+  <div class="copyright">&copy; 2014<a href="/">Sumakoi.com.</a>All Rights Reserved.</div>
+</footer>
+<!-- end footer -->
+
+<img src="/ping" width="0" height="0"></body>
+</html> 

@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UwYCVVJACQAGU1RRAA=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,o){t&&t(e,n,o),o||(o={});for(var a=i(e),s=a.length,c=o[r]||(o[r]={}),f=0;s>f;f++)a[f].apply(c,n);return c}function o(t,e){s[t]=i(t).concat(e)}function i(t){return s[t]||[]}function a(){return n(e)}var s={};return{on:o,emit:e,create:a,listeners:i,_events:s}}var r="nr@context";e.exports=n()},{}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(4),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(f){"stack"in f&&(t(5),t(3),"addEventListener"in window&&t(1),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(2),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:4,2:7,3:5,4:15,5:6,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o);if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var a=document;a&&!a.hasOwnProperty("addEventListener");)a=Object.getPrototypeOf(a);a&&n(a);for(var s=XMLHttpRequest.prototype;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=e["nr@wrapped"]?t[1]=e["nr@wrapped"]:e["nr@wrapped"]=t[1]=i(e,"fn-",null,e.name||"anonymous"):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:15,2:16,ee:"QJf3ax"}],5:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:16,2:15,ee:"QJf3ax"}],6:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:16,2:15,ee:"QJf3ax"}],7:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),f=s(a),u=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new u(t);try{i.emit("new-xhr",[],e),f.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",r)}catch(o){}}return e},window.XMLHttpRequest.prototype=u.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:4,2:16,ee:"QJf3ax"}],8:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=e(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(1),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(2);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=e(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",e)}catch(r){}}};for(var u=0;c>u;u++)n.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:9,2:12,3:7,4:4,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],9:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],12:[function(t,e){function n(t){if(!t||"object"!=typeof t&&"function"!=typeof t)return-1;if(t===window)return 0;if(o.call(t,"__nr"))return t.__nr;try{return Object.defineProperty(t,"__nr",{value:r,writable:!0,enumerable:!1}),r}catch(e){return t.__nr=r,r}finally{r+=1}}var r=1,o=Object.prototype.hasOwnProperty;e.exports=n},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){p.proto="https"===d.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=p.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,c=s.document,f="addEventListener",u="attachEvent",d=(""+location).split("?")[0],p=e.exports={offset:i(),origin:d,features:{}};c[f]?(c[f]("DOMContentLoaded",o,!1),s[f]("load",n,!1)):(c[u]("onreadystatechange",r),s[u]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],15:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],16:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper";e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,f,u;try{i=this,n=o(arguments),f=r&&r(n,i)||{}}catch(d){c([d,"",[n,i,a],f])}s(e+"start",[n,i,a],f);try{return u=t.apply(i,n)}catch(p){throw s(e+"err",[n,i,p],f),p}finally{s(e+"end",[n,i,u],f)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,nrWrapper)}function a(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s,t))}function s(e,n,r){try{t.emit(e,n,r)}catch(o){c([o,e,n,r])}}function c(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=a,e.flag=i,e}},{1:15,ee:"QJf3ax"}]},{},["G9z0Bl",3,8]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-6.newrelic.com","queueTime":0,"licenseKey":"89696ce665","agent":"js-agent.newrelic.com/nr-460.min.js","transactionName":"MgFXYENSVxECWkdRCgtLc0FfUE0LDFccUwAAFFZVXV4XFApcREtfFwFbUFRBZhIMSkddFw==","applicationID":"1367537","errorBeacon":"bam.nr-data.net","applicationTime":169}</script>
+
+        <title>KEEP CALM AND LOVE JAPAN - KEEP CALM AND CARRY ON Image Generator</title>
+        <!-- lo-web-4 -->
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        
+    <meta charset="utf-8" />
+    <meta name="keywords" content="keep calm and carry on, poster, keep calm-o-matic, keep, calm, carry, on" />
+    <meta name="description" content="Generate your own image based on the classic 'Keep Calm and Carry On' wartime poster" />
+    <meta name="robots" content="index, follow" />
+    <meta itemprop="name" content="KEEP CALM AND LOVE JAPAN - Keep Calm-o-matic" />
+    <meta itemprop="image" content="http://www.keepcalm-o-matic.co.uk" />
+
+    <meta property="fb:app_id"      content="177054532316756" />
+    <meta property="og:type"        content="keepcalmandcarryon:poster" />
+    <meta property="og:url"         content="http://www.keepcalm-o-matic.co.uk/p/keep-calm-and-love-japan-337/" />
+    <meta property="og:title"       content="KEEP CALM AND LOVE JAPAN" />
+    <meta property="og:description" content="Poster created with the Keep Calm-o-matic" />
+    <meta property="og:image"       content="http://sd.keepcalm-o-matic.co.uk/i/keep-calm-and-love-japan-337.png" />
+
+    <meta property="twitter:card"         content="photo" />
+    <meta property="twitter:site"         content="@keepcalmomatic" />
+    <meta property="twitter:title"        content="KEEP CALM AND LOVE JAPAN" />
+    <meta property="twitter:description"  content="Poster created with the Keep Calm-o-matic" />
+    <meta property="twitter:image"        content="http://sd.keepcalm-o-matic.co.uk/i/keep-calm-and-love-japan-337.png" />
+    <meta property="twitter:image:width"  content="" />
+    <meta property="twitter:image:height" content="" />
+    <style>
+        a.usingZazzle {
+            cursor: auto;
+        }
+        /*svg {
+            width: 100%;
+            height: 100%;
+        }*/
+    </style>
+
+        <!--[if IE]>
+			<script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of recent Keep Calm and Carry On posters" href="/feed/" />
+
+        
+        <link rel="stylesheet" href="http://s.keepcalm-o-matic.co.uk/res/new/css/style.min.css?v4" />
+        
+
+        
+
+        
+            <link rel="shortcut icon" href="http://s.keepcalm-o-matic.co.uk/favicon.ico" type="image/x-icon"/>
+        
+        <link rel="apple-touch-icon" href="http://s.keepcalm-o-matic.co.uk/apple-touch-icon.png">
+
+        
+            <script src="http://s.keepcalm-o-matic.co.uk/res/js/jquery.min.js"></script>
+        
+        <script src="http://s.keepcalm-o-matic.co.uk/res/js/raphael-min.js"></script>
+        <script type="text/javascript" src="http://s.keepcalm-o-matic.co.uk/res/new/js/jquery-ui.custom.min.js"></script>
+
+        
+            
+                <script type="text/javascript">
+                    var _gaq = _gaq || [];
+                    _gaq.push(['_setAccount', 'UA-2156704-23']);
+                    _gaq.push(['_setDomainName', 'keepcalm-o-matic.co.uk']);
+                    _gaq.push(['_setAllowLinker', true]);
+                    _gaq.push(['_trackPageview']);
+                    _gaq.push(['_setCustomVar', 1, 'Product_page_redesign', '', 1 ]);
+                    _gaq.push(['_trackPageLoadTime']);
+
+                    (function() {
+                        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                    })();
+                </script>
+            
+        
+
+        
+            <!-- Clicky -->
+            
+            <script src="//static.getclicky.com/js" type="text/javascript"></script>
+            <script type="text/javascript">try{ clicky.init(100746970); }catch(e){}</script>
+            <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100746970ns.gif" /></p></noscript>
+        
+
+        <!-- Start Visual Website Optimizer Code -->
+        <script type='text/javascript'>
+            var _vis_opt_account_id = 2452;
+            var _vis_opt_protocol = (('https:' == document.location.protocol) ? 'https://' : 'http://');
+            document.write('<s' + 'cript src="' + _vis_opt_protocol +
+            'dev.visualwebsiteoptimizer.com/deploy/js_visitor_settings.php?v=1&a='+_vis_opt_account_id+'&url='
+            +encodeURIComponent(document.URL)+'&random='+Math.random()+'" type="text/javascript">' + '<\/s' + 'cript>');
+            </script>
+
+            <script type='text/javascript'>
+            if(typeof(_vis_opt_settings_loaded) == "boolean") { document.write('<s' + 'cript src="' + _vis_opt_protocol +
+            'd5phz18u4wuww.cloudfront.net/vis_opt.js" type="text/javascript">' + '<\/s' + 'cript>'); }
+            // if your site already has jQuery 1.4.2, replace vis_opt.js with vis_opt_no_jquery.js above
+            </script>
+
+            <script type='text/javascript'>
+            if(typeof(_vis_opt_settings_loaded) == "boolean" && typeof(_vis_opt_top_initialize) == "function") {
+                    _vis_opt_top_initialize(); vwo_$(document).ready(function() { _vis_opt_bottom_initialize(); });
+            }
+        </script>
+        <!-- End Visual Website Optimizer Code -->
+
+        <!-- Start doubleclick for publishers -->
+        <script type='text/javascript'>
+            var googletag = googletag || {};
+            googletag.cmd = googletag.cmd || [];
+            (function() {
+                var gads = document.createElement('script');
+                gads.async = true;
+                gads.type = 'text/javascript';
+                var useSSL = 'https:' == document.location.protocol;
+                gads.src = (useSSL ? 'https:' : 'http:') +
+                '//www.googletagservices.com/tag/js/gpt.js';
+                var node = document.getElementsByTagName('script')[0];
+                node.parentNode.insertBefore(gads, node);
+            })();
+        </script>
+        <script type='text/javascript'>
+            googletag.cmd.push(function() {
+                googletag.pubads().enableAsyncRendering();
+                googletag.defineSlot('/22692634/Keep_Calm_top_MPU', [300, 250], 'div-gpt-ad-1364988475916-0').addService(googletag.pubads());
+                googletag.defineSlot('/22692634/Keep_Calm_bottom_MPU', [300, 250], 'div-gpt-ad-1364988617026-0').addService(googletag.pubads());
+                googletag.defineSlot('/22692634/Keep_Calm_wide_skyscraper', [160, 600], 'div-gpt-ad-1367494350203-0').addService(googletag.pubads());
+                
+                    googletag.defineSlot('/22692634/Keep_Calm_leaderboard', [728, 90], 'div-gpt-ad-1355940072740-0').addService(googletag.pubads());
+                
+                googletag.pubads().enableSingleRequest();
+                googletag.enableServices();
+            });
+            window.onresize = function(event) {
+                $('#canvas').height($('svg').height());
+            }
+        </script>
+        <!-- End doubleclick for publishers -->
+        
+        
+	</head>
+	<body class="">
+        
+        <!-- Google Tag Manager -->
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WZGT"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-WZGT');</script>
+        <!-- End Google Tag Manager -->
+        
+
+        <div id="container">
+    		<!-- Top area -->
+    		
+            <div class="top-area">
+	        	<!-- Header -->
+	            <header>
+	                <a href="/" class="logo">
+                        <img src="http://s.keepcalm-o-matic.co.uk/res/new/i/crown.png"></img>
+                        <h1>THE KEEP CALM-O-MATIC</h1>
+	                </a>
+                    
+                    <!-- END OF RESPONSIVE WHEEL BUTTON -->
+                    <a href="#" id="nav-toggle">
+                        <em></em>
+                        <em></em>
+                        <em style="margin-bottom: 0px;"></em>
+                        <span>Menu</span>
+                    </a>
+	                <nav id="page-poster">
+                        <a href="/#create" class="scroll_to_create">Create a poster</a>
+	                    <a href="/gallery/" >Browse gallery</a>
+	                    <a href="/guide-to-keep-calm/" >'Keep Calm' guide</a>
+	                    <a href="/shop/" >Online shop</a>
+                        
+                            <a href="javascript:;" onclick="logIn()">Log in</a>
+                            
+                        
+
+                        <!-- Search form -->
+                        <form action="/search" id="search-gallery">
+                            <div id="autocomplete-load"></div>
+                            <span class="sprite sprite-clear" id="autocomplete-clear"></span>
+                            <input type="text" value="Find an image" name="q" data-rel="Find an image" />
+                            <button><span class="sprite sprite-search"></span></button>
+                            <div id="autocomplete"></div>
+                        </form>
+                        <!-- /Search form -->
+	                </nav>
+	            </header>
+                
+                
+	            <!-- End header -->
+	            
+            </div>
+
+            
+
+            
+
+            <div class="grey-area ">
+                
+                    
+
+<div class="banner-wrapper">
+    <div class="banner">
+    
+        
+            <div class="leaderboard-ad-wide" id='div-gpt-ad-1355940072740-0' style='width:728px; height:90px;'>
+                <script type='text/javascript'>
+                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1355940072740-0'); });
+                </script>
+            </div>
+        
+    
+    </div>
+</div>
+                
+
+                
+    <!-- Main section -->
+    <div class="main-section">
+        <section id="poster-page">
+            <h3 class="poster-title">
+                KEEP CALM AND LOVE JAPAN
+                <div class="by-user">
+                    <span>by
+                        <strong>
+                        
+                            <a href="/user/jtuchika/"><img src="http://sd.keepcalm-o-matic.co.uk/avatar/size-32/.._.._filestorage_12_4f6_19b59c902b142c06036e26a258736" alt="jtuchika" />jtuchika</a>
+                            
+                        
+                        </strong>
+                        | 4 months, 3 weeks ago
+                    </span>
+                </div>
+            </h3>
+
+            <!-- see other great merchandise -->
+            <a class="other-merchandise" href="#buy-poster" onclick="javascript: _gaq.push(['_trackPageview', '/p/keep-calm-and-love-japan-337/products']);"><span class="other-merchandise-additional-text">Check out </span>our shop</a>
+
+            <div id="view-poster">
+                <!-- votes -->
+                <div class="poster-votes">
+                    <strong class="__count" id="vote_count_8582835">1</strong> <span class="__vote_pluralized" id="vote_pluralized_8582835">vote</span>, <strong class="__position_in_top" id="position_in_top_8582835">860th</strong> most popular
+                    <div class="vote-separator"></div>
+                    <span class="vote-up" title="Vote up" data-rel-url="/vote/8582835/u/" data-image="8582835" onclick="javascript: _gaq.push(['_trackPageview', '/p/keep-calm-and-love-japan-337/vote-up']); clicky.log('/vote-up/?owner=564603', 'Vote up');"><span class="sprite sprite-vote-up-big"></span></span>
+                    <span class="vote-down" title="Vote down" data-rel-url="/vote/8582835/d/" data-image="8582835" onclick="javascript: _gaq.push(['_trackPageview', '/p/keep-calm-and-love-japan-337/vote-down']); clicky.log('/vote-down/?owner=564603', 'Vote down');"><span class="sprite sprite-vote-down-big"></span></span>
+                    <!-- favourite this poster -->
+                    
+                        <span class="favourite" id="favourite_8582835" data-rel-url="/favourite/8582835/add/" onclick="javascript: _gaq.push(['_trackPageview', '/p/keep-calm-and-love-japan-337/favourite']); clicky.log('/favourite/', 'Favourite');"><span class="sprite sprite-star"></span></span>
+                    
+                    <span class="download-button" style="position: relative" title="Download poster" onclick="">
+                        <span class="download"></span>
+                        
+                        <div class="download-tooltip">
+                            <div class="tooltip-arrow"></div>
+                            
+                            <div data-rel-url="/i/download/600/700/keep-calm-and-love-japan-337.png" data-type="original" onclick="javascript: _gaq.push(['_trackPageview', '/p/keep-calm-and-love-japan-337/download']);" id="download" class="grey-button">Original</div>
+                            <div data-rel-url="/i/keep-calm-and-love-japan-337.pdf" data-type="pdf" onclick="javascript: _gaq.push(['_trackPageview', '/p/keep-calm-and-love-japan-337/download/pdf']);" id="download" class="grey-button">PDF</div>
+                            <div data-rel-url="/i/download/640/1136/keep-calm-and-love-japan-337.png" data-type="iphone" onclick="javascript: _gaq.push(['_trackPageview', '/p/keep-calm-and-love-japan-337/download/iphone']);" id="download" class="grey-button">iPhone 5</div>
+                            <div data-rel-url="/i/download/2048/1536/keep-calm-and-love-japan-337.png" data-type="ipad" onclick="javascript: _gaq.push(['_trackPageview', '/p/keep-calm-and-love-japan-337/download/ipad']);" id="download" class="grey-button">iPad 3</div>
+                            <div data-rel-url="/i/download/180/180/keep-calm-and-love-japan-337.png" data-type="widescreen" onclick="javascript: _gaq.push(['_trackPageview', '/p/keep-calm-and-love-japan-337/download/facebook']);" id="download" class="grey-button">Facebook profile pic</div>
+                            <div data-rel-url="/i/download/851/315/keep-calm-and-love-japan-337.png" data-type="widescreen" onclick="javascript: _gaq.push(['_trackPageview', '/p/keep-calm-and-love-japan-337/download/facebook-cover']);" id="download" class="grey-button">Facebook cover picture</div>
+                            <div data-rel-url="/i/download/300/300/keep-calm-and-love-japan-337.png" data-type="widescreen" onclick="javascript: _gaq.push(['_trackPageview', '/p/keep-calm-and-love-japan-337/download/twitter']);" id="download" class="grey-button">Twitter pic</div>
+                            <div data-rel-url="/i/download/1400/900/keep-calm-and-love-japan-337.png" data-type="widescreen" onclick="javascript: _gaq.push(['_trackPageview', '/p/keep-calm-and-love-japan-337/download/widescreen']);" id="download" class="grey-button">Widescreen wallpaper</div>
+                            <div data-rel-url="/i/download/1024/768/keep-calm-and-love-japan-337.png" data-type="normal" onclick="javascript: _gaq.push(['_trackPageview', '/p/keep-calm-and-love-japan-337/download/normal']);" id="download" class="grey-button" style="margin-bottom: 0px">Normal wallpaper</div>
+                        </div>
+                        
+                    </span>
+                </div>
+
+                <!-- the poster -->
+                
+                    <img src="http://sd.keepcalm-o-matic.co.uk/i/keep-calm-and-love-japan-337.png" id="poster-image" />
+                
+
+
+                
+                    <div class="poster-votes poster-votes-bottom" style="text-align: center;font-weight: bold;font-size: 17px;">
+                        <a href="/user/JtuChika/">@JtuChika</a> <a href="/search/?q=LoveJapan">#LoveJapan</a>
+                    </div>
+                
+                <div class="poster-votes poster-votes-bottom" style="font-size: 13px;">
+                    
+                        
+                            <a href="/user/jtuchika/"><img src="http://sd.keepcalm-o-matic.co.uk/avatar/size-32/.._.._filestorage_12_4f6_19b59c902b142c06036e26a258736" alt="jtuchika"/></a>
+                        
+                        <span>
+                            
+                                <a href="/user/jtuchika/">jtuchika</a>
+                            
+
+                            
+                                
+                                    voted for this poster
+                                
+                            
+                        </span>
+                    
+                </div>
+                
+                    <div id="buy-poster">
+                        <!-- buy products -->
+                        <p class="shop-gallery-t" >GET THIS POSTER FOR YOUR WALL, OR ON A MUG, MOUSEMAT OR KEYCHAIN!</p>
+                        <div class="shop-gallery-poster zazzle_product_gallery">
+                            
+                                
+
+	
+	    <a target="_self"
+           id="Posters-product"
+           class="one-row inHouse 3d"
+           href="/product/poster/keep-calm-and-love-japan-337/" >
+	        <img src="http://sd.keepcalm-o-matic.co.uk/i/productimage/180/209/keep-calm-and-love-japan-337.png
+	        		  "
+                 alt="Posters" style="width:77px; margin:0 auto" />
+	        <strong>
+	            <span class="sprite sprite-button-corner"></span>
+	            <span class="shop-text">Posters</span>
+	        </strong>
+	    </a>
+	
+	    <a target="_self"
+           id="Wall Decal-product"
+           class="one-row inHouse 3d"
+           href="/product/wall_decal/keep-calm-and-love-japan-337/" >
+	        <img src="http://sd.keepcalm-o-matic.co.uk/i/productimage/180/209/keep-calm-and-love-japan-337.png
+	        		  "
+                 alt="Wall Decal" style="width:77px; margin:0 auto" />
+	        <strong>
+	            <span class="sprite sprite-button-corner"></span>
+	            <span class="shop-text">Wall Decal</span>
+	        </strong>
+	    </a>
+	
+	    <a target="_self"
+           id="Mugs-product"
+           class="one-row inHouse"
+           href="/product/mug/keep-calm-and-love-japan-337/" >
+	        <img src="http://rlv.zcache.co.uk/mugs-r7bbfd3a5b7f74d7eb22d000b017967bd_x7jgr_8byvr_152.png?t_posterimage_iid=ea918fdf-5cce-4ec7-bedd-9f66af19a079"
+                 alt="Mugs"  />
+	        <strong>
+	            <span class="sprite sprite-button-corner"></span>
+	            <span class="shop-text">Mugs</span>
+	        </strong>
+	    </a>
+	
+	    <a target="_self"
+           id="4 Coasters-product"
+           class="one-row inHouse"
+           href="/product/coaster/keep-calm-and-love-japan-337/" >
+	        <img src="http://rlv.zcache.co.uk/keep_calm_and_carry_on_coasters-r44b83d095b374e2d9454dc9b102fab13_am0u7_8byvr_152.png?t_posterimage_iid=ea918fdf-5cce-4ec7-bedd-9f66af19a079"
+                 alt="4 Coasters"  />
+	        <strong>
+	            <span class="sprite sprite-button-corner"></span>
+	            <span class="shop-text">4 Coasters</span>
+	        </strong>
+	    </a>
+	
+	    <a target="_self"
+           id="Mouse mats-product"
+           class="one-row inHouse"
+           href="/product/mouse_mats/keep-calm-and-love-japan-337/" >
+	        <img src="http://rlv.zcache.co.uk/mouse_mats-r77298b4e94a04f1a9e8d2d43dd81584d_x74vi_8byvr_152.png?t_posterimage_iid=ea918fdf-5cce-4ec7-bedd-9f66af19a079"
+                 alt="Mouse mats"  />
+	        <strong>
+	            <span class="sprite sprite-button-corner"></span>
+	            <span class="shop-text">Mouse mats</span>
+	        </strong>
+	    </a>
+	
+	    <a target="_self"
+           id="Men&#39;s T-shirts-product"
+           class=" inHouse"
+           href="/product/mens_t_shirts/keep-calm-and-love-japan-337/" >
+	        <img src="http://rlv.zcache.co.uk/mens_t_shirts-r5bf21d917cb44d97a669fb4161896c30_f0czj_152.png?t_posterimage_iid=ea918fdf-5cce-4ec7-bedd-9f66af19a079"
+                 alt="Men&#39;s T-shirts"  />
+	        <strong>
+	            <span class="sprite sprite-button-corner"></span>
+	            <span class="shop-text">Men&#39;s T-shirts</span>
+	        </strong>
+	    </a>
+	
+	    <a target="_blank"
+           id="Keychains-product"
+           class="one-row "
+           href="http://www.zazzle.com/api/create/at-238246843588281621?rf=238246843588281621&amp;ax=linkover&amp;pd=146418051125104366&amp;fwd=productpage&amp;ed=true&amp;t_posterimage_iid=ea918fdf-5cce-4ec7-bedd-9f66af19a079" onclick="javascript: _gaq.push(['_trackPageview', '/buy/keychains/keep-calm-and-love-japan-337/']);">
+	        <img src="http://rlv.zcache.co.uk/keychains-p146418051125104366q0lja_152.png?t_posterimage_iid=ea918fdf-5cce-4ec7-bedd-9f66af19a079"
+                 alt="Keychains"  />
+	        <strong>
+	            <span class="sprite sprite-button-corner"></span>
+	            <span class="shop-text">Keychains</span>
+	        </strong>
+	    </a>
+	
+	    <a target="_blank"
+           id="Bags-product"
+           class="one-row "
+           href="http://www.zazzle.com/api/create/at-238246843588281621?rf=238246843588281621&amp;ax=linkover&amp;pd=149695764535961273&amp;fwd=productpage&amp;ed=true&amp;t_posterimage_iid=ea918fdf-5cce-4ec7-bedd-9f66af19a079" onclick="javascript: _gaq.push(['_trackPageview', '/buy/bags/keep-calm-and-love-japan-337/']);">
+	        <img src="http://rlv.zcache.co.uk/bags-r65cedfaf5398443aa574a740530739c3_v9wbe_8byvr_152.png?t_posterimage_iid=ea918fdf-5cce-4ec7-bedd-9f66af19a079"
+                 alt="Bags"  />
+	        <strong>
+	            <span class="sprite sprite-button-corner"></span>
+	            <span class="shop-text">Bags</span>
+	        </strong>
+	    </a>
+	
+	    <a target="_blank"
+           id="iPhone 5 Cases-product"
+           class=" "
+           href="http://www.zazzle.com/api/create/at-238246843588281621?rf=238246843588281621&amp;ax=linkover&amp;pd=179452357098574866&amp;fwd=productpage&amp;ed=true&amp;t_posterimage_iid=ea918fdf-5cce-4ec7-bedd-9f66af19a079" onclick="javascript: _gaq.push(['_trackPageview', '/buy/iphone-5-cases/keep-calm-and-love-japan-337/']);">
+	        <img src="http://rlv.zcache.co.uk/iphone_5_cases-r81e9b764509c4c2f854c1bfa246cbd6a_80cs8_8byvr_152.png?t_posterimage_iid=ea918fdf-5cce-4ec7-bedd-9f66af19a079"
+                 alt="iPhone 5 Cases"  />
+	        <strong>
+	            <span class="sprite sprite-button-corner"></span>
+	            <span class="shop-text">iPhone 5 Cases</span>
+	        </strong>
+	    </a>
+	
+	    <a target="_blank"
+           id="Ladies&#39; T-shirt-product"
+           class=" "
+           href="http://www.zazzle.com/api/create/at-238246843588281621?rf=238246843588281621&amp;ax=linkover&amp;pd=235457529526924037&amp;fwd=productpage&amp;ed=true&amp;t_posterimage_iid=ea918fdf-5cce-4ec7-bedd-9f66af19a079" onclick="javascript: _gaq.push(['_trackPageview', '/buy/ladies-t-shirt/keep-calm-and-love-japan-337/']);">
+	        <img src="http://rlv.zcache.co.uk/ladies_t_shirt-rd53d40bbfb24483b82a6e0e3554c3a59_f0czt_152.png?t_posterimage_iid=ea918fdf-5cce-4ec7-bedd-9f66af19a079"
+                 alt="Ladies&#39; T-shirt"  />
+	        <strong>
+	            <span class="sprite sprite-button-corner"></span>
+	            <span class="shop-text">Ladies&#39; T-shirt</span>
+	        </strong>
+	    </a>
+	
+	    <a target="_blank"
+           id="Girls&#39; T-shirt-product"
+           class=" "
+           href="http://www.zazzle.com/api/create/at-238246843588281621?rf=238246843588281621&amp;ax=linkover&amp;pd=235594382185449794&amp;fwd=productpage&amp;ed=true&amp;t_posterimage_iid=ea918fdf-5cce-4ec7-bedd-9f66af19a079" onclick="javascript: _gaq.push(['_trackPageview', '/buy/girls-t-shirt/keep-calm-and-love-japan-337/']);">
+	        <img src="http://rlv.zcache.co.uk/girls_t_shirt-reba2e0e000804a698809e455ca0beaf3_f0czu_152.png?t_posterimage_iid=ea918fdf-5cce-4ec7-bedd-9f66af19a079"
+                 alt="Girls&#39; T-shirt"  />
+	        <strong>
+	            <span class="sprite sprite-button-corner"></span>
+	            <span class="shop-text">Girls&#39; T-shirt</span>
+	        </strong>
+	    </a>
+	
+	    <a target="_blank"
+           id="Stickers-product"
+           class="one-row "
+           href="http://www.zazzle.com/api/create/at-238246843588281621?rf=238246843588281621&amp;ax=linkover&amp;pd=217083520700428387&amp;fwd=productpage&amp;ed=true&amp;t_posterimage_iid=ea918fdf-5cce-4ec7-bedd-9f66af19a079" onclick="javascript: _gaq.push(['_trackPageview', '/buy/stickers/keep-calm-and-love-japan-337/']);">
+	        <img src="http://rlv.zcache.co.uk/stickers-r878a8cca7e664248af69794472ac5bc7_v9waf_8byvr_152.png?t_posterimage_iid=ea918fdf-5cce-4ec7-bedd-9f66af19a079"
+                 alt="Stickers"  />
+	        <strong>
+	            <span class="sprite sprite-button-corner"></span>
+	            <span class="shop-text">Stickers</span>
+	        </strong>
+	    </a>
+	
+	    <a target="_blank"
+           id="Magnets-product"
+           class="one-row "
+           href="http://www.zazzle.com/api/create/at-238246843588281621?rf=238246843588281621&amp;ax=linkover&amp;pd=147150388937423566&amp;fwd=productpage&amp;ed=true&amp;t_posterimage_iid=ea918fdf-5cce-4ec7-bedd-9f66af19a079" onclick="javascript: _gaq.push(['_trackPageview', '/buy/magnets/keep-calm-and-love-japan-337/']);">
+	        <img src="http://rlv.zcache.co.uk/magnets-recd99bc57b5140b9820677ad161fd889_x7js9_8byvr_152.png?t_posterimage_iid=ea918fdf-5cce-4ec7-bedd-9f66af19a079"
+                 alt="Magnets"  />
+	        <strong>
+	            <span class="sprite sprite-button-corner"></span>
+	            <span class="shop-text">Magnets</span>
+	        </strong>
+	    </a>
+	
+	    <a target="_blank"
+           id="Greetings cards-product"
+           class=" "
+           href="http://www.zazzle.com/api/create/at-238246843588281621?rf=238246843588281621&amp;ax=linkover&amp;pd=137385233648478960&amp;fwd=productpage&amp;ed=true&amp;t_posterimage_iid=ea918fdf-5cce-4ec7-bedd-9f66af19a079" onclick="javascript: _gaq.push(['_trackPageview', '/buy/greetings-cards/keep-calm-and-love-japan-337/']);">
+	        <img src="http://rlv.zcache.co.uk/greetings_cards-r8ee22bacf88240e7bb216aae4191428d_xvuat_8byvr_152.png?t_posterimage_iid=ea918fdf-5cce-4ec7-bedd-9f66af19a079"
+                 alt="Greetings cards"  />
+	        <strong>
+	            <span class="sprite sprite-button-corner"></span>
+	            <span class="shop-text">Greetings cards</span>
+	        </strong>
+	    </a>
+	
+
+                                <div class="clear"></div>
+                            
+                        </div>
+                        <!-- see more products -->
+                        <span id="see-more-merchandise" data-all="yes">show fewer personalised products &#x25B2;</span>
+                    </div>
+                
+
+                <script type="text/javascript">
+                    // change images url
+                    var loading_url = "http://s.keepcalm-o-matic.co.uk/res/new/i/product_loading.gif";
+                    $(".3d img").each(function(index){
+                        if (!$(this)[0].complete || (typeof $(this).naturalWidth !== "undefined" && $(this).naturalWidth === 0)){
+                            $(this).hide();
+                            var loading_img = $('<img class="loading-product-image" src="'+loading_url+'"/>');
+                            $(this).after(loading_img);
+                            loading_img.css({"height":"69px"});
+                        }
+                    });
+                    $(".3d img:not(.loading-product-image)").load(function() {
+                        if ($(this)[0].complete){
+                            $(this).siblings('.loading-product-image').remove();
+                            $(this).show();
+                        }
+                    });
+                </script>
+                <!-- prev poster -->
+                <a href="/p/keep-calm-and-love-nafti/" rel="nofollow" class="prev"><span class="sprite sprite-left"></span></a>
+                <span class="prev-hint"></span>
+
+                <!-- next poster -->
+                <a href="/p/keep-calm-and-smile-bitch-36/" rel="nofollow" class="next"><span class="sprite sprite-right"></span></a>
+                <span class="next-hint"></span>
+
+            </div>
+
+            <div class="new-banner">
+                
+                    <!-- Keep_Calm_top_MPU -->
+                    <div id='div-gpt-ad-1364988475916-0' style='width:300px; height:250px;'>
+                        <script type='text/javascript'>
+                        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1364988475916-0'); });
+                        </script>
+                    </div>
+                
+            </div>
+
+            <!-- Share it -->
+            <div class="download-poster">
+                <h4 class="share-it">Share it <span>with your friends</span></h4>
+                <div class="buy-poster-description">
+                    <div style="margin-top: 2px;">
+                        <div class="fb-like" data-href="http://www.keepcalm-o-matic.co.uk/p/keep-calm-and-love-japan-337/" data-send="true" data-layout="button_count" data-width="280" data-show-faces="false" onclick="clicky.log('/facebook-share/?owner=564603', 'Facebook Share');"></div>
+                        <a href="http://pinterest.com/pin/create/button/?url=http://www.keepcalm-o-matic.co.uk/p/keep-calm-and-love-japan-337/&media=http%3A//sd.keepcalm-o-matic.co.uk/i/keep-calm-and-love-japan-337.png&description=KEEP%20CALM%20AND%20LOVE%20JAPAN" class="pin-it-button" count-layout="horizontal" onclick="clicky.log('/pinterest-share/?owner=564603', 'Pinterest Share');">
+                            <img border="0" src="//assets.pinterest.com/images/PinExt.png" title="Pin It" />
+                        </a>
+                    </div>
+                    <div style="margin-top: 2px; ">
+                        <a href="https://twitter.com/share" class="twitter-share-button" data-dnt="true" data-count="horizontal" data-via="keepcalmomatic" data-text='Check out "KEEP CALM AND LOVE JAPAN" from Keep Calm-o-matic at ' data-url="http://kpc.am/SvLAZf" onclick="clicky.log('/twitter-share/?owner=564603', 'Twitter Share');" >Tweet</a>
+                        <div class="g-plusone" href="https://plus.google.com/115120374373914451092" data-annotation="bubble" data-width="200" onclick="clicky.log('/gplus-share/?owner=564603', 'Gplus Share');"></div>
+                    </div>
+                    <div style="margin-top: 2px; ">
+                         <a href="http://twitter.com/keepcalmomatic" class="twitter-follow-button" >Follow @keepcalmomatic</a>
+                    </div>
+                    <!-- shortened url -->
+                    
+                    <div class="poster-link" >
+                        Link: <input type="text" readonly value="http://kpc.am/SvLAZf" />
+                    </div>
+                    
+                </div>
+            </div>
+
+            
+            <!-- Create a similar poster -->
+            <a href="/?based_on=8582835" onclick="javascript: _gaq.push(['_trackPageview', '/poster/similar/']);" class="create-poster2 similar-poster" rel="nofollow" >
+                <strong><span class="sprite sprite-similar-poster"></span> Create a similar poster</strong>
+            </a>
+
+            <!-- Create a random poster -->
+            <a href="/p/keep-calm-and-love-japan-337/random/" onclick="javascript: _gaq.push(['_trackPageview', '/poster/random/']);" class="create-poster2 random-poster" rel="nofollow" ><strong><span class="sprite sprite-random-poster"></span> Random poster</strong></a>
+
+            <div class="new-banner">
+                
+                    <!-- Keep_Calm_bottom_MPU -->
+                    <div id='div-gpt-ad-1364988617026-0' style='width:300px; height:250px;'>
+                        <script type='text/javascript'>
+                        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1364988617026-0'); });
+                        </script>
+                    </div>
+                
+            </div>
+
+            <!-- Report a poster-->
+            <a href="javascript:void(0)" class="create-poster2 report" data-image="8582835"
+                                         data-reported="false">
+              <strong>
+                <span class="sprite sprite-report-poster" ></span>
+                <span id="report-poster-text">Report this poster</span>
+              </strong>
+            </a>
+
+            <!-- Comments -->
+            <div class="comments-block">
+                <form id="add_comment_form" method="POST" action="/comments/add/8582835"><input type='hidden' name='csrfmiddlewaretoken' value='9GcZb6J36YplXCmqGUBeeCvvi7PJHX6E' />
+                    <div class="comment-top">
+                        
+                            <img src="http://s.keepcalm-o-matic.co.uk/res/i/gravatar70.png" style="position: absolute;" />
+                        
+                        <div style="padding-left: 80px;">
+                            <textarea disabled name="text" rows="3" style="width: 100%;" placeholder="Write what you think about this poster"></textarea>
+                        </div>
+                    </div>
+                    <div>
+                        
+                            <a onclick="logIn()">Login</a> to make a comment
+                        
+                        <img src="http://s.keepcalm-o-matic.co.uk/res/new/i/loading.gif" id="throbber" alt="loading">
+                        <span id="errors" class="quiet red"></span>
+                    </div>
+                </form>
+                <div style="margin: 25px 0px 10px 0px;">
+                    <span style="font-size: 130%;font-weight: bold">Comments</span> (<span class="comments-number">0</span>)
+                </div>
+                <div id="comment_list">
+                    
+                </div>
+            </div>
+
+            
+            <div class="clear"></div>
+        </section>
+    </div>
+    <!-- End main section -->
+    <!-- Other sections -->
+    <div class="other-sections">
+        <!-- Top posters -->
+        <section class="top-posters">
+            <h4>Top posters</h4>
+            
+                
+                    
+                        
+
+<span class="poster-thumb">
+    
+	    <a href="/p/keep-calm-be-original/"><img src="http://sd.keepcalm-o-matic.co.uk/i-w120/keep-calm-be-original.jpg" alt=""/></a>
+	    <span class="vote">
+	        <span class="votes-info"><strong class="__count" id="vote_count_3242464">3,071</strong> <span class="__vote_pluralized" id="vote_pluralized_3242464">votes</span></span>
+	        <span class="vote-button" title="Vote down" data-rel-url="/vote/3242464/d/" data-image="3242464" onclick="clicky.log('/vote-down/?owner=0', 'Vote down');"><span class="sprite sprite-vote-down"></span></span>
+	        <span class="vote-button" title="Vote up" data-rel-url="/vote/3242464/u/" data-image="3242464" onclick="clicky.log('/vote-up/?owner=0', 'Vote up');"><span class="sprite sprite-vote-up"></span></span>
+	    </span>
+	    
+	        <span class="votes-info-visible __count" id="visible_vote_count_3242464">3,071 <span class="__vote_pluralized">votes</span></span>
+	    
+	
+</span>
+                    
+                        
+
+<span class="poster-thumb">
+    
+	    <a href="/p/keep-calm-and-be-yourself-1602/"><img src="http://sd.keepcalm-o-matic.co.uk/i-w120/keep-calm-and-be-yourself-1602.jpg" alt=""/></a>
+	    <span class="vote">
+	        <span class="votes-info"><strong class="__count" id="vote_count_1073503">5,719</strong> <span class="__vote_pluralized" id="vote_pluralized_1073503">votes</span></span>
+	        <span class="vote-button" title="Vote down" data-rel-url="/vote/1073503/d/" data-image="1073503" onclick="clicky.log('/vote-down/?owner=0', 'Vote down');"><span class="sprite sprite-vote-down"></span></span>
+	        <span class="vote-button" title="Vote up" data-rel-url="/vote/1073503/u/" data-image="1073503" onclick="clicky.log('/vote-up/?owner=0', 'Vote up');"><span class="sprite sprite-vote-up"></span></span>
+	    </span>
+	    
+	        <span class="votes-info-visible __count" id="visible_vote_count_1073503">5,719 <span class="__vote_pluralized">votes</span></span>
+	    
+	
+</span>
+                    
+                        
+
+<span class="poster-thumb">
+    
+	    <a href="/p/keep-calm-and-never-stop-dreaming-92/"><img src="http://sd.keepcalm-o-matic.co.uk/i-w120/keep-calm-and-never-stop-dreaming-92.jpg" alt=""/></a>
+	    <span class="vote">
+	        <span class="votes-info"><strong class="__count" id="vote_count_4962654">2,446</strong> <span class="__vote_pluralized" id="vote_pluralized_4962654">votes</span></span>
+	        <span class="vote-button" title="Vote down" data-rel-url="/vote/4962654/d/" data-image="4962654" onclick="clicky.log('/vote-down/?owner=108142', 'Vote down');"><span class="sprite sprite-vote-down"></span></span>
+	        <span class="vote-button" title="Vote up" data-rel-url="/vote/4962654/u/" data-image="4962654" onclick="clicky.log('/vote-up/?owner=108142', 'Vote up');"><span class="sprite sprite-vote-up"></span></span>
+	    </span>
+	    
+	        <span class="votes-info-visible __count" id="visible_vote_count_4962654">2,446 <span class="__vote_pluralized">votes</span></span>
+	    
+	
+</span>
+                    
+                        
+
+<span class="poster-thumb">
+    
+	    <a href="/p/keep-calm-and-eat-cupcakes-1870/"><img src="http://sd.keepcalm-o-matic.co.uk/i-w120/keep-calm-and-eat-cupcakes-1870.jpg" alt=""/></a>
+	    <span class="vote">
+	        <span class="votes-info"><strong class="__count" id="vote_count_2965772">2,647</strong> <span class="__vote_pluralized" id="vote_pluralized_2965772">votes</span></span>
+	        <span class="vote-button" title="Vote down" data-rel-url="/vote/2965772/d/" data-image="2965772" onclick="clicky.log('/vote-down/?owner=25853', 'Vote down');"><span class="sprite sprite-vote-down"></span></span>
+	        <span class="vote-button" title="Vote up" data-rel-url="/vote/2965772/u/" data-image="2965772" onclick="clicky.log('/vote-up/?owner=25853', 'Vote up');"><span class="sprite sprite-vote-up"></span></span>
+	    </span>
+	    
+	        <span class="votes-info-visible __count" id="visible_vote_count_2965772">2,647 <span class="__vote_pluralized">votes</span></span>
+	    
+	
+</span>
+                    
+                        
+
+<span class="poster-thumb">
+    
+	    <a href="/p/keep-calm-and-make-a-wish-240/"><img src="http://sd.keepcalm-o-matic.co.uk/i-w120/keep-calm-and-make-a-wish-240.jpg" alt=""/></a>
+	    <span class="vote">
+	        <span class="votes-info"><strong class="__count" id="vote_count_2966986">2,681</strong> <span class="__vote_pluralized" id="vote_pluralized_2966986">votes</span></span>
+	        <span class="vote-button" title="Vote down" data-rel-url="/vote/2966986/d/" data-image="2966986" onclick="clicky.log('/vote-down/?owner=25853', 'Vote down');"><span class="sprite sprite-vote-down"></span></span>
+	        <span class="vote-button" title="Vote up" data-rel-url="/vote/2966986/u/" data-image="2966986" onclick="clicky.log('/vote-up/?owner=25853', 'Vote up');"><span class="sprite sprite-vote-up"></span></span>
+	    </span>
+	    
+	        <span class="votes-info-visible __count" id="visible_vote_count_2966986">2,681 <span class="__vote_pluralized">votes</span></span>
+	    
+	
+</span>
+                    
+                        
+
+<span class="poster-thumb">
+    
+	    <a href="/p/keep-calm-and-eat-a-cookie-134/"><img src="http://sd.keepcalm-o-matic.co.uk/i-w120/keep-calm-and-eat-a-cookie-134.jpg" alt=""/></a>
+	    <span class="vote">
+	        <span class="votes-info"><strong class="__count" id="vote_count_2356072">5,057</strong> <span class="__vote_pluralized" id="vote_pluralized_2356072">votes</span></span>
+	        <span class="vote-button" title="Vote down" data-rel-url="/vote/2356072/d/" data-image="2356072" onclick="clicky.log('/vote-down/?owner=0', 'Vote down');"><span class="sprite sprite-vote-down"></span></span>
+	        <span class="vote-button" title="Vote up" data-rel-url="/vote/2356072/u/" data-image="2356072" onclick="clicky.log('/vote-up/?owner=0', 'Vote up');"><span class="sprite sprite-vote-up"></span></span>
+	    </span>
+	    
+	        <span class="votes-info-visible __count" id="visible_vote_count_2356072">5,057 <span class="__vote_pluralized">votes</span></span>
+	    
+	
+</span>
+                    
+                
+            
+            <a href="/gallery/top/" class="see-more">see more</a>
+        </section>
+        <!-- End top posters -->
+        <div class="separator"></div>
+        <!-- New posters -->
+        <section class="new-posters">
+            
+                <h4>New posters</h4>
+                
+                    
+
+<span class="poster-thumb">
+    
+	    <a href="/p/keep-calm-and-carry-on-226021/"><img src="http://sd.keepcalm-o-matic.co.uk/i-w120/keep-calm-and-carry-on-226021.jpg" alt=""/></a>
+	    <span class="vote">
+	        <span class="votes-info"><strong class="__count" id="vote_count_9807307">0</strong> <span class="__vote_pluralized" id="vote_pluralized_9807307">votes</span></span>
+	        <span class="vote-button" title="Vote down" data-rel-url="/vote/9807307/d/" data-image="9807307" onclick="clicky.log('/vote-down/?owner=0', 'Vote down');"><span class="sprite sprite-vote-down"></span></span>
+	        <span class="vote-button" title="Vote up" data-rel-url="/vote/9807307/u/" data-image="9807307" onclick="clicky.log('/vote-up/?owner=0', 'Vote up');"><span class="sprite sprite-vote-up"></span></span>
+	    </span>
+	    
+	
+</span>
+                
+                    
+
+<span class="poster-thumb">
+    
+	    <a href="/p/keep-calm-and-victor-mb-2/"><img src="http://sd.keepcalm-o-matic.co.uk/i-w120/keep-calm-and-victor-mb-2.jpg" alt=""/></a>
+	    <span class="vote">
+	        <span class="votes-info"><strong class="__count" id="vote_count_9807306">0</strong> <span class="__vote_pluralized" id="vote_pluralized_9807306">votes</span></span>
+	        <span class="vote-button" title="Vote down" data-rel-url="/vote/9807306/d/" data-image="9807306" onclick="clicky.log('/vote-down/?owner=0', 'Vote down');"><span class="sprite sprite-vote-down"></span></span>
+	        <span class="vote-button" title="Vote up" data-rel-url="/vote/9807306/u/" data-image="9807306" onclick="clicky.log('/vote-up/?owner=0', 'Vote up');"><span class="sprite sprite-vote-up"></span></span>
+	    </span>
+	    
+	
+</span>
+                
+                    
+
+<span class="poster-thumb">
+    
+	    <a href="/p/don-t-keep-calm-and-drink-on-because-it-s-your-freakin-brthday/"><img src="http://sd.keepcalm-o-matic.co.uk/i-w120/don-t-keep-calm-and-drink-on-because-it-s-your-freakin-brthday.jpg" alt=""/></a>
+	    <span class="vote">
+	        <span class="votes-info"><strong class="__count" id="vote_count_9807305">0</strong> <span class="__vote_pluralized" id="vote_pluralized_9807305">votes</span></span>
+	        <span class="vote-button" title="Vote down" data-rel-url="/vote/9807305/d/" data-image="9807305" onclick="clicky.log('/vote-down/?owner=0', 'Vote down');"><span class="sprite sprite-vote-down"></span></span>
+	        <span class="vote-button" title="Vote up" data-rel-url="/vote/9807305/u/" data-image="9807305" onclick="clicky.log('/vote-up/?owner=0', 'Vote up');"><span class="sprite sprite-vote-up"></span></span>
+	    </span>
+	    
+	
+</span>
+                
+                    
+
+<span class="poster-thumb">
+    
+	    <a href="/p/keep-calm-and-pat-cat-mmcay-1/"><img src="http://sd.keepcalm-o-matic.co.uk/i-w120/keep-calm-and-pat-cat-mmcay-1.jpg" alt=""/></a>
+	    <span class="vote">
+	        <span class="votes-info"><strong class="__count" id="vote_count_9807304">0</strong> <span class="__vote_pluralized" id="vote_pluralized_9807304">votes</span></span>
+	        <span class="vote-button" title="Vote down" data-rel-url="/vote/9807304/d/" data-image="9807304" onclick="clicky.log('/vote-down/?owner=0', 'Vote down');"><span class="sprite sprite-vote-down"></span></span>
+	        <span class="vote-button" title="Vote up" data-rel-url="/vote/9807304/u/" data-image="9807304" onclick="clicky.log('/vote-up/?owner=0', 'Vote up');"><span class="sprite sprite-vote-up"></span></span>
+	    </span>
+	    
+	
+</span>
+                
+                    
+
+<span class="poster-thumb">
+    
+	    <a href="/p/keep-calm-its-my-birthday-month-424/"><img src="http://sd.keepcalm-o-matic.co.uk/i-w120/keep-calm-its-my-birthday-month-424.jpg" alt=""/></a>
+	    <span class="vote">
+	        <span class="votes-info"><strong class="__count" id="vote_count_9807303">0</strong> <span class="__vote_pluralized" id="vote_pluralized_9807303">votes</span></span>
+	        <span class="vote-button" title="Vote down" data-rel-url="/vote/9807303/d/" data-image="9807303" onclick="clicky.log('/vote-down/?owner=0', 'Vote down');"><span class="sprite sprite-vote-down"></span></span>
+	        <span class="vote-button" title="Vote up" data-rel-url="/vote/9807303/u/" data-image="9807303" onclick="clicky.log('/vote-up/?owner=0', 'Vote up');"><span class="sprite sprite-vote-up"></span></span>
+	    </span>
+	    
+	
+</span>
+                
+                    
+
+<span class="poster-thumb">
+    
+	    <a href="/p/keep-calm-and-buy-me-a-watch/"><img src="http://sd.keepcalm-o-matic.co.uk/i-w120/keep-calm-and-buy-me-a-watch.jpg" alt=""/></a>
+	    <span class="vote">
+	        <span class="votes-info"><strong class="__count" id="vote_count_9807302">0</strong> <span class="__vote_pluralized" id="vote_pluralized_9807302">votes</span></span>
+	        <span class="vote-button" title="Vote down" data-rel-url="/vote/9807302/d/" data-image="9807302" onclick="clicky.log('/vote-down/?owner=0', 'Vote down');"><span class="sprite sprite-vote-down"></span></span>
+	        <span class="vote-button" title="Vote up" data-rel-url="/vote/9807302/u/" data-image="9807302" onclick="clicky.log('/vote-up/?owner=0', 'Vote up');"><span class="sprite sprite-vote-up"></span></span>
+	    </span>
+	    
+	
+</span>
+                
+            
+            <a href="/gallery/latest" class="see-more">see more</a>
+        </section>
+        <!-- End new posters -->
+
+        <div class="clear"></div>
+        
+    </div>
+    <!-- End other sections -->
+
+                <!-- report popup -->
+                <div class="popup" id="report-poster">
+                    <span class="title">
+                        <span class="sprite sprite-close2" title="Close" onclick="closePopup()"></span>
+                    </span>
+                    <h2 class="logo-popup">THE KEEP CALM-O-MATIC</h2>
+                    <p class="p-popup">Please fill out the form below and tell us why you're bringing this poster to our attention.</p>
+                    <form id="report-form" method="" action="">
+                        <div class="report-choices" >
+                        
+                            <input type='radio' name='reason' value='1' id='reason_1'><label for='reason_1'>Poster contains sexually explicit content</label></input><br/>
+                        
+                            <input type='radio' name='reason' value='2' id='reason_2'><label for='reason_2'>Poster contains racially provocative language or themes</label></input><br/>
+                        
+                            <input type='radio' name='reason' value='3' id='reason_3'><label for='reason_3'>Poster contains potentially illegal content</label></input><br/>
+                        
+                            <input type='radio' name='reason' value='4' id='reason_4'><label for='reason_4'>Poster contains grossly offensive content</label></input><br/>
+                        
+                            <input type='radio' name='reason' value='0' id='reason_0'><label for='reason_0'>Other</label></input><br/>
+                        
+                        </div>
+                        <textarea id="reason_other" onclick="if(this.value == 'Why are you reporting this poster?'){this.value=' '}" maxlength="255">Why are you reporting this poster?</textarea>
+                        <input type="submit" value="Report" />
+                        <span class="error" style="color:red"></span>
+                    </form>
+                </div>
+                <div id="popup-background"></div>
+
+                <div class="other-sections">
+                    <!-- Left for other sections -->
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer>
+                <div class="top"></div>
+                <div class="middle">
+                    <div class="footer-column">
+                        <h5>Navigation</h5>
+                        <div class="footer-nav">
+                            <a href="/#create" class="scroll_to_create">Create your own poster</a>
+                            <a href="/gallery/">Browse the gallery</a>
+                            <a href="/shop/">&ldquo;Keep Calm and Carry On&rdquo; Shop</a>
+                            <a href="/about/">About us</a>
+                            
+                                <a href="javascript:;" onclick="showLoginForm();">Log in</a>
+                            
+                            <a href="/privacy/">Terms, conditions &amp; privacy</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-separator"></div>
+                    <div class="footer-column">
+                        <h5>Socialize</h5>
+                        <p class="socialize">Keep calm and get social! Follow us on Twitter, join our Facebook page or subscribe to the RSS feed!</p>
+                        <a target="_blank" href="http://www.facebook.com/keepcalmgenerator/" class="sm-button"><span class="sprite sprite-facebook"></span>Facebook</a>
+                        <a target="_blank" href="/feed/" class="sm-button"><span class="sprite sprite-rss"></span>RSS feed</a>
+                        <div class="footer-social-media">
+                            <div class="sm-div">
+                                <div id="fb-root"></div>
+                                <div class="fb-like" data-send="false" data-href="http://www.facebook.com/keepcalmgenerator" data-layout="button_count" data-width="250" data-show-faces="false"></div>
+                            </div>
+                            <div class="sm-div">
+                                <a href="http://twitter.com/keepcalmomatic" class="twitter-share-button" data-url="http://www.keepcalm-o-matic.co.uk" data-text="Check out the Keep Calm-o-matic!" data-count="horizontal" data-via="keepcalmomatic">Tweet</a>
+                            </div>
+                            <div class="sm-div">
+                                <a href="http://twitter.com/keepcalmomatic" class="twitter-follow-button" data-show-count="false">Follow @keepcalmomatic</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer-separator"></div>
+                    <div class="footer-column">
+                        <h5>Our network</h5>
+                        <div class="network-nav">
+                            <a href="http://www.awdit.com/"><span class="sprite sprite-awdit"></span>awdit</a>
+                            <a href="http://www.iphonebackupextractor.com/"><span class="sprite sprite-iphone"></span>iPhone Backup Extractor</a>
+                            <!--<a href="http://www.blackberryconverter.com/"><span class="sprite sprite-blackberry"></span>BlackBerry Backup Extractor</a>-->
+                            <a href="http://www.xrates.net/"><span class="sprite sprite-xrates"></span>xrates</a>
+                            <a href="http://www.convertervideo.net/"><span class="sprite sprite-convertervideo"></span>Video Converter</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-separator"></div>
+                    <div class="footer-column">
+                        <h5>Compliance</h5>
+                        <p class="socialize">
+                            Copyright &copy; 2009 - 2014 Keep Calm Network Ltd
+                            <br />
+                            Registered in England and Wales #9071964.
+                        </p>
+                        <p><a href="/guide-to-keep-calm/#advertise">Advertise on this site</a></p>
+                        <p><a href="/widgets/">Add us</a> to your site.</p>
+                    </div>
+                </div>
+            </footer>
+            <!-- End footer -->
+
+            <!-- Happening now -->
+            
+            <div id="happening-now">
+                <div class="h-n-header">
+                    <span>Happening now</span>
+                    <a class="x-black" title="Hide the notifications"></a>
+                    <a class="arrow-up" id="min-max" title="Minimize/maximize the notifications"></a>
+                </div>
+                <!-- Templates for the notifications tiles -->
+                <!-- Classes:
+                    notif img-poster    Poster created, favourited or voted
+                    notif img-user      User signed up
+                    notif collapsed     Minified tile
+                -->
+                <div id="tile-template">
+                    <a class="x-grey"></a>
+                    <a href="#href"><img src="#img" /></a>
+                    <span>#text</span>
+                </div>
+            </div>
+
+            
+            <!-- RESPONSIVE WHEEL BUTTON -->
+            <a class="wheel-button nw">
+                <span class="sprite sprite-similar-poster-white"></span>
+            </a>
+            <ul data-angle="NW" class="wheel">
+                <li class="item"><a href="/?engine=keepcalm&from_mobile#create"><img src="http://s.keepcalm-o-matic.co.uk/res/new/i/keepcalm-engine.png"><span>Keepcalm</span></a></li>
+                <li class="item"><a href="/?engine=thoughts&from_mobile#create"><img src="http://s.keepcalm-o-matic.co.uk/res/new/i/thoughts-engine.png"><span>Thoughts</span></a></li>
+                <li class="item"><a href="/?engine=meme&from_mobile#create"><img src="http://s.keepcalm-o-matic.co.uk/res/new/i/meme-engine.png"><span style="left: -120px;">Meme</span></a></li>
+            </ul>
+            </ul>
+            
+        
+        <!-- /Happening now-->
+        </div>
+        <div id="change-country">
+            <img src="http://s.keepcalm-o-matic.co.uk/img/c/us.gif" width="16" height="11" alt="United States" border="0"/>United States <span>click to change</span>
+            <div>
+                <a href="?country=GBR" rel="nofollow" title="Set destination country to the United Kingdom"><img src="http://s.keepcalm-o-matic.co.uk/img/c/gb.gif" alt="United Kingdom" /> United Kingdom</a>
+                <a href="?country=USA" rel="nofollow" title="Set destination country to the United States"><img src="http://s.keepcalm-o-matic.co.uk/img/c/us.gif" alt="United States" /> United States</a>
+                <a href="?country=DEU" rel="nofollow" title="Set destination country to Germany"><img src="http://s.keepcalm-o-matic.co.uk/img/c/de.gif" alt="Germany" /> Germany</a>
+                <a href="?country=ESP" rel="nofollow" title="Set destination country to Spain"><img src="http://s.keepcalm-o-matic.co.uk/img/c/es.gif" alt="Spain" /> Spain</a>
+                <a href="?country=FRA" rel="nofollow" title="Set destination country to France"><img src="http://s.keepcalm-o-matic.co.uk/img/c/fr.gif" alt="France" /> France</a>
+                <a href="?country=PRT" rel="nofollow" title="Set destination country to Portugal"><img src="http://s.keepcalm-o-matic.co.uk/img/c/pt.gif" alt="Portugal" /> Portugal</a>
+                <a href="?country=SWE" rel="nofollow" title="Set destination country to Sweden"><img src="http://s.keepcalm-o-matic.co.uk/img/c/se.gif" alt="Sweden" /> Sweden</a>
+                <a href="?country=NLD" rel="nofollow" title="Set destination country to the Netherlands"><img src="http://s.keepcalm-o-matic.co.uk/img/c/nl.gif" alt="Netherlands" /> Netherlands</a>
+                <a href="?country=AUT" rel="nofollow" title="Set destination country to Austria"><img src="http://s.keepcalm-o-matic.co.uk/img/c/at.gif" alt="Austria" /> Austria</a>
+                <a href="?country=CHE" rel="nofollow" title="Set destination country to Switzerland"><img src="http://s.keepcalm-o-matic.co.uk/img/c/ch.gif" alt="Switzerland" /> Switzerland</a>
+                <a href="?country=BEL" rel="nofollow" title="Set destination country to Belgium"><img src="http://s.keepcalm-o-matic.co.uk/img/c/be.gif" alt="Belgium" /> Belgium</a>
+                <a href="?country=AUS" rel="nofollow" title="Set destination country to Australia"><img src="http://s.keepcalm-o-matic.co.uk/img/c/au.gif" alt="Australia" /> Australia</a>
+                <a href="?country=NZL" rel="nofollow" title="Set destination country to New Zealand"><img src="http://s.keepcalm-o-matic.co.uk/img/c/nz.gif" alt="New Zealand" /> New Zealand</a>
+                <a href="?country=JPN" rel="nofollow" title="Set destination country to Japan"><img src="http://s.keepcalm-o-matic.co.uk/img/c/jp.gif" alt="Japan" /> Japan</a>
+                <a href="?country=KOR" rel="nofollow" title="Set destination country to Korea"><img src="http://s.keepcalm-o-matic.co.uk/img/c/kr.gif" alt="Korea" /> Korea</a>
+                <a href="?country=BRA" rel="nofollow" title="Set destination country to Brazil"><img src="http://s.keepcalm-o-matic.co.uk/img/c/br.gif" alt="Brazil" /> Brazil</a>
+                <a href="?country=CAN" rel="nofollow" title="Set destination country to Canada"><img src="http://s.keepcalm-o-matic.co.uk/img/c/ca.gif" alt="Canada" /> Canada</a>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            var AUTHENTICATED = 'False';
+
+            window.USER_AUTHENTICATED = false;
+            var checkLogIn = function(callback, next) {
+                // Wrapper function to either perform a callback (with additional variables) or prompt the user to log in
+                if (USER_AUTHENTICATED) {
+                    if (typeof callback == 'function') {
+                        // http://www.mennovanslooten.nl/blog/post/59
+                        var args = [].splice.call(arguments,0);
+                        if (args.length>1) {
+                            callback(args.splice(1,args.length-1));
+                        }
+                        else {
+                            callback();
+                        }
+                    }
+                    else {
+                        return true
+                    }
+                } else {
+                    if (typeof callback !== 'undefined')
+                        logIn(next);
+                }
+            };
+
+            var logIn = function(next, popup_div) {
+                // The functionality needed to be expanded to create other popups
+                // The original functions call logIn with only the next argument
+                // given, so this sets the popup_div to what they expect.
+                if (typeof(popup_div)==='undefined') {
+                    popup_div = 'login-popup';
+                }
+                if(typeof(next)==='undefined') {
+                    next = '';
+                }
+                else {
+                    next = '?next='+next;
+                }
+                $.get('/accounts/' + popup_div + '/'+next, function(data) {
+                    $('body').append(data);
+                    openPopup(popup_div);
+                });
+            };
+        </script>
+
+        <script src="http://s.keepcalm-o-matic.co.uk/res/new/js/jquery.scrollTo-1.4.2-min.js"></script>
+        <script src="http://s.keepcalm-o-matic.co.uk/res/js/eventsource.min.js"></script>
+        <script src="http://s.keepcalm-o-matic.co.uk/res/new/js/pixastic.core.min.js"></script>
+        <script src="http://s.keepcalm-o-matic.co.uk/res/new/js/farbtastic.min.js"></script>
+        <script src="http://s.keepcalm-o-matic.co.uk/res/new/js/script.min.js"></script>
+        <script type="text/javascript" src="http://s.keepcalm-o-matic.co.uk/res/js/jquery.wheelmenu.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $(".wheel-button").wheelmenu({
+                    trigger: "click",
+                    animation: "fly",
+                    animationSpeed: "fast"
+                });
+            });
+        </script>
+        
+    <script type="text/javascript">
+        $("input[name='delete']").click(function(){
+            $("#poster_control_form").submit(function() {
+                var c = confirm("Are you sure?");
+                return c;
+            });
+        });
+
+        
+    </script>
+
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+    
+    
+
+
+        <!-- Quantcast Tag -->
+        <script type="text/javascript">
+            var _qevents = _qevents || [];
+
+            (function() {
+                var elem = document.createElement('script');
+                elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+                elem.async = true;
+                elem.type = "text/javascript";
+                var scpt = document.getElementsByTagName('script')[0];
+                scpt.parentNode.insertBefore(elem, scpt);
+            })();
+
+            _qevents.push({ qacct:"p-1aJ1L69Z2f0Qs" });
+        </script>
+
+        <noscript>
+            <div style="display:none;">
+                <img src="//pixel.quantserve.com/pixel/p-1aJ1L69Z2f0Qs.gif" border="0" height="1" width="1" alt="Quantcast"/>
+            </div>
+        </noscript>
+        <!-- End Quantcast tag -->
+
+        
+        
+            <script type="text/javascript">
+                window.___gcfg = {lang: 'en-GB'};
+                (function (w, d, s) {
+                    function go() {
+                        var js, fjs = d.getElementsByTagName(s)[0], load = function (url, id) {
+                            if (d.getElementById(id)) {
+                                return;
+                            }
+                            js = d.createElement(s);
+                            js.src = url;
+                            js.id = id;
+                            fjs.parentNode.insertBefore(js, fjs);
+                        };
+                        load('//connect.facebook.net/en_US/all.js#appId=177054532316756&xfbml=1', 'fbjssdk');
+                        load('https://apis.google.com/js/plusone.js', 'gplus1js');
+                        load('//platform.twitter.com/widgets.js', 'tweetjs');
+                        //load('//widget.uservoice.com/OZGlXWD8a99FdwyfSNOHcA.js', 'uservoice');
+                        load('//assets.pinterest.com/js/pinit.js', 'pinterest');
+                        //load('//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit', 'translatejs');
+                    }
+
+                    if (w.addEventListener) {
+                        w.addEventListener("load", go, false);
+                    }
+                    else if (w.attachEvent) {
+                        w.attachEvent("onload", go);
+                    }
+                }(window, document, 'script'));
+            </script>
+        
+
+        
+
+        <script src="http://s.keepcalm-o-matic.co.uk/res/new/js/sponsored_link_keepcalm-o-matic.min.js"></script>
+        <span id='country_code' data-country='US'></span>
+	</body>
+</html>

@@ -1,0 +1,415 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+<link rel="shortcut icon" href="design/favicon.ico"/>
+<script type="text/javascript">
+//iPhoneまたは、Androidの場合は振り分けを判断
+if (document.referrer.indexOf('twps.jp/smart/') == -1 && (navigator.userAgent.indexOf('iPhone') > 0 || navigator.userAgent.indexOf('iPad') > 0 || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0)) {
+    //if(confirm('TweepieにはTweepieスマートフォン用のサイトがあります。表示しますか？')) {
+        location.href = 'smart/index.php';
+    //}
+}
+</script>
+
+<meta http-equiv="Content-Language" content="ja" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="robots" content="index,follow" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+
+<meta property="og:title" content="Tweepie.-SNSでお小遣い稼ぎ-" />
+<meta property="og:description" content="Tweepie（ツイーピー）は、気に入った商品を友達に紹介したり、アプリをダウンロードすることでお小遣いが貰えるサービスです。" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://twps.jp/" />
+<meta property="og:image" content="https://twps.jp/img/logo_main_2.png" />
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@tweepiejp">
+<meta name="twitter:creator" content="@tweepiejp">
+
+
+<link rel="stylesheet" href="css/common2.css" type="text/css" media="all" />
+<link rel="stylesheet" href="css/parts2.css" type="text/css" media="all" />
+<link rel="stylesheet" href="css/contents2.css" type="text/css" media="all" />
+<script type="text/javascript" src="/js/jquery-1.3.2.min.js"></script>
+<script src="js/jquery.mousewheel.js" type="text/javascript"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+
+<title>Tweepie.-SNSでお小遣い稼ぎ-</title>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21104457-1']);
+  _gaq.push(['_setDomainName', '.twps.jp']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script type="text/javascript">
+var totalDonation = 0;
+
+function chgFmt(str) {
+	var num = new String(str).replace(/,/g, "");
+	while(num != (num = num.replace(/^(-?\d+)(\d{3})/, "$1,$2")));
+	return num;
+}
+
+function getDonation() {
+	var url = "/donation/i_get_donation.php";
+	var params = {};
+	
+	$.getJSON(url, params, function(data) {
+		totalDonation = data.donation;
+		
+		$('span#totalDonation').text(chgFmt(totalDonation));
+	}); //end of getJson
+	
+}
+
+$(function() {
+	getDonation();
+	
+	
+	if($.cookie('T_ACCOUNT')){
+		$('#mail').val($.cookie('T_ACCOUNT'));
+	}
+}); // end
+</script>
+</head>
+<body id="top">
+<div id="wrapper">
+<div id="container">
+
+<div id="header" class="pkg">
+<div class="left">
+<p class="logo"><a href="index.php"><img src="img/logo_main.gif" alt="tweepie." /></a></p>
+<h1>SNSでお小遣い稼ぎ:Tweepie</h1>
+<!--/left--></div>
+<ul>
+  <li><a href="index.php">ホーム</a></li>
+  <li><a href="about.html">Tweepieとは？</a></li>
+  <li><a href="faq.html">よくある質問</a></li>
+  <li class="bd-none"><a href="contact/contact.php">お問い合わせ</a></li>
+</ul>
+<!--/ div#header--></div>
+
+			<div id="contents-top" class="contents pkg">
+            <div class="bot pkg">
+            
+            <div class="sec1">
+            <div class="left pkg">
+            <h2><img src="img/title_top_h2.gif" alt="SNSへのつぶやきやアプリのダウンロードでお小遣い稼ぎをしよう!" /></h2>
+            <h3><img src="img/title_top_h3.gif" alt="Tweepie（ツイーピー）は、気に入った商品を友達に紹介したり、アプリをダウンロードすることでお小遣いが貰えるサービスです。" /></h3>
+            	<!-- .mid -->
+            	<div class="mid">
+            	  <!-- .top -->
+            	  <div class="top">
+            	    <!-- .bot -->
+            	    <div class="bot">
+                    <p class="title"><img src="img/title_top_sec1_left.gif" alt="NPOへの寄付やチャリティにも参加できます。" /></p>
+                    
+                    
+                    
+                    
+                    <div class="count">
+                    <table>
+                    <tr>
+                    	<td><img src="img/title_count1.gif" alt="みんなの寄付総額" /></td>
+                        <td><span id="totalDonation" style="font-size:18pt;color:#347D45;"></span></td>
+                        <td><img src="img/title_count2.gif" alt="円" /></td>
+                    </tr>
+                    
+                    
+                    
+                    
+                    </table>
+                    
+                    
+                    
+                    <!--/count--></div>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <ul>
+                      <li><a href="donation/donation_status.php">寄付先一覧はこちらから</a></li>
+                    </ul>
+                    
+                    </div>
+            	    <!-- /.bot -->
+            	  </div>
+            	  <!-- /.top -->
+            	</div>
+            	<!-- /.mid -->
+                
+            <!--/left--></div>
+
+            <div class="right">
+            <div class="mid pkg"><!-- .top -->
+              <div class="top pkg">
+                <!-- .bot -->
+                <div class="bot pkg">
+                <p class="btn"><a href="regist/regist.php"><img src="img/btn_top_sec1_right_1.gif" width="236" height="61" alt="[無料]登録はこちら" /></a></p>
+                
+                <form method="post" action="manage/com_login.php">
+              <p class="input">メールアドレスもしくはTwitterID<br />
+<input type="text" id="mail" name="mail" width="80" value=""/></p>
+              <p class="input">パスワード<br />
+<input type="password" name="pass1" width="40"/></p>
+              <p class="btn2"><input type="submit" id="submit" value="ログイン"/></p>
+              <p class="pass"><a href="pass/forget_pass.php">パスワードをお忘れですか？</a></p>
+              </form>
+                           
+                </div>
+                <!-- /.bot -->
+              </div>
+              <!-- /.top -->
+              <!--/mid--></div>
+            
+           
+            <p class="btn2"><a href="about.html"><img src="img/btn_top_sec1.gif" width="202" height="38" alt="ツイーピーとは？" /></a></p>
+            <!--/right--></div>
+            
+            <!--/sec1--></div>
+            
+            <div class="sec2 pkg">
+            <!-- .top -->
+            <div class="top pkg">
+              <!-- .bot -->
+              <div class="bot pkg">
+              <ul>
+                <li>
+                  <p class="title"><img src="img/title_top_sec2_li_1.gif" alt="step1 会員登録する（無料）" /></p>
+                  <p class="text">Tweepieを利用するには会員登録が必要です。登録は無料です。TwitterやFacebookのキャンペーンに参加するには、TwitterとFacebookのアカウントが必要になります。</p>
+                  <p class="link"><a href="regist/regist.php">会員登録する</a></p>
+                </li>
+                <li>
+                  <p class="title"><img src="img/title_top_sec2_li_2.gif" alt="step2 商品やアプリを友達に紹介、アンケートに答える" /></p>
+                  <p class="text">会員登録後、お好みのキャンペーンを選んでください。商品の意見や感想をつぶやいたり、好きなアプリをダウンロードしましょう。</p>
+                  <p class="link"><a href="manage/login.php">ログインする</a></p>
+                </li>
+                <li>
+                  <p class="title"><img src="img/title_top_sec2_li_3.gif" alt="step3 ポイントをためる（つかう）" /></p>
+                  <p class="text">キャンペーンに参加するとポイントを獲得できます。獲得したポイントは3,000ポイントから換金できます。<br />
+※寄附の場合は10ポイントから寄附できます。</p>
+                  <p class="link"><a href="point/point.php">ポイントを確認する（登録が必要です）</a></p>
+                </li>
+              </ul>
+              
+              
+              </div>
+              <!-- /.bot -->
+            </div>
+            <!-- /.top -->
+            <!--/sec2--></div>
+            
+            <div class="bookmark">
+            <p class="text">もしよかったらソーシャルブックマークやTwitterに登録していただけると大変ありがたいです。</p>
+            <ul>
+              <li><a href="javascript:window.open('http://bookmarks.yahoo.co.jp/bookmarklet/showpopup?t='+encodeURIComponent(document.title)+'&u='+encodeURIComponent(window.location.href))"><img src="img/icon_social_1.gif" width="16" height="16" alt="" /></a></li>
+              <li><a href="javascript:window.open('http://www.google.com/bookmarks/mark?op=edit&bkmk='+encodeURIComponent(window.location.href)+'&title='+encodeURIComponent(document.title))"><img src="img/icon_social_2.gif" width="16" height="16" alt="" /></a></li>
+              <li><a href="javascript:window.open('http://b.hatena.ne.jp/append?'+encodeURIComponent(window.location.href))"><img src="img/icon_social_3.gif" width="16" height="16" alt="" /></a></li>
+              <li><a href="javascript:window.open('http://clip.livedoor.com/redirect?link='+encodeURIComponent(window.location.href)+'&title='+encodeURIComponent(document.title))"><img src="img/icon_social_5.gif" width="16" height="16" alt="" /></a></li>
+              <li><a href="javascript:window.open('http://del.icio.us/post?url='+encodeURIComponent(window.location.href)+'&title='+encodeURIComponent(document.title))"><img src="img/icon_social_6.gif" width="16" height="16" alt="" /></a></li>
+              <!--  
+              <li><a href="#"><img src="img/icon_social_7.gif" width="16" height="16" alt="" /></a></li>
+              -->
+              <!--
+              <li><a href="#"><img src="img/icon_social_8.gif" width="16" height="16" alt="" /></a></li>
+              
+              <li><a href="#"><img src="img/icon_social_9.gif" width="16" height="16" alt="" /></a></li>
+              <li><a href="#"><img src="img/icon_social_10.gif" width="62" height="16" alt="" /></a></li>
+           	  -->
+           		
+           		<li><a href="http://twitter.com/share" class="twitter-share-button" data-url="https://twps.jp/" data-text="SNSでお小遣い稼ぎ Tweepie（ツイーピー）" data-count="horizontal" data-lang="ja">Tweet</a><script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script></li>
+            <li><script src="https://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="https://www.facebook.com/Tweepie" layout="button_count" show_faces="true" width="100"></fb:like></li>
+            </ul>
+            <!--/bookmark--></div>
+            
+            <div class="sec3 pkg">
+            <div class="main">
+            	
+                <h4><img src="img/title_top_h4_1.gif" width="106" height="30" alt="NEWS" /></h4>
+                <p class="rss"><a href="#">お知らせや機能追加等のRSS</a></p>
+                
+                
+                <ul>
+                
+                	<li>
+                		<p class="date">2013.3.26</p>
+                  <p class="link"><a href="javascript:void(0)">換金手数料が、500p⇒無料になりました。</a></p>
+                	</li>
+                	
+                	<li>
+                		<p class="date">2013.3.26</p>
+                  <p class="link"><a href="javascript:void(0)">1000ポイントから換金できるようになりました。</a></p>
+                	</li>
+                	
+                	<li>
+                		<p class="date">2013.2.4</p>
+                  <p class="link"><a href="javascript:void(0)">他社サービスと提携して、キャンペーン数を増加しました。</a></p>
+                	</li>
+                	
+                	<li>
+                		<p class="date">2013.1.10</p>
+                  <p class="link"><a href="javascript:void(0)">Tweepieユーザの延べフォロワー数（リーチ数）が3,000万人を突破しました。</a></p>
+                	</li>
+                	
+                	<li>
+                		<p class="date">2011.10.20</p>
+                  <p class="link"><a href="javascript:void(0)">Tweepieユーザの延べフォロワー数（リーチ数）が1,000万人を突破しました。</a></p>
+                	</li>
+                  
+                	
+                	<li>
+                		<p class="date">2011.2.8</p>
+                  <p class="link"><a href="javascript:void(0)">皆さんの宮崎県への応援メッセージを掲載しました。</a></p>
+                	</li>
+                  
+                	<li>
+                		<p class="date">2011.2.8</p>
+                  <p class="link"><a href="javascript:void(0)">宮崎県新燃岳噴火被害へ寄附できるようにしました。</a></p>
+                	</li>
+                  
+                  
+                	<li>
+                		<p class="date">2011.1.20</p>
+                  <p class="link"><a href="javascript:void(0)">Tweepieユーザの延べフォロワー数（リーチ数）が500万人を突破しました。</a></p>
+                	</li>
+                  
+                	<li>
+                		<p class="date">2011.1.17</p>
+                  <p class="link"><a href="javascript:void(0)">iPhone、iPad、Android端末用に対応しました。</a></p>
+                	</li>
+                  
+                	<li>
+                		<p class="date">2011.1.11</p>
+                  <p class="link"><a href="tweepie_info20110105.html">ユーザー評価式を変更しました。</a></p>
+                	</li>
+                  
+                	<li>
+                		<p class="date">2011.1.11</p>
+                  <p class="link"><a href="javascript:void(0)">3,000ポイントから換金できるようになりました。</a></p>
+                	</li>
+                  
+                	<li>
+                		<p class="date">2010.12.25</p>
+                  <p class="link"><a href="javascript:void(0)">PRESIDENT 2011年1.17号にTweepieが掲載されました。</a></p>
+                	</li>
+                  
+                	<li>
+                		<p class="date">2010.10.18</p>
+                  <p class="link"><a href="http://antenna.tweepie.jp/">1ポイントツイート（みんなのツイート）がコラムになりました。</a></p>
+                	</li>
+                  
+                  
+                	<li>
+                		<p class="date">2010.7.24</p>
+                  <p class="link"><a href="tweepie_info20100724.html">ユーザー評価式を変更しました。</a></p>
+                	</li>
+                  
+                  
+                	<li>
+                		<p class="date">2010.7.23</p>
+                  <p class="link"><a href="tweepie_info20100723.html">1ポイントツイート機能をリリースしました。</a></p>
+                	</li>
+                  
+                  
+                	<li>
+                		<p class="date">2010.7.5</p>
+                  <p class="link"><a href="javascript:void(0)">ユーザーの宮崎県口蹄疫の応援メッセージ一覧を掲載しました。</a></p>
+                	</li>
+                  
+                  
+                	<li>
+                		<p class="date">2010.6.7</p>
+                  <p class="link"><a href="javascript:void(0)">Tweepieプレスリリースを配信しました。</a></p>
+                	</li>
+                  
+                  
+                	<li>
+                		<p class="date">2010.6.2</p>
+                  <p class="link"><a href="tweepie_info20100601.html">Tweepieサービスの変更について</a></p>
+                	</li>
+                  
+                  
+                	<li>
+                		<p class="date">2010.5.25</p>
+                  <p class="link"><a href="tweepie_info20100525.html">Twitterの利用規約変更に伴う、Tweepieサービスの対応ついて</a></p>
+                	</li>
+                  
+                  
+                	<li>
+                		<p class="date">2010.5.17</p>
+                  <p class="link"><a href="javascript:void(0)">寄附機能を追加しました。</a></p>
+                	</li>
+                  
+                  
+                	<li>
+                		<p class="date">2010.4.9</p>
+                  <p class="link"><a href="javascript:void(0)">Tweepie（β版）のサービスをプレオープンしました。</a></p>
+                	</li>
+                </ul>
+                
+                
+                
+                
+                
+                
+                
+
+      
+
+            
+            <!--/main--></div>
+            <div class="sub">
+            	<div class="mid pkg">
+            	    <div class="bot pkg">
+                    <p class="img"><img src="img/title_top_sec3_right.gif" width="273" height="120" alt="キャンペーン出稿/代理店/業務提携ご希望の方はこちら" /></p>
+                    <p class="text">SNS上でのPR及び代理店、業務提携をご希望のお客様はこちらよりご連絡ください。</p>
+                    <p class="btn"><a href="http://twitmedia.net" target="_blank"><img src="img/btn_top_sec3.gif" width="216" height="49" alt="お問い合わせはこちら" /></a></p>
+                    
+                    <!--/bot--></div>
+            	<!--/mid--></div>
+                
+                <p class="bnr"><a href="donation/donation_status.php"><img src="img/bnr_top_sec3_1.gif" width="269" height="58" alt="Tweepieで獲得したポイントをボランティア団体に寄付できます。" /></a></p>
+                <p class="bnr"><a href="http://antenna.tweepie.jp/" target="_blank"><img src="img/bnr_top_sec3_2.gif" width="268" height="57" alt="アンテナ-twitterアンテナみんなのツイート-" /></a></p>
+            	<p class="bnr"><a href="/manage/about_charity.php" ><img src="img/tw_csr_br_3.png"  alt="アンテナ-twitterアンテナみんなのツイート-" /></a></p>
+            	
+            	
+            <!--/sub--></div>
+            <!--/sec3--></div>
+            
+            
+            <p class="totop"><a href="#header">↑ページの先頭へ</a></p>
+            
+            
+            
+            
+            
+            
+            
+            <!--/bot--></div>
+			<!--/ div#contents--></div>
+
+<div id="footer" class="pkg">
+<p class="copyright">Copyright &copy;&nbsp;2010-2011 <strong><a href="http://fusion-tec.jp" target="_blank">フュージョンテクノロジー株式会社</a></strong>, All Rights Reserved &reg;</p>
+<p class="link"><a href="/manage/policy.php" >運用ポリシー</a>　｜　<a href="http://fusion-tec.jp/privacy.html" target="_blank">プライバシーポリシー</a></p>
+
+<!--/ div#footer--></div>
+
+<!--/ div#container --></div>
+<!--/ div#wrapper --></div>
+</body>
+</html>

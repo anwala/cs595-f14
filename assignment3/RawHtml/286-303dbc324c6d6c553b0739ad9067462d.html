@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]>
+	<html debug="true" id="scoped-css" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" class="not-logged-in no-js  oldie">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+	<html debug="true" id="scoped-css" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" class="not-logged-in no-js ">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-2.newrelic.com","errorBeacon":"bam.nr-data.net","licenseKey":"4722504a69","applicationID":"2187286","transactionName":"IQxWQRdXDQ1UEUtCFgcRS1wRXU4RUAQBREoRC1dC","queueTime":1,"applicationTime":544,"ttGuid":"","agentToken":null,"agent":"js-agent.newrelic.com/nr-460.min.js"}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VwAPVFJQGwEBXFZQDwc="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,o){t&&t(e,n,o),o||(o={});for(var a=i(e),s=a.length,c=o[r]||(o[r]={}),f=0;s>f;f++)a[f].apply(c,n);return c}function o(t,e){s[t]=i(t).concat(e)}function i(t){return s[t]||[]}function a(){return n(e)}var s={};return{on:o,emit:e,create:a,listeners:i,_events:s}}var r="nr@context";e.exports=n()},{}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(4),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(f){"stack"in f&&(t(5),t(3),"addEventListener"in window&&t(1),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(2),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:4,2:7,3:5,4:15,5:6,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o);if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var a=document;a&&!a.hasOwnProperty("addEventListener");)a=Object.getPrototypeOf(a);a&&n(a);for(var s=XMLHttpRequest.prototype;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=e["nr@wrapped"]?t[1]=e["nr@wrapped"]:e["nr@wrapped"]=t[1]=i(e,"fn-",null,e.name||"anonymous"):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:15,2:16,ee:"QJf3ax"}],5:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:16,2:15,ee:"QJf3ax"}],6:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:16,2:15,ee:"QJf3ax"}],7:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),f=s(a),u=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new u(t);try{i.emit("new-xhr",[],e),f.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",r)}catch(o){}}return e},window.XMLHttpRequest.prototype=u.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:4,2:16,ee:"QJf3ax"}],8:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=e(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(1),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(2);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=e(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",e)}catch(r){}}};for(var u=0;c>u;u++)n.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:9,2:12,3:7,4:4,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],9:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],12:[function(t,e){function n(t){if(!t||"object"!=typeof t&&"function"!=typeof t)return-1;if(t===window)return 0;if(o.call(t,"__nr"))return t.__nr;try{return Object.defineProperty(t,"__nr",{value:r,writable:!0,enumerable:!1}),r}catch(e){return t.__nr=r,r}finally{r+=1}}var r=1,o=Object.prototype.hasOwnProperty;e.exports=n},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){p.proto="https"===d.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=p.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,c=s.document,f="addEventListener",u="attachEvent",d=(""+location).split("?")[0],p=e.exports={offset:i(),origin:d,features:{}};c[f]?(c[f]("DOMContentLoaded",o,!1),s[f]("load",n,!1)):(c[u]("onreadystatechange",r),s[u]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],15:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],16:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper";e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,f,u;try{i=this,n=o(arguments),f=r&&r(n,i)||{}}catch(d){c([d,"",[n,i,a],f])}s(e+"start",[n,i,a],f);try{return u=t.apply(i,n)}catch(p){throw s(e+"err",[n,i,p],f),p}finally{s(e+"end",[n,i,u],f)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,nrWrapper)}function a(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s,t))}function s(e,n,r){try{t.emit(e,n,r)}catch(o){c([o,e,n,r])}}function c(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=a,e.flag=i,e}},{1:15,ee:"QJf3ax"}]},{},["G9z0Bl",3,8]);</script>
+
+		<meta name="viewport" content="width=device-width">
+
+	<title>The Ken Reedy Show</title>
+
+	
+
+	<meta content="authenticity_token" name="csrf-param" />
+<meta content="4IP8okwyYQFZyDSxVG4d8sHY/P0GggPkKxfsjjfpLys=" name="csrf-token" />
+
+		<script>if(typeof console == "undefined") { window.console = { log: function () {} }; }</script>
+<link href="//s3.amazonaws.com/content.sitezoogle.com/assets/usersites/favicon/BZ-d8e90faac07f485e12024b16d5ab20ff.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+
+<link href="//s3.amazonaws.com/content.sitezoogle.com/assets/usersite-4bf820e95487b4dd0e667bac922ae1c8.css" media="screen" rel="stylesheet" type="text/css" />
+<link class="feature_theme" href="//s3.amazonaws.com/content.sitezoogle.com/assets/usersite/dark-7a8e1a09888238392e2f8277b030c965.css" media="screen" rel="stylesheet" type="text/css" />
+
+	<link class="non-intro" href="//s3.amazonaws.com/content.sitezoogle.com/assets/usersite/styles/2-95e3903205446a23c97230b5bcb0768c.css" media="screen" rel="stylesheet" type="text/css" />
+<link class="non-intro" href="/style.css" media="screen" rel="stylesheet" type="text/css" />
+
+<style id="custom-css" type="text/css"></style>
+
+	<meta content="Ken Reedy, The Ken Reedy Show, Ken Reedy Show, Ken and Michele Show, KnMProductions, KnMProductionsNY, We say what you think, The best in pro-wrestling talk, Get on the bus, Diamond Dave Rosenbluth, Michele3D, Michele De G, Tony V, Tony Vizioli, Tony Viz, Ken Reedy Radio, Ken Reedy Podcast, Ken on the internet, Ken Reedy Internet show, Ken Reedy Internet broadcast" name="keywords"></meta>
+
+<link href="//s3.amazonaws.com/content.sitezoogle.com/assets/usersite_print-d7a5c1c305750d13d94d06a5798a6cac.css" media="print" rel="stylesheet" type="text/css" />
+
+	<meta content="Home page of The Ken Reedy Show. The Ken Reedy Show is a Pro-Wrestling internet radio show." name="description" />
+<meta content="The Ken Reedy Show" property="og:title" />
+<meta content="Home page of The Ken Reedy Show. The Ken Reedy Show is a Pro-Wrestling internet radio show." property="og:description" />
+<meta content="http://thekenreedyshow.com/home" property="og:url" />
+<meta content="The Ken Reedy Show" property="og:site_name" />
+
+
+	
+	
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<!--[if lte IE 9]>
+		<script src="//s3.amazonaws.com/content.sitezoogle.com/assets/history.iegte8.min-4d97f9fb1651e72b353f4ded7f2f83d7.js" type="text/javascript"></script>
+	<![endif]-->
+
+	<script protocol="relative" src="//s3.amazonaws.com/content.sitezoogle.com/assets/usersite/application-a81561abfea189b57a8968456812644a.js" type="text/javascript"></script>
+
+</head>
+
+
+<body id="style-2d" class="style-2">
+	
+	
+
+	<div data-pjax-container>
+		
+	<div class="landing-page website-page-home" id="page-root">
+		<div id="container-wrap">
+
+	<div id="container">
+		<header id="page-header">
+			
+		<div id="mobile-header">
+			<div class="bar">
+				<a href="javascript:" id="toggle-menu"><i class="icon-hamburger"></i></a>
+				<div class="project-name">The Ken Reedy Show</div>
+			</div>
+				<img alt="Page-photo-27824" src="http://content.sitezoogle.com.s3.amazonaws.com/u/2989/style/page-photo-27824.jpg?00a25ed85b322b81c830aff389f6676c" />
+		</div>
+		
+
+		<div class="" data-text-fallbacks="{&quot;title&quot;:&quot;http://content.sitezoogle.com.s3.amazonaws.com/u/2989/style/title.png?1393427983&quot;}" id="header-wrap"><div class="layer-photo layer"><img src="http://content.sitezoogle.com.s3.amazonaws.com/u/2989/style/page-photo-27824.jpg?00a25ed85b322b81c830aff389f6676c"/></div><div class="layer-frame layer"></div><div class="layer-title layer"><h1 class="display-type-text" id="page-title"><span class="outer" data-max-font-size="34"><span class="inner">The Ken Reedy Show</span></span></h1></div></div>
+		
+
+			<span id="toggle-mobile-menu"><a href="javascript:"><i class="icon-hamburger"></i></a></span><nav class="non-mobile" id="main-nav"><ul class="vertical_right vertical list balance_7 top"><li class="top" style="z-index: 7;"><div><a href="/home" class="top" title="Home">Home</a></div><ul><li class=""><div><a href="/discuss-here" class="" title="Discuss here!">Discuss here!</a></div></li></ul></li><li class="top" style="z-index: 6;"><div><a href="/photos" class="top" title="Photos">Photos</a></div></li><li class="top" style="z-index: 5;"><div><a href="/blogs" class="top" title="Blogs">Blogs</a></div><ul><li class=""><div><a href="/ken-s-blog" class="" title="Ken&#x27;s Blog">Ken&#x27;s Blog</a></div></li><li class=""><div><a href="/michele-s-blog" class="" title="Michele&#x27;s Blog">Michele&#x27;s Blog</a></div></li><li class=""><div><a href="/the-joan-s-blog" class="" title="The Joan&#x27;s Blog">The Joan&#x27;s Blog</a></div></li><li class="selected"><div><a href="/tony-s-blog" class="" title="Tony&#x27;s Blog">Tony&#x27;s Blog</a></div></li></ul></li><li class="top" style="z-index: 4;"><div><a href="/who-s-who" class="top" title="Who&#x27;s Who?">Who&#x27;s Who?</a></div></li><li class="top" style="z-index: 3;"><div><a href="/contact-us" class="top" title="Contact Us">Contact Us</a></div></li><li class="top" style="z-index: 2;"><div><a href="/caller-corner" class="top" title="Caller Corner">Caller Corner</a></div></li><li class="top" style="z-index: 1;"><div><a href="/guests" class="top" title="Guests">Guests</a></div></li></ul></nav>
+		</header>
+
+		<div id="content-wrap">
+			<div id="content-top"> </div>
+
+			<div id="content">
+				<div id="zoogle_flash">
+</div>
+
+
+				<section id="cart" class="cart bg-accent">
+</section>
+
+
+
+				
+<table id="page-content-wrap"><tbody class="zoogle-content block" data-arrangement-id="123529"><tr class="zoogle-columns zoogle-columns-2 zoogle-columns-50-50 block block-row layout_full" data-row-id="721021"><td class="zoogle-column zoogle-column-1-of-2 col_1_of_2 block layout_half" colspan="3" data-column-id="769784"><div class="zoogle-feature block layout_full" data-block-id="444607"><section class="feature text_feature with-title" data-feature-id="208549"><h2 class="subtitle-wrap"><span class="subtitle">Welcome to the Show!</span></h2><span style="font-size: larger;"><b>THE BEST IN PRO-WRESTLING TALK.<br>RAW PRE SHOW: MONDAYS 6:30-8PM<br>PPV PRE SHOW: SUNDAYS 6-8:00PM</b></span><br> <hr><br><span style="font-size: larger;"><b>We here at The Ken Reedy Show worship in the church of professional wrestling and invite you to do the same. We plan on taking over the world "One Championship Belt at a Time".</b></span><br><br><br><span style="font-size: larger;"><b>In addition to our brilliantly witty host we have assembled the funniest, zaniest group of misfits and miscreants since the Oddities: co-host "Diamond Dave" Rosenbluth, producer and resident "Diva" Michele De G and weekly show blogger Tony "V". Of course we can't forget the cast of characters that call in every week! </b></span><br><br><span style="font-size: larger;"><b>Together we discuss, dissect, dismantle and defend the world of professional wrestling as you know and love it today.</b></span><br><br><span style="font-size: larger;"><b>THE KEN REEDY SHOW: "We say what you think".</b></span>
+<hr></section></div></td><td class="zoogle-column zoogle-column-2-of-2 col_2_of_2 block layout_half" colspan="3" data-column-id="769785"><div class="zoogle-feature block layout_full" data-block-id="444608"><section class="feature image_feature with-title" data-feature-id="76834"><h2 class="subtitle-wrap"><span class="subtitle">CLICK ICON TO LISTEN LIVE:</span></h2>		<div class="image small">
+				<a href="http://www.blogtalkradio.com/thekenreedyshow"><img alt="Blogtalkradio" src="http://s3.amazonaws.com/content.sitezoogle.com/u/2989/08e7cb92737c4c31b567dd99f3646d4dacd71087/small/blogtalkradio.bmp?1368406949" /></a>
+		</div>
+
+</section></div><div class="zoogle-feature block layout_full" data-block-id="444609"><section class="feature html_feature with-title" data-feature-id="35195"><h2 class="subtitle-wrap"><span class="subtitle">ARCHIVED SHOWS:</span></h2>	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.adobe.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="210" height="270" name="241883" id="241883"><param name="movie" value="http://www.blogtalkradio.com/btrplayer.swf?file=http://www.blogtalkradio.com%2Fthekenreedyshow%2Fplay_list.xml%3Fitemcount%3D5&amp;autostart=false&amp;bufferlength=5&amp;volume=80&amp;corner=rounded&amp;callback=http://www.blogtalkradio.com/flashplayercallback.aspx">
+<param name="quality" value="high">
+<param name="wmode" value="transparent">
+<param name="menu" value="false">
+<param name="allowScriptAccess" value="always">
+<embed src="http://www.blogtalkradio.com/btrplayer.swf" flashvars="file=http://www.blogtalkradio.com%2fthekenreedyshow%2fplay_list.xml%3Fitemcount%3D5&amp;autostart=false&amp;shuffle=false&amp;callback=http://www.blogtalkradio.com/FlashPlayerCallback.aspx&amp;width=210&amp;height=270&amp;volume=80&amp;corner=rounded" width="210" height="270" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" wmode="transparent" menu="false" name="241883" id="241883" allowscriptaccess="always"></embed></object><div style="font-size: 10px;text-align: center; width:220px;"> Listen to <a href="http://www.blogtalkradio.com">internet radio</a> with <a href="http://www.blogtalkradio.com/thekenreedyshow">theKenReedyShow</a> on Blog Talk Radio</div></section></div></td></tr><tr class="zoogle-columns zoogle-columns-1 zoogle-columns-100 block block-row layout_full" data-row-id="721022"><td class="zoogle-column zoogle-column-1-of-1 col_1_of_1 block layout_full" colspan="6" data-column-id="769786"><div class="zoogle-feature block layout_full" data-block-id="444610"><section class="feature calendar_feature with-title" data-feature-id="4666"><h2 class="subtitle-wrap"><span class="subtitle">UPCOMING EVENTS:</span></h2><div class="calendar-wrap">
+			<p>There are no upcoming events right now.</p>
+	
+
+
+</div>
+<script type="application/ld+json">[]</script>
+
+</section></div></td></tr><tr class="zoogle-columns zoogle-columns-1 zoogle-columns-100 block block-row layout_full" data-row-id="721023"><td class="zoogle-column zoogle-column-1-of-1 col_1_of_1 block layout_full" colspan="6" data-column-id="769787"><div class="zoogle-feature block layout_full" data-block-id="444611"><section class="feature text_feature" data-feature-id="208550">TO BOOK KEN REEDY FOR YOUR LIVE OR ON AIR EVENT, CONTACT <a href="mailto:michele@thekenreedyshow.com">MICHELE</a>!</section></div></td></tr><tr class="zoogle-columns zoogle-columns-1 zoogle-columns-100 block block-row layout_full" data-row-id="721024"><td class="zoogle-column zoogle-column-1-of-1 col_1_of_1 block layout_full" colspan="6" data-column-id="769788"><div class="zoogle-feature block layout_full" data-block-id="444612"><section class="feature video_feature with-title" data-feature-id="33389"><h2 class="subtitle-wrap"><span class="subtitle">The Ken Reedy Experience!</span></h2>		<div class="video fixed">
+			  <iframe class="youtube-player" frameborder="0" height="355" id="yt-33389" src="https://www.youtube.com/embed/ehpeIL1nVJE?rel=0&amp;amp;wmode=transparent&amp;amp;enablejsapi=1" type="text/html" width="425"></iframe>
+
+		</div>
+</section></div></td></tr><tr class="zoogle-columns zoogle-columns-1 zoogle-columns-100 block block-row layout_full" data-row-id="721025"><td class="zoogle-column zoogle-column-1-of-1 col_1_of_1 block layout_full" colspan="6" data-column-id="769789"><div class="zoogle-feature block layout_full" data-block-id="444613"><section class="feature text_feature" data-feature-id="208551"><span style="font-size: larger"><b>THE KEN REEDY SHOW is coming to AM RADIO!  <br></b></span><span id="fck_dom_range_temp_1360540279532_914"></span><br>
+Starting March 5, <b>TKRS</b> will be broadcast live on <b>1640AM Tuesday Nights 6-7 PM </b>on <a target="_new" href="http://www.ir1640.com/">Iron Bound Radio</a>!<br><br>
+Catch <b>TKRS </b>twice a week! <br><br>
+6-8 on the regular Sunday Night Broadcast right here on TKRS website<br>
+and now from 6-7 on Tuesdays on 1640AM!<br><br>
+The Best in Pro-Wrestling Talk - TWICE A WEEK!</section></div></td></tr><tr class="zoogle-columns zoogle-columns-1 zoogle-columns-100 block block-row layout_full" data-row-id="721026"><td class="zoogle-column zoogle-column-1-of-1 col_1_of_1 block layout_full" colspan="6" data-column-id="769790"><div class="zoogle-feature block layout_full" data-block-id="444614"><section class="feature text_feature" data-feature-id="208552">Catch <a href="http://www.nwaonfire.com/">NWA On Fire</a> every Friday Night on <a target="_new" href="http://metvnetwork.com/">ME TV</a> from 11pm - 12am.<br><br>
+Check local listings for channel information!</section></div></td></tr><tr class="zoogle-columns zoogle-columns-1 zoogle-columns-100 block block-row layout_full" data-row-id="721027"><td class="zoogle-column zoogle-column-1-of-1 col_1_of_1 block layout_full" colspan="6" data-column-id="769791"><div class="zoogle-feature block layout_full" data-block-id="444615"><section class="feature image_feature" data-feature-id="76837">		<div class="image small">
+				<a href="http://metvnetwork.com/"><img alt="Me" src="http://s3.amazonaws.com/content.sitezoogle.com/u/2989/69d5f08c185bf8b0909735b52d2a186079003aec/small/me.jpg?1368406957" /></a>
+		</div>
+
+</section></div></td></tr><tr class="zoogle-columns zoogle-columns-1 zoogle-columns-100 block block-row layout_full" data-row-id="721028"><td class="zoogle-column zoogle-column-1-of-1 col_1_of_1 block layout_full" colspan="6" data-column-id="769792"><div class="zoogle-feature block layout_full" data-block-id="444616"><section class="feature image_feature" data-feature-id="76838">		<div class="image original">
+				<a href="http://www.wrestlingonfire.com/"><img alt="On-firelogo" src="http://s3.amazonaws.com/content.sitezoogle.com/u/2989/3f31a19209639c3963f2e82b8ccc50c8e813ac7a/original/ON-FIRELOGO.jpg?1370388336" /></a>
+		</div>
+
+</section></div></td></tr><tr class="zoogle-columns zoogle-columns-1 zoogle-columns-100 block block-row layout_full" data-row-id="721029"><td class="zoogle-column zoogle-column-1-of-1 col_1_of_1 block layout_full" colspan="6" data-column-id="769793"><div class="zoogle-feature block layout_full" data-block-id="444617"><section class="feature image_feature with-title" data-feature-id="76839"><h2 class="subtitle-wrap"><span class="subtitle">Click to zoom!</span></h2>		<div class="image medium">
+				<a href="http://s3.amazonaws.com/content.sitezoogle.com/u/2989/b0bb19d881f086348681bae1c54ad562bd145808/original/Shirts.jpg?1361489925" class="thumbnail-popup"><img alt="Shirts" src="http://s3.amazonaws.com/content.sitezoogle.com/u/2989/b0bb19d881f086348681bae1c54ad562bd145808/medium/Shirts.jpg?1361489925" /></a>
+		</div>
+
+</section></div></td></tr><tr class="zoogle-columns zoogle-columns-1 zoogle-columns-100 block block-row layout_full" data-row-id="721030"><td class="zoogle-column zoogle-column-1-of-1 col_1_of_1 block layout_full" colspan="6" data-column-id="769794"><div class="zoogle-feature block layout_full" data-block-id="444618"><section class="feature html_feature with-title" data-feature-id="35196"><h2 class="subtitle-wrap"><span class="subtitle">KRS Shirts are NOW available!</span></h2>	<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick"><table>
+<tr><td>
+<input type="hidden" name="on0" value="Sizes">Sizes</td></tr>
+<tr><td><select name="os0"><option value="Medium">Medium </option>
+<option value="Large">Large </option>
+<option value="XL">XL </option>
+<option value="XXL">XXL </option>
+<option value="Option 5">Option 5 </option></select></td></tr>
+</table>
+<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+"><input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"><img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form></section></div></td></tr><tr class="zoogle-columns zoogle-columns-1 zoogle-columns-100 block block-row layout_full" data-row-id="721031"><td class="zoogle-column zoogle-column-1-of-1 col_1_of_1 block layout_full" colspan="6" data-column-id="769795"><div class="zoogle-feature block layout_full" data-block-id="444619"><section class="feature image_feature with-title" data-feature-id="76840"><h2 class="subtitle-wrap"><span class="subtitle">Check out our sponsors:</span></h2>		<div class="image medium">
+				<a href="http://www.peppermillsouth.com/new-site/"><img alt="Peppermill" src="http://s3.amazonaws.com/content.sitezoogle.com/u/2989/c99d68663ae3bfc2ccf9fb52bf16c7665fa5ab8b/medium/peppermill.bmp?1368406958" /></a>
+		</div>
+
+</section></div></td></tr><tr class="zoogle-columns zoogle-columns-1 zoogle-columns-100 block block-row layout_full" data-row-id="721032"><td class="zoogle-column zoogle-column-1-of-1 col_1_of_1 block layout_full" colspan="6" data-column-id="769796"><div class="zoogle-feature block layout_full" data-block-id="444620"><section class="feature image_feature with-title" data-feature-id="76841"><h2 class="subtitle-wrap"><span class="subtitle">AMBIT ENERGY: Contact Joe Miller</span></h2>		<div class="image medium">
+				<a href="http://mainline.myambit.com/contact-ambit-energy"><img alt="Ambit-ad" src="http://s3.amazonaws.com/content.sitezoogle.com/u/2989/66f2de2d5b9d7748f5615a99c049778ee28a9f18/medium/AMBIT-AD.jpg?1368406951" /></a>
+		</div>
+
+</section></div></td></tr><tr class="zoogle-columns zoogle-columns-1 zoogle-columns-100 block block-row layout_full" data-row-id="721033"><td class="zoogle-column zoogle-column-1-of-1 col_1_of_1 block layout_full" colspan="6" data-column-id="769797"><div class="zoogle-feature block layout_full" data-block-id="444621"><section class="feature image_feature" data-feature-id="76842">		<div class="image medium">
+				<a href="http://realfantasywrestling.com/"><img alt="C2" src="http://s3.amazonaws.com/content.sitezoogle.com/u/2989/efc1831880f4461223101f0ec27a6bf7fe07ce10/medium/C2.jpg?1368406953" /></a>
+		</div>
+
+</section></div></td></tr><tr class="zoogle-columns zoogle-columns-1 zoogle-columns-100 block block-row layout_full" data-row-id="721034"><td class="zoogle-column zoogle-column-1-of-1 col_1_of_1 block layout_full" colspan="6" data-column-id="769798"><div class="zoogle-feature block layout_full" data-block-id="444622"><section class="feature text_feature" data-feature-id="208553"><p>Like what you hear? Would you like to be a proud sponsor of THE KEN REEDY SHOW? <br>
+Email <a href="mailto:michele@thekenreedyshow.com">Sponsorship</a> for sponsorship packages!</p></section></div></td></tr><tr class="zoogle-columns zoogle-columns-2 zoogle-columns-50-50 block block-row layout_full" data-row-id="721035"><td class="zoogle-column zoogle-column-1-of-2 col_1_of_2 block layout_half" colspan="3" data-column-id="769799"><div class="zoogle-feature block layout_full" data-block-id="444623"><section class="feature html_feature" data-feature-id="35197">	<!-- Place this tag where you want the +1 button to render -->
+<plusone annotation="inline"></plusone><!-- Place this render call where appropriate --><script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script></section></div></td><td class="zoogle-column zoogle-column-2-of-2 col_2_of_2 block layout_half" colspan="3" data-column-id="769800"><div class="zoogle-feature block layout_full" data-block-id="444624"><section class="feature my_site_feature" data-feature-id="15250">	<ul class="my_sites my_sites_color_large">
+		  <li class="twitter">
+			  <a href="http://www.twitter.com/TheKenReedyShow" class="my_site_icon tip text-secondary" target="_blank" title="http://www.twitter.com/TheKenReedyShow"></a>
+</li>		  <li class="youtube">
+			  <a href="http://www.youtube.com/user/knmproductionsny" class="my_site_icon tip text-secondary" target="_blank" title="http://www.youtube.com/user/knmproductionsny"></a>
+</li>		  <li class="facebook">
+			  <a href="http://www.facebook.com/TheKenReedyShow" class="my_site_icon tip text-secondary" target="_blank" title="http://www.facebook.com/TheKenReedyShow"></a>
+</li>	</ul>
+
+
+</section></div></td></tr></tbody></table>
+				<div class="clear"> </div>
+			</div>
+
+			<div id="content-bottom"> </div>
+		</div>
+
+	</div>
+
+	<footer id="page-footer">
+	<div class="block layout_full"><section class="feature text_feature" data-feature-id="208563">©THE KEN REEDY SHOW</section></div>
+		<div class="branding text-tertiary">
+		<small>
+			<a href="http://bandzoogle.com/" rel="nofollow" target="_blank" title="Powered by Bandzoogle">Powered by Bandzoogle</a>
+		</small>
+	</div>
+
+</footer>
+
+
+
+</div>
+</div>
+	</div>
+
+		<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-32560458-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
+
+
+
+
+	
+</body>
+</html>

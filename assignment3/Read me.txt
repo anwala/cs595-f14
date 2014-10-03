@@ -1,0 +1,12 @@
+Nwala_Assignment3_Report.pdf: contains methodology
+
+	downloadHTML.py: downloads/processes raw HTML files taking input from URIs.txt
+
+	TFIDF-TF-IDF-URI.txt: contains tuples of form <TF-IDF, TF, IDF, URI>
+
+	PAGERANK-URI.txt: contains tuples of form <PageRank, URI>
+
+	URIs.txt: contains 1000 seed URIs
+
+
+

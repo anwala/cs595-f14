@@ -1,0 +1,541 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Programming/Coding Assignment
+% LaTeX Template
+%
+% This template has been downloaded from:
+% http://www.latextemplates.com
+%
+% Original author:
+% Ted Pavlic (http://www.tedpavlic.com)
+%
+% Note:
+% The \lipsum[#] commands throughout this template generate dummy text
+% to fill the template out. These commands should all be removed when 
+% writing assignment content.
+%
+% This template uses a Perl script as an example snippet of code, most other
+% languages are also usable. Configure them in the "CODE INCLUSION 
+% CONFIGURATION" section.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+
+\usepackage{fancyhdr} % Required for custom headers
+\usepackage{lastpage} % Required to determine the last page for the footer
+\usepackage{extramarks} % Required for headers and footers
+\usepackage[usenames,dvipsnames]{color} % Required for custom colors
+\usepackage{graphicx} % Required to insert images
+\usepackage{listings} % Required for insertion of code
+\usepackage{courier} % Required for the courier font
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{setspace}
+\usepackage{color}
+\usepackage{comment}
+\usepackage{caption}
+
+\usepackage{hyperref}
+\usepackage{natbib}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    breaklinks=true
+}
+
+%\usepackage[]{algorithm2e}
+\usepackage{pdfpages}
+
+
+
+
+%For python inclusion (http://widerin.org/blog/syntax-highlighting-for-python-scripts-in-latex-documents)
+\definecolor{Code}{rgb}{0,0,0}
+\definecolor{Decorators}{rgb}{0.5,0.5,0.5}
+\definecolor{Numbers}{rgb}{0.5,0,0}
+\definecolor{MatchingBrackets}{rgb}{0.25,0.5,0.5}
+\definecolor{Keywords}{rgb}{0,0,1}
+\definecolor{self}{rgb}{0,0,0}
+\definecolor{Strings}{rgb}{0,0.63,0}
+\definecolor{Comments}{rgb}{0,0.63,1}
+\definecolor{Backquotes}{rgb}{0,0,0}
+\definecolor{Classname}{rgb}{0,0,0}
+\definecolor{FunctionName}{rgb}{0,0,0}
+\definecolor{Operators}{rgb}{0,0,0}
+\definecolor{Background}{rgb}{0.98,0.98,0.98}
+
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+\linespread{1.1} % Line spacing
+
+% Set up the header and footer
+\pagestyle{fancy}
+\lhead{\hmwkAuthorName} % Top left header
+%\chead{\hmwkClass\ (\hmwkClassInstructor\ \hmwkClassTime): \hmwkTitle} % Top center head
+\chead{\hmwkClass\ (\hmwkClassInstructor): \hmwkTitle} % Top center head
+\rhead{\firstxmark} % Top right header
+\lfoot{\lastxmark} % Bottom left footer
+\cfoot{} % Bottom center footer
+\rfoot{Page\ \thepage\ of\ \protect\pageref{LastPage}} % Bottom right footer
+\renewcommand\headrulewidth{0.4pt} % Size of the header rule
+\renewcommand\footrulewidth{0.4pt} % Size of the footer rule
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+%----------------------------------------------------------------------------------------
+%	CODE INCLUSION CONFIGURATION
+%----------------------------------------------------------------------------------------
+
+\definecolor{MyDarkGreen}{rgb}{0.0,0.4,0.0} % This is the color used for comments
+\lstloadlanguages{Perl} % Load Perl syntax for listings, for a list of other languages supported see: ftp://ftp.tex.ac.uk/tex-archive/macros/latex/contrib/listings/listings.pdf
+\lstset{language=Perl, % Use Perl in this example
+        frame=single, % Single frame around code
+        basicstyle=\small\ttfamily, % Use small true type font
+        keywordstyle=[1]\color{Blue}\bf, % Perl functions bold and blue
+        keywordstyle=[2]\color{Purple}, % Perl function arguments purple
+        keywordstyle=[3]\color{Blue}\underbar, % Custom functions underlined and blue
+        identifierstyle=, % Nothing special about identifiers                                         
+        commentstyle=\usefont{T1}{pcr}{m}{sl}\color{MyDarkGreen}\small, % Comments small dark green courier font
+        stringstyle=\color{Purple}, % Strings are purple
+        showstringspaces=false, % Don't put marks in string spaces
+        tabsize=5, % 5 spaces per tab
+        %
+        % Put standard Perl functions not included in the default language here
+        morekeywords={rand},
+        %
+        % Put Perl function parameters here
+        morekeywords=[2]{on, off, interp},
+        %
+        % Put user defined functions here
+        morekeywords=[3]{test},
+       	%
+        morecomment=[l][\color{Blue}]{...}, % Line continuation (...) like blue comment
+        numbers=left, % Line numbers on left
+        firstnumber=1, % Line numbers start with line 1
+        numberstyle=\tiny\color{Blue}, % Line numbers are blue and small
+        stepnumber=5 % Line numbers go in steps of 5
+}
+
+% Creates a new command to include a perl script, the first parameter is the filename of the script (without .pl), the second parameter is the caption
+\newcommand{\perlscript}[2]{
+\begin{itemize}
+\item[]\lstinputlisting[caption=#2,label=#1]{#1.pl}
+\end{itemize}
+}
+
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT STRUCTURE COMMANDS
+%	Skip this unless you know what you're doing
+%----------------------------------------------------------------------------------------
+
+% Header and footer for when a page split occurs within a problem environment
+\newcommand{\enterProblemHeader}[1]{
+\nobreak\extramarks{#1}{#1 continued on next page\ldots}\nobreak
+\nobreak\extramarks{#1 (continued)}{#1 continued on next page\ldots}\nobreak
+}
+
+% Header and footer for when a page split occurs between problem environments
+\newcommand{\exitProblemHeader}[1]{
+\nobreak\extramarks{#1 (continued)}{#1 continued on next page\ldots}\nobreak
+\nobreak\extramarks{#1}{}\nobreak
+}
+
+\setcounter{secnumdepth}{0} % Removes default section numbers
+\newcounter{homeworkProblemCounter} % Creates a counter to keep track of the number of problems
+
+\newcommand{\homeworkProblemName}{}
+\newenvironment{homeworkProblem}[1][Problem \arabic{homeworkProblemCounter}]{ % Makes a new environment called homeworkProblem which takes 1 argument (custom name) but the default is "Problem #"
+\stepcounter{homeworkProblemCounter} % Increase counter for number of problems
+\renewcommand{\homeworkProblemName}{#1} % Assign \homeworkProblemName the name of the problem
+\section{\homeworkProblemName} % Make a section in the document with the custom problem count
+\enterProblemHeader{\homeworkProblemName} % Header and footer within the environment
+}{
+\exitProblemHeader{\homeworkProblemName} % Header and footer after the environment
+}
+
+\newcommand{\problemAnswer}[1]{ % Defines the problem answer command with the content as the only argument
+\noindent\framebox[\columnwidth][c]{\begin{minipage}{0.98\columnwidth}#1\end{minipage}} % Makes the box around the problem answer and puts the content inside
+}
+
+\newcommand{\homeworkSectionName}{}
+\newenvironment{homeworkSection}[1]{ % New environment for sections within homework problems, takes 1 argument - the name of the section
+\renewcommand{\homeworkSectionName}{#1} % Assign \homeworkSectionName to the name of the section from the environment argument
+\subsection{\homeworkSectionName} % Make a subsection with the custom name of the subsection
+\enterProblemHeader{\homeworkProblemName\ [\homeworkSectionName]} % Header and footer within the environment
+}{
+\enterProblemHeader{\homeworkProblemName} % Header and footer after the environment
+}
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CLASS SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\hmwkTitle}{Assignment\ \#3 } % Assignment title
+%\newcommand{\hmwkDueDate}{Monday,\ January\ 1,\ 2012} % Due date
+\newcommand{\hmwkClass}{Introduction to Web Science} % Course/class
+%\newcommand{\hmwkClassTime}{10:30am} % Class/lecture time
+\newcommand{\hmwkClassInstructor}{Dr. Nelson} % Teacher/lecturer
+\newcommand{\hmwkAuthorName}{Alexander Nwala} % Your name
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title{
+\vspace{2in}
+\textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
+%\normalsize\vspace{0.1in}\small{Due\ on\ \hmwkDueDate}\\
+%\vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}}
+\vspace{0.1in}\large{\textit{\hmwkClassInstructor}}
+\vspace{3in}
+}
+
+\author{\textbf{\hmwkAuthorName}}
+\date{Thursday, October 2, 2014} % Insert date here if you want it to appear below your name
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle
+
+
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+%\setcounter{tocdepth}{1} % Uncomment this line if you don't want subsections listed in the ToC
+
+\newpage
+\tableofcontents
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 1
+%----------------------------------------------------------------------------------------
+
+% To have just one problem per page, simply put a \clearpage after each problem
+
+\begin{homeworkProblem}
+
+Download the 1000 URIs from assignment \#2.  ``curl'', ``wget'', or
+``lynx'' are all good candidate programs to use.  We want just the
+raw HTML, not the images, stylesheets, etc.
+
+from the command line:
+
+\begin{verbatim}
+    % curl http://www.cnn.com/ > www.cnn.com
+    % wget -O www.cnn.com http://www.cnn.com/
+    % lynx -source http://www.cnn.com/ > www.cnn.com
+\end{verbatim}
+
+
+
+``www.cnn.com'' is just an example output file name, keep in mind
+that the shell will not like some of the characters that can occur
+in URIs (e.g., ``?'', ``\&'').  You might want to hash the URIs, like:
+
+\begin{verbatim}
+    % echo -n ``http://www.cs.odu.edu/show_features.shtml?72'' | md5
+    41d5f125d13b4bb554e6e31b6b591eeb
+\end{verbatim}
+
+("md5sum" on some machines; note the ``-n'' in echo -- this removes
+the trailing newline.) 
+
+Now use a tool to remove (most) of the HTML markup.  ``lynx'' will
+do a fair job:
+
+\begin{verbatim}
+    % lynx -dump -force_html www.cnn.com > www.cnn.com.processed
+\end{verbatim}
+
+Keep both files for each URI (i.e., raw HTML and processed). 
+
+If you're feeling ambitious, ``boilerpipe'' typically does a good
+job for removing templates:
+
+\url{https://code.google.com/p/boilerpipe/}
+
+
+%\lstinputlisting[breaklines=true, caption=Curl Demo]{"/home/anwala/CS 895/Assignment 1/problem1_curlDemonstration.py"}
+%\lstinputlisting[breaklines=true, caption=Hash function; extract HTML funtion; and strip HTML tags function]{hashExtractProcessHTMlSnippet.py}
+
+
+\begin{comment}
+\begin{figure}
+    \caption{curlDemoOutput}
+    \begin{center}
+        \includegraphics{curlDemo} % Example image
+    \end{center}
+\end{figure}
+\end{comment}
+
+%\problemAnswer
+%{
+    \begin{verbatim}\end{verbatim}
+    \textbf{SOLUTION}
+
+    The solution for this problem is outlined by the following steps:
+    \begin{enumerate}
+    \item \textbf{Hash URIs to derive filenames:} This was achieved through 
+    the python hashlib.md5 method as outlined in Listing 1:
+    \lstinputlisting[breaklines=true, caption=Hash function]{hashSnippet.py}
+
+    \item \textbf{Extract raw HTML:} This was achieved through the use of the ``curl'' command as outlined in Listing 2:
+    \lstinputlisting[breaklines=true, caption=Extract HTML function]{extractHTMLSnippet.py}
+
+    \item \textbf{Process HTML files:} To remove the HTML tags, the ``lynx'' command was used as outlined in Listing 3:
+    \lstinputlisting[breaklines=true, caption=Extract HTML function]{processHTMLSnippet.py}
+
+    \end{enumerate}
+%}
+
+\begin{verbatim}
+    The folder "RawHtml" contains all the downloaded html files, and the folder 
+    "ProcessedHtml" contains the processed versions
+\end{verbatim}
+
+\end{homeworkProblem}
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 2
+%----------------------------------------------------------------------------------------
+
+\begin{homeworkProblem}
+Choose a query term (e.g., ``shadow'') that is not a stop word
+(see week 4 slides) and not HTML markup from step 1 (e.g., ``http'')
+that matches at least 10 documents (hint: use ``grep'' on the processed
+files).  If the term is present in more than 10 documents, choose
+any 10 from your list.  (If you do not end up with a list of 10
+URIs, you've done something wrong).
+
+
+As per the example in the week 4 slides, compute TFIDF values for
+the term in each of the 10 documents and create a table with the
+TF, IDF, and TFIDF values, as well as the corresponding URIs.  The
+URIs will be ranked in decreasing order by TFIDF values.  For
+example:
+
+Table 1. 10 Hits for the term ``shadow'', ranked by TFIDF.
+
+\begin{verbatim}
+    TFIDF   TF  IDF URI
+    -----   --  --- ---
+    0.150   0.014   10.680  http://foo.com/
+    0.085   0.008   10.680  http://bar.com/
+\end{verbatim}
+
+You can use Google or Bing for the DF estimation.  To count the
+number of words in the processed document (i.e., the deonminator
+for TF), you can use ``wc'':
+
+\begin{verbatim}
+    % wc -w www.cnn.com.processed
+        2370 www.cnn.com.processed
+\end{verbatim}
+
+It won't be completely accurate, but it will be probably be
+consistently inaccurate across all files.  You can use more 
+accurate methods if you'd like.  
+
+Don't forget the log base 2 for IDF, and mind your significant
+digits!
+
+
+\begin{verbatim}\end{verbatim}
+\textbf{SOLUTION}
+
+Using the query term ``plan'', 49 documents were retrieved and the TF-IDF calculated for all 49; the top 10 (TF-IDF criteria) documents were collected: Table 1 summarizes the outcome. The total number of documents in the corpus was set to 20 billion, and with the use of Google, the count of document with the term was set to 206 million.
+
+\begin{table}[h!]
+\caption{Rank Table Based On TF-IDF} % title of Table
+\centering % used for centering table
+\begin{tabular}{c | c | c | c | c } % centered columns (4 columns)
+\hline\hline %inserts double horizontal lines
+ITEM & TF-IDF & TF & IDF & URI \\ [0.5ex] % inserts table 
+%heading
+\hline \hline% inserts single horizontal line
+1   &   0.001    &   0.000 & 6.601 & http://market-ticker.org/... \\ \hline
+2   &   0.002    &   0.000 & 6.601 & http://www.seattlepi.com/       \\ \hline
+3   &   0.002    &   0.000 & 6.601 & http://www.philly.com/         \\ \hline
+4   &   0.002    &   0.000  & 6.601 & http://www.huffingtonpost.com/...       \\ \hline
+5   &   0.002    &   0.000 & 6.601 & http://www.entretiempo.com.co/         \\ \hline
+6   &   0.004    &   0.001  & 6.601 & http://www.booking.com/         \\ \hline
+7   &   0.004    &   0.001  & 6.601 & http://www.ebay.de/...         \\ \hline
+8   &   0.004    &   0.001  & 6.601 & http://news.google.com/         \\ \hline
+9   &   0.004    &   0.001 & 6.601 & http://thecpb.com/        \\ \hline
+10 & 0.005 & 0.001 & 6.601 & http://www.solidverbal.com/... \\ [1ex] 
+\hline %inserts single line
+\end{tabular}
+\label{table:nonlin} % is used to refer this table in the text
+\end{table}
+
+\begin{verbatim}
+    The file TFIDF-TF-IDF-URI.txt contains the complete table
+\end{verbatim}
+
+The results in Table 1 was facilitated by the function in Listing 4. 
+
+\lstinputlisting[breaklines=true, caption=Calculate TF-IDF]{calculateTFIDFSnippet.py}
+
+
+\begin{comment}
+\begin{figure}
+\caption{Uris distribution}
+\begin{center}
+    %\includegraphics{/home/anwala/CS895/Assignment2/urisDistribution.png} % Example image
+    %\includepdf[pages={1},width=\textwidth,scale=0.5]{/home/anwala/CS895/Assignment2/Rplots.pdf}
+\end{center}
+\end{figure}
+\end{comment}
+
+\end{homeworkProblem}
+
+
+
+%----------------------------------------------------------------------------------------
+%   PROBLEM 3
+%----------------------------------------------------------------------------------------
+
+\begin{homeworkProblem}
+Now rank the same 10 URIs from question \#2, but this time 
+by their PageRank.  Use any of the free PR estimaters on the web,
+such as:
+
+\begin{verbatim}
+    http://www.prchecker.info/check_page_rank.php
+    http://www.seocentro.com/tools/search-engines/pagerank.html
+    http://www.checkpagerank.net/
+\end{verbatim}
+
+If you use these tools, you'll have to do so by hand (they have
+anti-bot captchas), but there is only 10.  Normalize the values
+they give you to be from 0 to 1.0.  Use the same tool on all 10
+(again, consistency is more important than accuracy).
+
+Create a table similar to Table 1:
+
+Table 2.  10 hits for the term ``shadow'', ranked by PageRank.
+
+\begin{verbatim}
+    PageRank    URI
+    --------    ---
+    0.9     http://bar.com/
+    0.5     http://foo.com/
+\end{verbatim}
+
+Briefly compare and contrast the rankings produced in questions 2
+and 3.
+
+\begin{verbatim}\end{verbatim}
+\textbf{SOLUTION}
+
+With the use of this page rank: \url{http://www.seocentro.com/tools/search-engines/pagerank.html}
+applied upon the URIs in Table 1, the following Table 2 was obtained
+
+\begin{table}[h!]
+\caption{Rank Rank} % title of Table
+\centering % used for centering table
+\begin{tabular}{c | c | c} % centered columns (4 columns)
+\hline\hline %inserts double horizontal lines
+ITEM & PAGE RANK  & URI \\ [0.5ex] % inserts table 
+%heading
+\hline \hline% inserts single horizontal line
+1   &   0.8    &   http://news.google.com/  \\ \hline
+2   &   0.7    &   http://www.seattlepi.com/   \\ \hline
+3   &   0.7    &   http://www.philly.com/  \\ \hline
+4   &   0.7    &   http://www.booking.com/  \\ \hline
+5   &   0.0    &   http://www.ebay.de/...  \\ \hline
+6   &   0.0    &   http://market-ticker.org/...  \\ \hline
+7   &   0.0    &   http://thecpb.com/   \\ \hline
+8   &   0.0    &   http://www.solidverbal.com/  \\ \hline
+9   &   0.0    &   http://www.entretiempo.com.co/  \\ \hline
+10 & 0.0 & http://www.huffingtonpost.com/... \\ [1ex] 
+\hline %inserts single line
+\end{tabular}
+\label{table:nonlin} % is used to refer this table in the text
+\end{table}
+
+\begin{verbatim}
+    The file PAGERANK-URI.txt contains the complete table
+\end{verbatim}
+
+Since TF-IDF captures how important a term is in a document, the TF-IDF ranking in Problem 2. is a mechanical procedure which tries to reward documents according to their relatedness with respect to the term.
+The page rank comparison takes into account the backlink structure; so it seeks to answer the question:
+How is this page relevant/important with respect to other pages? In summary, the page rank comparison 
+quantifies the relevance of the document with respect to other documents in the web, but the TF-IDF metric seeks to rank documents based on the level of their similarity to the term in question. Also the TF-IDF metric considers the term while the second does not. This means the first metric could rank an unpopular site very high if the the term has a high TF-IDF score, however, the second metric could rank the unpopular site low because of the poor quality of its backlinks.
+
+
+\end{homeworkProblem}
+
+%----------------------------------------------------------------------------------------
+%   PROBLEM 4
+%----------------------------------------------------------------------------------------
+\begin{homeworkProblem}
+Compute the Kendall Tau\_b score for both lists (use ``b'' because
+there will likely be tie values in the rankings).  Report both the
+Tau value and the ``p'' value.
+
+See: 
+\begin{verbatim}
+http://stackoverflow.com/questions/2557863/measures-of-association-in-r-kend
+alls-tau-b-and-tau-c
+http://en.wikipedia.org/wiki/Kendall_tau_rank_correlation_coefficient#Tau-b
+http://en.wikipedia.org/wiki/Correlation_and_dependence
+\end{verbatim}
+
+\begin{verbatim}\end{verbatim}
+\textbf{SOLUTION}\cite{RTutorial1}, \cite{RTutorial2}
+
+Kendall's tau b (accounts for ties) was used to measure the association between the ranks produced by TF-IDF and the Page Rank.
+The solution for this problem is outlined by the following steps:
+
+\begin{enumerate}
+
+    \item\textbf{Convert the rank tables to there respetive rank vectors:}
+
+    Page Rank Vector = \{1, 2, 2, 2, 2, 3, 3, 3, 3, 3\}, TF-IDF Rank Vector = \{1, 2, 2, 2, 3, 3, 3, 3, 3, 4\}
+
+    \item\textbf{Obtain the rank coefficient with R:}
+    The following code in Listing 5. was used to calculate the tau coefficient and significance (z-value) as well as the p-value
+    \lstinputlisting[breaklines=true, caption=Calculate TF-IDF]{calculateKendallsTauBAndPValue.r}
+
+    \item\textbf{Output:}tau = 0.8207, z = 2.7146, p-value = 0.0066.
+
+    Due to the fact that half (5) of the URIs do not have rank data (rank 0), thus result in tied page ranks, Kendall's tau  coefficient shows a high correlation; but this is mainly due to the absence of rank data and very small variations in TF-IDF values.
+
+
+
+\end{enumerate}
+
+\end{homeworkProblem}
+\begin{verbatim}\end{verbatim}
+
+
+
+
+
+
+
+\bibliographystyle{plain}
+\bibliography{A3bibFile}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}

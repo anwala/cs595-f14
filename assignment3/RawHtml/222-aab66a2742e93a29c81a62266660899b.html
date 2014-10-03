@@ -1,0 +1,627 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Error 404</title>
+<base href="http://sharkmp3.net"/>
+<meta name="description" content="sharkmp3.net - уникальный поисковик музыки, на котором можно бесплатно осуществить поиск и скачать музыку бесплатно в mp3 формате. Также Вы можете слушать музыку онлайн без регистрации, без смс. В нашем каталоге ко всем mp3 есть тексты песен. Наша база музыки включает в себя большой ассортимент, начиная от обычных песен исполнителей, заканчивая самыми новыми миксами и каверами. Каждый день наши специалисты улучшают сайт, добавляют новые треки, чтобы времяпровождения на нашем сайте для Вас стало еще комфортнее." />
+<meta name="keywords" content="поиск музыки, скачать музыку, вконтакте, бесплатно, музыкальный поисковик, mp3, музыка, файл, free, скачать новинки бесплатно, сайт, романтическая музыка скачать, скачать музыку vk, романтическая музыка, народную музыку, клубную музыку, бесплатно стас михайлов, скачать музыку из фильма, скачать soundtrack из фильма, саундтреки к фильмам, скачать минусовки, скачать dubstep, дабстеп, хиты лета, хиты зимы, новинки музыки, музыку без смс, бесплатная музыка, музыку года, сборники музыки, музыку клубняк, бесплатная клубная музыка, без регистрации прослушать, новою музыку бесплатно, скачать бесплатную музыку из фильмов, слушать музыку онлайн, бесплатная музыка скачать, прослушать бесплатную музыку" />
+<meta property="og:site_name" content="Sharkmp3.net">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link rel="shortcut icon" href="/favicon.ico" />
+<link media="screen" href="/web/css/style.css" type="text/css" rel="stylesheet" />
+<link media="screen" href="/web/css/form.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script type="text/javascript" src="/web/js/jPlayer/jquery.jplayer.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script type="text/javascript" src="//vk.com/js/api/openapi.js?101"></script>
+</head>
+<body>
+<div id="jquery_jplayer_1"></div>
+<div id="jp_container_1" class="player_bar">
+    <div class="player_wrap">
+       <a href="/" class="pl_logo hash"></a>
+            <div class="left noselect">
+                <button title="Назад" href="javascript:" class="j-icon x-icons x-icon-backward">&nbsp;</button>
+                <button title="Играть" href="javascript:"  class="j-icon jp-play x-icons x-icon-play">&nbsp;</button>
+                <button title="Пауза" href="javascript:" class="j-icon jp-pause x-icons x-icon-pause">&nbsp;</button>
+                <button title="Вперед" href="javascript:" class="j-icon x-icons x-icon-forward">&nbsp;</button>
+				  <div class="jp-time-holder noselect">
+        <span class="jp-current-time"></span>
+		</div>
+            </div>
+
+             <div class="center">
+			 <div  class="jp-progress" >
+			 <div class="jp-seek-bar">
+			  <div class="jp-play-bar"></div>
+      
+	 
+                    
+                
+        <div  class="slider">
+		
+          <div class="track_name" id="trackname" >
+               
+		 </div>
+		 </div>
+		</div>
+      </div>
+    </div>
+        <div class="right">
+      <div class="jp-time-holder noselect">
+	  <span class="jp-duration"></span>
+       
+      </div>
+      <div class="volume">
+        <div class="jp-volume-bar">
+          <div class="jp-volume-bar-value">
+          </div>
+          
+        </div>
+      </div>
+	  <a title="Скачать" href="javascript:" siteload="siteload" target="_blank" class="pldownload" >&nbsp;</a>
+<a title="Перемешать" href="javascript:" class="playlist x-icons x-icon-randomize" >&nbsp;</a>
+                <a title="Повтор" href="javascript:" class="j-icon x-icon-repeat" style="display:none;">&nbsp;</a>
+                <a title="Повтор" href="javascript:" class="j-icon x-icon-repeatoff">&nbsp;</a>
+       
+    </div>           
+          
+        
+            
+
+       
+    </div>
+</div>	<header>
+		<div class='logo'><a href="/" title="Музыкальный поисковик"><img src="/web/images/logo.png" alt="Sharkmp3.net" width="200" height="40" /></a></div> 
+		<div class="headsearch">
+			<form class="search_form" style="max-width:600px;margin:auto;" onsubmit="return Search.search(this)">
+			<ul class="reset">
+			<li class="lfield"><input name="q" placeholder="Введите название трека или исполнителя" autocomplete="off" name="q" class="span12 placeholder" id="q"  onblur="if(this.value=='') this.value='Введите название трека или исполнителя';" onfocus="if(this.value=='Введите название трека или исполнителя') this.value='';" /></li>
+			<li class="lbtn"><button type="submit" style="font-size:14px;float:left;" class="btn" data-goal='CLICK_ON_SEARCH_BUTTON' ga-action='Button' ga-label='CLICK_ON_SEARCH_BUTTON' ga-value="MAIN_PAGE">Искать</button></li>
+			</ul>
+			</form>
+        </div>
+		<div class="toollogin"><ul class="reset"><li><a href="http://sharkmp3.net/user/" siteload="siteload"><img id="vkimg" src="/web/image/vk.png">Мои аудиозаписи Вконтакте</a></li></ul></div>   
+		<div class="clr"></div>    
+	</header>
+
+<section class="content" style="">
+	<div id="content">
+        <div class="page404">
+	<div class="title">
+        	<h2>Страница не найдена</h2>
+            <a href="http://sharkmp3.net/"><span>Перейти на главную</span>→</a>
+        </div>
+	<div class="page404Cont">
+    
+		<div class="page404Search">
+			<div class="page404SearchCont">
+		
+					<form class="search_form" style="max-width:600px;margin:auto;" onsubmit="return Search.search(this)">
+			<ul class="reset">
+			<li class="lfield"><input name="q" placeholder="Искать артиста, трек или альбом" autocomplete="off" name="q" class="span12 placeholder" id="q"  onblur="if(this.value=='') this.value='Искать артиста, трек или альбом';" onfocus="if(this.value=='Искать артиста, трек или альбом') this.value='';" /></li>
+			</ul>
+			</form> 
+		
+		
+			</div>
+		</div>
+    </div>
+</div>    </div>	
+</section> 
+<div class="clr"></div> 
+<div class="allsearch"><b>На нашем сайте искали</b><br/><a href="/music/13th door">13th door</a>
+<a href="/music/Sordez Jaguar">Sordez Jaguar</a>
+<a href="/music/Неизвестный исполнитель соло межансе 1">Неизвестный исполнитель соло межансе 1</a>
+<a href="/music/Кидэ">Кидэ</a>
+<a href="/music/Oxximiron">Oxximiron</a>
+<a href="/music/Tbili i Jeka  KTO TAM Отражение">Tbili i Jeka  KTO TAM Отражение</a>
+<a href="/music/23.  Катя Лель Твоя">23.  Катя Лель Твоя</a>
+<a href="/music/pyromania remix">pyromania remix</a>
+<a href="/music/Elbrus 2009">Elbrus 2009</a>
+<a href="/music/10.20Coco20Lee">10.20Coco20Lee</a>
+<a href="/music/miguel">miguel</a>
+<a href="/music/Elias_">Elias_</a>
+<a href="/music/CAMILLA BRINK">CAMILLA BRINK</a>
+<a href="/music/РпїЅР»СпїЅР± Р»Р°Р№СпїЅ РўСпїЅР°РЅСЃ">РпїЅР»СпїЅР± Р»Р°Р№СпїЅ РўСпїЅР°РЅСЃ</a>
+<a href="/music/MTBRD Looker">MTBRD Looker</a>
+<a href="/music/цензуры">цензуры</a>
+<a href="/music/Dream of">Dream of</a>
+<a href="/music/The Script feat. William  Hall of Fame">The Script feat. William  Hall of Fame</a>
+<a href="/music/РпїЅСпїЅСпїЅР±Р°РЅ РпїЅР°Р·Р°РјРѕРІAMK Vostok amp РЁСпїЅСпїЅСпїЅР°СпїЅ РЇРєСпїЅР±РѕРІ 7 РґРѕСпїЅРѕРі">РпїЅСпїЅСпїЅР±Р°РЅ РпїЅР°Р·Р°РјРѕРІAMK Vostok amp РЁСпїЅСпїЅСпїЅР°СпїЅ РЇРєСпїЅР±РѕРІ 7 РґРѕСпїЅРѕРі</a>
+<a href="/music/1 klass feat. Кмc Прощай Россия">1 klass feat. Кмc Прощай Россия</a>
+<a href="/music/Curd Duca Gunshot">Curd Duca Gunshot</a>
+<a href="/music/eXx_pAc">eXx_pAc</a>
+<a href="/music/Tony Parker Rai">Tony Parker Rai</a>
+<a href="/music/Р СпїЅР±Рё 04 РпїЅРІРµ РпїЅРѕР»СпїЅР±РєРё">Р СпїЅР±Рё 04 РпїЅРІРµ РпїЅРѕР»СпїЅР±РєРё</a>
+<a href="/music/LOGIC BOMB">LOGIC BOMB</a>
+<a href="/music/радио рекорд клубная музыка">радио рекорд клубная музыка</a>
+<a href="/music/Zdorovie">Zdorovie</a>
+<a href="/music/СЃР°РЅРєРёСпїЅСпїЅР°РЅР° РіР°СпїЅСпїЅР°РЅРіР°">СЃР°РЅРєРёСпїЅСпїЅР°РЅР° РіР°СпїЅСпїЅР°РЅРіР°</a>
+<a href="/music/CHeTkIj TreK">CHeTkIj TreK</a>
+<a href="/music/1 Klass Я устал">1 Klass Я устал</a>
+<a href="/music/Acyuta Gopi dasi Radhe Govinda 1">Acyuta Gopi dasi Radhe Govinda 1</a>
+<a href="/music/РЎРІРµР¶Р°СЏ РпїЅРѕРґР°">РЎРІРµР¶Р°СЏ РпїЅРѕРґР°</a>
+<a href="/music/Iggy Azelea Work">Iggy Azelea Work</a>
+<a href="/music/Хава Нагила минус">Хава Нагила минус</a>
+<a href="/music/песня на пароходе">песня на пароходе</a>
+</div><br/>
+<div class="clr"></div> 
+<footer>
+<div class="footer_menu">
+<a style="font-size: 14px;" href="/">Главная</a>
+<a style="font-size: 14px;" href="/news/">Новости</a>
+<a style="font-size: 14px;" href="/genre">Жанры</a>
+<a style="font-size: 14px;" href="/popular">ТОП 100</a>
+<a style="font-size: 14px;" href="/holders.html">Правила</a>
+<a style="font-size: 14px;" href="/contact.html">Контакты</a>
+<a style="font-size: 14px;" href="/radio">Онлайн радио</a>
+<a style="font-size: 14px;" href="/reklama.html">Реклама</a>
+<a style="font-size: 14px;" href="https://twitter.com/alexashark" siteload="siteload" target="_blank">Мы в Twitter</a></div>
+
+<div class="copy">
+	<div class="copy_year">
+ <!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t38.6;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet' "+
+"border='0' width='31' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+	</div>
+
+	<div class="copy_text">
+		© 2014 Sharkmp3.net - Музыкальный поисковик.
+	</div>
+
+</footer>
+
+<script type="text/javascript">
+            var Search = {
+                search: function() {
+                    var val = $('#q').val();
+
+                    Site.load("/music/"+(val.replace(/\//, ' ')), 1);
+                    return false;
+                }
+            }
+  
+            var Loading = {
+                on: function() {
+                    $('#loading').fadeIn('fast');
+                },
+
+                off: function() {
+                    $('#loading').fadeOut('fast');
+                }
+            }
+
+            var Controls = {
+                init: function() {
+                    $('.x-pladd').unbind('click');
+                    $('.x-pladd').click(function() {
+                        var self = this;
+                        Loading.on();
+                        $('.plslist').remove();
+						
+                        $.ajax({
+                            url: "/plslist",
+							 
+                            success: function( resp ) {
+							   
+                                $($(self).parents('.x-track').find('#popuplist')).append(resp);
+								$('#popuplist').html(resp);
+                                $('#popuplist').fadeIn('fast');
+                                Loading.off();
+                                Controls.init();
+                            }
+
+                        });
+                    });
+
+                    $('.x-pltrackdel').unbind('click');
+                    $('.x-pltrackdel').click(function() {
+                        if ( confirm("Уверен?") ) {
+                            var self = this;
+                            var playlistId = $(this).parents('.pl').data('id');
+                            var vkId = $(this).parents('.x-track').data('vkid');
+
+                            $.ajax({
+                                url: "/user/pltrackremove",
+                                type: "post",
+                                data: {
+                                    playlistId: playlistId,
+                                    vkId: vkId
+                                },
+                                success: function( resp ) {
+                                    $(self).parents('.x-track').remove();
+                                }
+                            });
+                        }
+                    });
+
+                     $('.x-lyrics').unbind('click');
+                    $('.x-lyrics').click(function() {
+                        var lyricsId = $(this).parents('.x-track').data('lyricsid');
+
+                        Loading.on();
+                        $.ajax({
+                            url: "/getlyrics",
+                            data: {
+                                lyricsId: lyricsId
+                            },
+                            success: function( resp ) {
+                            	  $("#textpopup").toggle();
+                            	 
+                                $('#popupBlock').html(resp);
+                                $('#popupBlock').fadeIn('fast');
+                                Loading.off();
+                                Controls.init();
+                            }
+                        });
+                    });
+			        $('#popclose').unbind('click');
+                    $('#popclose').click(function() {
+                    	$("#textpopup").toggle();
+                    	$('#popupBlock').fadeOut('fast');
+                    });
+					
+					
+                    $('.xr-play').unbind('click');
+                    $('.xr-play').click(function() {
+                        var track = $(this).parents('.xr-track');
+                        var rar = $(track).data('rar');
+						
+
+                        $('.x-playing').removeClass('x-playing');
+                        $(track).addClass('x-playing');
+
+
+                        $('.xr-pause').hide();
+                        $('.xr-play').show();
+
+                        $(track).find('.xr-pause').show();
+                        $(this).hide();
+						
+                        
+						if ( rar == window.curTrack ) {
+                            $("#jquery_jplayer_1").jPlayer("play");
+                        } else {
+                        $('.jp-audio').slideDown();
+                            window.curTrack = rar;
+                            window.nowplaying = track;
+                         $('#trackname').html($(track).data('artist'));  
+                            $("#jquery_jplayer_1").jPlayer("setMedia", {
+                                "mp3": rar,
+								"oga" : rar
+                            }).jPlayer("play");
+                        }
+                    });
+					
+
+                   $('.x-play').unbind('click');
+                    $('.x-play').click(function() {
+                        var track = $(this).parents('.x-track');
+                        var vkid = $(track).data('vkid');
+
+                        $('.x-playing').removeClass('x-playing');
+                        $(track).addClass('x-playing');
+
+                        $('.x-pause').hide();
+                        $('.x-play').show();
+
+                        $(track).find('.x-pause').show();
+                        $(this).hide();
+
+                        if ( vkid == window.curTrack ) {
+                            $("#jquery_jplayer_1").jPlayer("play");
+                        } else {
+                            $('.jp-audio').slideDown();
+                            window.curTrack = vkid;
+                            window.nowplaying = track;
+
+                            $('#trackname').html($(track).data('artist')+' - '+$(track).data('name'));
+                             
+							$('.right .pldownload').attr(
+	                         'href', "/getsong/"+vkid+"?dl=1"
+	                         ).click(function() {
+	                       
+        	                });
+                            $("#jquery_jplayer_1").jPlayer("setMedia", {
+                                "mp3": "/getsong/"+vkid
+                            }).jPlayer("play");
+                        }
+                    });
+
+                    $('.x-icon-randomize').unbind('click');    
+                    $('.x-icon-randomize').click(function() {
+                        $(".playlist .x-track").shuffle();
+                     
+                    });
+					
+
+                    $('.x-icon-forward').unbind('click');
+                    $('.x-icon-forward').click(function() {
+                    		$(window.nowplaying).next().find('.x-play').click();
+							$(window.nowplaying).next().find('.xr-play').click();
+                    });
+
+                    $('.x-icon-backward').unbind('click');
+                    $('.x-icon-backward').click(function() {
+                    		$(window.nowplaying).prev().find('.x-play').click();
+							$(window.nowplaying).prev().find('.xr-play').click();
+                    });
+			
+				$('.x-icon-repeatoff').unbind('click');
+                    $('.x-icon-repeatoff').click(function() {
+					var repeat = "no";
+					//alert(repeat);
+					$('.x-icon-repeatoff').hide();
+                         $('.x-icon-repeat').show();
+                    });
+                                      
+				$('.x-icon-repeat').unbind('click');
+                    $('.x-icon-repeat').click(function() {
+					var repeat = "yes";
+					//alert(repeat);
+					$('.x-icon-repeat').hide();
+                         $('.x-icon-repeatoff').show();
+                    });
+
+                    $('.x-pause').unbind('click');
+                    $('.x-pause').click(function() {
+                        var track = $(this).parents('.x-track');
+
+                        $(track).find('.x-play').show();
+                        $(this).hide();
+
+                        $.jPlayer.pause();
+                    });
+					$('.xr-pause').unbind('click');
+                    $('.xr-pause').click(function() {
+                        var track = $(this).parents('.xr-track');
+
+                        $(track).find('.xr-play').show();
+                        $(this).hide();
+
+                        $.jPlayer.pause();
+                    });
+
+                    $('.x-icon-link').unbind('click');
+                    $('.x-icon-link').click(function() {
+                        var track = $(this).parents('.x-track');
+
+                        prompt("Ссылка на трек", "http://sharkmp3.nettrack/"+$(track).data('vkid'));
+                    });
+					
+				    
+
+                    var selector = 'a[href!="javascript:"][siteload!="siteload"]';
+                    $(selector).click(function(e) {
+                        e.preventDefault();
+                        /*  
+                        if uncomment the above line, html5 nonsupported browers won't change the url but will display the ajax content;
+                        if commented, html5 nonsupported browers will reload the page to the specified link. 
+                        */
+                      
+                        pageurl = $(this).attr('href');
+                        Site.load(pageurl, 1);
+                        
+                        return false;
+                    });
+
+                    var popped = ('state' in window.history && window.history.state !== null), initialURL = location.href;
+                    $(window).unbind('popstate');
+                    $(window).bind('popstate', function(event) {
+
+                        var initialPop = !popped && location.href == initialURL;
+                        popped = true;
+                        if ( initialPop ) return;
+                        
+                        Site.load(location.pathname);
+                    });
+
+                    $(selector).attr('siteload', 'siteload');
+                }
+            }
+
+            Controls.init();
+
+            var Site = {
+                load: function(href, store) {
+
+                    if ( store && href != location.href ) {
+                        if (  typeof window.history.pushState != 'undefined' ) {
+
+                            history.pushState(null,null,href);
+                        } else {
+                            
+                        }
+                    }
+
+                    Loading.on();
+                    $.ajax({
+                        url: href,
+                        success: function( data ) {
+                            $('#content').html(data);
+                            Loading.off();
+                            Controls.init();
+                            
+                            // $('#content').fadeOut('fast', function() {
+                            //     $('#content').html(data);
+                            //     $('#content').fadeIn('fast');
+                            //     Loading.off();
+                            //     Controls.init();
+                            // });                                
+                        }
+                    });
+                },
+
+                init: function() {
+                    $("#jquery_jplayer_1").jPlayer({
+                        swfPath: "/web/js/jPlayer/",
+                        solution: "flash, html",
+                        supplied: "mp3, oga",
+                        volume: "100",
+
+                        ready: function() {},
+						
+						 ended: function() {
+						if($('.x-icon-repeat').css('display') != 'none')
+						{
+							$(".x-playing").find('.x-play').click();
+						}
+						else
+						{
+							if ($(".x-playing").nextAll('.x-track').first().find('.x-play').length > 0)
+							{
+						  		$(".x-playing").nextAll('.x-track').first().find('.x-play').click();
+							}
+							else
+							{
+								$(".playlist .x-track").first().find('.x-play').click();   
+							}
+						}
+                        },
+
+                      
+                        pause: function() {},
+                        play: function() {
+                            Loading.off();
+                        },
+
+                        mute: function() {},
+                        unmute: function() {}
+                    });
+
+                    Controls.init();
+
+                    
+                     $(document).ready(function() {
+                        $('#popuplist').click(function() {
+                            $(this).fadeOut('fast');
+                        });
+                    });
+                    $(document).click(function() {
+                        $('.plslist').remove();
+                    });
+                },
+
+                links: function() {
+                    
+                }
+            }
+
+            Site.init();
+
+            function reloadPlaylists() {
+                $.ajax({
+                    url: "/user/widget/pl",
+                    success: function( resp ) {
+                        $('#playlists').html(resp);
+                        Controls.init();
+                    }
+                });
+            }
+
+$(document).ready(function () { 
+    var top = $('#roll').offset().top - parseFloat($('#roll').css('margin-top').replace(/auto/, 0));
+    $(window).scroll(function (event) {
+      var y = $(this).scrollTop();
+      if (y >= top) {
+        $('#roll').addClass('fixed');
+        $('#roll').stop().animate({marginTop: 15}, 250);
+      } else {
+        // otherwise remove it
+        $('#roll').removeClass('fixed');
+        $('#roll').stop().animate({marginTop: 0}, 250);
+      }
+    });
+});
+var tooltip = $('.proc');
+$('.jp-volume-bar').slider({
+    value : 100,
+    max: 100,
+    range: 'min',
+    animate: true,
+    orientation: "horizontal", 
+        start: function(event,ui) {  
+          tooltip.fadeIn('fast');  
+        },  
+        stop: function(event,ui) {  
+          tooltip.fadeOut('fast');  
+        },  
+    slide: function(event, ui) {
+	   var value = $('.jp-volume-bar').slider('value');
+	   tooltip.text(ui.value+"%");  
+        var volume = ui.value / 100;
+        $("#jquery_jplayer_1").jPlayer("volume", volume);
+    }
+});
+ window._uds_vbw_donotrepair = true; 
+
+ function setc(value) {
+				var date = new Date();
+				date.setTime(date.getTime()+(360*24*60*60*1000));
+				var expires = "; expires="+date.toGMTString();
+				document.cookie = "lang"+"="+value+expires+"; path=/";			
+				$('#part_menu').load("/part/menu");
+			    $('#menuplaylist').load("/part/menuplaylist");
+				Controls.init();	
+				$('#main').load("/part/logo");
+				$('#menufooter').load("/part/menufooter");
+                reloadPlaylists();
+				testare();
+                Loading.off();
+				return false;
+			}
+ 
+        </script>
+<style type="text/css">
+.loading img{position: absolute;left: 50%;margin-left: -64px;top:30%;}
+.loading{position: absolute;left: 50%; margin-left: -60px;top:40%;background: rgba(29, 115, 115, 0.8);border: 1px solid #0e9696;color: #FFFFFF;padding: 10px 15px;position: fixed;text-align: center;text-shadow: 0 -1px #6d6d6d;width: 120px;z-index: 1000;display: none;-webkit-box-shadow: 0 0 3px #b1b1b1, 0 1px 0 #d5d5d5 inset;-moz-box-shadow: 0 0 3px #b1b1b1, 0 1px 0 #d5d5d5 inset;box-shadow: 0 0 4px #b1b1b1, 0 1px 0 #d5d5d5 inset;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; }
+.loading .spin{margin-top: 10px;margin-bottom: 10px;margin-left: 45px;width: 32px;height: 32px;background: url("../web/images/ui_loader_spin.gif") no-repeat; }
+.loading p{text-transform: none;font-size: 18px;margin: 0;}
+</style>
+
+<div class="loading" id="loading"><div class="spin"></div><p>Загрузка</p></div>
+<div class="hides opdivy popup" id="popupBlock">
+
+</div>
+<div id="textpopup">
+<span ><b>Популярные исполнители</b></span>
+<span id="popclose"><b>Закрыть</b></span>
+</div>
+	
+	
+
+
+  
+</div>
+
+<script type="text/javascript">
+    var reformalOptions = {
+        project_id: 198283,
+        project_host: "sharkmp3.reformal.ru",
+        tab_orientation: "left",
+        tab_indent: "50%",
+        tab_bg_color: "#0088f0",
+        tab_border_color: "#FFFFFF",
+        tab_image_url: "http://tab.reformal.ru/0JzQvdC10L3QuNC1INC%252BINGB0LDQudGC0LU=/FFFFFF/aa5fb71fc810cc6be395d51b4c8cc92f/left/0/tab.png",
+        tab_border_width: 1
+    };
+    
+    (function() {
+        var script = document.createElement('script');
+        script.type = 'text/javascript'; script.async = true;
+        script.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'media.reformal.ru/widgets/v3/reformal.js';
+        document.getElementsByTagName('head')[0].appendChild(script);
+    })();
+</script><noscript><a href="http://reformal.ru"><img src="http://media.reformal.ru/reformal.png" /></a><a href="http://sharkmp3.reformal.ru">Отзывы о проекте</a></noscript>
+</body>
+</html>

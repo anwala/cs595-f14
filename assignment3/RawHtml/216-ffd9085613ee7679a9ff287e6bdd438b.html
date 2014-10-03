@@ -1,0 +1,871 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>JobsOver50K: home </title>
+	<link rel="StyleSheet" type="text/css" href="http://www.jobsover50k.com/templates/_system/main/images/css/form.css" />
+	<link rel="StyleSheet" type="text/css" href="http://www.jobsover50k.com/templates/ProgressiveView/main/images/design.css" />
+	<link rel="StyleSheet" type="text/css" href="http://www.jobsover50k.com/system/ext/jquery/css/jquery.autocomplete.css"  />
+											<link rel="alternate" type="application/rss+xml" title="RSS2.0" href="http://www.jobsover50k.com/rss/" />
+	<link rel="Stylesheet" type="text/css" href="http://www.jobsover50k.com/system/ext/jquery/css/jquery.multiselect.css" />
+	<script language="JavaScript" type="text/javascript" src="http://www.jobsover50k.com/system/ext/jquery/jquery.js"></script>
+	<script language="JavaScript" type="text/javascript" src="http://www.jobsover50k.com/system/ext/jquery/jquery.autocomplete.pack.js"></script>
+	<link rel="StyleSheet" type="text/css" href="http://www.jobsover50k.com/system/ext/jquery/css/jquery-ui.css"  />
+	<script language="JavaScript" type="text/javascript" src="http://www.jobsover50k.com/templates/_system/common_js/main.js"></script>
+	<script language="JavaScript" type="text/javascript" src="http://www.jobsover50k.com/system/ext/jquery/jquery-ui.js"></script>
+	<script language="JavaScript" type="text/javascript" src="http://www.jobsover50k.com/templates/ProgressiveView/main/images/js/jquery.selectbox-0.2.min.js"></script>
+	<script language="JavaScript" type="text/javascript" src="http://www.jobsover50k.com/system/ext/jquery/jquery.form.js"></script>
+	<script language="JavaScript" type="text/javascript" src="http://www.jobsover50k.com/system/ext/jquery/multilist/jquery.multiselect.min.js"></script>
+	<script language="JavaScript" type="text/javascript" src="http://www.jobsover50k.com/templates/_system/common_js/multilist_functions.js"></script>
+	<script language="JavaScript" type="text/javascript" src="http://www.jobsover50k.com/templates/_system/common_js/autoupload_functions.js"></script>
+	<script language="JavaScript" type="text/javascript" src="http://www.jobsover50k.com/templates/_system/common_js/jquery.poshytip.min.js"></script>
+	<!--[if IE 8]>
+		<script language="JavaScript" type="text/javascript" src="http://www.jobsover50k.com/system/ext/jquery/pie-ie.js"></script>
+		<script language="javascript" type="text/javascript">
+			$(function() {
+				$("#employers").addClass("ie-employers");
+				if (window.PIE) {
+					$('input, .white-block, #quick-search, .ie-employers, .find-button-zoom, .label, a.button, a.standart-button, .products, .productLinks').each(function() {
+						PIE.attach(this);
+					});
+				}
+			});
+		</script>
+	<![endif]-->
+	
+
+	
+	<script language="javascript" type="text/javascript">
+		$.ui.dialog.prototype.options.bgiframe = true;
+
+		function popUpWindow(url, widthWin, title, parentReload, userLoggedIn, callbackFunction) {
+			reloadPage = false;
+			$("#loading").show();
+			$("#messageBox").dialog( 'destroy' ).html('<img style="vertical-align: middle;" src="http://www.jobsover50k.com/system/ext/jquery/progbar.gif" alt="Please wait ..." /> Please wait ...');
+			$("#messageBox").dialog({
+				autoOpen: false,
+				width: widthWin,
+				height: 'auto',
+				modal: true,
+				title: title,
+				close: function(event, ui) {
+					if (callbackFunction) {
+						callbackFunction();
+					}
+					if (parentReload == true && !userLoggedIn && reloadPage == true) {
+						parent.document.location.reload();
+					}
+				}
+			}).hide();
+
+			$.get(url, function(data){
+				$("#messageBox").html(data).dialog("open").show();
+				$("#loading").hide();
+			});
+
+			return false;
+		}
+	</script>
+
+</head>
+<body>
+	<div class="main-wrapper">
+		
+		<div id="loading"></div>
+		<div id="messageBox"></div>
+		<div id="header-bg">
+			<div id="header-bg-in"></div>
+		</div>
+		<div class="main-div">
+						<div id="employers"><a href="http://www.jobsover50k.com/employers/">Employers</a></div>
+	<div class="main-div">
+	<div id="header">
+		<div id="header-left">
+			<a href="http://www.jobsover50k.com/"><img src="http://www.jobsover50k.com/templates/ProgressiveView/main/images/logo.png" border="0" alt="JobsOver50K" title="JobsOver50K" /></a>
+			<div class="clr"><br/></div>
+			<div id="top-menu">
+	<ul>
+		<li><a href="http://www.jobsover50k.com/">Home</a></li>
+				<li id="dropDown">
+							<a href="#">Products</a>
+				<ul>
+    <li><a href="http://www.jobsover50k.com/jobseeker-products/">Job Seeker</a></li>
+    <li><a href="http://www.jobsover50k.com/employer-products/">Employer</a></li>
+</ul>
+
+					</li>
+									<li><a href="http://www.jobsover50k.com/find-jobs/" >Find Jobs</a></li>
+				<li><a href="http://www.jobsover50k.com/add-listing/?listing_type_id=Resume" >Post CVs</a></li>
+										<li><a href="http://www.jobsover50k.com/search-cv/" >Search CVs</a></li>
+				<li><a href="http://www.jobsover50k.com/add-listing/?listing_type_id=Job" >Post Jobs</a></li>
+						</ul>
+</div>
+<div class="clr"></div>
+		</div>
+		<div id="header-right">
+			<form id="langSwitcherForm" method="get" action="">
+				<select name="lang" onchange="location.href='http://www.jobsover50k.com/?lang='+this.value+'&amp;'" class="language-switcher">
+											<option value="ar">العربية</option>
+											<option value="de">Deutsch</option>
+											<option value="en" selected="selected">English</option>
+											<option value="es">Español</option>
+											<option value="fa">فارسی</option>
+											<option value="fr">Français</option>
+											<option value="hi">Hindi</option>
+											<option value="ja">日本語</option>
+											<option value="nl">Nederlands</option>
+											<option value="pl">Polski</option>
+											<option value="pt">Português</option>
+											<option value="ro">Română</option>
+											<option value="ru">Русский</option>
+											<option value="sr">Српски</option>
+											<option value="tr">Türkçe</option>
+											<option value="zh">Chinese</option>
+									</select>
+			</form>
+			<div class="clr"><br/></div>
+							
+<form action="http://www.jobsover50k.com/login/" method="post" class="loginForm">
+	<input type="hidden" name="return_url" value="" />
+	<input type="hidden" name="action" value="login" />
+		<fieldset>
+		<input type="text" name="username" id="username" />
+		<input type="password" name="password" id="password" />
+		<input type="submit" value="Login" class="button" />
+	</fieldset>
+</form>
+<div class="clr"><br/></div>
+
+<a href="http://www.jobsover50k.com/registration/">Registration</a>
+<div class="soc_reg_form"><div class="social_plugins_div">
+	<span class="login_buttons_txt">
+					Social network you want to login/join with:
+			</span>
+	<span class="social-buttons">
+					<a href="http://www.jobsover50k.com/social/?network=linkedin" class="social_login_button slb_linkedin" title="Connect using Linkedin"></a>
+					<a href="http://www.jobsover50k.com/social/?network=google_plus" class="social_login_button slb_google_plus" title="Connect using Google+"></a>
+					<a href="http://www.jobsover50k.com/social/?network=facebook" class="social_login_button slb_facebook" title="Connect using Facebook"></a>
+			</span>
+	<div class="clr"></div>
+</div></div>
+
+<script type="text/javascript">
+	$(function() {
+		//*** Placeholder for Username ***//
+		$("#username").val('Username');
+
+		$("#loginForm").submit(function(){
+			if ($("#username").val()=='Username')
+			{
+				$("#username").val('');
+			}
+		});
+
+		$("#username").focus(function(){
+			if ($("#username").val()=='Username')
+			{
+				$("#username").val('');
+			}
+		});
+
+		$("#username").blur(function(){
+			if ($("#username").val()=='')
+			{
+				$("#username").val('Username');
+			}
+		});
+		//*** Placeholder for Password ***//
+		$("#password").val('Password');
+
+		$("#loginForm").submit(function(){
+			if ($("#password").val()=='Password')
+			{
+				$("#password").val('');
+			}
+		});
+
+		$("#password").focus(function(){
+			if ($("#password").val()=='Password')
+			{
+				$("#password").val('');
+				$("#password").get(0).type='password';
+			}
+		});
+
+		$("#password").blur(function(){
+			if ($("#password").val()=='')
+			{
+				$("#password").val('Password');
+				$("#password").get(0).type='text';
+			}
+		});
+	});
+</script>
+					</div>
+	</div>
+	<div class="clr"></div>
+</div>
+
+<script type="text/javascript">
+	$(".language-switcher").selectbox({
+		change: function (value) {
+			location.href='http://www.jobsover50k.com/?lang='+value+'&';
+		}
+	});
+</script>
+			<div class="clr"></div>
+			<div id="quick-search">
+	<div id="quick-search-left">
+		<div class="label"><h1>Find a Job</h1></div>
+		<div class="right-arrow"></div>
+	</div>
+	<div id="quick-search-right">
+		<form action="http://www.jobsover50k.com/search-results-jobs/" id="quickSearchForm">
+			<input type="hidden" name="action" value="search" />
+			<input type="hidden" name="listing_type[equal]" value="Job" />
+			<fieldset>
+				<div class="quick-search-input">	<input type="text" value="" class="searchText" name="keywords[all_words]"  id="keywords" />
+	<script type="text/javascript">
+	$(document).ready(function() {
+		function liFormat (row, i, num) {
+			return htmlentities(row[0]);
+		}
+		
+		function selectItem(li) {
+			var sValue;
+			
+			if (li == null) {
+				sValue = 'Nothing Selected!';
+			}
+			
+			if (!!li.extra) {
+				sValue = li.extra[2];
+			} else {
+				sValue = li.selectValue;
+			}
+			
+			alert("Selected ID: " + sValue);
+		}
+		
+		var elementId     = "keywords";
+		var siteUrl       = "http://www.jobsover50k.com/autocomplete/";
+		var field         = "keywords/";
+		var fieldType     = "text/";
+		var tablePrefix   = "users/";
+		var viewType      = "search/";
+		var listingTypeID = "Job/";
+		
+		$("input#" + elementId).autocomplete(siteUrl + field + fieldType + tablePrefix + viewType + listingTypeID, {
+			delay:10,
+			minChars:2,
+			matchSubset:1,
+			autoFill:false,
+			width: 300,
+			matchContains:1,
+			cacheLength:1,
+			selectFirst:true,
+			formatItem:liFormat,
+			maxItemsToShow:5,
+			onItemSelect:selectItem
+		})
+	}); 
+</script>
+
+
+
+
+
+</div><span class="in">in</span>
+				<div class="quick-search-input">
+<input type="text"  id="Location" name="Location[location][value]" value="" />
+			<input type="hidden"  name="Location[location][radius]" value="10" />
+	
+<script type="text/javascript">
+$(function() {
+	var defaultInputTextFieldValue = "City, State or Zip Code";
+	var inputTextFieldId           = "Location";
+	
+	if ($("#" + inputTextFieldId).val() == "") {
+		$("#" + inputTextFieldId).val(defaultInputTextFieldValue);
+		$("#" + inputTextFieldId).addClass("location");
+	}
+	$("#" + inputTextFieldId).focus(function() {
+		if ($("#" + inputTextFieldId).val() == defaultInputTextFieldValue) {
+			$("#" + inputTextFieldId).val("");
+		}
+	});
+
+	$("#" + inputTextFieldId).blur(function() {
+		$("#" + inputTextFieldId).removeClass("location");
+		if ($("#" + inputTextFieldId).val() == "") {
+			$("#" + inputTextFieldId).val(defaultInputTextFieldValue);
+			$("#" + inputTextFieldId).addClass("location");
+		}
+	});
+
+	$("#search_form").submit(function() {
+		if ($("#Location").val() == defaultInputTextFieldValue) {
+			$("#Location").val("");
+		}
+	});
+
+	$("#quickSearch").submit(function() {
+		if ($("#Location").val() == defaultInputTextFieldValue) {
+			$("#Location").val("");
+		}
+	});
+
+	$("#quickSearchForm").submit(function() {
+		if ($("#Location").val() == defaultInputTextFieldValue) {
+			$("#Location").val("");
+		}
+	});
+});
+</script>
+
+
+		<script type="text/javascript">
+	$(document).ready(function() {
+		function liFormat (row, i, num) {
+			return htmlentities(row[0]);
+		}
+		
+		function selectItem(li) {
+			var sValue;
+			
+			if (li == null) {
+				sValue = 'Nothing Selected!';
+			}
+			
+			if (!!li.extra) {
+				sValue = li.extra[2];
+			} else {
+				sValue = li.selectValue;
+			}
+			
+			alert("Selected ID: " + sValue);
+		}
+		
+		var elementId     = "Location";
+		var siteUrl       = "http://www.jobsover50k.com/autocomplete/";
+		var field         = "Location/";
+		var fieldType     = "location/";
+		var tablePrefix   = "listings/";
+		var viewType      = "search/";
+		var listingTypeID = "Job/";
+		
+		$("input#" + elementId).autocomplete(siteUrl + field + fieldType + tablePrefix + viewType + listingTypeID, {
+			delay:10,
+			minChars:2,
+			matchSubset:1,
+			autoFill:false,
+			width: 300,
+			matchContains:1,
+			cacheLength:1,
+			selectFirst:true,
+			formatItem:liFormat,
+			maxItemsToShow:5,
+			onItemSelect:selectItem
+		})
+	}); 
+</script>
+
+
+</div>
+				<div class="quick-search-btn"><div class="find-button-zoom"><input type="submit" id="btnSearch" value="Search"/></div></div>
+			</fieldset>
+
+			<fieldset>
+				<div id="inputStat"><span class="strong">884 jobs</span> currently online. <span class="strong">164 CV's</span> <span class="online">currently online</span>.</div>
+				<div id="quickSearchLinks">
+					<ul>
+						<li><a href="#" id="moreOptions">More Options</a>
+							<ul id="moreOprtionsItem">
+								<li><a href="http://www.jobsover50k.com/find-jobs/">&#187; <span>Advanced search</span></a></li>
+																	<li><a href="http://www.jobsover50k.com/browse-by-company/">&#187; <span>Search by Company</span></a></li>
+															</ul>
+						</li>
+					</ul>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+	$(function() {
+		$("#keywords").val('Keywords');
+		$("#Location").val('Location');
+		$("#State").val('State');
+
+		$("#quickSearchForm").submit(function(){
+			if ($("#keywords").val()=='Keywords')
+			{
+				$("#keywords").val('');
+			}
+			if ($("#Location").val()=='Location')
+			{
+				$("#Location").val('');
+			}
+		});
+
+		$("#keywords").focus(function(){
+			if ($("#keywords").val()=='Keywords')
+			{
+				$("#keywords").val('');
+			}
+		});
+
+		$("#keywords").blur(function(){
+			if ($("#keywords").val()=='')
+			{
+				$("#keywords").val('Keywords');
+			}
+		});
+
+
+		$("#Location").focus(function(){
+			if ($("#Location").val()=='Location')
+			{
+				$("#Location").val('');
+			}
+		});
+
+		$("#Location").blur(function(){
+			if ($("#Location").val()=='')
+			{
+				$("#Location").val('Location');
+			}
+		});
+	});
+</script>
+			<div class="clr"><br/></div>
+			<div id="left-column">
+				<script type="text/javascript">
+					
+					$(function(){
+						$("#jTabs").tabs();
+					});
+					
+				</script>
+				<div>
+					<div class="css-tabs skin1" id="jTabs">
+						<ul>
+							<li><a href="#tabs-1">Jobs by Category</a></li>
+							<li><a href="#tabs-2">Jobs by City</a></li>
+							<li><a href="#tabs-3">Jobs by County</a></li>
+						</ul>
+						<div class="css-panes skin2">
+							<div id="tabs-1"><ul class="browseListing">
+									<li>
+				<a class='brByCategoryLink'  href="http://www.jobsover50k.com/browse-by-category/Accounting/">Accounting
+					<span class="blue">(379)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">											<li>
+				<a class='brByCategoryLink'  href="http://www.jobsover50k.com/browse-by-category/Admin-Clerical/">Admin-Clerical
+					<span class="blue">(7)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">											<li>
+				<a class='brByCategoryLink'  href="http://www.jobsover50k.com/browse-by-category/Automotive/">Automotive
+					<span class="blue">(10)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">											<li>
+				<a class='brByCategoryLink'  href="http://www.jobsover50k.com/browse-by-category/Banking/">Banking
+					<span class="blue">(2)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">											<li>
+				<a class='brByCategoryLink'  href="http://www.jobsover50k.com/browse-by-category/Biotech/">Biotech
+					<span class="blue">(23)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">														<li>
+				<a class='brByCategoryLink'  href="http://www.jobsover50k.com/browse-by-category/Construction/">Construction
+					<span class="blue">(10)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">											<li>
+				<a class='brByCategoryLink'  href="http://www.jobsover50k.com/browse-by-category/Consultant/">Consultant
+					<span class="blue">(6)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">											<li>
+				<a class='brByCategoryLink'  href="http://www.jobsover50k.com/browse-by-category/Customer%20Service/">Customer Service
+					<span class="blue">(1)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">																	<li>
+				<a class='brByCategoryLink'  href="http://www.jobsover50k.com/browse-by-category/Education/">Education
+					<span class="blue">(3)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">											<li>
+				<a class='brByCategoryLink'  href="http://www.jobsover50k.com/browse-by-category/Engineering/">Engineering
+					<span class="blue">(58)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">																				<li>
+				<a class='brByCategoryLink'  href="http://www.jobsover50k.com/browse-by-category/Finance/">Finance
+					<span class="blue">(2)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">											<li>
+				<a class='brByCategoryLink'  href="http://www.jobsover50k.com/browse-by-category/Franchise/">Franchise
+					<span class="blue">(1)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">																	<li>
+				<a class='brByCategoryLink'  href="http://www.jobsover50k.com/browse-by-category/Government/">Government
+					<span class="blue">(2)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">														<li>
+				<a class='brByCategoryLink'  href="http://www.jobsover50k.com/browse-by-category/Health%20Care/">Health Care
+					<span class="blue">(216)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">											<li>
+				<a class='brByCategoryLink'  href="http://www.jobsover50k.com/browse-by-category/Hospitality-Hotel/">Hospitality-Hotel
+					<span class="blue">(2)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">											<li>
+				<a class='brByCategoryLink'  href="http://www.jobsover50k.com/browse-by-category/Human%20Resources/">Human Resources
+					<span class="blue">(27)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">											<li>
+				<a class='brByCategoryLink'  href="http://www.jobsover50k.com/browse-by-category/Information%20Technology/">Information Technology
+					<span class="blue">(209)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">														<li>
+				<a class='brByCategoryLink'  href="http://www.jobsover50k.com/browse-by-category/Insurance/">Insurance
+					<span class="blue">(1)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">														<li>
+				<a class='brByCategoryLink'  href="http://www.jobsover50k.com/browse-by-category/Legal/">Legal
+					<span class="blue">(6)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">											<li>
+				<a class='brByCategoryLink'  href="http://www.jobsover50k.com/browse-by-category/Management/">Management
+					<span class="blue">(3)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">																																																																												</ul>
+</div>
+							<div id="tabs-2"><ul class="browseListing">
+									<li>
+				<a class='browseItem' href="http://www.jobsover50k.com/browse-by-city/Atlanta/">Atlanta
+					<span class="blue">(1)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">											<li>
+				<a class='browseItem' href="http://www.jobsover50k.com/browse-by-city/Cambridge/">Cambridge
+					<span class="blue">(3)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">											<li>
+				<a class='browseItem' href="http://www.jobsover50k.com/browse-by-city/Durango/">Durango
+					<span class="blue">(1)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">											<li>
+				<a class='browseItem' href="http://www.jobsover50k.com/browse-by-city/Hartford/">Hartford
+					<span class="blue">(1)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">											<li>
+				<a class='browseItem' href="http://www.jobsover50k.com/browse-by-city/Sacramento/">Sacramento
+					<span class="blue">(2)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">											<li>
+				<a class='browseItem' href="http://www.jobsover50k.com/browse-by-city/San%20Francisco/">San Francisco
+					<span class="blue">(1)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">											<li>
+				<a class='browseItem' href="http://www.jobsover50k.com/browse-by-city/Edinburgh/">Edinburgh
+					<span class="blue">(2)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">											<li>
+				<a class='browseItem' href="http://www.jobsover50k.com/browse-by-city/London/">London
+					<span class="blue">(455)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">											<li>
+				<a class='browseItem' href="http://www.jobsover50k.com/browse-by-city/Warwickshire/">Warwickshire
+					<span class="blue">(32)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">											<li>
+				<a class='browseItem' href="http://www.jobsover50k.com/browse-by-city/Essex/">Essex
+					<span class="blue">(22)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">											<li>
+				<a class='browseItem' href="http://www.jobsover50k.com/browse-by-city/Yorkshire/">Yorkshire
+					<span class="blue">(79)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">											<li>
+				<a class='browseItem' href="http://www.jobsover50k.com/browse-by-city/Lancashire/">Lancashire
+					<span class="blue">(57)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">											<li>
+				<a class='browseItem' href="http://www.jobsover50k.com/browse-by-city/Surrey/">Surrey
+					<span class="blue">(23)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">											<li>
+				<a class='browseItem' href="http://www.jobsover50k.com/browse-by-city/Wiltshire/">Wiltshire
+					<span class="blue">(17)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">											<li>
+				<a class='browseItem' href="http://www.jobsover50k.com/browse-by-city/Hampshire/">Hampshire
+					<span class="blue">(22)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">											<li>
+				<a class='browseItem' href="http://www.jobsover50k.com/browse-by-city/Somerset/">Somerset
+					<span class="blue">(33)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">											<li>
+				<a class='browseItem' href="http://www.jobsover50k.com/browse-by-city/West%20Midlands/">West Midlands
+					<span class="blue">(18)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">											<li>
+				<a class='browseItem' href="http://www.jobsover50k.com/browse-by-city/Buckinghamshire/">Buckinghamshire
+					<span class="blue">(22)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">											<li>
+				<a class='browseItem' href="http://www.jobsover50k.com/browse-by-city/Kent/">Kent
+					<span class="blue">(18)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">											<li>
+				<a class='browseItem' href="http://www.jobsover50k.com/browse-by-city/Middlesex/">Middlesex
+					<span class="blue">(3)</span>				</a>
+			</li>
+			</ul><ul class="browseListing">																																																																																																																																																						</ul>
+</div>
+							<div id="tabs-3"><ul class="browseListing">
+			<li>There are no listings with requested parameters in the system.</li>
+	</ul>
+</div>
+						</div>
+					</div>
+				</div>
+				<div class="clr"><br/></div>
+				<div id="featured-listings">
+					<div id="featured-head">Featured Jobs</div>
+					<div id="featured">				<div class="featuredListings">
+			<a href="http://www.jobsover50k.com/display-job/19/HR-Specialist.html">HR Specialist</a><br />
+			<span class="green">
+				Integrated Resource Group
+			</span>
+		</div>
+					<div class="featuredListings">
+			<a href="http://www.jobsover50k.com/display-job/25/Office-Receptionist.html">Office Receptionist</a><br />
+			<span class="green">
+				Jardini
+			</span>
+		</div>
+					<div class="featuredListings">
+			<a href="http://www.jobsover50k.com/display-job/23/Project-Manager.html">Project Manager</a><br />
+			<span class="green">
+				Jardini
+			</span>
+		</div>
+					<div class="featuredListings">
+			<a href="http://www.jobsover50k.com/display-job/14/Credit-Analyst.html">Credit Analyst</a><br />
+			<span class="green">
+				Testers LTD
+			</span>
+		</div>
+			</div>
+				</div>
+				<div id="latest-listings">
+					<div id="latest-head">Latest Jobs</div>
+					<div id="latest">			<div class="featuredListings">
+			<a href="http://www.jobsover50k.com/display-job/32196/Echocardiographer.html">Echocardiographer</a><br />
+			<span class="green">The Placement Group</span>
+		</div>
+					<div class="featuredListings">
+			<a href="http://www.jobsover50k.com/display-job/32195/MARKETING-&-COMMUNICATIONS-MANAGER,-DUBAI.html">MARKETING &amp; COMMUNICATIONS MANAGER, DUBAI</a><br />
+			<span class="green">Totum Partners Limited</span>
+		</div>
+					<div class="featuredListings">
+			<a href="http://www.jobsover50k.com/display-job/32194/PITCH-MANAGER.html">PITCH MANAGER</a><br />
+			<span class="green">Totum Partners Limited</span>
+		</div>
+					<div class="featuredListings">
+			<a href="http://www.jobsover50k.com/display-job/32193/Associate-Dentist-Newcastle-under-Lyme-2,-Staffordshire.html">Associate Dentist-Newcastle under Lyme 2, Staffordshire</a><br />
+			<span class="green">Integrated Dental Holdings</span>
+		</div>
+			</div>
+				</div>
+				<div class="clr"><br/></div>
+				<div class="job-seeker-tools">
+					<div class="header">Job Seeker Tools</div>
+					<ul>
+						<li><a href="http://www.jobsover50k.com/add-listing/?listing_type_id=Resume"><img src="http://www.jobsover50k.com/templates/ProgressiveView/main/images/post-resume.png" alt="Post Resume" border="0" /><br/>Post CV</a></li>
+						<li><a href="http://www.jobsover50k.com/find-jobs/"><img src="http://www.jobsover50k.com/templates/ProgressiveView/main/images/find-zoom.png" alt="Find Jobs" border="0" /><br/>Find Jobs</a></li>
+						<li><a href="http://www.jobsover50k.com/job-alerts/?action=new"><img src="http://www.jobsover50k.com/templates/ProgressiveView/main/images/get-by-mail.png" alt="Get Jobs by Email" border="0" /><br/>Get Jobs by Email</a></li>
+					</ul>
+				</div>
+				<div class="clr"><br/></div>
+
+								<div class="job-seeker-tools blog-posts">
+					<div class="header">Blog Posts</div>
+					
+	<div id="innerBlogContentDiv"></div>
+
+
+	<!-- preloader row here -->
+	<div id="ajax_preloader_blog" class="preloader">
+		<img src="http://www.jobsover50k.com/templates/_system/main/images/ajax_preloader_circular_32.gif" />
+	</div>
+
+
+	<script language="javascript" type="text/javascript">
+	
+
+		function getBlogContent() {
+			$('#ajax_preloader_blog').show();
+
+			var ajaxUrl = "http://www.jobsover50k.com/ajax/";
+			var ajaxParams = {
+				'action' : 'get_blog_content',
+				'listing_type[equal]' : 'Job'
+			};
+
+			$.get(ajaxUrl, ajaxParams, function(data) {
+				$('#ajax_preloader_blog').hide();
+				$('#innerBlogContentDiv').append(data);
+			});
+		}
+
+		// make request for blog content after page loads
+		$(function() {
+			getBlogContent();
+		});
+
+	
+	</script>
+
+
+				</div>
+								<div class="clr"><br/></div>
+				<div class="banner">
+			<a href="http://www.jobsover50k.com/go-link/?bannerId=145" target="_self">
+			<a href="http://northsomersetonline.zulutrade.com" target="_blank"><img src="http://northsomersetonline.zulutrade.com/Static/Banners/Affiliate/Zulutrade-affiliateGeneric-728x90-02.en.gif" style="width: 728px; height: 90px; border: 0px;" /></a>"
+		</a>
+	</div>
+
+			</div>
+			<div id="right-column">
+				<div class="white-block featured-companies">
+					<h2>Featured Companies</h2>
+					<span class="sep-line">&nbsp;</span>
+						<div class="FeaturedCompaniesLogo">
+		<a href="http://www.jobsover50k.com/company/3/Jardini/"><img src="http://www.jobsover50k.com/files/pictures/Jardini logo_1_1_thumb.jpg" border="0" alt="jardiniconstruct.com"/></a>
+	</div>
+		<div class="FeaturedCompaniesLogo">
+		<a href="http://www.jobsover50k.com/company/5/Inventa-Group/"><img src="http://www.jobsover50k.com/files/pictures/inventa_1_thumb.jpg" border="0" alt="www.somewebsite.com"/></a>
+	</div>
+			<div class="clr"></div>
+		<div class="FeaturedCompaniesLogo">
+		<a href="http://www.jobsover50k.com/company/4/Chilisoft/"><img src="http://www.jobsover50k.com/files/pictures/chilisoft_1_thumb.jpg" border="0" alt="http://websiteurl.com"/></a>
+	</div>
+		<div class="FeaturedCompaniesLogo">
+		<a href="http://www.jobsover50k.com/company/6/Integrated-Resource-Group/"><img src="http://www.jobsover50k.com/files/pictures/irg_1_thumb.jpg" border="0" alt="integrated.rg.com"/></a>
+	</div>
+			<div class="clr"></div>
+	
+					<div class="clr"><br/></div>
+					<div class="view-all">
+						<a href="http://www.jobsover50k.com/browse-by-company/">View All Companies</a>
+					</div>
+				</div>
+
+									<div class="white-block latest-news">
+						<h2>News</h2>
+						<span class="sep-line">&nbsp;</span>
+							<div id="news">
+		<input type="hidden" name="news_count" id="news_count" value="" />
+		<ul>
+							<li>
+											<a href="http://www.jobsover50k.com/news/29/Welcome-to-our-new-site..html">Welcome to our new site.</a>
+										<div class="clr"></div>
+					<div class="news-date"></div>
+					Welcome to our brand new website. We are currently in the process of developing the new site and adding our content to the site. If you had an account we are sorry to say that these will not be carried over, you will have to re-register and re-upload your CV.<br /><br />We will be ready with all our content in a couple of weeks.<br /><br />Regards<br />JobOver50K&nbsp;
+				</li>
+					</ul>
+	</div>
+	<div class="view-all">
+		<a href="http://www.jobsover50k.com/news/">View All News</a>
+	</div>
+
+					</div>
+				
+
+									<div class="white-block polls">
+						<h2>Poll</h2>
+						<span class="sep-line">&nbsp;</span>
+						
+					</div>
+				
+									<div class="white-block newsletter">
+						<h2>Newsletter</h2>
+						<span class="sep-line">&nbsp;</span>
+						<div id="mailchimp-newsletter">
+	<div id="mailchimp-nl-cont">
+						<form action="http://www.jobsover50k.com/system/miscellaneous/mailchimp/" method="get" id="mailchimp-form">
+			<p class="mailchimp-nl-desc">Fill the form to subscribe</p>
+			<fieldset><label for="mch_name">Your name:</label><input type="text" name="mch_name" id="mch_name"/></fieldset>
+			<fieldset><label for="mch_email">Email:</label><input type="text" name="mch_email" id="mch_email"/></fieldset>
+			<fieldset><input type="submit" name="subscribe" value="Subscribe" id="mch_subscribe"/></fieldset>
+		</form>
+	</div>
+</div>
+
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+		$("#mch_subscribe").live("click", function(){
+			var oEmail = $("#mch_email");
+			var oName = $("#mch_name");
+			var email = oEmail.val();
+			var name = oName.val();
+			var error = false;
+			if (!email || !name){
+				error = true;
+			}
+			if (!error) {
+				var content = $("#mailchimp-nl-cont");
+				content.html("<img src=\"http://www.jobsover50k.com/templates/_system/main/images/ajax_preloader_circular_32.gif\" />")
+					.css("text-align", "center");
+				$.ajax({
+					url: 'http://www.jobsover50k.com/system/miscellaneous/mailchimp/',
+					type: "GET",
+					data: "mch_name="+name+"&mch_email="+email+"&subscribe=1",
+					success: function(data) {
+						content.html($(data).find("#mailchimp-nl-cont"));
+					}
+				});
+			}
+			return false;
+		});
+	});
+	
+</script>
+
+
+					</div>
+							</div>
+		</div>
+		<div class="clr"><br/></div>
+		<div id="footer">
+	<div class="footer-wrapper">
+		<ul>
+			<li><a href="http://www.jobsover50k.com/">Home</a> / </li>
+						<li>
+									<a href="http://www.jobsover50k.com/jobseeker-products/">Products</a>
+				 /
+			</li>
+												<li><a href="http://www.jobsover50k.com/find-jobs/">Find Jobs</a> / </li>
+					<li><a href="http://www.jobsover50k.com/add-listing/?listing_type_id=Resume">Post CV</a> / </li>
+										<li><a href="http://www.jobsover50k.com/contact/">Contact</a> / </li>
+			<li><a href="http://www.jobsover50k.com/about/">About Us</a> / </li>
+			<li><a href="http://www.jobsover50k.com/site-map/">Site Map</a></li>
+								</ul>
+		<div id="copy">&copy; 2008-2014 Powered by <a target="_blank" href="http://www.smartjobboard.com" title="Job Board Software, Script">SmartJobBoard Job Board Software</a></div>
+	</div>
+	<div id="footer-bottom"></div>
+</div>
+
+
+	</div>
+
+	
+	</body>
+</html>
