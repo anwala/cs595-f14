@@ -1,0 +1,16 @@
+http://www.nicovideo.jp/watch/sm8553096/
+	http://www.nicovideo.jp/?header
+	http://www.nicovideo.jp/video_top?header
+	http://seiga.nicovideo.jp/?header
+	http://live.nicovideo.jp/?header
+	http://ch.nicovideo.jp/?header
+	http://ch.nicovideo.jp/portal/blomaga?header
+	http://app.nicovideo.jp/?header
+	http://dic.nicovideo.jp/?header
+	http://ichiba.nicovideo.jp/?header
+	http://uad.nicovideo.jp/?header
+	http://3d.nicovideo.jp/?header
+	http://commons.nicovideo.jp/?header
+	http://jk.nicovideo.jp/?header
+	http://com.nicovideo.jp/?header
+	http://chokuhan.nicovideo.jp/?header

@@ -1,0 +1,4 @@
+http://www.philly.com/
+	https://www.facebook.com/phillydotcom
+	https://twitter.com/phillydotcom
+	http://www.inquirer.com/

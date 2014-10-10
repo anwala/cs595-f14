@@ -1,0 +1,5 @@
+http://tsguide.jp/?p=4239/
+	http://tsguide.jp/
+	http://tsguide.jp/?cat=2
+	http://tsguide.jp/?p=4239#respond
+	http://tsguide.jp/?author=1
