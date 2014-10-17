@@ -1,0 +1,23 @@
+\begin{thebibliography}{1}
+
+\bibitem{BeautifulSoup}
+Beautifulsoup.
+\newblock http://www.crummy.com/software/BeautifulSoup/bs4/doc/.
+\newblock Accessed: 2014-10-15.
+
+\bibitem{Oauth}
+Oath.
+\newblock https://dev.twitter.com/oauth.
+\newblock Accessed: 2014-10-14.
+
+\bibitem{Selenium}
+Selenium.
+\newblock http://www.seleniumhq.org/.
+\newblock Accessed: 2014-10-15.
+
+\bibitem{Tweepy}
+{T}witter api.
+\newblock http://tweepy.readthedocs.org/en/v2.3.0/.
+\newblock Accessed: 2014-10-14.
+
+\end{thebibliography}
