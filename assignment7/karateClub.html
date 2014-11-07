@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zachary's Karate Club Graph</title>
+  <meta charset="utf-8">
+  <style>
+
+  .node {
+    stroke: #000;
+    stroke-width: 1.5px;
+  }
+
+  .link {
+    stroke: #000;
+    stroke-opacity: 0.6;
+  }
+
+  body * {
+    text-align: center;
+  }
+  </style>
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+</head>
+<body>
+
+  <h1>Zachary's Karate Club Graph</h1>
+  <p>Click on any node to toggle split, hover on node to see node name.</p>
+
+  <script>
+
+    var globalClickFlag = 1;
+
+    //960, 500
+    var width = window.innerWidth - 10,
+        height = window.innerHeight - 130;
+
+    var color = d3.scale.category20();
+
+    //charge = -120
+    var force = d3.layout.force()
+        .charge(-1200)
+        .linkDistance(40)
+        .size([width, height]);
+
+    var svg = d3.select("body").append("svg")
+        .attr("width", width)
+        .attr("height", height);
+
+    d3.json("karateClub.json", function(error, graph) 
+    {
+      force
+          .nodes(graph.nodes)
+          .links(graph.links)
+          .start();
+
+      var link = svg.selectAll(".link")
+          .data(graph.links)
+          .enter().append("line")
+          .attr("class", "link")
+          .attr("id", function(d) { return d.id; })
+          .style("stroke-width", function(d) { return Math.sqrt(d.weight*3); });
+          
+
+      var node = svg.selectAll(".node")
+          .data(graph.nodes)
+          .enter()
+          .append("circle")
+          .attr("class", "node")
+          .on("click", specialNodeClick)
+          .attr("id", function(d) { return d.name; })
+          .attr("r", 5)
+          .style("fill", function(d) { return color(d.color); })
+          .call(force.drag);
+
+
+      //select a special node
+      //var specialNode = svg.select("#Click")
+          //.on("click", specialNodeClick);
+
+      //d3.select('#Click').style('fill', '#000');
+
+          
+      node.append("title")
+          .text(function(d) { return d.name; });
+
+      force.on("tick", function() {
+        link.attr("x1", function(d) { return d.source.x; })
+            .attr("y1", function(d) { return d.source.y; })
+            .attr("x2", function(d) { return d.target.x; })
+            .attr("y2", function(d) { return d.target.y; });
+
+        node.attr("cx", function(d) { return d.x; })
+            .attr("cy", function(d) { return d.y; });
+      });
+
+
+    }
+    );
+
+
+    function specialNodeClick(d) 
+    {
+      //d3.selectAll("line.link").remove();
+      if(globalClickFlag==1)
+      {
+        //d3.select('#e1').style('stroke-width', 0);
+        d3.selectAll('.node').style('fill', function(d) { return color(d.faction - 10); });
+        
+        globalClickFlag = 0;
+      }
+      else
+      {
+        //d3.select('#e1').style('stroke-width', function(d) { return Math.sqrt(d.weight); });
+        d3.selectAll('.node').style('fill', function(d) { return color(d.color); });
+        //d3.select('#Click').style('fill', '#000');
+
+        globalClickFlag = 1;
+      }
+    }
+
+  </script>
+
+</body>
+</html>

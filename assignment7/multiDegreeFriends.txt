@@ -1,0 +1,126 @@
+Dr. Nelson -> Dragan Espenschied ,, despens++
+	Dragan Espenschied -> Brian Mackern ,, 34s56w++
+		Brian Mackern -> CCD RADIO ,, CCDRadio++
+			CCD RADIO -> Los De La Tarde ,, losdelatarde++
+				Los De La Tarde -> Toni Franois ,, ToniFrancois+
+				Los De La Tarde -> Rulo.  ,, ruleiro+
+				Los De La Tarde -> Sopitas ,, sopitas+
+			CCD RADIO -> Rulo.  ,, ruleiro++
+				Rulo.  -> Anna Cristina Bez ,, KITTYBAEZ+
+				Rulo.  -> Sonia Chvez ,, SonitaChavez+
+				Rulo.  -> AdrianDargelos ,, AdrianDBBsonico+
+			CCD RADIO -> Elfindelmundo ,, Elfindelmundo++
+				Elfindelmundo -> maspormasdf ,, maspormasdf+
+				Elfindelmundo -> Pellejos ,, BandaPellejos+
+				Elfindelmundo -> Sofia Buitron ,, Sof_Bm+
+		Brian Mackern -> Javier Figueredo ,, chavofigueredo++
+			Javier Figueredo -> Cristina Snchez ,, cristisanchez26++
+				Cristina Snchez -> Uruguay Sub20 ,, Sub20Uruguay+
+				Cristina Snchez -> segundapelota ,, segundapelota+
+				Cristina Snchez -> YOy3MAS ,, YOy3MAS+
+			Javier Figueredo -> Oincs ,, oincs++
+				Oincs -> Luis Alberto VARGAS ,, LuisLuivar+
+				Oincs -> Noticiera Apasionada ,, pajara_voladora+
+				Oincs -> Susana Gonzalez ,, sgsmir+
+			Javier Figueredo -> Miguel Nogueira ,, MiguelCapito++
+				Miguel Nogueira -> BBC Mundo Tecnologa ,, un_mundo_feliz+
+				Miguel Nogueira -> Manuel Mesias. ,, mesiasman+
+				Miguel Nogueira -> natalia nogues ,, natalianogues1+
+		Brian Mackern -> WebArchivists ,, WebArchivists++
+			WebArchivists -> Thoriz Studio ,, TheorizStudio++
+				Thoriz Studio -> Storycode France ,, StorycodeFR+
+				Thoriz Studio -> CNR ,, CNR_Officiel+
+				Thoriz Studio -> CTI Market Entry USA ,, SwissStartups+
+			WebArchivists -> Jason Webber ,, jasonmarkwebber++
+				Jason Webber -> Karolina ,, KarolHolu+
+				Jason Webber -> UKSG ,, UKSG+
+				Jason Webber -> Neil Fitzgerald ,, N_Fitzgerald+
+			WebArchivists -> Web Archiving RT ,, WebArch_RT++
+				Web Archiving RT -> Pew Internet ,, pewinternet+
+				Web Archiving RT -> Disappearing Web ,, GoneDarkProject+
+				Web Archiving RT -> Paul Koerbin ,, koerbin+
+	Dragan Espenschied -> Julia Noordegraaf ,, jjnoordegraaf++
+		Julia Noordegraaf -> Rolf Kllman ,, rolfkallman++
+			Rolf Kllman -> EUscreen ,, EUscreen++
+				EUscreen -> LoCloud Project ,, LoCloudProject+
+				EUscreen -> RunCoCo project ,, RunCoCo+
+				EUscreen -> Lancashire Museums ,, LMuseums+
+			Rolf Kllman -> Erwin Verbruggen ,, erwinverb++
+				Erwin Verbruggen -> Steph Taylor ,, CriticalSteph+
+				Erwin Verbruggen -> Pericles Project FP7 ,, PericlesFP7+
+				Erwin Verbruggen -> LeCollagiste ,, LeCollagiste+
+			Rolf Kllman -> Julia Noordegraaf ,, jjnoordegraaf++
+				Julia Noordegraaf -> Rolf Kllman ,, rolfkallman+
+				Julia Noordegraaf -> Cees Snoek ,, cgmsnoek+
+				Julia Noordegraaf -> Leo lucassen ,, Leolucassen+
+		Julia Noordegraaf -> Cees Snoek ,, cgmsnoek++
+			Cees Snoek -> Julia Noordegraaf ,, jjnoordegraaf++
+				Julia Noordegraaf -> Rolf Kllman ,, rolfkallman+
+				Julia Noordegraaf -> Cees Snoek ,, cgmsnoek+
+				Julia Noordegraaf -> Leo lucassen ,, Leolucassen+
+			Cees Snoek -> Martin Ford ,, MFordFuture++
+				Martin Ford -> SeanGolliher ,, SeanGolliher+
+				Martin Ford -> C. Carvalho ,, ccarvalho1987+
+				Martin Ford -> aaron wetzler ,, aaronwetzler+
+			Cees Snoek -> ICVSS ,, icvss++
+				ICVSS -> Giuseppe Palestra ,, giupalestra+
+				ICVSS -> Mick LaSalle ,, MickLaSalle+
+				ICVSS -> iride sanfilippo ,, iridesanfilippo+
+		Julia Noordegraaf -> Leo lucassen ,, Leolucassen++
+			Leo lucassen -> Jan Riezenkamp ,, JanRiezenkamp++
+				Jan Riezenkamp -> Rocky Horjus ,, RockyHorjus+
+				Jan Riezenkamp -> Rena Netjes ,, RenaNetjes+
+				Jan Riezenkamp -> Toon Geenen ,, toongeenen+
+			Leo lucassen -> Kari-Anne Fygi ,, KAFygi++
+				Kari-Anne Fygi -> Wim van der Kooi ,, TENDENSE+
+				Kari-Anne Fygi -> Leo lucassen ,, Leolucassen+
+				Kari-Anne Fygi -> julie mesters ,, julie59kg+
+			Leo lucassen -> Eduard Nazarski ,, EduardNazarski++
+				Eduard Nazarski -> Adela Ros ,, adela_ros+
+				Eduard Nazarski -> Thijs Broer ,, ThijsBroer+
+				Eduard Nazarski -> Jorn Jonker ,, Jorn+
+	Dragan Espenschied -> unstablearchives ,, unstablearchive++
+		unstablearchives -> Joshua Droid ,, JoshuaDroid++
+			Joshua Droid -> Michelle Ruff ,, MichelleRuffvo1++
+				Michelle Ruff -> Cristina Vee ,, CristinaVee+
+				Michelle Ruff -> Erin Fitzgerald ,, ErinFitzgerald+
+				Michelle Ruff -> Paul Pescrillo ,, PaulPescrillo+
+			Joshua Droid -> mayenin martinez ,, mayeninn++
+			Joshua Droid -> kisstheculprit ,, kisstheculprit++
+				kisstheculprit -> Mike Viola ,, candybutchers+
+				kisstheculprit -> Marlin James ,, marlinjamesband+
+				kisstheculprit -> Pickathon Music Fest ,, pickathon+
+		unstablearchives -> Post-Variable Media ,, timebasedmedia++
+		unstablearchives -> Xpace ,, xpacecc++
+			Xpace -> Lone Star Explosion ,, TexasBiennale++
+				Lone Star Explosion -> Sarah Goldberg ,, GoldbergCouture+
+				Lone Star Explosion -> Robert Jennings ,, _RobertJennings+
+				Lone Star Explosion -> Tiny TOE Press ,, TinyTOEPress+
+			Xpace -> Humboldt Magnussen ,, Humboldt_M++
+				Humboldt Magnussen -> Mary Ann Buchanan ,, KEDTMaryann+
+				Humboldt Magnussen -> Kipling Gallery ,, KiplingGallery+
+				Humboldt Magnussen -> Jocelyn Claire Burke ,, jocelyn_burke+
+			Xpace -> Alison Snowball ,, AlisonSnowball++
+				Alison Snowball -> Katherine Dennis ,, kdartprojects+
+				Alison Snowball -> Stephen C. Rose ,, stephencrose+
+				Alison Snowball -> Sue Enrich ,, EnrichSue+
+Dr. Nelson -> Mounia Lalmas ,, mounialalmas++
+	Mounia Lalmas -> Tableau Software ,, tableau++
+		Tableau Software -> Aman Lamba ,, AmannLamba++
+			Aman Lamba -> Insurgent ,, Divergent++
+				Insurgent -> I am Divergent ,, KristieNicole2+
+				Insurgent -> Be brave. ,, BarbaraGrint+
+				Insurgent -> Insurgent ,, insurgentx_+
+			Aman Lamba -> Kanan Gill ,, KananGill++
+				Kanan Gill -> Anuya J ,, effyourstylist+
+				Kanan Gill -> Nidhi Bisht ,, EkThapaTiger+
+				Kanan Gill -> brown paper bag ,, bpbmumbai+
+			Aman Lamba -> Shailene Woodley ,, shailenewoodley++
+				Shailene Woodley -> Summit Entertainment ,, SummitEnt+
+				Shailene Woodley -> sheila sornsin ,, goddesssheesh+
+				Shailene Woodley -> Jocelyn Gordon ,, Jocelyn_Gordon+
+		Tableau Software -> Sara Phelan ,, luckiestarsara+
+		Tableau Software -> LauraEllen, MSW ,, LauraEllenMSW+
+	Mounia Lalmas -> Stewart Tansley ,, dswtan+
+	Mounia Lalmas -> Seth A. Tropper ,, sethtropper+
+Dr. Nelson -> Denise Howell ,, dhowell+

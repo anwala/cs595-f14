@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>WhoFollowsWho</title>
+  <meta charset="utf-8">
+<style>
+  .link {
+    fill: none;
+    stroke: #666;
+    stroke-width: 1.5px;
+  }
+
+  #licensing {
+    fill: green;
+  }
+
+  .link.licensing {
+    stroke: green;
+    stroke-width: 2.0px;
+  }
+
+  .link.resolved {
+    stroke-dasharray: 0,2 1;
+  }
+
+  circle {
+    fill: #70B8FF;
+    stroke: #333;
+    stroke-width: 1.5px;
+  }
+
+  text {
+    font: 10px sans-serif;
+    pointer-events: none;
+    text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+  }
+
+   body * {
+    text-align: center;
+  }
+
+  </style>
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+</head>
+<body>
+
+  <h1>Who follows who?</h1>
+  
+
+  <script>
+    // http://blog.thomsonreuters.com/index.php/mobile-patent-suits-graphic-of-the-day/
+  var links = 
+  [
+      {source: "Dr. Nelson", target: "Dragan Espenschied", type: "licensing"},
+      {source: "Dragan Espenschied", target: "Brian Mackern", type: "suit"},
+      {source: "Brian Mackern", target: "CCD RADIO", type: "suit"},
+      {source: "CCD RADIO", target: "Los De La Tarde", type: "suit"},
+      {source: "Los De La Tarde", target: "Toni Franois", type: "suit"},
+      {source: "Los De La Tarde", target: "Rulo.", type: "suit"},
+      {source: "Los De La Tarde", target: "Sopitas", type: "suit"},
+      {source: "CCD RADIO", target: "Rulo.", type: "suit"},
+      {source: "Rulo.", target: "Anna Cristina Bez", type: "suit"},
+      {source: "Rulo.", target: "Sonia Chvez", type: "suit"},
+      {source: "Rulo.", target: "AdrianDargelos", type: "suit"},
+      {source: "CCD RADIO", target: "Elfindelmundo", type: "suit"},
+      {source: "Elfindelmundo", target: "maspormasdf", type: "suit"},
+      {source: "Elfindelmundo", target: "Pellejos", type: "suit"},
+      {source: "Elfindelmundo", target: "Sofia Buitron", type: "suit"},
+      {source: "Brian Mackern", target: "Javier Figueredo", type: "suit"},
+      {source: "Javier Figueredo", target: "Cristina Snchez", type: "suit"},
+      {source: "Cristina Snchez", target: "Uruguay Sub20", type: "suit"},
+      {source: "Cristina Snchez", target: "segundapelota", type: "suit"},
+      {source: "Cristina Snchez", target: "YOy3MAS", type: "suit"},
+      {source: "Javier Figueredo", target: "Oincs", type: "suit"},
+      {source: "Oincs", target: "Luis Alberto VARGAS", type: "suit"},
+      {source: "Oincs", target: "Noticiera Apasionada", type: "suit"},
+      {source: "Oincs", target: "Susana Gonzalez", type: "suit"},
+      {source: "Javier Figueredo", target: "Miguel Nogueira", type: "suit"},
+      {source: "Miguel Nogueira", target: "BBC Mundo Tecnologa", type: "suit"},
+      {source: "Miguel Nogueira", target: "Manuel Mesias.", type: "suit"},
+      {source: "Miguel Nogueira", target: "natalia nogues", type: "suit"},
+      {source: "Brian Mackern", target: "WebArchivists", type: "suit"},
+      {source: "WebArchivists", target: "Thoriz Studio", type: "suit"},
+      {source: "Thoriz Studio", target: "Storycode France", type: "suit"},
+      {source: "Thoriz Studio", target: "CNR", type: "suit"},
+      {source: "Thoriz Studio", target: "CTI Market Entry USA", type: "suit"},
+      {source: "WebArchivists", target: "Jason Webber", type: "suit"},
+      {source: "Jason Webber", target: "Karolina", type: "suit"},
+      {source: "Jason Webber", target: "UKSG", type: "suit"},
+      {source: "Jason Webber", target: "Neil Fitzgerald", type: "suit"},
+      {source: "WebArchivists", target: "Web Archiving RT", type: "suit"},
+      {source: "Web Archiving RT", target: "Pew Internet", type: "suit"},
+      {source: "Web Archiving RT", target: "Disappearing Web", type: "suit"},
+      {source: "Web Archiving RT", target: "Paul Koerbin", type: "suit"},
+      {source: "Dragan Espenschied", target: "Julia Noordegraaf", type: "suit"},
+      {source: "Julia Noordegraaf", target: "Rolf Kllman", type: "suit"},
+      {source: "Rolf Kllman", target: "EUscreen", type: "suit"},
+      {source: "EUscreen", target: "LoCloud Project", type: "suit"},
+      {source: "EUscreen", target: "RunCoCo project", type: "suit"},
+      {source: "EUscreen", target: "Lancashire Museums", type: "suit"},
+      {source: "Rolf Kllman", target: "Erwin Verbruggen", type: "suit"},
+      {source: "Erwin Verbruggen", target: "Steph Taylor", type: "suit"},
+      {source: "Erwin Verbruggen", target: "Pericles Project FP7", type: "suit"},
+      {source: "Erwin Verbruggen", target: "LeCollagiste", type: "suit"},
+      {source: "Rolf Kllman", target: "Julia Noordegraaf", type: "suit"},
+      {source: "Julia Noordegraaf", target: "Rolf Kllman", type: "suit"},
+      {source: "Julia Noordegraaf", target: "Cees Snoek", type: "suit"},
+      {source: "Julia Noordegraaf", target: "Leo lucassen", type: "suit"},
+      {source: "Julia Noordegraaf", target: "Cees Snoek", type: "suit"},
+      {source: "Cees Snoek", target: "Julia Noordegraaf", type: "suit"},
+      {source: "Julia Noordegraaf", target: "Rolf Kllman", type: "suit"},
+      {source: "Julia Noordegraaf", target: "Cees Snoek", type: "suit"},
+      {source: "Julia Noordegraaf", target: "Leo lucassen", type: "suit"},
+      {source: "Cees Snoek", target: "Martin Ford", type: "suit"},
+      {source: "Martin Ford", target: "SeanGolliher", type: "suit"},
+      {source: "Martin Ford", target: "C. Carvalho", type: "suit"},
+      {source: "Martin Ford", target: "aaron wetzler", type: "suit"},
+      {source: "Cees Snoek", target: "ICVSS", type: "suit"},
+      {source: "ICVSS", target: "Giuseppe Palestra", type: "suit"},
+      {source: "ICVSS", target: "Mick LaSalle", type: "suit"},
+      {source: "ICVSS", target: "iride sanfilippo", type: "suit"},
+      {source: "Julia Noordegraaf", target: "Leo lucassen", type: "suit"},
+      {source: "Leo lucassen", target: "Jan Riezenkamp", type: "suit"},
+      {source: "Jan Riezenkamp", target: "Rocky Horjus", type: "suit"},
+      {source: "Jan Riezenkamp", target: "Rena Netjes", type: "suit"},
+      {source: "Jan Riezenkamp", target: "Toon Geenen", type: "suit"},
+      {source: "Leo lucassen", target: "Kari-Anne Fygi", type: "suit"},
+      {source: "Kari-Anne Fygi", target: "Wim van der Kooi", type: "suit"},
+      {source: "Kari-Anne Fygi", target: "Leo lucassen", type: "suit"},
+      {source: "Kari-Anne Fygi", target: "julie mesters", type: "suit"},
+      {source: "Leo lucassen", target: "Eduard Nazarski", type: "suit"},
+      {source: "Eduard Nazarski", target: "Adela Ros", type: "suit"},
+      {source: "Eduard Nazarski", target: "Thijs Broer", type: "suit"},
+      {source: "Eduard Nazarski", target: "Jorn Jonker", type: "suit"},
+      {source: "Dragan Espenschied", target: "unstablearchives", type: "suit"},
+      {source: "unstablearchives", target: "Joshua Droid", type: "suit"},
+      {source: "Joshua Droid", target: "Michelle Ruff", type: "suit"},
+      {source: "Michelle Ruff", target: "Cristina Vee", type: "suit"},
+      {source: "Michelle Ruff", target: "Erin Fitzgerald", type: "suit"},
+      {source: "Michelle Ruff", target: "Paul Pescrillo", type: "suit"},
+      {source: "Joshua Droid", target: "mayenin martinez", type: "suit"},
+      {source: "Joshua Droid", target: "kisstheculprit", type: "suit"},
+      {source: "kisstheculprit", target: "Mike Viola", type: "suit"},
+      {source: "kisstheculprit", target: "Marlin James", type: "suit"},
+      {source: "kisstheculprit", target: "Pickathon Music Fest", type: "suit"},
+      {source: "unstablearchives", target: "Post-Variable Media", type: "suit"},
+      {source: "unstablearchives", target: "Xpace", type: "suit"},
+      {source: "Xpace", target: "Lone Star Explosion", type: "suit"},
+      {source: "Lone Star Explosion", target: "Sarah Goldberg", type: "suit"},
+      {source: "Lone Star Explosion", target: "Robert Jennings", type: "suit"},
+      {source: "Lone Star Explosion", target: "Tiny TOE Press", type: "suit"},
+      {source: "Xpace", target: "Humboldt Magnussen", type: "suit"},
+      {source: "Humboldt Magnussen", target: "Mary Ann Buchanan", type: "suit"},
+      {source: "Humboldt Magnussen", target: "Kipling Gallery", type: "suit"},
+      {source: "Humboldt Magnussen", target: "Jocelyn Claire Burke", type: "suit"},
+      {source: "Xpace", target: "Alison Snowball", type: "suit"},
+      {source: "Alison Snowball", target: "Katherine Dennis", type: "suit"},
+      {source: "Alison Snowball", target: "Stephen C. Rose", type: "suit"},
+      {source: "Alison Snowball", target: "Sue Enrich", type: "suit"},
+      {source: "Dr. Nelson", target: "Mounia Lalmas", type: "licensing"},
+      {source: "Mounia Lalmas", target: "Tableau Software", type: "suit"},
+      {source: "Tableau Software", target: "Aman Lamba", type: "suit"},
+      {source: "Aman Lamba", target: "Insurgent", type: "suit"},
+      {source: "Insurgent", target: "I am Divergent", type: "suit"},
+      {source: "Insurgent", target: "Be brave.", type: "suit"},
+      {source: "Insurgent", target: "Insurgent", type: "suit"},
+      {source: "Aman Lamba", target: "Kanan Gill", type: "suit"},
+      {source: "Kanan Gill", target: "Anuya J", type: "suit"},
+      {source: "Kanan Gill", target: "Nidhi Bisht", type: "suit"},
+      {source: "Kanan Gill", target: "brown paper bag", type: "suit"},
+      {source: "Aman Lamba", target: "Shailene Woodley", type: "suit"},
+      {source: "Tableau Software", target: "Sara Phelan", type: "suit"},
+      {source: "Tableau Software", target: "LauraEllen, MSW", type: "suit"},
+      {source: "Mounia Lalmas", target: "Stewart Tansley", type: "suit"},
+      {source: "Mounia Lalmas", target: "Seth A. Tropper", type: "suit"},
+      {source: "Dr. Nelson", target: "Denise Howell", type: "licensing"}
+    ];
+
+    var nodes = {};
+
+    // Compute the distinct nodes from the links.
+    links.forEach(function(link) 
+    {
+      link.source = nodes[link.source] || (nodes[link.source] = {name: link.source});
+      link.target = nodes[link.target] || (nodes[link.target] = {name: link.target});
+    });
+
+    var width = window.innerWidth - 10,
+        height = window.innerHeight - 130;
+
+    var force = d3.layout.force()
+        .nodes(d3.values(nodes))
+        .links(links)
+        .size([width, height])
+        .linkDistance(60)
+        .charge(-300)
+        .on("tick", tick)
+        .start();
+
+    var svg = d3.select("body").append("svg")
+        .attr("width", width)
+        .attr("height", height);
+
+    // Per-type markers, as they don't inherit styles.
+    svg.append("defs").selectAll("marker")
+        .data(["suit", "licensing", "resolved"])
+        .enter().append("marker")
+        .attr("id", function(d) { return d; })
+        .attr("viewBox", "0 -5 10 10")
+        .attr("refX", 15)
+        .attr("refY", -1.5)
+        .attr("markerWidth", 6)
+        .attr("markerHeight", 6)
+        .attr("orient", "auto")
+      .append("path")
+        .attr("d", "M0,-5L10,0L0,5");
+
+    var path = svg.append("g").selectAll("path")
+        .data(force.links())
+      .enter().append("path")
+        .attr("class", function(d) { return "link " + d.type; })
+        .attr("marker-end", function(d) { return "url(#" + d.type + ")"; });
+
+    var circle = svg.append("g").selectAll("circle")
+        .data(force.nodes())
+        .enter().append("circle")
+        .attr("r", 6)
+        .call(force.drag);
+
+    var text = svg.append("g").selectAll("text")
+        .data(force.nodes())
+        .enter().append("text")
+        .attr("x", 8)
+        .attr("y", ".31em")
+        .text(function(d) { return d.name; });
+
+    // Use elliptical arc path segments to doubly-encode directionality.
+    function tick() 
+    {
+      path.attr("d", linkArc);
+      circle.attr("transform", transform);
+      text.attr("transform", transform);
+    }
+
+    function linkArc(d) 
+    {
+      var dx = d.target.x - d.source.x,
+          dy = d.target.y - d.source.y,
+          dr = Math.sqrt(dx * dx + dy * dy);
+      return "M" + d.source.x + "," + d.source.y + "A" + dr + "," + dr + " 0 0,1 " + d.target.x + "," + d.target.y;
+    }
+
+    function transform(d)
+    {
+      return "translate(" + d.x + "," + d.y + ")";
+    }
+
+  </script>
+
+</body>
+</html>
