@@ -1,0 +1,334 @@
+k = 5, iterations = 5
+     cluster 0
+          STEADY BLOGGIN!
+          HK
+          BMer on Music
+          Evin on Earth
+          Confessions of a very troubled mind.
+          In Search of an Elusive Band
+          Fu-Jen Catholic University Digital Music Club 
+          Bruunski Beats
+          NallsBlog
+          Blogus Ignoramus
+          Redneck Fistula
+          Albums That I Own
+          JasonTankerley.com
+          KASMS
+          One-Sided War
+          The Start of a New Day
+          F-Measure
+     cluster 1
+          Marvelous Musings
+          Shelze's World
+          Our CRAZY, MESSY yet so very FABULOUS life.- A & G
+          A JOURNEY TOWARD HOPE
+          T i F F ' s
+          The California Whites
+          Shamrock Jews Adventure Story
+          hmm?
+          quella vita
+          Cannon Family
+          QiuQiu
+          And you'll see me waiting for you on our corner of the street
+          Transitions
+          Nana Goes Lala
+          The Jackson Family Blog
+          Jackson Dye Family
+          A Bunch of Barkers
+          Single woman on a mission
+          typing off-the-record
+          B a b y   F a v o r i t e
+          Mommy's Madhouse
+          JDActually
+          Welcome to my crazy world of motherhood
+          Life Without Magic
+          a little bit of sunshine
+          Ramblings of a crazy woman
+          Spitnoodle
+          Welcome to my Crazy life
+          The Weakest Pen
+          The Riries
+          This is a story
+          And So It Goes
+          Just as the caterpillar thought the world was over, it became a butterfly
+          The Staffaroni Family
+          Glimpses of 40
+          A Groovy Kind of Life
+          The Holley Herald
+          Overtly Trite
+          THE HASLAR BOYS
+          bootsbythebackdoor
+     cluster 2
+          meandering recollections
+          KeLLy
+          Blokeish me
+          Cause I Believe in You
+          Bussell's Blessings
+          My Crappy Life
+          The Sonnet Project
+          THE NORTHENS
+          O Bicho Preguia
+          {sushicat}
+          tomato transplants
+          As canes dos meus dias
+          HARMONY GRACE ELOHIM
+     cluster 3
+          let lemons be angry
+          Best Mp3 Blog
+          Web Science and Digital Libraries Research Group
+          the sometimes maternal musings of dr. blaurb
+          Napoleon Solo Media
+          Jazz with Jerry Brabenec
+          time out
+          The Dainty Dream, by Mandy Fisher
+          NO Kiddin' !
+     cluster 4
+          kolorofon team blog
+          Lunatic Ramblings
+          Living Diagonally In My Parallel World!
+          Final Approach
+          The Life and Times of David Ferrell
+          Under My Skin
+          Lucy Blues
+          If at first you don't succeed
+          The Sassy Flip Flop
+          JeromeProphet
+          The Ruffle Blog - RuffleButts RuggedButts Life and Business
+          alpha charlie bravo
+          Journey To The Highlands
+          and a bag of chips
+          levenshulme daily photo
+          Vers de Socit
+          Character of the Week
+          As my world turns
+          hopeful romantics
+          Analyst Catalyst
+k = 10, iterations = 7
+     cluster 0
+          STEADY BLOGGIN!
+          BMer on Music
+          Cause I Believe in You
+          Evin on Earth
+          Confessions of a very troubled mind.
+          In Search of an Elusive Band
+          Fu-Jen Catholic University Digital Music Club 
+          Bruunski Beats
+          NallsBlog
+          Redneck Fistula
+          Albums That I Own
+          JasonTankerley.com
+          KASMS
+          F-Measure
+     cluster 1
+          KeLLy
+          hmm?
+          quella vita
+          QiuQiu
+          Nana Goes Lala
+          Blokeish me
+          Life Without Magic
+          a little bit of sunshine
+     cluster 2
+          Marvelous Musings
+          Shamrock Jews Adventure Story
+          Cannon Family
+          Transitions
+          Single woman on a mission
+          Under My Skin
+          time out
+          The Weakest Pen
+          The Riries
+          {sushicat}
+          Blogus Ignoramus
+          levenshulme daily photo
+          The Start of a New Day
+          As my world turns
+          Overtly Trite
+     cluster 3
+          T i F F ' s
+          And you'll see me waiting for you on our corner of the street
+          HK
+          The Life and Times of David Ferrell
+          Mommy's Madhouse
+          JDActually
+          Spitnoodle
+          The Dainty Dream, by Mandy Fisher
+     cluster 4
+          let lemons be angry
+          Shelze's World
+          A JOURNEY TOWARD HOPE
+          B a b y   F a v o r i t e
+          Bussell's Blessings
+          Ramblings of a crazy woman
+          THE NORTHENS
+          The Ruffle Blog - RuffleButts RuggedButts Life and Business
+          and a bag of chips
+          And So It Goes
+          Just as the caterpillar thought the world was over, it became a butterfly
+          HARMONY GRACE ELOHIM
+          Glimpses of 40
+          The Holley Herald
+     cluster 5
+          Our CRAZY, MESSY yet so very FABULOUS life.- A & G
+          The California Whites
+          The Jackson Family Blog
+          Jackson Dye Family
+          A Bunch of Barkers
+          Welcome to my crazy world of motherhood
+          Welcome to my Crazy life
+          tomato transplants
+          The Staffaroni Family
+          A Groovy Kind of Life
+          THE HASLAR BOYS
+          bootsbythebackdoor
+     cluster 6
+          kolorofon team blog
+          Lunatic Ramblings
+          the sometimes maternal musings of dr. blaurb
+          typing off-the-record
+          O Bicho Preguia
+     cluster 7
+          meandering recollections
+          Napoleon Solo Media
+          My Crappy Life
+          The Sonnet Project
+          This is a story
+          As canes dos meus dias
+          hopeful romantics
+     cluster 8
+          Best Mp3 Blog
+          Web Science and Digital Libraries Research Group
+          Jazz with Jerry Brabenec
+          If at first you don't succeed
+     cluster 9
+          Living Diagonally In My Parallel World!
+          Final Approach
+          Lucy Blues
+          The Sassy Flip Flop
+          JeromeProphet
+          alpha charlie bravo
+          NO Kiddin' !
+          Journey To The Highlands
+          One-Sided War
+          Vers de Socit
+          Character of the Week
+          Analyst Catalyst
+k = 20, iterations = 5
+     cluster 0
+         A Groovy Kind of Life
+     cluster 1
+          Lucy Blues
+          Fu-Jen Catholic University Digital Music Club 
+          and a bag of chips
+          Redneck Fistula
+          F-Measure
+     cluster 2
+          Marvelous Musings
+          let lemons be angry
+          The Life and Times of David Ferrell
+          Cause I Believe in You
+          Mommy's Madhouse
+          The Sassy Flip Flop
+     cluster 3
+          Life Without Magic
+          NO Kiddin' !
+          levenshulme daily photo
+          Vers de Socit
+          Character of the Week
+     cluster 4
+          Transitions
+          Single woman on a mission
+          Under My Skin
+          JDActually
+          My Crappy Life
+          time out
+          Spitnoodle
+          Blogus Ignoramus
+          This is a story
+          As my world turns
+     cluster 5
+          STEADY BLOGGIN!
+          The Ruffle Blog - RuffleButts RuggedButts Life and Business
+          The Start of a New Day
+          THE HASLAR BOYS
+     cluster 6
+          the sometimes maternal musings of dr. blaurb
+          And So It Goes
+     cluster 7
+          Best Mp3 Blog
+          Jazz with Jerry Brabenec
+          {sushicat}
+     cluster 8
+          Web Science and Digital Libraries Research Group
+          Napoleon Solo Media
+     cluster 9
+          KeLLy
+          T i F F ' s
+          hmm?
+          quella vita
+          QiuQiu
+          And you'll see me waiting for you on our corner of the street
+          Nana Goes Lala
+          Blokeish me
+          a little bit of sunshine
+          As canes dos meus dias
+     cluster 10
+          The Sonnet Project
+          hopeful romantics
+          Analyst Catalyst
+     cluster 11
+          A JOURNEY TOWARD HOPE
+          The California Whites
+          The Holley Herald
+     cluster 12
+          Shamrock Jews Adventure Story
+          Evin on Earth
+          Bruunski Beats
+          Albums That I Own
+     cluster 13
+          kolorofon team blog
+          Lunatic Ramblings
+          BMer on Music
+          Confessions of a very troubled mind.
+          In Search of an Elusive Band
+          KASMS
+     cluster 14
+          If at first you don't succeed
+          NallsBlog
+          JasonTankerley.com
+     cluster 15
+          Shelze's World
+          Our CRAZY, MESSY yet so very FABULOUS life.- A & G
+          Cannon Family
+          The Jackson Family Blog
+          Jackson Dye Family
+          A Bunch of Barkers
+          B a b y   F a v o r i t e
+          Bussell's Blessings
+          Welcome to my crazy world of motherhood
+          Ramblings of a crazy woman
+          THE NORTHENS
+          Welcome to my Crazy life
+          The Weakest Pen
+          The Dainty Dream, by Mandy Fisher
+          The Riries
+          tomato transplants
+          Just as the caterpillar thought the world was over, it became a butterfly
+          The Staffaroni Family
+          Glimpses of 40
+          Overtly Trite
+          bootsbythebackdoor
+     cluster 16
+          meandering recollections
+          HARMONY GRACE ELOHIM
+     cluster 17
+          Living Diagonally In My Parallel World!
+          Final Approach
+          HK
+          typing off-the-record
+          JeromeProphet
+          alpha charlie bravo
+          Journey To The Highlands
+          One-Sided War
+     cluster 18
+         O Bicho Preguia
