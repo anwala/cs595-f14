@@ -1,0 +1,12 @@
+\begin{thebibliography}{1}
+
+\bibitem{sklearn}
+sci-kit learn.
+\newblock http://scikit-learn.org/stable/.
+\newblock Accessed: 2014-12-11.
+
+\bibitem{pciBook}
+{T}oby {S}egaran.
+\newblock {P}rogramming {C}ollective {I}ntelligence, 2007.
+
+\end{thebibliography}

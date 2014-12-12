@@ -1,0 +1,11 @@
+TITLE, CPROB, PREDICTED-LABEL, ACTUAL-LABEL
+Mr. Sulu Phasers Tim Hardaway, 0.25, story, misc
+Despite total ignorance, I support this idea, 0.269540623929, politics, story
+Time to serve, 0.25, politics, misc
+Simple point, 0.106215910434, misc, misc
+We're playing you, 0.485714285714, story, story
+Good luck, Jane, 0.265950699759, politics, misc
+A simple question, 0.25, politics, politics
+Pointless, 0.334574468085, politics, story
+Sucker, 0.25, politics, story
+Silicone, 0.194574194945, story, misc

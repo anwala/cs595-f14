@@ -1,0 +1,6 @@
+#!/bin/bash
+
+pdflatex Nwala_Assignment10_Report
+bibtex Nwala_Assignment10_Report
+pdflatex Nwala_Assignment10_Report
+pdflatex Nwala_Assignment10_Report

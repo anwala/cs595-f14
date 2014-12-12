@@ -1,0 +1,46 @@
+TITLE, CPROB, PREDICTED-LABEL, ACTUAL-LABEL
+Mr. Sulu Phasers Tim Hardaway, 0.25, story, misc
+Too close for comfort, 0.369318181818, politics, story
+Middle School?, 0.25, politics, story
+No kids for gays, 0.31862745098, politics, story
+HDTV, 0.369318181818, story, misc
+Change sometimes isn't so fast, 0.25, story, law
+More idiocy, 0.25, politics, politics
+Yawn, Hillary's In, 0.268595041322, politics, politics
+Scumbags in action, 0.25, politics, law
+The battle of the exploding pigs, 0.369318181818, politics, misc
+Racial Row on UK show, 0.369318181818, politics, story
+No spanking, 0.31862745098, politics, story
+Provoking Sadr, 0.601851851852, politics, politics
+Jenna writes a book, 0.25, story, misc
+Only in Washington, 0.505836575875, politics, politics
+Oooops, 0.25, politics, story
+Another 9/11 tragedy, 0.369318181818, story, story
+Time to serve, 0.25, politics, misc
+About going to Walter Reed, 0.369318181818, story, story
+Voir Dire from hell, 0.896551724138, politics, law
+Simple point, 0.369318181818, misc, misc
+Fading away, 0.822784810127, politics, politics
+We're playing you, 0.833333333333, politics, story
+Libby on trial, 0.31862745098, politics, law
+The Car Wreck of American TV, 0.369318181818, politics, misc
+No more actors, 0.25, story, story
+Good luck, Jane, 0.268965517241, politics, misc
+More dead in Iraq, 0.61320754717, politics, law
+A simple question, 0.25, politics, politics
+What bubble?, 0.31862745098, politics, story
+Idiocy in action, 0.25, story, story
+Yeah, attacking the Mahdi Army will happen, 0.585585585586, politics, politics
+What can I do?, 0.585585585586, politics, story
+Marine murdered for insurance?, 0.896551724138, story, law
+Hey, it just happened, 0.31862745098, politics, story
+Why the fuck is he making military policy, 0.25, politics, politics
+You have to be kidding, 0.25, politics, story
+Bush will lose the country, 0.369318181818, politics, politics
+Pointless, 0.25, politics, story
+Better to  drop FAE's instead, 0.25, politics, story
+How stupid can you be, 0.25, story, story
+Madness in action, 0.31862745098, politics, politics
+They don't want us, 0.25, politics, politics
+Sucker, 0.25, politics, story
+Silicone, 0.369318181818, politics, misc
